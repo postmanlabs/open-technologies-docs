@@ -52,7 +52,7 @@ class IndexPage extends React.Component {
                   </p>
                   <Button
                     onClick={() => {
-                      navigate("/getting-started/introduction/")
+                      navigate("/specifications/collections/")
                     }} 
                     className="mb-5 secondary"
                   >
