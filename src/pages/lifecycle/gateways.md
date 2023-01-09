@@ -1,7 +1,7 @@
 ---
-title: "Introduction"
+title: "gateways"
 order: 1
-page_id: "introduction"
+page_id: "gateways"
 warning: false
 updated: 2021-09-29
 contextual_links:
