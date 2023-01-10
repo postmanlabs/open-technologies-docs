@@ -48,7 +48,7 @@ contextual_links:
      - type: link
     name: "Sending your first request"
     url: "/docs/getting-started/sending-the-first-request/"
-    blog_tag: "collaboration"
+   
 ---
 
 Welcome to the Postman docs! This is the place to find official information on how to use Postman in your API projects.
