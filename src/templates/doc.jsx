@@ -387,7 +387,7 @@ export const query = graphql`
           type
           name
           url
-          blog_tag
+          # blog_tag
         }
       }
       fields {
