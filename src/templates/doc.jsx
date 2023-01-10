@@ -350,9 +350,9 @@ const DocPage = ({ data }) => {
                 <div className="sticky">
                   <div> 
                     <p>
-                      {/* <span className="font-weight-bold">Postman Newsletter</span>  */}
+                      <span className="font-weight-bold">Open Technologies</span> 
                       <br></br>
-                      Open Technologies helps with providing them a safe space to grow and flourish.
+                       help with providing a safe space to grow and flourish.
                     </p>
                     {/* <BaseLink 
                       className="sticky"
