@@ -42,19 +42,23 @@ export const leftNavItems = [
         name: 'OpenAPI',
         url: '/specifications/openapi/',
       },     
-    ],
-  },
-  {
-    name: 'Patterns',
-    parentSlug: 'patterns',
-    url: '/patterns/graphql/',
-    subMenuItems1: [
       {
         name: 'GraphQL',
         url: '/patterns/graphql/',
       },
     ],
   },
+  // {
+  //   name: 'Patterns',
+  //   parentSlug: 'patterns',
+  //   url: '/patterns/graphql/',
+  //   subMenuItems1: [
+  //     {
+  //       name: 'REST',
+  //       url: '/patterns/rest/',
+  //     },
+  //   ],
+  // },
   {
     name: 'Lifecycle',
     parentSlug: 'lifecycle',

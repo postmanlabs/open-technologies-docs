@@ -7,7 +7,11 @@ import SEO from '../components/seo';
 // import { LandingCard } from '../components/MarketingPages/Cards';
 import '../../styles/config/_pm-icons.css';
 import Button from '../components/Shared/Button';
-import {CallOut, Feature, Divider, SideXSide} from 'aether-marketing';
+import {CallOut, Feature, Divider, SideXSide, Paragraph,
+  SectionStyles,
+  BaseLinkStyles,
+  UnorderedListStyles,
+  OrderedListStyles, TextSection } from 'aether-marketing';
 
 const HeroWrapper = styled.section`
   background-color: ${(props) => props.theme.colors.grey_05};
@@ -25,13 +29,92 @@ const HeroWrapper = styled.section`
     }
 `
 
-const HRStyles = styled.hr`
-  border: 0;
-  margin-top: 0;
-  border-top: 1px solid ${(props) => props.theme.colors.grey_30};
-  margin-bottom: 0;
+
+const ContentContainer = styled.div`
+  margin-bottom: 40px;
+  @media (min-width: 992px) {
+    margin-bottom: 100px;
+  }
+  a {
+    ${BaseLinkStyles.componentStyle.rules}
+  }
+
+  ul {
+    ${UnorderedListStyles.componentStyle.rules}
+  }
+
+  ol {
+    ${OrderedListStyles.componentStyle.rules}
+  }
 `;
 
+const InputStyled = styled.div`
+margin-top: 20px;
+input{
+  background: ${(props) => props.theme.colors.white};
+  border: 1px solid ${(props) => props.theme.forms.border};
+  border-radius: ${(props) => props.theme.borderRadius.small};
+  box-sizing: border-box;
+  box-shadow: none;
+  color: ${(props) => props.theme.colors.grey_05};
+  font-size: 16px;
+  height: 40px;
+  margin: 0;
+  padding: 8px 1px 8px 14px;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  width: 500px;
+}
+  /* Removes arrows from number fields
+  Chrome, Safari, Edge, Opera */
+  ::-webkit-outer-spin-button,
+  ::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  textarea {
+    width: 500px;
+  }
+input.submit {
+  color: ${(props) => props.theme.colors.white} !important;
+  background-color: ${(props) => props.theme.colors.orange_50};
+  transform: translateZ(0px);
+  transition: none !important;
+
+  &:hover,
+  &:active {
+    background-color: ${(props) => props.theme.colors.orange_60};
+    border: 1px solid transparent;
+    -webkit-appearance: none;
+    border-inline: 1px solid ${(props) => props.theme.colors.orange_60};
+  }
+}
+  /* Firefox */
+  &[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  &.form-control {
+    :focus {
+      border: 1px solid ${(props) => props.theme.colors.blue_30};
+      box-shadow: 0 0 0 1px ${(props) => props.theme.colors.blue_30};
+      outline: none;
+    }
+    ::-webkit-input-placeholder,
+    :-moz-placeholder,
+    ::placeholder,
+    :-ms-input-placeholder {
+      color: ${(props) => props.theme.forms.text};
+    }
+    &.is-invalid {
+      background-color: ${(props) => props.theme.colors.white};
+      background-image: none;
+      border: 1px solid ${(props) => props.theme.colors.red_error};
+      &:focus {
+        box-shadow: 0 0 0 1px ${(props) => props.theme.colors.red_error};
+      }
+    }
+  }
+`;
 const callout = {
   title: "Collaborate with us",
 divider: true,
@@ -272,7 +355,11 @@ const data = {
   "iconList": {},
   "listTitle": ""
 }
-
+const formdata = {
+  title: "Need to talk to someone on the Open Technology team?" ,
+  body:["Tell us more and a member of our team will contact you."],
+  legal: "By clicking 'Become a partner' below, you agree to the processing of personal data you provide in accordance with Postman's Privacy Policy. Postman respects your privacy, and information collected on this site is for the sole purpose of matching you with appropriate studies."
+}
 class IndexPage extends React.Component {
   render() {
     return (
@@ -337,7 +424,59 @@ class IndexPage extends React.Component {
           body={callout.body} link={callout.link}
            />
           
-         <h2 className='my-5'>Form goes here</h2>
+         <h2 className='my-5'>Form is a mockup, does NOT work</h2>
+         <SectionStyles
+        
+      >
+        <div className="container">
+          <div className="row">
+         
+            <div className="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-0 mb-5 mb-lg-0 pr-lg-5">
+              <ContentContainer className="text-left">
+              <TextSection
+                  subtitle={formdata.subtitle}
+                  layout={formdata.layout}
+                  button={formdata.button}
+                  backgroundColor={formdata.backgroundColor}
+                  paddingTop="0px"
+                  title={formdata.title}
+                  body={formdata.body}
+                />
+              </ContentContainer>
+             
+            
+                <div className="text-center">
+                  <img alt="Postmanaut on hoverboard. Illustration." className="img-fluid" src="https://voyager.postman.com/illustration/get-in-touch-postman-hoverboard-illustration.svg" />
+                </div>
+           
+            </div>
+            <div className="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-0 pl-lg-5">
+              {/* <FormV7 form={form} /> */}
+              <InputStyled>
+                  <form>
+                      <label>
+                        Name:
+                        <input type="text" name="name" />
+                      </label>
+                      <label>
+                        Email
+                        <input type="text" name="email" />
+                      </label>
+                      <br/>
+                      <label>
+                        How can Open Tech help you?<br/>
+                        <textarea rows="10" type="text" name="message" />
+                      </label>
+                      <input className='submit' type="submit" value="Submit" />
+                    </form>
+                </InputStyled>
+               <Paragraph className='small'>{formdata.legal}</Paragraph>
+              
+            </div>
+          </div>
+        </div>
+      </SectionStyles>
+      
          <Divider />
          <SideXSide {...data} />
         </div>
