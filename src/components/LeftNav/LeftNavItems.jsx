@@ -54,8 +54,8 @@ export const leftNavItems = [
   //   url: '/patterns/graphql/',
   //   subMenuItems1: [
   //     {
-  //       name: 'GraphQL',
-  //       url: '/patterns/graphql/',
+  //       name: 'REST',
+  //       url: '/patterns/rest/',
   //     },
   //   ],
   // },

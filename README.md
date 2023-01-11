@@ -7,6 +7,7 @@ The [Postman Open Technology Docs](https://learning.postman.com/open-technologie
 ## Tech stack
 
 The Docs are build with ReactJS, GatsbyJS Framework and styled components for styling.
+
 The primary header on top and the footer consume the header and footer API from Marketing Engineering.
 The secondary top navbar as well as the left and right navbars can be adjusted/edited.
 
