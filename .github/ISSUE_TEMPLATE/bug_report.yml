@@ -1,16 +1,16 @@
 name: Bug report
 description: Report typos, broken links, or other documentation errors
-title: 'Marketing Template Doc bug report'
+title: 'Open Technology Doc bug report'
 labels: ["bug"]
 assignees:
   - OlliesWorld
 body:
 - type: checkboxes
   attributes:
-    label: Is this an issue with the Marketing Template Doc documentation?
+    label: Is this an issue with the Open Technology Doc documentation?
     description: This isn't a general support repo. For app support issues, please open an issue at [Postman App Support issues](https://github.com/postmanlabs/postman-app-support/issues).
     options:
-    - label: This is an issue with Marketing Template Doc documentation.
+    - label: This is an issue with Open Technology Doc documentation.
       required: true
 - type: textarea
   attributes:

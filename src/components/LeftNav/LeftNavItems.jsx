@@ -28,8 +28,7 @@
 */
 
 
-export const leftNavItems = [
-  
+export const leftNavItems = [ 
   {
     name: 'Specifications',
     parentSlug: 'specifications',
@@ -38,14 +37,11 @@ export const leftNavItems = [
       {
         name: 'Collections',
         url: '/specifications/collections/',
-      },
-      
+      },     
       {
         name: 'OpenAPI',
-        url: '/specifications/openapi',
-      },
-      
-      
+        url: '/specifications/openapi/',
+      },     
     ],
   },
   {
@@ -57,25 +53,17 @@ export const leftNavItems = [
         name: 'GraphQL',
         url: '/patterns/graphql/',
       },
-      
-      {
-        name: 'OpenAPI',
-        url: '/specifications/openapi',
-      },
-      
-      
     ],
   },
   {
     name: 'Lifecycle',
     parentSlug: 'lifecycle',
-    slug: '/Lifecycle/gateways/',
+    url: '/lifecycle/gateways/',
     subMenuItems1: [
       {
         name: 'Gateways',
-        url: '/Lifecycle/gateways/',
+        url: '/lifecycle/gateways/',
       },
-      
     ],
   },
 ];
