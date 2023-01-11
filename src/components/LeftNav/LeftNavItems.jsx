@@ -40,7 +40,7 @@ export const leftNavItems = [
       },     
       {
         name: 'OpenAPI',
-        url: '/specifications/openapi',
+        url: '/specifications/openapi/',
       },     
     ],
   },

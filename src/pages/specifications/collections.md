@@ -45,6 +45,9 @@ contextual_links:
   - type: link
     name: "30 days of Postman for developers"
     url:  "https://www.postman.com/postman/workspace/30-days-of-postman-for-developers/overview"
+  - type: link
+    name: "Sending your first request"
+    url: "/docs/getting-started/sending-the-first-request/"
 ---
 
 Welcome to the Postman docs! This is the place to find official information on how to use Postman in your API projects.
