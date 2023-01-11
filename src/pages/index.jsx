@@ -14,7 +14,7 @@ import {CallOut, Feature, Divider, SideXSide, Paragraph,
   OrderedListStyles, TextSection } from 'aether-marketing';
 
 const HeroWrapper = styled.section`
-  background-color: ${(props) => props.theme.colors.grey_05};
+  /* background-color: ${(props) => props.theme.colors.grey_05}; */
   padding: 48px 80px;
     @media (max-width: 991px) {
         padding: 40px !important;
@@ -115,6 +115,11 @@ input.submit {
     }
   }
 `;
+const maincallout = {
+  "body": [
+    "<p class=\"subtitle\">Our purpose is in growing the knowledge and projects that define the next 50 years of the API economy, which is already today the underpinning for the global economy. We care about standards, tooling, specifications, data, organizations and the people who drive it.</p>"
+  ]
+}
 const callout = {
   title: "Collaborate with us",
 divider: true,
@@ -132,15 +137,17 @@ link: {
   as: "a",
 },
 };
+const projects = {
+  "title": "Some of the Open Source projects we love and support",
+}
 
 const tools  = {
   paddingTop: "",
   paddingBottom: "",
   divider: true,
   backgroundColor: "",
-  title: "API Tools and Implementations",
+  title: "Some of the Open Source projects we love and support",
   body: [
-    "Providing a catalog of the tools available to service every stop along the API life cycle, including a mix of platform, third-party, and open-source solutions for teams.",
   ],
   items: [
     {
@@ -149,7 +156,7 @@ const tools  = {
       subtitle: [],
       
       media: {
-        src: "/assets/open-tech/postman-gateway.png",
+        src: "../assets/open-tech/postman-gateway.png",
         alt: "Postman API Gateways. Illustration.",
       },
       "link": {
@@ -218,19 +225,6 @@ const tools  = {
         alt: "Postman HTTPBin. Illustration.",
       }
     },
-  ],
-};
-
-const specifications = {
-  paddingTop: "",
-  paddingBottom: "",
-  divider: true,
-  backgroundColor: "",
-  title: "API specifications",
-  body: [
-    "API specifications have evolved over the last decade to provide API providers and consumers with a machine readable way to descibe the surface area of the APIs being published and integrated with.",
-  ],
-  items: [
     {
       imageSize: "icon",
       title: "AsyncAPI",
@@ -313,6 +307,98 @@ const specifications = {
   ],
 };
 
+// const specifications = {
+//   paddingTop: "",
+//   paddingBottom: "",
+//   divider: true,
+//   backgroundColor: "",
+//   title: "API specifications",
+//   body: [
+    
+//   ],
+//   items: [
+//     {
+//       imageSize: "icon",
+//       title: "AsyncAPI",
+//       subtitle: [],
+      
+//       media: {
+//         src: "/assets/open-tech/postman-async-api.png",
+//         alt: "Postman AsyncAPI. Illustration.",
+//       }
+//     },
+//     {
+//       imageSize: "icon",
+//       title: "OpenAPI Initiative (OAI)",
+//       subtitle: [],
+      
+//       media: {
+//         src:"/assets/open-tech/postman-open-api.png",
+//         alt: "Postman OpenAPI Initiative. Illustration.",
+//       }
+//     },
+//     {
+//       imageSize: "icon",
+//       title: "GraphQL",
+//       subtitle: [],
+      
+//       media: {
+//         src:"/assets/open-tech/postman-graphql.png",
+//         alt: "Postman GraphQL. Illustration.",
+//       },
+//       link: {
+//         text: "Read the doc",
+//         src: "X",
+//         target: "",
+//       },
+//     },
+//     {
+//       imageSize: "icon",
+//       title: "gRPC",
+//       subtitle: [],
+      
+//       media: {
+//         src:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fgrpc.io%2Fimg%2Flogos%2Fgrpc-icon-color.png&f=1&nofb=1&ipt=295cbb615ec3d7629da68e94d6b83712030b68e87530c2e9fc8d2847c7a7e9f1&ipo=images",
+//         alt: "Postman gRPC. Illustration.",
+//       }
+//     },
+//     {
+//       imageSize: "icon",
+//       title: "Collection Format",
+//       subtitle: [],
+      
+//       media: {
+//         src:"https://voyager.postman.com/icon/engineering-styleguide-icon-postman.svg",
+//         alt: "Postman Collection Format. Illustration.",
+//       },"link": {
+//           "src": "https://github.com/postman-open-technologies/collections",
+//           "text": "Read the doc",
+//           "target": ""
+//         }
+//     },
+//     {
+//       imageSize: "icon",
+//       title: "JSON Schema",
+//       subtitle: [],
+      
+//       media: {
+//         src:"/assets/open-tech/postman-json-schema.png",
+//         alt: "Postman JSON Schema. Illustration.",
+//       }
+//     },
+//     {
+//       imageSize: "icon",
+//       title: "Spectral",
+//       subtitle: [],
+      
+//       media: {
+//         src:"/assets/open-tech/postman-log-checklist.png",
+//         alt: "Postman Spectral. Illustration.",
+//       }
+//     },
+//   ],
+// };
+
 const data = {
   
   "layout": "medium",
@@ -360,6 +446,7 @@ const formdata = {
   body:["Tell us more and a member of our team will contact you."],
   legal: "By clicking 'Become a partner' below, you agree to the processing of personal data you provide in accordance with Postman's Privacy Policy. Postman respects your privacy, and information collected on this site is for the sole purpose of matching you with appropriate studies."
 }
+
 class IndexPage extends React.Component {
   render() {
     return (
@@ -396,6 +483,9 @@ class IndexPage extends React.Component {
             </div>
           </HeroWrapper>
         </div>
+        <Divider />
+        <CallOut body={maincallout.body} divider="false" paddingBottomStyles="0px"/>
+        {/* <CallOut title={projects.title} paddingBottomStyles="0px"/> */}
         <div className="container">
         <Feature
         paddingTop={tools.paddingTop}
@@ -408,7 +498,7 @@ class IndexPage extends React.Component {
         items={tools.items}
         bodyLink={tools.bodyLink}
       />
-          <Feature
+          {/* <Feature
         paddingTop={specifications.paddingTop}
         paddingBottom={specifications.paddingBottom}
         divider={specifications.divider}
@@ -418,7 +508,7 @@ class IndexPage extends React.Component {
         backgroundColor={specifications.backgroundColor}
         items={specifications.items}
         bodyLink={specifications.bodyLink}
-      />
+      /> */}
        
           <CallOut title={callout.title} textAlign="left"
           body={callout.body} link={callout.link}
