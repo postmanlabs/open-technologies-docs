@@ -115,11 +115,6 @@ input.submit {
     }
   }
 `;
-const maincallout = {
-  "body": [
-    "<p class=\"subtitle\">Our purpose is in growing the knowledge and projects that define the next 50 years of the API economy, which is already today the underpinning for the global economy. We care about standards, tooling, specifications, data, organizations and the people who drive it.</p>"
-  ]
-}
 const callout = {
   title: "Collaborate with us",
 divider: true,
@@ -437,7 +432,6 @@ const formdata = {
   body:["Tell us more and a member of our team will contact you."],
   legal: "By clicking 'Become a partner' below, you agree to the processing of personal data you provide in accordance with Postman's Privacy Policy. Postman respects your privacy, and information collected on this site is for the sole purpose of matching you with appropriate studies."
 }
-
 class IndexPage extends React.Component {
   render() {
     return (
