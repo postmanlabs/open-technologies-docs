@@ -41,11 +41,11 @@ export const leftNavItems = [
       {
         name: 'OpenAPI',
         url: '/specifications/openapi/',
-      },     
+      },  
       {
         name: 'GraphQL',
-        url: '/patterns/graphql/',
-      },
+        url: '/specifications/graphql/',
+      },   
     ],
   },
   // {
