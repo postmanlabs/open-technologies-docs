@@ -156,7 +156,7 @@ const tools  = {
       subtitle: [],
       
       media: {
-        src: "../assets/open-tech/postman-gateway.png",
+        src: "https://design.postman.com/static/36ad7518568213dfeb773c881e58b2b6/gateway-icon-postman.svg",
         alt: "Postman API Gateways. Illustration.",
       },
       "link": {
@@ -272,11 +272,11 @@ const tools  = {
     },
     {
       imageSize: "icon",
-      title: "Collection Format",
+      title: "Collections",
       subtitle: [],
       
       media: {
-        src:"https://voyager.postman.com/icon/engineering-styleguide-icon-postman.svg",
+        src:"/assets/open-tech/postman-collections.svg",
         alt: "Postman Collection Format. Illustration.",
       },"link": {
           "src": "https://github.com/postman-open-technologies/collections",
@@ -483,8 +483,8 @@ class IndexPage extends React.Component {
             </div>
           </HeroWrapper>
         </div>
-        <Divider />
-        <CallOut body={maincallout.body} divider="false" paddingBottomStyles="0px"/>
+        <Divider fullWidth />
+        <CallOut body={maincallout.body} divider="false" paddingBottomStyles="0px" />
         {/* <CallOut title={projects.title} paddingBottomStyles="0px"/> */}
         <div className="container">
         <Feature
