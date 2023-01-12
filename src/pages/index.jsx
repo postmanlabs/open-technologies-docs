@@ -293,98 +293,6 @@ const tools  = {
   ],
 };
 
-// const specifications = {
-//   paddingTop: "",
-//   paddingBottom: "",
-//   divider: true,
-//   backgroundColor: "",
-//   title: "API specifications",
-//   body: [
-    
-//   ],
-//   items: [
-//     {
-//       imageSize: "icon",
-//       title: "AsyncAPI",
-//       subtitle: [],
-      
-//       media: {
-//         src: "/assets/open-tech/postman-async-api.png",
-//         alt: "Postman AsyncAPI. Illustration.",
-//       }
-//     },
-//     {
-//       imageSize: "icon",
-//       title: "OpenAPI Initiative (OAI)",
-//       subtitle: [],
-      
-//       media: {
-//         src:"/assets/open-tech/postman-open-api.png",
-//         alt: "Postman OpenAPI Initiative. Illustration.",
-//       }
-//     },
-//     {
-//       imageSize: "icon",
-//       title: "GraphQL",
-//       subtitle: [],
-      
-//       media: {
-//         src:"/assets/open-tech/postman-graphql.png",
-//         alt: "Postman GraphQL. Illustration.",
-//       },
-//       link: {
-//         text: "Read the doc",
-//         src: "X",
-//         target: "",
-//       },
-//     },
-//     {
-//       imageSize: "icon",
-//       title: "gRPC",
-//       subtitle: [],
-      
-//       media: {
-//         src:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fgrpc.io%2Fimg%2Flogos%2Fgrpc-icon-color.png&f=1&nofb=1&ipt=295cbb615ec3d7629da68e94d6b83712030b68e87530c2e9fc8d2847c7a7e9f1&ipo=images",
-//         alt: "Postman gRPC. Illustration.",
-//       }
-//     },
-//     {
-//       imageSize: "icon",
-//       title: "Collection Format",
-//       subtitle: [],
-      
-//       media: {
-//         src:"https://voyager.postman.com/icon/engineering-styleguide-icon-postman.svg",
-//         alt: "Postman Collection Format. Illustration.",
-//       },"link": {
-//           "src": "https://github.com/postman-open-technologies/collections",
-//           "text": "Read the doc",
-//           "target": ""
-//         }
-//     },
-//     {
-//       imageSize: "icon",
-//       title: "JSON Schema",
-//       subtitle: [],
-      
-//       media: {
-//         src:"/assets/open-tech/postman-json-schema.png",
-//         alt: "Postman JSON Schema. Illustration.",
-//       }
-//     },
-//     {
-//       imageSize: "icon",
-//       title: "Spectral",
-//       subtitle: [],
-      
-//       media: {
-//         src:"/assets/open-tech/postman-log-checklist.png",
-//         alt: "Postman Spectral. Illustration.",
-//       }
-//     },
-//   ],
-// };
-
 const data = {
   
   "layout": "medium",
@@ -470,39 +378,26 @@ class IndexPage extends React.Component {
         </div>
         <Divider fullWidth />
         <CallOut body={maincallout.body} divider="false" paddingBottomStyles="0px" />
-        {/* <CallOut title={projects.title} paddingBottomStyles="0px"/> */}
+    
         <div className="container">
-        <Feature
-        paddingTop={tools.paddingTop}
-        paddingBottom={tools.paddingBottom}
-        divider={tools.divider}
-        title={tools.title}
-        body={tools.body}
-        media={tools.media}
-        backgroundColor={tools.backgroundColor}
-        items={tools.items}
-        bodyLink={tools.bodyLink}
-      />
-          {/* <Feature
-        paddingTop={specifications.paddingTop}
-        paddingBottom={specifications.paddingBottom}
-        divider={specifications.divider}
-        title={specifications.title}
-        body={specifications.body}
-        media={specifications.media}
-        backgroundColor={specifications.backgroundColor}
-        items={specifications.items}
-        bodyLink={specifications.bodyLink}
-      /> */}
-       
+            <Feature
+            paddingTop={tools.paddingTop}
+            paddingBottom={tools.paddingBottom}
+            divider={tools.divider}
+            title={tools.title}
+            body={tools.body}
+            media={tools.media}
+            backgroundColor={tools.backgroundColor}
+            items={tools.items}
+            bodyLink={tools.bodyLink}
+          />
+          
           <CallOut title={callout.title} textAlign="left"
           body={callout.body} link={callout.link}
            />
           
          <h2 className='my-5'>Form is a mockup, does NOT work</h2>
-         <SectionStyles
-        
-      >
+      <SectionStyles >
         <div className="container">
           <div className="row">
          
@@ -518,8 +413,7 @@ class IndexPage extends React.Component {
                   body={formdata.body}
                 />
               </ContentContainer>
-             
-            
+  
                 <div className="text-center">
                   <img alt="Postmanaut on hoverboard. Illustration." className="img-fluid" src="https://voyager.postman.com/illustration/get-in-touch-postman-hoverboard-illustration.svg" />
                 </div>
@@ -545,8 +439,7 @@ class IndexPage extends React.Component {
                       <input className='submit' type="submit" value="Submit" />
                     </form>
                 </InputStyled>
-               <Paragraph className='small'>{formdata.legal}</Paragraph>
-              
+               <Paragraph className='small'>{formdata.legal}</Paragraph>             
             </div>
           </div>
         </div>
