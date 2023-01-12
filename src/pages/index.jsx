@@ -132,8 +132,11 @@ link: {
   as: "a",
 },
 };
-const projects = {
-  "title": "Some of the Open Source projects we love and support",
+
+const maincallout = {
+  "body": [
+    "<p class=\"subtitle\">Our purpose is in growing the knowledge and projects that define the next 50 years of the API economy, which is already today the underpinning for the global economy. We care about standards, tooling, specifications, data, organizations and the people who drive it.</p>"
+  ]
 }
 
 const tools  = {
