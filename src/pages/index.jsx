@@ -343,8 +343,13 @@ const formdata = {
   body:["Tell us more and a member of our team will contact you."],
   legal: "By clicking 'Become a partner' below, you agree to the processing of personal data you provide in accordance with Postman's Privacy Policy. Postman respects your privacy, and information collected on this site is for the sole purpose of matching you with appropriate studies."
 }
-class IndexPage extends React.Component {
-  render() {
+const IndexPage = ({data}) => {
+    console.log(data);
+    // Use this variable when referencing relative image paths
+    // It is equal to the appropriate prefix on build
+    // Example: src: `${assetPrefix}/path/to/image.jpg`;
+    const assetPrefix = data.site.siteMetadata.assetPrefix;
+    console.log(assetPrefix)
     return (
       <Layout>
         <SEO title="Open Technology" slug="/" />
@@ -453,7 +458,16 @@ class IndexPage extends React.Component {
         </div>
       </Layout>
     );
-  }
 }
 
 export default IndexPage;
+
+export const query = graphql`
+  query HomePageQuery {
+    site {
+      siteMetadata {
+        assetPrefix
+      }
+    }
+  }
+`
