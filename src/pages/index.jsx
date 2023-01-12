@@ -156,7 +156,7 @@ const tools  = {
       subtitle: [],
       
       media: {
-        src: "https://design.postman.com/static/36ad7518568213dfeb773c881e58b2b6/gateway-icon-postman.svg",
+        src: "https://voyager.postman.com/icon/api-gateways-icon-postman.svg",
         alt: "Postman API Gateways. Illustration.",
       },
       "link": {
@@ -171,7 +171,7 @@ const tools  = {
       subtitle: [],
       
       media: {
-        src:"/assets/open-tech/postman-open-api.png",
+        src:"https://voyager.postman.com/icon/open-api-icon-postman.svg",
         alt: "Postman OpenAPI Linter. Illustration.",
       }
     },
@@ -181,7 +181,7 @@ const tools  = {
       subtitle: [],
       
       media: {
-        src: "/assets/open-tech/postman-log-checklist.png",
+        src: "https://voyager.postman.com/icon/api-logging-checklist-icon-postman.svg",
         alt: "Postman Spectral. Illustration.",
       }
     },
@@ -191,7 +191,7 @@ const tools  = {
       subtitle: [],
       
       media: {
-        src:"/assets/open-tech/postman-extension.png",
+        src:"https://voyager.postman.com/icon/extension-folder-icon-postman.svg",
         alt: "Postman Collection Run Chrome Extension. Illustration.",
       }
     },
@@ -201,7 +201,7 @@ const tools  = {
       subtitle: [],
       
       media: {
-        src: "/assets/open-tech/postman-application-performance.svg",
+        src: "https://voyager.postman.com/icon/appplication-performance-icon-postman.svg",
         alt: "Postman Blast. Illustration.",
       }
     },
@@ -211,7 +211,7 @@ const tools  = {
       subtitle: [],
       
       media: {
-        src: "/assets/open-tech/postman-newman.png",
+        src: "https://voyager.postman.com/icon/newman-trace-icon-postman.svg",
         alt: "Postman Newman Trace. Illustration.",
       }
     },
@@ -221,7 +221,7 @@ const tools  = {
       subtitle: [],
       
       media: {
-        src: "/assets/open-tech/postman-http-request.png",
+        src: "https://voyager.postman.com/icon/http-request-icon-postman.svg",
         alt: "Postman HTTPBin. Illustration.",
       }
     },
@@ -231,8 +231,8 @@ const tools  = {
       subtitle: [],
       
       media: {
-        src: "/assets/open-tech/postman-async-api.png",
-        alt: "Postman AsyncAPI. Illustration.",
+        src: "https://voyager.postman.com/icon/async-api-icon-postman.svg",
+        alt: "Icon version of Async API logo.Illustration.",
       }
     },
     {
@@ -241,8 +241,8 @@ const tools  = {
       subtitle: [],
       
       media: {
-        src:"/assets/open-tech/postman-open-api.png",
-        alt: "Postman OpenAPI Initiative. Illustration.",
+        src:"https://voyager.postman.com/icon/open-api-icon-postman.svg",
+        alt: "Icon of Open API logo. Illustration.",
       }
     },
     {
@@ -251,7 +251,7 @@ const tools  = {
       subtitle: [],
       
       media: {
-        src:"/assets/open-tech/postman-graphql.png",
+        src:"https://voyager.postman.com/icon/graphql-icon-postman.svg",
         alt: "Postman GraphQL. Illustration.",
       },
       link: {
@@ -266,7 +266,7 @@ const tools  = {
       subtitle: [],
       
       media: {
-        src:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fgrpc.io%2Fimg%2Flogos%2Fgrpc-icon-color.png&f=1&nofb=1&ipt=295cbb615ec3d7629da68e94d6b83712030b68e87530c2e9fc8d2847c7a7e9f1&ipo=images",
+        src:"https://voyager.postman.com/logo/external/grpc-logo.svg",
         alt: "Postman gRPC. Illustration.",
       }
     },
@@ -276,8 +276,8 @@ const tools  = {
       subtitle: [],
       
       media: {
-        src:"/assets/open-tech/postman-collections.svg",
-        alt: "Postman Collection Format. Illustration.",
+        src:"https://voyager.postman.com/icon/collections-folder-icon-postman.svg",
+        alt: "Postman Collections. Illustration.",
       },"link": {
           "src": "https://github.com/postman-open-technologies/collections",
           "text": "Read the doc",
@@ -290,20 +290,11 @@ const tools  = {
       subtitle: [],
       
       media: {
-        src:"/assets/open-tech/postman-json-schema.png",
+        src:"https://voyager.postman.com/icon/json-schema-icon-postman.svg",
         alt: "Postman JSON Schema. Illustration.",
       }
     },
-    {
-      imageSize: "icon",
-      title: "Spectral",
-      subtitle: [],
-      
-      media: {
-        src:"/assets/open-tech/postman-log-checklist.png",
-        alt: "Postman Spectral. Illustration.",
-      }
-    },
+   
   ],
 };
 
