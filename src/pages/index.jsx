@@ -1,5 +1,5 @@
 import React from 'react';
-import { navigate } from 'gatsby';
+import { navigate, graphql } from 'gatsby';
 import styled from 'styled-components';
 import '../../styles/config/normalize.css';
 import Layout from '../components/layout';
@@ -115,236 +115,243 @@ input.submit {
     }
   }
 `;
-const callout = {
-  title: "Collaborate with us",
-divider: true,
-body: [
-  '<p class="subtitle">We welcome you to be a contributor to one of our 50 public GitHub repositories.</p>',
-],
-link: {
-  buttonType: "secondary",
-  text: "View our Github",
-  src: "https://github.com/postman-open-technologies",
-  target: "",
-  id: "",
-  gaCategory: "e",
-  gaLabel: "",
-  as: "a",
-},
-};
 
-const maincallout = {
-  "body": [
-    "<p class=\"subtitle\">Our purpose is in growing the knowledge and projects that define the next 50 years of the API economy, which is already today the underpinning for the global economy. We care about standards, tooling, specifications, data, organizations and the people who drive it.</p>"
-  ]
-}
+const IndexPage = ({data}) => {
+    console.log(data);
+    // Use this variable when referencing relative image paths
+    // It is equal to the appropriate prefix on build
+    // Example: src: `${assetPrefix}/path/to/image.jpg`;
+    const assetPrefix = data.site.siteMetadata.assetPrefix;
+    console.log(assetPrefix)
 
-const tools  = {
-  paddingTop: "",
-  paddingBottom: "",
-  divider: true,
-  backgroundColor: "",
-  title: "Some of the Open Source projects we love and support",
-  body: [
-  ],
-  items: [
-    {
-      imageSize: "icon",
-      title: "API Gateways",
-      subtitle: [],
-      
-      media: {
-        src: "https://voyager.postman.com/icon/api-gateways-icon-postman.svg",
-        alt: "Postman API Gateways. Illustration.",
-      },
-      "link": {
-        "src": "https://learning.postman.com/open-technologies/patterns/graphql",
-        "text": "Read the doc",
-        "target": ""
-      }
+    const callout = {
+      title: "Collaborate with us",
+    divider: true,
+    body: [
+      '<p class="subtitle">We welcome you to be a contributor to one of our 50 public GitHub repositories.</p>',
+    ],
+    link: {
+      buttonType: "secondary",
+      text: "View our Github",
+      src: "https://github.com/postman-open-technologies",
+      target: "",
+      id: "",
+      gaCategory: "e",
+      gaLabel: "",
+      as: "a",
     },
-    {
-      imageSize: "icon",
-      title: "OpenApi-Linter",
-      subtitle: [],
-      
-      media: {
-        src:"https://voyager.postman.com/icon/open-api-icon-postman.svg",
-        alt: "Postman OpenAPI Linter. Illustration.",
-      }
-    },
-    {
-      imageSize: "icon",
-      title: "Spectral",
-      subtitle: [],
-      
-      media: {
-        src: "https://voyager.postman.com/icon/api-logging-checklist-icon-postman.svg",
-        alt: "Postman Spectral. Illustration.",
-      }
-    },
-    {
-      imageSize: "icon",
-      title: "Collection Run Chrome Extension",
-      subtitle: [],
-      
-      media: {
-        src:"https://voyager.postman.com/icon/extension-folder-icon-postman.svg",
-        alt: "Postman Collection Run Chrome Extension. Illustration.",
-      }
-    },
-    {
-      imageSize: "icon",
-      title: "Blast",
-      subtitle: [],
-      
-      media: {
-        src: "https://voyager.postman.com/icon/appplication-performance-icon-postman.svg",
-        alt: "Postman Blast. Illustration.",
-      }
-    },
-    {
-      imageSize: "icon",
-      title: "Newman Trace",
-      subtitle: [],
-      
-      media: {
-        src: "https://voyager.postman.com/icon/newman-trace-icon-postman.svg",
-        alt: "Postman Newman Trace. Illustration.",
-      }
-    },
-    {
-      imageSize: "icon",
-      title: "HTTPBin",
-      subtitle: [],
-      
-      media: {
-        src: "https://voyager.postman.com/icon/http-request-icon-postman.svg",
-        alt: "Postman HTTPBin. Illustration.",
-      }
-    },
-    {
-      imageSize: "icon",
-      title: "AsyncAPI",
-      subtitle: [],
-      
-      media: {
-        src: "https://voyager.postman.com/icon/async-api-icon-postman.svg",
-        alt: "Icon version of Async API logo.Illustration.",
-      }
-    },
-    {
-      imageSize: "icon",
-      title: "OpenAPI Initiative (OAI)",
-      subtitle: [],
-      
-      media: {
-        src:"https://voyager.postman.com/icon/open-api-icon-postman.svg",
-        alt: "Icon of Open API logo. Illustration.",
-      }
-    },
-    {
-      imageSize: "icon",
-      title: "GraphQL",
-      subtitle: [],
-      
-      media: {
-        src:"https://voyager.postman.com/icon/graphql-icon-postman.svg",
-        alt: "Postman GraphQL. Illustration.",
-      },
-      link: {
-        text: "Read the doc",
-        src: "X",
-        target: "",
-      },
-    },
-    {
-      imageSize: "icon",
-      title: "gRPC",
-      subtitle: [],
-      
-      media: {
-        src:"https://voyager.postman.com/logo/external/grpc-logo.svg",
-        alt: "Postman gRPC. Illustration.",
-      }
-    },
-    {
-      imageSize: "icon",
-      title: "Collections",
-      subtitle: [],
-      
-      media: {
-        src:"https://voyager.postman.com/icon/collections-folder-icon-postman.svg",
-        alt: "Postman Collections. Illustration.",
-      },"link": {
-          "src": "https://github.com/postman-open-technologies/collections",
-          "text": "Read the doc",
-          "target": ""
-        }
-    },
-    {
-      imageSize: "icon",
-      title: "JSON Schema",
-      subtitle: [],
-      
-      media: {
-        src:"https://voyager.postman.com/icon/json-schema-icon-postman.svg",
-        alt: "Postman JSON Schema. Illustration.",
-      }
-    },
-   
-  ],
-};
-
-const data = {
-  
-  "layout": "medium",
-  "divider": false,
-  "left": "media",
-  "right": "text",
-  "paddingBottom": "",
-  "paddingTop": "",
-  "backgroundColor": "",
-  "textClassName": "",
-  "textContainer": "",
-  "headerTitle": "",
-  "headerBody": [""],
-  "SideXSideTextRight": true,
-  "textPaddingBottomRight": "0px",
-  "textPaddingTopRight": "0px", 
-  "textTitleRight": "Read the blog post: How We're Protecting Your Postman API Keys in GitHub",
-  "textSubtitleRight": "",
-  "textBodyRight": [
-    "<p>Developers contribute code to open source projects in GitHub every day; unfortunately, during this process sometimes security credentials are shared by accident. So Postman has implemented a new token-scanning service in GitHub that will send you a notification if you accidentally commit a Postman API key to a public repository. This gives you a chance to respond quickly before there's any unauthorized access your data.</p>"
-  ],
-  "linkRight": [
-    {
-      "type": "arrowLink",
-      "text": "Read the Blog Post",
-      "src": "https://blog.postman.com/how-were-protecting-your-postman-api-keys-in-github/",
-      "target": "same-tab",
-      "id": "read-blog-post",
-      "gaCategory": "open-philosophy-page",
-      "gaLabel": "read-blog-post"
+    };
+    
+    const maincallout = {
+      "body": [
+        "<p class=\"subtitle\">Our purpose is in growing the knowledge and projects that define the next 50 years of the API economy, which is already today the underpinning for the global economy. We care about standards, tooling, specifications, data, organizations and the people who drive it.</p>"
+      ]
     }
-  ],
-  "media": {
-    "src": "https://voyager.postman.com/illustration/postman-security-illustration.svg",
-    "alt": "Illustration of Postmanaut with lock. Illustration.",
-    "shadow": false
-  },
-  "videoRight": {},
-  "videoLeft": {},
-  "iconList": {},
-  "listTitle": ""
-}
-const formdata = {
-  title: "Need to talk to someone on the Open Technology team?" ,
-  body:["Tell us more and a member of our team will contact you."],
-  legal: "By clicking 'Become a partner' below, you agree to the processing of personal data you provide in accordance with Postman's Privacy Policy. Postman respects your privacy, and information collected on this site is for the sole purpose of matching you with appropriate studies."
-}
-class IndexPage extends React.Component {
-  render() {
+    
+    const tools  = {
+      paddingTop: "",
+      paddingBottom: "",
+      divider: true,
+      backgroundColor: "",
+      title: "Some of the Open Source projects we love and support",
+      body: [
+      ],
+      items: [
+        {
+          imageSize: "icon",
+          title: "API Gateways",
+          subtitle: [],
+          
+          media: {
+            src: "https://voyager.postman.com/icon/api-gateways-icon-postman.svg",
+            alt: "Postman API Gateways. Illustration.",
+          },
+          "link": {
+            "src": "https://learning.postman.com/open-technologies/patterns/graphql",
+            "text": "Read the doc",
+            "target": ""
+          }
+        },
+        {
+          imageSize: "icon",
+          title: "OpenApi-Linter",
+          subtitle: [],
+          
+          media: {
+            src:"https://voyager.postman.com/icon/open-api-icon-postman.svg",
+            alt: "Postman OpenAPI Linter. Illustration.",
+          }
+        },
+        {
+          imageSize: "icon",
+          title: "Spectral",
+          subtitle: [],
+          
+          media: {
+            src: "https://voyager.postman.com/icon/api-logging-checklist-icon-postman.svg",
+            alt: "Postman Spectral. Illustration.",
+          }
+        },
+        {
+          imageSize: "icon",
+          title: "Collection Run Chrome Extension",
+          subtitle: [],
+          
+          media: {
+            src:"https://voyager.postman.com/icon/extension-folder-icon-postman.svg",
+            alt: "Postman Collection Run Chrome Extension. Illustration.",
+          }
+        },
+        {
+          imageSize: "icon",
+          title: "Blast",
+          subtitle: [],
+          
+          media: {
+            src: "https://voyager.postman.com/icon/appplication-performance-icon-postman.svg",
+            alt: "Postman Blast. Illustration.",
+          }
+        },
+        {
+          imageSize: "icon",
+          title: "Newman Trace",
+          subtitle: [],
+          
+          media: {
+            src: "https://voyager.postman.com/icon/newman-trace-icon-postman.svg",
+            alt: "Postman Newman Trace. Illustration.",
+          }
+        },
+        {
+          imageSize: "icon",
+          title: "HTTPBin",
+          subtitle: [],
+          
+          media: {
+            src: "https://voyager.postman.com/icon/http-request-icon-postman.svg",
+            alt: "Postman HTTPBin. Illustration.",
+          }
+        },
+        {
+          imageSize: "icon",
+          title: "AsyncAPI",
+          subtitle: [],
+          
+          media: {
+            src: "https://voyager.postman.com/icon/async-api-icon-postman.svg",
+            alt: "Icon version of Async API logo.Illustration.",
+          }
+        },
+        {
+          imageSize: "icon",
+          title: "OpenAPI Initiative (OAI)",
+          subtitle: [],
+          
+          media: {
+            src:"https://voyager.postman.com/icon/open-api-icon-postman.svg",
+            alt: "Icon of Open API logo. Illustration.",
+          }
+        },
+        {
+          imageSize: "icon",
+          title: "GraphQL",
+          subtitle: [],
+          
+          media: {
+            src:"https://voyager.postman.com/icon/graphql-icon-postman.svg",
+            alt: "Postman GraphQL. Illustration.",
+          },
+          link: {
+            text: "Read the doc",
+            src: "X",
+            target: "",
+          },
+        },
+        {
+          imageSize: "icon",
+          title: "gRPC",
+          subtitle: [],
+          
+          media: {
+            src:"https://voyager.postman.com/logo/external/grpc-logo.svg",
+            alt: "Postman gRPC. Illustration.",
+          }
+        },
+        {
+          imageSize: "icon",
+          title: "Collections",
+          subtitle: [],
+          
+          media: {
+            src:"https://voyager.postman.com/icon/collections-folder-icon-postman.svg",
+            alt: "Postman Collections. Illustration.",
+          },"link": {
+              "src": "https://github.com/postman-open-technologies/collections",
+              "text": "Read the doc",
+              "target": ""
+            }
+        },
+        {
+          imageSize: "icon",
+          title: "JSON Schema",
+          subtitle: [],
+          
+          media: {
+            src:"https://voyager.postman.com/icon/json-schema-icon-postman.svg",
+            alt: "Postman JSON Schema. Illustration.",
+          }
+        },
+       
+      ],
+    };
+    
+    const sidexsideData = {
+      
+      "layout": "medium",
+      "divider": false,
+      "left": "media",
+      "right": "text",
+      "paddingBottom": "",
+      "paddingTop": "",
+      "backgroundColor": "",
+      "textClassName": "",
+      "textContainer": "",
+      "headerTitle": "",
+      "headerBody": [""],
+      "SideXSideTextRight": true,
+      "textPaddingBottomRight": "0px",
+      "textPaddingTopRight": "0px", 
+      "textTitleRight": "Read the blog post: How We're Protecting Your Postman API Keys in GitHub",
+      "textSubtitleRight": "",
+      "textBodyRight": [
+        "<p>Developers contribute code to open source projects in GitHub every day; unfortunately, during this process sometimes security credentials are shared by accident. So Postman has implemented a new token-scanning service in GitHub that will send you a notification if you accidentally commit a Postman API key to a public repository. This gives you a chance to respond quickly before there's any unauthorized access your data.</p>"
+      ],
+      "linkRight": [
+        {
+          "type": "arrowLink",
+          "text": "Read the Blog Post",
+          "src": "https://blog.postman.com/how-were-protecting-your-postman-api-keys-in-github/",
+          "target": "same-tab",
+          "id": "read-blog-post",
+          "gaCategory": "open-philosophy-page",
+          "gaLabel": "read-blog-post"
+        }
+      ],
+      "media": {
+        "src": "https://voyager.postman.com/illustration/postman-security-illustration.svg",
+        "alt": "Illustration of Postmanaut with lock. Illustration.",
+        "shadow": false
+      },
+      "videoRight": {},
+      "videoLeft": {},
+      "iconList": {},
+      "listTitle": ""
+    }
+    const formdata = {
+      title: "Need to talk to someone on the Open Technology team?" ,
+      body:["Tell us more and a member of our team will contact you."],
+      legal: "By clicking 'Become a partner' below, you agree to the processing of personal data you provide in accordance with Postman's Privacy Policy. Postman respects your privacy, and information collected on this site is for the sole purpose of matching you with appropriate studies."
+    }
     return (
       <Layout>
         <SEO title="Open Technology" slug="/" />
@@ -449,11 +456,20 @@ class IndexPage extends React.Component {
       </SectionStyles>
       
          <Divider />
-         <SideXSide {...data} />
+         <SideXSide {...sidexsideData} />
         </div>
       </Layout>
     );
-  }
 }
 
 export default IndexPage;
+
+export const query = graphql`
+  query HomePageQuery {
+    site {
+      siteMetadata {
+        assetPrefix
+      }
+    }
+  }
+`
