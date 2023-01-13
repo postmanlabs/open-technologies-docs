@@ -1,5 +1,5 @@
 import React from 'react';
-import { navigate } from 'gatsby';
+import { navigate, graphql } from 'gatsby';
 import styled from 'styled-components';
 import '../../styles/config/normalize.css';
 import Layout from '../components/layout';
