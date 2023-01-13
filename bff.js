@@ -89,7 +89,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       && `
 ${pmTech}
 setTimeout(function(){
-  var propertyName = 'postman-docs';
+  var propertyName = 'open-technologies-docs';
   if (typeof window.pm.scalp !== 'function') {
     window.pm.setScalp({
       property: propertyName
