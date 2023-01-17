@@ -238,7 +238,7 @@ const IndexPage = ({data}) => {
           subtitle: [],
           
           media: {
-            src:"https://voyager.postman.com/logo/external/grpc-logo.svg",
+            src:"https://voyager.postman.com/icon/grpc-icon-postman.svg",
             alt: "Postman gRPC. Illustration.",
           }
         },
