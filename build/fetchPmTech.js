@@ -24,7 +24,7 @@ const fetchPmTech = () => new Promise((resolve) => {
   fetch(host, requestOptions).then((resp) => {
     if (resp) {
       resp.json().then((data) => {
-        const tag = data['postman-docs'];
+        const tag = data['open-technologies-docs'];
         const script = base64.decode(data.version[tag]);
         compress(script).then((compressed) => {
           sh.exec('mkdir -p bff-data');
