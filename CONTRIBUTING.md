@@ -1,6 +1,6 @@
 # Contributing
 
-When contributing to this repository, please first discuss the change you wish to make at [Issues](https://github.com/postmanlabs/postman-docs/issues).
+When contributing to this repository, please first discuss the change you wish to make at [Issues](https://github.com/postmanlabs/open-tech/issues).
 
 We have a [code of conduct](https://www.postman.com/code-of-conduct) that you're expected to follow in all your interactions with the project.
 
@@ -20,7 +20,7 @@ If you run into issues when running the Learning Center locally, try the followi
 1. Enter `rm -rf node_modules; npm i` to remove all existing packages and perform a fresh install.
 1. Enter `gatsby clean` to clear the cache.
 
-If you still have issues running the Learning Center locally, feel free to [open an issue](https://github.com/postmanlabs/postman-docs/issues).
+If you still have issues running the Learning Center locally, feel free to [open an issue](https://github.com/postmanlabs/open-tech/issues).
 
 ### Workflow
 
@@ -29,7 +29,7 @@ We follow [Git Flow](https://guides.github.com/introduction/flow/) for changes t
 1. Fork this repo to create a copy hosted on your GitHub account. The Fork button is in the top right of the page.
     * If you're a collaborator on the repo you can instead create a branch.
 1. Clone down your copy of this repo onto your local machine: `git clone <YOUR GITHUB REPO URL>`
-1. Navigate to the new directory git created: `cd postman-docs`
+1. Navigate to the new directory git created: `cd open-tech`
 1. Check out the `develop` branch: `git checkout develop`
 1. Run `npm install` to add all dependencies.
 1. Create a new branch for your work based on develop: `git checkout -b <YOUR BRANCH NAME>` Your branch name should be something descriptive of the changes you wish to make, and can include the issue number this change is associated with. Example: `feature/1234-update-mock-api-docs`
@@ -39,11 +39,11 @@ We follow [Git Flow](https://guides.github.com/introduction/flow/) for changes t
     * `git add <FILENAMES OF CHANGED FILES>`
     * `git commit -m "<YOUR COMMIT MESSAGE>"` Your commit message should be descriptive of the changes you made.
     * `git push -u origin HEAD` This will push your changes to the branch you created on your forked repo.
-1. Open a Pull Request to the `postman-docs` repo:
-    * Navigate to the [postman-docs](https://github.com/postmanlabs/postman-docs) repo
+1. Open a Pull Request to the `open-tech` repo:
+    * Navigate to the [open-tech](https://github.com/postmanlabs/open-tech) repo
     * Select `New pull request`
     * Select `Compare across forks`
-    * Select `base repository: postmanlabs/postman-docs`
+    * Select `base repository: postmanlabs/open-tech`
     * Select `base branch: develop`
     * Select `head repository: <YOUR FORKED REPOSITORY>`
     * Select `head branch: <YOUR BRANCH NAME>`
@@ -95,7 +95,7 @@ If you would like to add, edit, or replace images you are welcome to do so. Ther
 Images hosted by Postman should always be referenced as follows:
 
 ``` bash
-https://assets.postman.com/postman-docs/<filename>.png
+https://assets.postman.com/open-tech/<filename>.png
 ```
 
 ## Adding and editing code blocks
@@ -247,7 +247,7 @@ To use Vale, you must install it. Then you can run Vale to check your work for s
     brew install vale
     ```
 
-1. Download the third-party styles. Run this in the root of your `postman-docs` repo:
+1. Download the third-party styles. Run this in the root of your `open-tech` repo:
 
     ```
     build/pm-get-vale-styles

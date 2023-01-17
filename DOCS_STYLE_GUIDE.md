@@ -1,6 +1,6 @@
 # Documentation style guide
 
-Thanks for your interest in contributing to the Postman docs! :rocket::book::trophy:
+Thanks for your interest in contributing to the Postman Open Tech docs! :rocket::book::trophy:
 
 Check out the [contributing](CONTRIBUTING.md) guide for a step-by-step overview of making your contribution. Read on for tips on what types of language to use in your edits and additions.
 
@@ -15,7 +15,7 @@ Check out the [contributing](CONTRIBUTING.md) guide for a step-by-step overview 
 * [Links](#links)
 * [Publish!](#publish)
 
-_This style guide is a work in progress, and we'll be continuing to iterate on it. Create an [issue](https://github.com/postmanlabs/postman-docs/issues) if you'd like to provide feedback!_
+_This style guide is a work in progress, and we'll be continuing to iterate on it. Create an [issue](https://github.com/postmanlabs/open-tech/issues) if you'd like to provide feedback!_
 
 ## Audience
 
