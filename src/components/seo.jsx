@@ -48,11 +48,11 @@
          },
          {
            property: 'og:title',
-           content: `${title} | Postman Learning Center`,
+           content: `${title} | Postman Open Tech`,
          },
          {
            property: 'og:site_name',
-           content: 'Postman Learning Center',
+           content: 'Postman Open Tech',
          },
          {
           property: 'article:publisher',
@@ -80,11 +80,11 @@
          },
          {
            name: 'twitter:title',
-           content: `${title} | Postman Learning Center`,
+           content: `${title} | Postman Open Tech`,
          },
          {
            property: 'twitter:description',
-           content: `${title}: documentation for Postman, the collaboration platform for API development. Create better APIs—faster.`,
+           content: `${title}: documentation for Postman Open Tech, the collaboration platform for API development. Create better APIs—faster.`,
          },
          {
            property: 'twitter:domain',

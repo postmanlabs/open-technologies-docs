@@ -104,10 +104,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/postmanlabs/postman-docs.git"
+    "url": "git+https://github.com/postmanlabs/open-technologies-docs.git"
   },
   "bugs": {
-    "url": "https://github.com/postmanlabs/postman-docs/issues"
+    "url": "https://github.com/postmanlabs/open-technologies-docs/issues"
   },
   "engines": {
     "node": "14.17.1"
@@ -117,7 +117,7 @@
       "*"
     ]
   },
-  "homepage": "https://github.com/postmanlabs/postman-docs#readme",
+  "homepage": "https://github.com/postmanlabs/open-technologies-docs#readme",
   "main": ".eslintrc.js",
   "author": ""
 }

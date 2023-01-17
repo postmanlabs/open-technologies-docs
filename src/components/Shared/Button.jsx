@@ -28,10 +28,10 @@ const Button = styled.button`
 
     &:disabled,
     &.isDisabled {
-    color: #EDEDED;
+    color: ${theme.colors.grey_20};
     cursor: not-allowed;
     background-image: none !important;
-    background: #EDEDED;
+    background: ${theme.colors.grey_20};
     border-color: transparent;
     }
 

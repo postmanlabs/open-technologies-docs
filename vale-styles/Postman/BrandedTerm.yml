@@ -22,7 +22,7 @@ swap:
   Postman interceptor: Postman Interceptor
   '(?:Postman bridge|interceptor bridge)': Interceptor Bridge
   Postman console: Postman Console
-  '(?:learning center|Learning center)': Postman Learning Center
+  '(?:Open Tech|Open Tech)': Postman Open Tech
   Postman dashboard: Postman Dashboard
   '(?:Postman visualizer|visualizer)': Postman Visualizer
   Postman API network: Postman API Network

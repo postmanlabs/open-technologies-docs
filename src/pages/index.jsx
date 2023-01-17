@@ -174,32 +174,12 @@ const IndexPage = ({data}) => {
         },
         {
           imageSize: "icon",
-          title: "OpenApi-Linter",
+          title: "AsyncAPI",
           subtitle: [],
           
           media: {
-            src:"https://voyager.postman.com/icon/open-api-icon-postman.svg",
-            alt: "Postman OpenAPI Linter. Illustration.",
-          }
-        },
-        {
-          imageSize: "icon",
-          title: "Spectral",
-          subtitle: [],
-          
-          media: {
-            src: "https://voyager.postman.com/icon/api-logging-checklist-icon-postman.svg",
-            alt: "Postman Spectral. Illustration.",
-          }
-        },
-        {
-          imageSize: "icon",
-          title: "Collection Run Chrome Extension",
-          subtitle: [],
-          
-          media: {
-            src:"https://voyager.postman.com/icon/extension-folder-icon-postman.svg",
-            alt: "Postman Collection Run Chrome Extension. Illustration.",
+            src: "https://voyager.postman.com/icon/async-api-icon-postman.svg",
+            alt: "Icon version of Async API logo.Illustration.",
           }
         },
         {
@@ -212,44 +192,29 @@ const IndexPage = ({data}) => {
             alt: "Postman Blast. Illustration.",
           }
         },
+        
         {
           imageSize: "icon",
-          title: "Newman Trace",
+          title: "Collections",
           subtitle: [],
           
           media: {
-            src: "https://voyager.postman.com/icon/newman-trace-icon-postman.svg",
-            alt: "Postman Newman Trace. Illustration.",
-          }
+            src:"https://voyager.postman.com/icon/collections-folder-icon-postman.svg",
+            alt: "Postman Collections. Illustration.",
+          },"link": {
+              "src": "https://github.com/postman-open-technologies/collections",
+              "text": "Read the doc",
+              "target": ""
+            }
         },
         {
           imageSize: "icon",
-          title: "HTTPBin",
+          title: "Collection Run Chrome Extension",
           subtitle: [],
           
           media: {
-            src: "https://voyager.postman.com/icon/http-request-icon-postman.svg",
-            alt: "Postman HTTPBin. Illustration.",
-          }
-        },
-        {
-          imageSize: "icon",
-          title: "AsyncAPI",
-          subtitle: [],
-          
-          media: {
-            src: "https://voyager.postman.com/icon/async-api-icon-postman.svg",
-            alt: "Icon version of Async API logo.Illustration.",
-          }
-        },
-        {
-          imageSize: "icon",
-          title: "OpenAPI Initiative (OAI)",
-          subtitle: [],
-          
-          media: {
-            src:"https://voyager.postman.com/icon/open-api-icon-postman.svg",
-            alt: "Icon of Open API logo. Illustration.",
+            src:"https://voyager.postman.com/icon/extension-folder-icon-postman.svg",
+            alt: "Postman Collection Run Chrome Extension. Illustration.",
           }
         },
         {
@@ -279,17 +244,13 @@ const IndexPage = ({data}) => {
         },
         {
           imageSize: "icon",
-          title: "Collections",
+          title: "HTTPBin",
           subtitle: [],
           
           media: {
-            src:"https://voyager.postman.com/icon/collections-folder-icon-postman.svg",
-            alt: "Postman Collections. Illustration.",
-          },"link": {
-              "src": "https://github.com/postman-open-technologies/collections",
-              "text": "Read the doc",
-              "target": ""
-            }
+            src: "https://voyager.postman.com/icon/http-request-icon-postman.svg",
+            alt: "Postman HTTPBin. Illustration.",
+          }
         },
         {
           imageSize: "icon",
@@ -301,7 +262,47 @@ const IndexPage = ({data}) => {
             alt: "Postman JSON Schema. Illustration.",
           }
         },
-       
+        {
+          imageSize: "icon",
+          title: "Newman Trace",
+          subtitle: [],
+          
+          media: {
+            src: "https://voyager.postman.com/icon/newman-trace-icon-postman.svg",
+            alt: "Postman Newman Trace. Illustration.",
+          }
+        },
+        
+        {
+          imageSize: "icon",
+          title: "OpenAPI Initiative (OAI)",
+          subtitle: [],
+          
+          media: {
+            src:"https://voyager.postman.com/icon/open-api-icon-postman.svg",
+            alt: "Icon of Open API logo. Illustration.",
+          }
+        },
+        {
+          imageSize: "icon",
+          title: "OpenApi-Linter",
+          subtitle: [],
+          
+          media: {
+            src:"https://voyager.postman.com/icon/open-api-icon-postman.svg",
+            alt: "Postman OpenAPI Linter. Illustration.",
+          }
+        },
+        {
+          imageSize: "icon",
+          title: "Spectral",
+          subtitle: [],
+          
+          media: {
+            src: "https://voyager.postman.com/icon/api-logging-checklist-icon-postman.svg",
+            alt: "Postman Spectral. Illustration.",
+          }
+        }       
       ],
     };
     
@@ -362,7 +363,7 @@ const IndexPage = ({data}) => {
                 <div className="col-sm-12 col-md-5 col-lg-6 align-self-center">
                   <h1>Postman Open Technology</h1>
                   <p className="subtitle">
-                  Open Tech is Postman's central instance for Open Source, whether it is using, contributing or creating Open Source software, specifications, libraries or other components, that the API industry relies on today or tomorrow. It consists of three operative pillars: Open Strategy, the Program Office and Developer Relations.
+                  Open Tech is Postman's central instance for Open Source&mdash;using, contributing to, and creating Open Source software, specifications, libraries, and other components that the API industry relies on both today and tomorrow.
                   </p>
                   <Button
                     onClick={() => {

@@ -1,6 +1,6 @@
 # Contributing
 
-When contributing to this repository, please first discuss the change you wish to make at [Issues](https://github.com/postmanlabs/postman-docs/issues).
+When contributing to this repository, please first discuss the change you wish to make at [Issues](https://github.com/postmanlabs/open-tech/issues).
 
 We have a [code of conduct](https://www.postman.com/code-of-conduct) that you're expected to follow in all your interactions with the project.
 
@@ -14,13 +14,13 @@ This site is built with Node.js v14.17.1. We recommend installing and using [nvm
 
 ### Troubleshooting local development
 
-If you run into issues when running the Learning Center locally, try the following:
+If you run into issues when running the Open Tech locally, try the following:
 
 1. Check the Node.js version (`node -v`) to ensure you are using `v14.17.1`. If not, enter `nvm use v14.17.1`.
 1. Enter `rm -rf node_modules; npm i` to remove all existing packages and perform a fresh install.
 1. Enter `gatsby clean` to clear the cache.
 
-If you still have issues running the Learning Center locally, feel free to [open an issue](https://github.com/postmanlabs/postman-docs/issues).
+If you still have issues running the Open Tech locally, feel free to [open an issue](https://github.com/postmanlabs/open-tech/issues).
 
 ### Workflow
 
@@ -29,21 +29,21 @@ We follow [Git Flow](https://guides.github.com/introduction/flow/) for changes t
 1. Fork this repo to create a copy hosted on your GitHub account. The Fork button is in the top right of the page.
     * If you're a collaborator on the repo you can instead create a branch.
 1. Clone down your copy of this repo onto your local machine: `git clone <YOUR GITHUB REPO URL>`
-1. Navigate to the new directory git created: `cd postman-docs`
+1. Navigate to the new directory git created: `cd open-tech`
 1. Check out the `develop` branch: `git checkout develop`
 1. Run `npm install` to add all dependencies.
 1. Create a new branch for your work based on develop: `git checkout -b <YOUR BRANCH NAME>` Your branch name should be something descriptive of the changes you wish to make, and can include the issue number this change is associated with. Example: `feature/1234-update-mock-api-docs`
-1. Make your changes. The Learning Center's documentation is built from the `.md` files in the `/src/pages/docs` folder of the repo.
+1. Make your changes. The  Open Tech's documentation is built from the `.md` files in the `/src/pages/docs` folder of the repo.
 1. Check your files are valid markdown by running `npm run test:mdlint` and resolve any errors.
 1. When you're ready to apply your changes, push your changed files to your forked repo:
     * `git add <FILENAMES OF CHANGED FILES>`
     * `git commit -m "<YOUR COMMIT MESSAGE>"` Your commit message should be descriptive of the changes you made.
     * `git push -u origin HEAD` This will push your changes to the branch you created on your forked repo.
-1. Open a Pull Request to the `postman-docs` repo:
-    * Navigate to the [postman-docs](https://github.com/postmanlabs/postman-docs) repo
+1. Open a Pull Request to the `open-tech` repo:
+    * Navigate to the [open-tech](https://github.com/postmanlabs/open-tech) repo
     * Select `New pull request`
     * Select `Compare across forks`
-    * Select `base repository: postmanlabs/postman-docs`
+    * Select `base repository: postmanlabs/open-tech`
     * Select `base branch: develop`
     * Select `head repository: <YOUR FORKED REPOSITORY>`
     * Select `head branch: <YOUR BRANCH NAME>`
@@ -57,7 +57,7 @@ When your PR is opened it will run GitHub Actions which will lint the markdown f
 
 Upon approval your PR will be merged into develop for further verification and then merged into production upon final approval. Please delete your branch once it's been merged to develop to help keep a clean repository.
 
-[homepage]: https://learning.postman.com
+[homepage]: https://learning.postman.com/open-tech
 
 > __Staff and Repo Collaborators__: Please only push to `develop` when changes are ready to publish. The `develop` branch is intended only as a last check to see edits live on the web in a production type build environment before publishing—changes shouldn't sit on the `develop` branch for long before pushing to `master`.
 
@@ -67,7 +67,7 @@ If you would like to add, edit, or replace links you are welcome to do so. There
 
 ### Internal links to docs
 
-When creating or editing an internal link (a link that points to a Learning Center doc), be sure to:
+When creating or editing an internal link (a link that points to a Open Tech doc), be sure to:
 
 * use a relative URL. Example: `/docs/collaborating-in-postman/working-with-your-team/collaboration-overview/`
 * use a trailing slash to keep our app from creating unnecessary 302 redirects. (See example of trailing slash above.)
@@ -76,12 +76,12 @@ When creating or editing an internal link (a link that points to a Learning Cent
 
 ### External links
 
-When creating or editing an external link (a link that points to sources outside of Learning Center), be sure to:
+When creating or editing an external link (a link that points to sources outside of  Open Tech), be sure to:
 
 * Use an absolute URL. Example: `https://www.postman.com`
 * Use the resolved URL. Don't use abbreviated URLs (postman.com) or URLs that redirect (`http://www.postman.com`). **Tip:** Enter the URL into the browser and let it resolve, and copy the entire URL and use that.
 * Strip off any UTM parameters or unnecessary query strings or tracking at the end of URLs. Example: `?utm_source=blog&utm_medium=internal&utm_campaign=exampleCampaign`
-* As a best practice for accessibility, add titles to external links to help the visitor understand the purpose of the link and why they will be taken away from the Learning Center. Example: `[Postman API Platform](https://www.postman.com/api-platform/  "Visit the Postman website to learn more about the Postman API Platform")`
+* As a best practice for accessibility, add titles to external links to help the visitor understand the purpose of the link and why they will be taken away from the Open Tech. Example: `[Postman API Platform](https://www.postman.com/api-platform/  "Visit the Postman website to learn more about the Postman API Platform")`
 
 ## Adding and editing images
 
@@ -95,7 +95,7 @@ If you would like to add, edit, or replace images you are welcome to do so. Ther
 Images hosted by Postman should always be referenced as follows:
 
 ``` bash
-https://assets.postman.com/postman-docs/<filename>.png
+https://assets.postman.com/open-tech/<filename>.png
 ```
 
 ## Adding and editing code blocks
@@ -142,7 +142,7 @@ Two example docs using `dynamic_blog`:
 
 #### For internal Postman contributors
 
-You need to get the `.env.development` file from Marketing Engineering, and place in root of local Learning Center (`.gitignore` will keep it from getting checked in).
+You need to get the `.env.development` file from Marketing Engineering, and place in root of local Open Tech(`.gitignore` will keep it from getting checked in).
 
 * If you don't have this file or are an external contributor, the app will still build, but the Recent Blogs section in right sidebar will be hidden / blank (this is expected behavior).
 * The `.env.development` file is for internal use only.
@@ -247,7 +247,7 @@ To use Vale, you must install it. Then you can run Vale to check your work for s
     brew install vale
     ```
 
-1. Download the third-party styles. Run this in the root of your `postman-docs` repo:
+1. Download the third-party styles. Run this in the root of your `open-tech` repo:
 
     ```
     build/pm-get-vale-styles
