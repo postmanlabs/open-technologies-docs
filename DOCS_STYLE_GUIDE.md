@@ -29,7 +29,7 @@ Postman learners speak lots of different languages, but our docs are only availa
 
 ## Language style
 
-The documentation in the [Postman Learning Center](https://learning.postman.com/docs) is intended to help people learn how to use Postman, so use practical instructional language wherever possible. Be specific, and "__show, don't tell__."
+The documentation in the [Postman Open Tech](https://learning.postman.com/open-tech) is intended to help people learn how to use Postman, so use practical instructional language wherever possible. Be specific, and "__show, don't tell__."
 
 ---
 

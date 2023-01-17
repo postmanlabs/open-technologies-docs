@@ -64,7 +64,7 @@ button, input, optgroup, select, textarea {
     }
   }
   
-   /* Used for Learning Center Nav */
+   /* Used for Open Tech Nav */
    body.menu-open:after {
     content: '';
     display: block;

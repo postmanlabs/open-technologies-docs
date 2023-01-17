@@ -84,7 +84,7 @@ class BreadCrumbsLinksComponent extends React.Component {
       <BreadCrumbStyles className=" mb-3" aria-label="breadcrumbs">
         <ol className="lc-breadcrumbs">
           <li>
-            <Link to="/" className="small breadcrumb-home-link" title="Learning Center">Home</Link>
+            <Link to="/" className="small breadcrumb-home-link" title="Open Tech">Home</Link>
             <span className="small" aria-hidden="true"> / </span>
           </li>
           {JSON.stringify(subParentLink) !== '{}' ? (

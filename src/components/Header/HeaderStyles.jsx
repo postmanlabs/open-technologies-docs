@@ -85,7 +85,7 @@ export const NavStyles = styled.nav`
        position: relative;
      }
    }
-   /* Second Nav - Learning Center Link */
+   /* Second Nav - Open Tech Link */
    & #learning-center-home-link {
      color: ${(props) => props.theme.colors.grey_90} !important;
      font-weight: 600;
@@ -124,7 +124,7 @@ export const NavStyles = styled.nav`
      &:active {
        font-weight: 600;
        padding: 6px 6px 6px 16px;
-       /* Learning Center Nav Positioning */
+       /* Open Tech Nav Positioning */
        &.uber-nav {
          padding: 6px 16px;
          @media screen and (max-width: 992px) {
@@ -277,7 +277,7 @@ export const NavStyles = styled.nav`
      }
    }
  
-   /* Learning Center Link */
+   /* Open Tech Link */
    & .property-context-menu {
      & .nav-link:link,
      .nav-link:active {
