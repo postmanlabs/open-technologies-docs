@@ -51,16 +51,15 @@ class EditDocComponent extends Component {
   render() {
     const { pathRoute } = this.state;
 
-    
-
     return (
       <BaseButton 
         buttonType="secondary"
         as="a"
         id="GTM-LC-id" 
-        href={`https://github.com/postmanlabs/open-technologies-docs/blob/master/src/pages${pathRoute}.md`} 
+        src={`https://github.com/postmanlabs/open-technologies-docs/blob/master/src/pages${pathRoute}.md`} 
         target="new-tab-external-nofollow"
         >
+          {console.log(BaseButton.href)}
         <SvgWrapper >
           <svg className="button-icon--left" transform="translate(0, -1)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <title>logo-github</title>
