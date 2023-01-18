@@ -8,14 +8,14 @@ import EditDoc from '../components/Shared/EditDoc';
 import { leftNavItems } from '../components/LeftNav/LeftNavItems';
 import LeftNav from '../components/LeftNav/LeftNav';
 import SEO from '../components/seo';
-const { v4: uuidv4 } = require('uuid');
+import { v4 as uuidv4 } from "uuid";
 import styled from 'styled-components';
 import 'prismjs/themes/prism-tomorrow.css';
 import { useModal } from '../components/modules/Modal';
 import PreviousAndNextLinks from '../components/modules/PreviousAndNextLinks';
 import BreadCrumbsLinks from '../components/modules/BreadCrumbsLinks';
 import LoadQualtrics from '../components/modules/loadQualtrics';
-import { BaseLinkStyles, BaseLink } from 'aether-marketing';
+import { BaseLinkStyles} from 'aether-marketing';
 
 const DocWrapper = styled.div`
   /* Used for Deeplinking */   
@@ -294,7 +294,7 @@ const DocPage = ({ data }) => {
     const { data } = props;
     const doc = data.markdownRemark;
     return (
-      doc.frontmatter.contextual_links && <ContextualLinks key={uuidv4()} links={doc.frontmatter.contextual_links} />
+      doc.frontmatter.contextual_links && <ContextualLinks key={uuidv4()}  links={doc.frontmatter.contextual_links} />
     )
   }
   // updates HTML to enable clickable images to display modal
@@ -354,14 +354,7 @@ const DocPage = ({ data }) => {
                       <br></br>
                        help with providing a safe space to grow and flourish.
                     </p>
-                    {/* <BaseLink 
-                      className="sticky"
-                      href="https://www.postman.com/newsletter-signup/"
-                      target="same-tab"
-                      linkType="arrowLink"
-                      >
-                        Sign up
-                    </BaseLink> */}
+                  
                   </div>
                   <figure className="postmanaut-dab mt-1">
                     <img src="https://voyager.postman.com/illustration/postmanaut-posing-dancing-postman-illustration.svg" alt="Posmanaut dancing. Illustration." className="img-fluid" />
@@ -387,7 +380,7 @@ export const query = graphql`
           type
           name
           url
-          # blog_tag
+          blog_tag
         }
       }
       fields {

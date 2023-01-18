@@ -4,7 +4,8 @@ import { trackCustomEvent } from 'gatsby-plugin-google-analytics';
 import $ from 'jquery';
 import {PrimaryNavbarV6, SecondaryNavbarV6, NavStyles, DropdownStyles, CTAButton} from './HeaderStyles.jsx' ; 
 import navbarData from '../../../bff-data/navbar.json';
-
+// For local TOPNAVBAR TESTING
+// import navbarDataLocal from '../../../build/navbarDev.json';
 
 // Get Cookie for Sign In toggler
 const getCookie = (a) => {
@@ -72,7 +73,7 @@ const Header = (props) => {
   const [beta, setBeta] = useState('');
   const [cookie, setCookie] = useState('');
   const [hidden, setHidden] = useState(true);
-  const [data] = useState(navbarData);
+  const [data, setData] = useState(navbarData);
   const [visibleHelloBar] = useState();
 
   useEffect(() => {

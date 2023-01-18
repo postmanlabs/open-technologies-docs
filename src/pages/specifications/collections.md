@@ -14,7 +14,7 @@ contextual_links:
     name: "Postman's Philosophy"
     url: "https://www.postman.com/book/api-first-transformation/"
   - type: section
-    name: "Blogs"
+    name: "Open Tech Team Blogs"
   # - type: subtitle
   #   name: "Videos"
   - type: link
@@ -38,6 +38,9 @@ contextual_links:
   - type: link
     name: "Discord"
     url:  ""
+  - type: dynamic_blog
+    name: "Postman Blog Posts"
+    blog_tag: "openapi"
 ---
 
 Welcome to the Postman docs! This is the place to find official information on how to use Postman in your API projects.
