@@ -14,7 +14,7 @@ contextual_links:
     name: "Postman's Philosophy"
     url: "https://www.postman.com/book/api-first-transformation/"
   - type: section
-    name: "Team Blogs"
+    name: "Open Tech Team Blogs"
   # - type: subtitle
   #   name: "Videos"
   - type: link

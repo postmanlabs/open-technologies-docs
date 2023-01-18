@@ -73,7 +73,13 @@ const ContextualLinks = ({ links }) => (
             </div>
           );
         }
-      
+        if (item.type === 'subtitle') {
+          return (
+            <div className="contextual-links__subtitle" key={item.name}>
+              {item.name}
+            </div>
+          );
+        }
         if (item.type === 'dynamic_blog' && item.blog_tag) {
           if (Object.keys(recentBlogPosts).length === 0) {
             // If recentBlogPosts.length === 0, then either there is no .env.development,
