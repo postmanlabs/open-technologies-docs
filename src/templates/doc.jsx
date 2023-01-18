@@ -350,18 +350,18 @@ const DocPage = ({ data }) => {
                 <div className="sticky">
                   <div> 
                     <p>
-                      <span className="font-weight-bold">Open Technologies</span> 
+                      <span className="font-weight-bold">Postman Newsletter</span> 
                       <br></br>
-                       help with providing a safe space to grow and flourish.
+                      Subscribe for product updates, API best practices.
                     </p>
-                    {/* <BaseLink 
+                    <BaseLink 
                       className="sticky"
                       href="https://www.postman.com/newsletter-signup/"
                       target="same-tab"
                       linkType="arrowLink"
                       >
                         Sign up
-                    </BaseLink> */}
+                    </BaseLink>
                   </div>
                   <figure className="postmanaut-dab mt-1">
                     <img src="https://voyager.postman.com/illustration/postmanaut-posing-dancing-postman-illustration.svg" alt="Posmanaut dancing. Illustration." className="img-fluid" />
@@ -387,7 +387,7 @@ export const query = graphql`
           type
           name
           url
-          # blog_tag
+          blog_tag
         }
       }
       fields {
