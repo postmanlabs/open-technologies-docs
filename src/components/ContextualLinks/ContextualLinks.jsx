@@ -81,21 +81,21 @@ const ContextualLinks = ({ links }) => (
             </div>
           );
         }
-        // if (item.type === 'dynamic_blog' && item.blog_tag) {
-        //   if (Object.keys(recentBlogPosts).length === 0) {
-        //     // If recentBlogPosts.length === 0, then either there is no .env.development,
-        //     // it has a bad blog url, or the endpoint returned something bad
-        //     return (
-        //       <div className="contextual-links__alert" role="alert">
-        //         <p>
-        //           You are currently in develop mode.
-        //           Dynamic blog posts will not be displayed locally.
-        //           <a style={{ fontSize: 'inherit' }} href="https://github.com/postmanlabs/postman-docs/blob/develop/CONTRIBUTING.md#to-use-the-dynamic-blog-posts-feature" target="_blank" rel="noopener">See Contributing doc for details</a>
-        //           .
-        //         </p>
-        //       </div>
-        //     );
-        //   }
+        if (item.type === 'dynamic_blog' && item.blog_tag) {
+          if (Object.keys(recentBlogPosts).length === 0) {
+            // If recentBlogPosts.length === 0, then either there is no .env.development,
+            // it has a bad blog url, or the endpoint returned something bad
+            return (
+              <div className="contextual-links__alert" role="alert">
+                <p>
+                  You are currently in develop mode.
+                  Dynamic blog posts will not be displayed locally.
+                  <a style={{ fontSize: 'inherit' }} href="https://github.com/postmanlabs/open-technologies-docs/blob/develop/CONTRIBUTING.md#to-use-the-dynamic-blog-posts-feature" target="_blank" rel="noopener">See Contributing doc for details</a>
+                  .
+                </p>
+              </div>
+            );
+          }
           if (recentBlogPosts.index && recentBlogPosts.index[item.blog_tag]) {
             const dynamicLinks = recentBlogPosts.index[item.blog_tag].slice(0, 3).map((post) => (
               <div className="contextual-links__link" key={uuidv4()}>
@@ -117,8 +117,8 @@ const ContextualLinks = ({ links }) => (
 
           // This will likely be the case when you are developing locally,
           // and do not have a .env.development file with the BFF endpoints.
-        //   return null;
-        // }
+          return null;
+        }
 
         return (
           <div className="contextual-links__section" key={uuidv4()}>{item.name}</div>
