@@ -29,36 +29,60 @@
 
 
 export const leftNavItems = [ 
+  
+  {
+    name: 'Collections',
+    parentSlug: 'collections',
+    url: '/collections/page1',
+    subMenuItems1: [
+      {
+        name: 'Page1',
+        url: '/collections/page1/',
+      },     
+      {
+        name: 'Page2',
+        url: '/collections/page2/',
+      },         
+    ],
+  },
+  {
+    name: 'GraphQL',
+    parentSlug: 'graphql',
+    url: '/graphql/page2/',
+    subMenuItems1: [
+      // {
+      //   name: 'Graphql',
+      //   url: '/graphql/graphql/',
+      // },
+      {
+        name: 'Page2',
+        url: '/graphql/page2/',
+      },
+      {
+        name: 'Page3',
+        url: '/graphql/page3/',
+      },
+    ],
+  },
   {
     name: 'Specifications',
     parentSlug: 'specifications',
-    url: '/specifications/collections/',
+    url: '/specifications/asyncapi/',
     subMenuItems1: [
       {
         name: 'Collections',
-        url: '/specifications/collections/',
+        url: '/specifications/asyncapi/',
       },     
       {
         name: 'OpenAPI',
         url: '/specifications/openapi/',
       },  
       {
-        name: 'GraphQL',
-        url: '/specifications/graphql/',
-      },   
+        name: 'gRPC',
+        url: '/specifications/grpc/',
+      },
     ],
   },
-  // {
-  //   name: 'Patterns',
-  //   parentSlug: 'patterns',
-  //   url: '/patterns/graphql/',
-  //   subMenuItems1: [
-  //     {
-  //       name: 'REST',
-  //       url: '/patterns/rest/',
-  //     },
-  //   ],
-  // },
   {
     name: 'Lifecycle',
     parentSlug: 'lifecycle',
