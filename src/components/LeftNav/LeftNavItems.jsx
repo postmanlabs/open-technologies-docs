@@ -48,7 +48,7 @@ export const leftNavItems = [
   {
     name: 'GraphQL',
     parentSlug: 'graphql',
-    url: '/graphql/page2/',
+    url: '/graphql/',
     subMenuItems1: [
       // {
       //   name: 'Graphql',
@@ -69,6 +69,10 @@ export const leftNavItems = [
     parentSlug: 'specifications',
     url: '/specifications/asyncapi/',
     subMenuItems1: [
+      {
+        name: 'Testing',
+        url: '/specifications/testing/',
+      },
       {
         name: 'Collections',
         url: '/specifications/asyncapi/',
