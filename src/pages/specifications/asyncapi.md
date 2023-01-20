@@ -1,7 +1,7 @@
 ---
-title: "collections"
+title: "AsyncAPI"
 order: 1
-page_id: "collections"
+page_id: "asyncapi"
 warning: false
 updated: 2021-09-29
 contextual_links:

@@ -1,7 +1,7 @@
 ---
-title: "graphql"
+title: "page2"
 order: 1
-page_id: "graphql"
+page_id:  "page2"
 warning: false
 updated: 2021-09-29
 contextual_links:
