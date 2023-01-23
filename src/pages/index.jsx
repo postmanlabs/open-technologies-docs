@@ -117,7 +117,7 @@ input.submit {
 `;
 
 const IndexPage = ({data}) => {
-    console.log(data);
+  
     // Use this variable when referencing relative image paths
     // It is equal to the appropriate prefix on build
     // Example: src: `${assetPrefix}/path/to/image.jpg`;
