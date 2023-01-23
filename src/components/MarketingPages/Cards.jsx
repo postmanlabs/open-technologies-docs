@@ -21,27 +21,49 @@ const CardWrapper = styled.div`
     &-description {
       margin-bottom: 25px;
       font-size: 16px;
+      
+    }
+    &-title{
+      width: 85%;
     }
     a {
+      
       margin-bottom: 48px;
+      
     }
+  }
+  .title_link  {
+    color: black;
+  }
+  
+  a:hover {
+    color: ${(props) => props.theme.colors.blue_60} !important;
+    text-decoration: none;
   }
 `
 
+const SquaredUpThumbnailWrapper = styled.div`
+  img { 
+    border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-bottom: 24px;
+  }
+`;
+
 export const LandingCard = ({
-  title, description, link, icon, cta,
+  title, description, link, icon, cta, image
 }) => (
   <CardWrapper className="landing-card h-100">
     <div className="landing-card__top">
-      <div className="landing-card__image">
+     {icon && icon ? (<div className="landing-card__image">
         <img src={icon} alt={title} aria-hidden="true"/>
-      </div>
+      </div>) : (<SquaredUpThumbnailWrapper> <img src={image} alt={title} aria-hidden="true"/></SquaredUpThumbnailWrapper>)}
     </div>
     <div className="landing-card__content text-left">
-      <h3 className="landing-card__content-title h4">{title}</h3>
+      <h3 className="landing-card__content-title h4  mb-4"><a href={link} target="_blank" rel="noopener" className='title_link'>{title}</a></h3>
       <p className="landing-card__content-description">{description}</p>
       <BaseLink 
-        href={link} 
+        src={link} 
         linkType="arrowLink"
         target="same-tab"
       >
