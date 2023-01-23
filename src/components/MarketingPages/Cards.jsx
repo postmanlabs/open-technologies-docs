@@ -6,6 +6,7 @@ import { BaseLink } from 'aether-marketing'
 const CardWrapper = styled.div`
   margin-bottom: 32px;
   text-align: left !important;
+  
   .landing-card__top {
     background: transparent;
     margin: 0;
@@ -25,6 +26,7 @@ const CardWrapper = styled.div`
     }
     &-title{
       width: 85%;
+     
     }
     a {
       
@@ -33,12 +35,13 @@ const CardWrapper = styled.div`
     }
   }
   .title_link  {
-    color: black;
+    color: black !important;
   }
   
-  a:hover {
+   a:hover {
     color: ${(props) => props.theme.colors.blue_60} !important;
     text-decoration: none;
+    border: none !important;
   }
 `
 

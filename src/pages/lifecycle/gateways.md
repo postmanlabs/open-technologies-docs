@@ -98,7 +98,7 @@ These capabilities represent the expected value delivered by API gateway today, 
 
 There are a numer of capabilities offered by API gateway service providers to round off their offerings, but in recent years many of these capabilities have expanding into their offerings.
 
-*Accounts, Activity, Alerts, Analytics, Application Performance Management (APM), Applications, Automation, Catalogs, Dashboards, Design, Developers, Discovery, DNS, Documentation, Domains, Environments, Extensions, Gateways, Governance, Licensing, Logging, Mocking, Models, Monetization, Monitoring, Networking, Observability, Performance, Policies, Portals, Products, Projects, Reports, Repositories, Roles, SDKs, Search, Serverless, Specifications, Standards, Teams, Templates, Testing, Threat Protection, Workspaces*
+*Accounts, Activity, Alerts, Analytics, Application Performance Management (APM), Applications, Automation, Catalogs, Dashboards, Design, Developers, Discovery, DNS, Documentation, Domains, Environments, Extensions, Gateways, Governance, Licensing, Logging, Mocking, Models, Monetization, Monitoring, Networking, Observability, Performance, Policies, Portals, Products, Projects, Reports, Repositories, Roles, SDKs, Search, Serverless, Specifications, Standards, Teams, Templates, Testing, Threat Protection, Workspaces.*
 
 These capabilities have historically been bundled with gateways as part of API management solutions, but have become more modular and interchangeable as part of a platform strategy.
 
@@ -106,7 +106,7 @@ These capabilities have historically been bundled with gateways as part of API m
 
 There are numerous protocols gateways utilized on the backend, ensuring that digital resources available across the enterprise are available for use in applications and integrations.
 
-*AMQP, AWS Lambda, Database, ERP, FTP, GraphQL, gRPC, HTTP 1.1, HTTP Long-Polling, HTTP/2, HTTP/3, IMAP, JMS, Kafka, MQTT, NATS, RabbitMQ, Server-Sent Events (SSE), SMTP, SOAP, TCP, UDP, WebSockets*
+*AMQP, AWS Lambda, Database, ERP, FTP, GraphQL, gRPC, HTTP 1.1, HTTP Long-Polling, HTTP/2, HTTP/3, IMAP, JMS, Kafka, MQTT, NATS, RabbitMQ, Server-Sent Events (SSE), SMTP, SOAP, TCP, UDP, WebSockets.*
 
 Gateways are the facade enterprise are using to modernize their legacy systems without always having to replace what is behind, while still meeting the needs of consumers today.
 
@@ -114,7 +114,7 @@ Gateways are the facade enterprise are using to modernize their legacy systems w
 
 Inversely, there are a number of common protocols being made available downstream, supplying internal, partner, and 3rd party API consumers with the resources they need.
 
-*AMQP, GraphQL, gRPC, HTTP 1.1, HTTP Long-Polling, JMS, Kafka, MQTT, NATS, RabbitMQ, Server-Sent Events (SSE), SOAP, TCP, UDP, WebSockets, HTTP/2, HTTP/3*
+*AMQP, GraphQL, gRPC, HTTP 1.1, HTTP Long-Polling, JMS, Kafka, MQTT, NATS, RabbitMQ, Server-Sent Events (SSE), SOAP, TCP, UDP, WebSockets, HTTP/2, HTTP/3.*
 
 Gateways are literally the digital gateway into the enterprise, providing a single large front door, but also many smaller doors for partners, teams, acquisitions, and other consumers.
 
