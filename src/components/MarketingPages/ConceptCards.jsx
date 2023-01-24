@@ -46,17 +46,38 @@ const CardWrapper = styled.div`
     border: none !important;
   }
   .graphql {
-        background-color: blue;
+        background-color: rgb(45, 81, 170);
     }
     .api {
-        background-color: #049604;
+        background-color: rgb(216, 245, 200);
+        color: black;
     }
     .schema {
-        background-color: grey;
+        background-color: rgb(102, 102, 102);
     }
     .type {
-        background-color: lightblue;
+        background-color: rgb(163, 198, 252);
         color: black;
+    }
+    .operation{
+        background-color: rgb(250, 216, 122);
+        color: black;
+    }
+    .subscription {
+        background-color: rgb(92, 197, 72);
+    }
+    .real-time {
+        background-color: rgb(81, 188,251);
+    }
+    .non-spec {
+        background-color: rgb(203, 243, 234);
+        color: black;
+    }
+    .scalars {
+        background-color: rgb(202,89,49);
+    }
+    .client {
+        background-color: rgb(177, 121, 35);
     }
 code {
     background-color: ${(props) => props.theme.colors.grey_10};
@@ -130,13 +151,14 @@ const Tag = styled.p`
     color: white;
     font-size: 10px;
     font-weight: bold;
+    margin-right: 10px;
 `
 
 
 export const ConceptCard = ({
-    title, description, tagG, tagA,  example, code
+    title, description, tag, example, code
   }) => {
-    // const tags = tag.split(', ');
+    // const item = tag.split(', ');
 
 return(
     <CardWrapper className="landing-card h-100">
@@ -147,19 +169,29 @@ return(
         <p className="landing-card__content-description"> {description}</p>
         <div>
             <p className='mb-0 text-uppercase small'>tags</p>
-            <div className='row ml-1'>
-           {tagG && <Tag className='mr-2 graphql'>{tagG}</Tag>}
-            {tagA && <Tag className='mr-2 api'>{tagA}</Tag>}
-            </div>
-            {/* {console.log(tags)} */}
-            {/* {tags.map((tag) => {(
-                <div key={uuidv4()}>
-                {tags === 'graphql' && <p className="graphql">{tags}</p>}
-                {tags === 'api' && <Tag className="api">{tags}</Tag>}
-                {tags === 'schema' && <Tag className="schema">{tags}</Tag>}
-                      
-                    </div>
-             )})}  */}
+            <div className='row ml-1'>          
+             {tag.split(", ").map(item => (
+                item === 'api' &&  (<Tag className="api" key={uuidv4()}>{item}</Tag>)
+                ||
+                item === 'graphql' &&  (<Tag className="graphql" key={uuidv4()}>{item}</Tag>)
+               ||
+                item === 'schema' &&  (<Tag className="schema" key={uuidv4()}>{item}</Tag>)
+                  ||
+                  item === 'type' &&  (<Tag className="type" key={uuidv4()}>{item}</Tag>)
+                  ||
+                  item === 'operation' &&  (<Tag className="operation" key={uuidv4()}>{item}</Tag>)
+                  ||
+                  item === 'subscription' &&  (<Tag className="subscription" key={uuidv4()}>{item}</Tag>)
+                  ||
+                  item === 'real-time' &&  (<Tag className="real-time" key={uuidv4()}>{item}</Tag>)
+                  ||
+                  item === 'non-spec' &&  (<Tag className="non-spec" key={uuidv4()}>{item}</Tag>)
+                  ||
+                  item === 'scalars' &&  (<Tag className="scalars" key={uuidv4()}>{item}</Tag>)
+                  ||
+                  item === 'client' &&  (<Tag className="operation" key={uuidv4()}>{item}</Tag>)
+                ))}    
+       </div>
         </div>
         <div>
             <p className='mb-0 text-uppercase small'>Example</p>

@@ -366,8 +366,7 @@ const GraphQLPage = ({data}) => {
                   <ConceptCard
                         title="Schema"
                         description="A GraphQL schema is a list of object types that define all of the data available to clients of the API."
-                        tagG="graphql"
-                        tagA="api"
+                        tag="graphql, api"
                         example="this is the example"
                       />
                   </div>
@@ -375,8 +374,7 @@ const GraphQLPage = ({data}) => {
                 <ConceptCard
                     title="Introspection"
                     description="Introspection is the capability of returning parts of a schema or the full schema from a GraphQL API using a special client query."
-                    tagG="graphql"
-                    tagA="api"
+                    tag="graphql, api"
                     example='Sending a query to a GraphQL API using the "__schema" will return type information about a named object or all of the types in a GraphQL schema.'
                     code="{
                       __schema {                     
@@ -473,7 +471,7 @@ const GraphQLPage = ({data}) => {
                 <ConceptCard
                     title="Custom Scalar Type"
                     description="The most common custom scalar type in GraphQL schemas is DateTime, because it isn't a built-in scalar or described in the specification. Custom Scalars can also be used to define other units of measure or whatever is needed by a given implementation."
-                    tag="schema, scalarsm type"
+                    tag="schema, scalars, type"
                     example="scalar DateTime"
                     code='type Cake {
 
@@ -509,7 +507,7 @@ const GraphQLPage = ({data}) => {
                     code=''
                   />
                 </div>
-                <div className="col-6 mb-3 mb-md-4 ">
+                {/* <div className="col-6 mb-3 mb-md-4 ">
                 <ConceptCard
                     title="Interface"
                     description=""
@@ -517,7 +515,7 @@ const GraphQLPage = ({data}) => {
                     example=""
                     code=''
                   />
-                </div>
+                </div> */}
                 
                 </div>
                 </div>
