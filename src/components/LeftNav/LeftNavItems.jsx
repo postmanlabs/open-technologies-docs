@@ -56,7 +56,7 @@ export const leftNavItems = [
         subParentSlug: 'blog',
         subMenuItems2: [
           {
-          name: 'Echo Service',
+          name: 'How to Build an Echo Service for GraphQL',
           url: '/graphql/blog/echoservice/',
           }
         ]

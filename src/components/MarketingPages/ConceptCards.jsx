@@ -171,25 +171,18 @@ return(
             <p className='mb-0 text-uppercase small'>tags</p>
             <div className='row ml-1'>          
              {tag.split(", ").map(item => (
-                item === 'api' &&  (<Tag className="api" key={uuidv4()}>{item}</Tag>)
-                ||
-                item === 'graphql' &&  (<Tag className="graphql" key={uuidv4()}>{item}</Tag>)
-               ||
-                item === 'schema' &&  (<Tag className="schema" key={uuidv4()}>{item}</Tag>)
-                  ||
-                  item === 'type' &&  (<Tag className="type" key={uuidv4()}>{item}</Tag>)
-                  ||
-                  item === 'operation' &&  (<Tag className="operation" key={uuidv4()}>{item}</Tag>)
-                  ||
-                  item === 'subscription' &&  (<Tag className="subscription" key={uuidv4()}>{item}</Tag>)
-                  ||
-                  item === 'real-time' &&  (<Tag className="real-time" key={uuidv4()}>{item}</Tag>)
-                  ||
-                  item === 'non-spec' &&  (<Tag className="non-spec" key={uuidv4()}>{item}</Tag>)
-                  ||
-                  item === 'scalars' &&  (<Tag className="scalars" key={uuidv4()}>{item}</Tag>)
-                  ||
-                  item === 'client' &&  (<Tag className="operation" key={uuidv4()}>{item}</Tag>)
+              <div key={uuidv4()}>
+                {item === 'api' &&  (<Tag className="api" >{item}</Tag>)}
+                {item === 'graphql' &&  (<Tag className="graphql" >{item}</Tag>)}
+                {item === 'schema' &&  (<Tag className="schema" >{item}</Tag>)}
+                {item === 'type' &&  (<Tag className="type" >{item}</Tag>)}
+                {item === 'operation' &&  (<Tag className="operation" >{item}</Tag>)}
+                {item === 'subscription' &&  (<Tag className="subscription" >{item}</Tag>)}
+                {item === 'real-time' &&  (<Tag className="real-time" >{item}</Tag>)}
+                {item === 'non-spec' &&  (<Tag className="non-spec" >{item}</Tag>)}     
+                {item === 'scalars' &&  (<Tag className="scalars" >{item}</Tag>)}     
+                {item === 'client' &&  (<Tag className="operation" >{item}</Tag>)}
+              </div>
                 ))}    
        </div>
         </div>

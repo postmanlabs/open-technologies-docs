@@ -360,9 +360,9 @@ const GraphQLPage = ({data}) => {
               <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem numquam vitae ratione eveniet fuga assumenda id dolor corrupti. Aperiam ab a reiciendis, odit dignissimos tempore minima autem cum animi pariatur!
               </p>
-            <div className='col-12'>
-              <div className="row justify-content-center">
-                <div className="col-6 mb-3 mb-md-4 ">
+          
+              <div className="row justify-content-evenly">
+                <div className="col-lg-6 mb-3 mb-md-4 ">
                   <ConceptCard
                         title="Schema"
                         description="A GraphQL schema is a list of object types that define all of the data available to clients of the API."
@@ -370,7 +370,7 @@ const GraphQLPage = ({data}) => {
                         example="this is the example"
                       />
                   </div>
-                <div className="col-6 mb-3 mb-md-4 ">
+                <div className="col-lg-6 mb-3 mb-md-4 ">
                 <ConceptCard
                     title="Introspection"
                     description="Introspection is the capability of returning parts of a schema or the full schema from a GraphQL API using a special client query."
@@ -385,7 +385,7 @@ const GraphQLPage = ({data}) => {
                      }"
                   />
                 </div>
-                <div className="col-6 mb-3 mb-md-4 ">
+                <div className="col-lg-6  mb-3 mb-md-4 ">
                 <ConceptCard
                     title="Types"
                     description="Types describe the objects that are part of your GraphQL schema. There are eight types defined by the GraphQL specification."
@@ -393,7 +393,7 @@ const GraphQLPage = ({data}) => {
                     example=""
                   />
                 </div>
-                <div className="col-6 mb-3 mb-md-4 ">
+                <div className="col-lg-6  mb-3 mb-md-4 ">
                 <ConceptCard
                     title="Query"
                     description="A query is a read-only operation. It enables the user to request specific fields from objects and receive only those fields, avoiding over- or under-fetching. *Cover both schema description and client description.*"
@@ -405,7 +405,7 @@ const GraphQLPage = ({data}) => {
                     }"
                   />
                 </div>
-                <div className="col-6 mb-3 mb-md-4 ">
+                <div className="col-lg-6  mb-3 mb-md-4 ">
                 <ConceptCard
                     title="Mutation"
                     description="A mutation is a write operation followed by a fetch. It enables the user to mutate (add, update, or delete) specified fields and then query the modified value on the object returned. "
@@ -422,7 +422,7 @@ const GraphQLPage = ({data}) => {
                     }"
                   />
                 </div>
-                <div className="col-6 mb-3 mb-md-4 ">
+                <div className="col-lg-6 mb-3 mb-md-4 ">
                 <ConceptCard
                     title="Subscription"
                     description="
@@ -436,7 +436,7 @@ const GraphQLPage = ({data}) => {
                     }}"
                   />
                 </div>
-                <div className="col-6 mb-3 mb-md-4 ">
+                <div className="col-lg-6 mb-3 mb-md-4 ">
                 <ConceptCard
                     title="Live Queries"
                     description="
@@ -454,7 +454,7 @@ const GraphQLPage = ({data}) => {
                   `;'
                   />
                 </div>
-                <div className="col-6 mb-3 mb-md-4 ">
+                <div className="col-lg-6 mb-3 mb-md-4 ">
                 <ConceptCard
                     title="Scalar Type"
                     description="GraphQL specifies a list of scalar types to identify the data structure of an object field. The list of built-in scalars is given in the Example below."
@@ -467,7 +467,7 @@ const GraphQLPage = ({data}) => {
                     code=''
                   />
                 </div>
-                <div className="col-6 mb-3 mb-md-4 ">
+                <div className="col-lg-6 mb-3 mb-md-4 ">
                 <ConceptCard
                     title="Custom Scalar Type"
                     description="The most common custom scalar type in GraphQL schemas is DateTime, because it isn't a built-in scalar or described in the specification. Custom Scalars can also be used to define other units of measure or whatever is needed by a given implementation."
@@ -498,7 +498,7 @@ const GraphQLPage = ({data}) => {
                       }'
                   />
                 </div>
-                <div className="col-6 mb-3 mb-md-4 ">
+                <div className="col-lg-6 mb-3 mb-md-4 ">
                 <ConceptCard
                     title="Union Type"
                     description=""
@@ -518,7 +518,7 @@ const GraphQLPage = ({data}) => {
                 </div> */}
                 
                 </div>
-                </div>
+              
               
                 <PreviousAndNextLinks data={{ previous, next }} />
               </main>

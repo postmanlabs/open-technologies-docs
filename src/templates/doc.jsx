@@ -314,7 +314,7 @@ const DocPage = ({ data }) => {
   const date = new Date(post.frontmatter.updated).toISOString().split("T")[0];
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} slug={post.fields.slug} lastModifiedTime={lastModifiedTime} />
+      <SEO title={post.frontmatter.title} slug={post.fields.slug} lastModifiedTime={post.frontmatter.updated} />
       <DocWrapper className="container-fluid">
         <div className="row row-eq-height">
           <nav className="col-sm-12 col-md-4 col-lg-3 left-nav-re">
