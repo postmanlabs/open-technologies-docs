@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import { LandingCard } from '../components/MarketingPages/Cards';
+import {ConceptCard } from '../components/MarketingPages/ConceptCards';
 import DynamicLink from '../components/Shared/DynamicLink';
 import EditDoc from '../components/Shared/EditDoc';
 import { leftNavItems } from '../components/LeftNav/LeftNavItems';
@@ -337,7 +338,6 @@ const GraphQLPage = ({data}) => {
   
   const { parentLink, subParentLink, previous, next } = data;
 
-
   return (
     <Layout>
       <SEO title="Postman GraphQL"
@@ -355,147 +355,171 @@ const GraphQLPage = ({data}) => {
                 {/* Qualtrics */}
                 
               <h1>GraphQL</h1>
-              <h2 className="mt-5 mb-3">GraphQL Blog</h2>
+              <h2 className="mt-5 mb-3">GraphQL Concepts</h2>
+
               <p>
-                Read our blog post -
-                {' '}
-                <a
-                  href="https://blog.postman.com/introducing-auto-flex-for-teams/"
-                >
-                  GraphQL
-                </a>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem numquam vitae ratione eveniet fuga assumenda id dolor corrupti. Aperiam ab a reiciendis, odit dignissimos tempore minima autem cum animi pariatur!
               </p>
-              <p>
-                Effective April 8, 2021, Postman offers a more flexible model that simplifies how
-                you can add Users to your Postman team. With the &quot;auto-flex&quot; model, you
-                can authorize additional Users at any time through the administrative dashboard of
-                your Postman Service, instead of having to purchase each additional User license
-                with Postman prior to enablement.
-              </p>
-              <p>
-                We will bill you for any additional Users on a monthly basis for monthly plans, and
-                on a quarterly basis for annual plans, measured from the date of your initial
-                purchase. Shortly before the applicable billing date, your Billing and Admin User
-                will receive a notification that reflects the number of added Users during that
-                monthly or quarterly cycle. Your Admin User can make adjustments to the number of
-                Users on your plan through the administrative dashboard at any time prior to the
-                billing date, provided however, once you have been billed you may not reduce the
-                number of Users until the end of your then-current Subscription Term. Then, on the
-                billing date, you will be billed for the number of additional Users on your plan as
-                of the billing date.
-              </p>
-              <h2 id="summary">Summary</h2>
+<div className='col-12'>
               <div className="row justify-content-center">
-              <div className="col-sm-6 col-lg-4 mb-3 mb-md-4 pr-md-5">
-              <LandingCard
-                    title="Test with Postman"
-                    description="Write test scripts and build automation into your workflow."
-                    link="/docs/writing-scripts/intro-to-scripts/"
-                    cta="Create tests"
-                    icon="https://voyager.postman.com/icon/flask-science-beaker-test-icon-postman.svg"
+              <div className="col-6 mb-3 mb-md-4 ">
+              <ConceptCard
+                    title="Schema"
+                    description="A GraphQL schema is a list of object types that define all of the data available to clients of the API."
+                    tag="graphql, api"
+                    example="this is the example"
                   />
                 </div>
-                <div className="col-sm-6 col-lg-4 mb-3 mb-md-4 pr-md-5">
-                  <LandingCard
-                    title="30 Days of Postman"
-                    description="Tackle a new challenge each day with these developer tutorials."
-                    link="https://www.postman.com/postman/workspace/30-days-of-postman-for-developers/overview"
-                    cta="Start challenge"
-                    icon="https://voyager.postman.com/icon/trophy-award-icon-postman.svg"
+                <div className="col-6 mb-3 mb-md-4 ">
+                <ConceptCard
+                    title="Introspection"
+                    description="Introspection is the capability of returning parts of a schema or the full schema from a GraphQL API using a special client query."
+                    tag="graphql, schema"
+                    example='Sending a query to a GraphQL API using the "__schema" will return type information about a named object or all of the types in a GraphQL schema.'
+                    code="{
+                      __schema {                     
+                       types {                    
+                          name                     
+                       }                     
+                      }  
+                     }"
                   />
                 </div>
-                <div className="col-sm-6 col-lg-4 mb-3 mb-md-4 pr-md-5">
-                  <LandingCard
-                    title="Postman Intergalactic"
-                    description="A series of educational trainings taught by Postman team members with a live Q&A."
-                    cta="See upcoming webinars"
-                    link="https://www.postman.com/events/intergalactic/"
-                    icon="https://voyager.postman.com/icon/product-ufo-icon-postman.svg"
+                <div className="col-6 mb-3 mb-md-4 ">
+                <ConceptCard
+                    title="Types"
+                    description="Types describe the objects that are part of your GraphQL schema. There are eight types defined by the GraphQL specification."
+                    tag="graphql, type"
+                    example="="
                   />
                 </div>
-                <div className="col-sm-6 col-lg-4 mb-3 mb-md-4 pr-md-5">
-              <LandingCard
-                    title="Test with Postman"
-                    description="Write test scripts and build automation into your workflow."
-                    link="/docs/writing-scripts/intro-to-scripts/"
-                    cta="Create tests"
-                    icon="https://voyager.postman.com/icon/flask-science-beaker-test-icon-postman.svg"
+                <div className="col-6 mb-3 mb-md-4 ">
+                <ConceptCard
+                    title="Query"
+                    description="A query is a read-only operation. It enables the user to request specific fields from objects and receive only those fields, avoiding over- or under-fetching. *Cover both schema description and client description.*"
+                    tag="graphql, api, operation, type, schema, client"
+                    example="Client Query"
+                    code="type Query {
+                      users: [User]
+                      user(id: ID!): User
+                    }"
                   />
                 </div>
-                <div className="col-sm-6 col-lg-4 mb-3 mb-md-4 pr-md-5">
-                  <LandingCard
-                    title="30 Days of Postman"
-                    description="Tackle a new challenge each day with these developer tutorials."
-                    link="https://www.postman.com/postman/workspace/30-days-of-postman-for-developers/overview"
-                    cta="Start challenge"
-                    icon="https://voyager.postman.com/icon/trophy-award-icon-postman.svg"
+                <div className="col-6 mb-3 mb-md-4 ">
+                <ConceptCard
+                    title="Mutation"
+                    description="A mutation is a write operation followed by a fetch. It enables the user to mutate (add, update, or delete) specified fields and then query the modified value on the object returned. "
+                    tag="graphql, operation"
+                    example="schema"
+                    code="type Mutation {
+
+                      createUser(name: String!, email: String!): User
+                    
+                      updateUser(id: ID!, name: String, email: String): User
+                    
+                      deleteUser(id: ID!): User
+                    
+                    }"
                   />
                 </div>
-                <div className="col-sm-6 col-lg-4 mb-3 mb-md-4 pr-md-5">
-                  <LandingCard
-                    title="Postman Intergalactic"
-                    description="A series of educational trainings taught by Postman team members with a live Q&A."
-                    cta="See upcoming webinars"
-                    link="https://www.postman.com/events/intergalactic/"
-                    icon="https://voyager.postman.com/icon/product-ufo-icon-postman.svg"
+                <div className="col-6 mb-3 mb-md-4 ">
+                <ConceptCard
+                    title="Subscription"
+                    description="
+                    A subscription is a type of operation that allows a client to receive real-time updates from a server by establishing a long-running connection. When the server's data changes, the server can push updates to the subscribed client through this connection."
+                    tag="graphql, operation"
+                    example=""
+                    code="{subscription onFilmAdded(id: ID!, filmID: ID) {
+                      filmAdded(id: $id, filmID: $filmID) {
+                        title
+                      }
+                    }}"
                   />
                 </div>
+                <div className="col-6 mb-3 mb-md-4 ">
+                <ConceptCard
+                    title="Live Queries"
+                    description="
+                    GraphQL live queries allow a client to subscribe to real-time updates from a GraphQL server. Instead of making a request to the server and receiving a one-time response, the client can establish a long-running connection with the server and receive updates in real time as they happen."
+                    tag="subscription, real-time, non-spec"
+                    example="Subscribe to real-time updates on the current temperature in a city"
+                    code='const query = `
+
+                    subscription {
+                  
+                      temperature(city: "San Francisco")
+                  
+                    }
+                  
+                  `;'
+                  />
                 </div>
-              <h2 id="examples">Examples</h2>
-              <p>Here&#39;s an example of a monthly plan:</p>
-              <p className="font-italic">
-                Your workspace is on the Basic plan and you&#39;re paying monthly — $15 per User per
-                month. You add 4 new Users ten days into your monthly billing cycle. You deprovision
-                2 Users before the next regular billing date. You will be charged $15 each for the
-                total number of Users on your plan as of the billing date, including the 2 Users you
-                added during the preceding month and retained as of the billing date.
-              </p>
-              <p>Here&#39;s an example of an annual plan:</p>
-              <p className="font-italic">
-                Your workspace is on the Basic plan and you&#39;re paying annually — $144 per User
-                per year. Your &quot;auto-flex&quot; billing cycle happens at the end of every
-                quarter of your annual Subscription Term. You add 4 new Users two months into your
-                billing cycle. You deprovision 2 Users before the next regular billing date (i.e.
-                the end of the third month of your annual Subscription Term). You will be charged
-                for the 2 incremental Users you added during the preceding three month period and
-                retained as of the billing date, at the prorated price for the remaining nine months
-                of your annual Subscription Term (i.e. $216 total).
-              </p>
-              <p className="alert alert-info font-weight-bold text-dark ">
-                Paying by annual invoice? We invoice you for a set number of Users for the full
-                year. If your team grows larger than anticipated, we’ll send you an invoice once per
-                quarter to settle any outstanding balances.
-              </p>
-              <h2 id="credit-card-charges">Credit card charges</h2>
-              <p>
-                You&#39;ll see the first credit card charge from Postman on the day you purchase any
-                paid subscriptions. Here are some other times you&#39;ll see charges:
-              </p>
-              <ul>
-                <li>
-                  On the monthly renewal date if your team is on a monthly payment plan. This will
-                  include any charges for adding new Users as described in the Auto-Flex team policy
-                  sections above.
-                </li>
-                <li>On the annual renewal date if you are on an annual payment plan.</li>
-                <li>
-                  On the last day of the quarter, if you are on an annual payment plan and there are
-                  any charges due for adding new Users as described in the Auto-Flex team policy
-                  sections above.
-                </li>
-              </ul>
-              <p className="alert alert-info mb-5">
-                <span className="font-weight-bold text-dark">Tip:</span>
-                {' '}
-                To learn more about the
-                different types of roles and permissions you can assign in Postman, visit
-                {' '}
-                <a href="https://learning.postman.com/docs/collaborating-in-postman/roles-and-permissions/">
-                  Defining Roles
-                </a>
-                .
-              </p>
-           
+                <div className="col-6 mb-3 mb-md-4 ">
+                <ConceptCard
+                    title="Scalar Type"
+                    description="GraphQL specifies a list of scalar types to identify the data structure of an object field. The list of built-in scalars is given in the Example below."
+                    tag="schema, scalars"
+                    example="Int: A signed 32‐bit integer.
+                    Float: A signed double-precision floating-point value.
+                    String: A UTF‐8 character sequence.
+                    Boolean: true or false.
+                    ID: The ID scalar type represents a unique identifier, often used to refetch an object or as the key for a cache. The ID type is serialized in the same way as a String; however, defining it as an ID signifies that it is not intended to be human‐readable."
+                    code=''
+                  />
+                </div>
+                <div className="col-6 mb-3 mb-md-4 ">
+                <ConceptCard
+                    title="Custom Scalar Type"
+                    description="The most common custom scalar type in GraphQL schemas is DateTime, because it isn't a built-in scalar or described in the specification. Custom Scalars can also be used to define other units of measure or whatever is needed by a given implementation."
+                    tag="schema, scalarsm type"
+                    example="scalar DateTime"
+                    code='type Cake {
+
+                      id: ID!
+                    
+                      name: String!
+                    
+                      price: Float
+                    
+                      available: Boolean!
+                    
+                      hasFrosting: Boolean!
+                    
+                      hasFilling: Boolean!
+                    
+                      hasToppingOption: Boolean!
+                    
+                      toppingKind: String
+                    
+                      whenCreated: DateTime!
+                    
+                      lastUpdated: DateTime!
+                    
+                      }'
+                  />
+                </div>
+                <div className="col-6 mb-3 mb-md-4 ">
+                <ConceptCard
+                    title="Union Type"
+                    description=""
+                    tag=""
+                    example=""
+                    code=''
+                  />
+                </div>
+                <div className="col-6 mb-3 mb-md-4 ">
+                <ConceptCard
+                    title="Interface"
+                    description=""
+                    tag=""
+                    example=""
+                    code=''
+                  />
+                </div>
+                
+                </div>
+                </div>
+              
                 <PreviousAndNextLinks data={{ previous, next }} />
               </main>
               <RightColumnWrapper className="col-sm-12 col-md-12 col-lg-3 offset-lg-0 col-xl-3 offset-xl-1 right-column">

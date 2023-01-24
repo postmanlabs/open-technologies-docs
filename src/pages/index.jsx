@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import '../../styles/config/normalize.css';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-// import { LandingCard } from '../components/MarketingPages/Cards';
+import { LandingCard } from '../components/MarketingPages/Cards';
 import '../../styles/config/_pm-icons.css';
 import Button from '../components/Shared/Button';
 import {CallOut, Feature, Divider, SideXSide, Paragraph,
@@ -117,7 +117,7 @@ input.submit {
 `;
 
 const IndexPage = ({data}) => {
-    console.log(data);
+  
     // Use this variable when referencing relative image paths
     // It is equal to the appropriate prefix on build
     // Example: src: `${assetPrefix}/path/to/image.jpg`;
@@ -412,7 +412,7 @@ const IndexPage = ({data}) => {
         <div className="container">
           <div className="row">
          
-            <div className="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-0 mb-5 mb-lg-0 pr-lg-5">
+            <div className="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-0 mb-5 mb-lg-0 ">
               <ContentContainer className="text-left">
               <TextSection
                   subtitle={formdata.subtitle}
@@ -457,7 +457,36 @@ const IndexPage = ({data}) => {
       </SectionStyles>
       
          <Divider />
-         <SideXSide {...sidexsideData} />
+          <h2 className='text-center mt-5'>From the Postman Blog</h2>
+         <div className="row justify-content-center mt-5">
+              <div className="col-md-6 col-lg-4 mb-5">
+              <LandingCard
+                     title="Introducing Postman’s Open Data and Research Intelligence Initiative"
+                     description="Data has become a digital commodity that we can no longer survive without. It drives our global economy, national and international policies,..."
+                    link="https://blog.postman.com/introducing-postman-open-data-and-research-intelligence-initiative/"
+                    cta="Read the blog"
+                    image="https://blog.postman.com/wp-content/uploads/2022/09/Introducing-Postman-Open-Data-and-Research-Intelligence-Initiative@2x.jpg"
+                  />
+                </div>
+                <div className="col-md-6 col-lg-4 mb-5">
+              <LandingCard
+                    title="Don't Panic: A Developer's Guide to Building Secure GraphQL APIs"
+                    description="At this year's API Specifications Conference (ASC), Postman Developer Advocate Meenakshi Dhanani shared the dos and don'ts of designing secure GraphQL APIs."
+                    link="https://blog.postman.com/how-to-build-secure-graphql-apis/"
+                    cta="Read the blog"
+                    image="https://blog.postman.com/wp-content/uploads/2022/12/Dont-Panic-A-Developers-Guide-to-Building-Secure-GraphQL-APIs-v2@2x.jpg"
+                  />
+                </div>
+                <div className="col-md-6 col-lg-4 mb-5">
+              <LandingCard
+                    title="OpenAPI Does What Swagger Don't"
+                    description="At this year's API Specifications Conference (ASC), Postman OpenAPI Technical Lead Arnaud Lauret (also known in the community as the API Handyman!"
+                    link="https://blog.postman.com/openapi-does-what-swagger-dont/"
+                    cta="Read the blog"
+                    image="https://blog.postman.com/wp-content/uploads/2022/11/ASC-2022-Recap-OpenAPI-Does-What-Swagger-Dont-V1@2x.jpg"
+                  />
+                </div>
+                </div>
         </div>
       </Layout>
     );

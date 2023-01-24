@@ -336,9 +336,12 @@ const DocPage = ({ data }) => {
                     </div>
                     : null
                 }
-                <p>
-                  <small className="font-italic">Last modified: {lastModifiedDate}</small>
-                </p>
+                <div className='row'>
+                  <p className='col-8'>
+                    <small className="font-italic">Last modified: {post.frontmatter.updated}</small>
+                  </p>
+                  <p className='col-4'><small className='font-italic'>Author {post.frontmatter.author}</small></p>
+                </div>
                 {/* Qualtrics */}
                 <LoadQualtrics />
                 <PreviousAndNextLinks data={{ previous, next }} />
@@ -376,6 +379,8 @@ export const query = graphql`
       excerpt(pruneLength: 20000)
       frontmatter {
         title
+        updated
+        author
         contextual_links {
           type
           name

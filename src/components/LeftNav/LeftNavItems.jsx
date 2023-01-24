@@ -50,10 +50,17 @@ export const leftNavItems = [
     parentSlug: 'graphql',
     url: '/graphql/',
     subMenuItems1: [
-      // {
-      //   name: 'Graphql',
-      //   url: '/graphql/graphql/',
-      // },
+      {
+        name: 'Blog',
+        slug: '/graphql/blog/echoservice/',
+        subParentSlug: 'blog',
+        subMenuItems2: [
+          {
+          name: 'Echo Service',
+          url: '/graphql/blog/echoservice/',
+          }
+        ]
+      },
       {
         name: 'Page2',
         url: '/graphql/page2/',
