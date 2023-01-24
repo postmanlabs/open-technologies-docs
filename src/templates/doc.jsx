@@ -281,7 +281,7 @@ const DocPage = ({ data }) => {
   const post = data.markdownRemark;
   // Last modified date - bottom
   // Last modified time - top 
-  const { lastModifiedDate, lastModifiedTime } = data.markdownRemark.fields;
+  // const { lastModifiedDate, lastModifiedTime } = data.markdownRemark.fields;
   // Breadcrumbs (top of page) & Previous and Next Links (bottom of page) 
   const { parentLink, subParentLink, previous, next } = data;
 
@@ -311,9 +311,10 @@ const DocPage = ({ data }) => {
       null
     );
   })()
+  const date = new Date(post.frontmatter.updated).toISOString().split("T")[0];
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} slug={post.fields.slug} lastModifiedTime={lastModifiedTime} />
+      <SEO title={post.frontmatter.title} slug={post.fields.slug} lastModifiedTime={post.frontmatter.updated} />
       <DocWrapper className="container-fluid">
         <div className="row row-eq-height">
           <nav className="col-sm-12 col-md-4 col-lg-3 left-nav-re">
@@ -336,9 +337,12 @@ const DocPage = ({ data }) => {
                     </div>
                     : null
                 }
-                <p>
-                  <small className="font-italic">Last modified: {lastModifiedDate}</small>
-                </p>
+                <div className='row'>
+                  <p className='col-8'>
+                    <small className="font-italic">Last modified: {date}</small>
+                  </p>
+                  <p className='col-4'><small className='font-italic'>Author {post.frontmatter.author}</small></p>
+                </div>
                 {/* Qualtrics */}
                 <LoadQualtrics />
                 <PreviousAndNextLinks data={{ previous, next }} />
@@ -376,6 +380,8 @@ export const query = graphql`
       excerpt(pruneLength: 20000)
       frontmatter {
         title
+        updated
+        author
         contextual_links {
           type
           name
