@@ -360,21 +360,23 @@ const GraphQLPage = ({data}) => {
               <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem numquam vitae ratione eveniet fuga assumenda id dolor corrupti. Aperiam ab a reiciendis, odit dignissimos tempore minima autem cum animi pariatur!
               </p>
-<div className='col-12'>
+            <div className='col-12'>
               <div className="row justify-content-center">
-              <div className="col-6 mb-3 mb-md-4 ">
-              <ConceptCard
-                    title="Schema"
-                    description="A GraphQL schema is a list of object types that define all of the data available to clients of the API."
-                    tag="graphql, api"
-                    example="this is the example"
-                  />
-                </div>
+                <div className="col-6 mb-3 mb-md-4 ">
+                  <ConceptCard
+                        title="Schema"
+                        description="A GraphQL schema is a list of object types that define all of the data available to clients of the API."
+                        tagG="graphql"
+                        tagA="api"
+                        example="this is the example"
+                      />
+                  </div>
                 <div className="col-6 mb-3 mb-md-4 ">
                 <ConceptCard
                     title="Introspection"
                     description="Introspection is the capability of returning parts of a schema or the full schema from a GraphQL API using a special client query."
-                    tag="graphql, schema"
+                    tagG="graphql"
+                    tagA="api"
                     example='Sending a query to a GraphQL API using the "__schema" will return type information about a named object or all of the types in a GraphQL schema.'
                     code="{
                       __schema {                     
@@ -390,7 +392,7 @@ const GraphQLPage = ({data}) => {
                     title="Types"
                     description="Types describe the objects that are part of your GraphQL schema. There are eight types defined by the GraphQL specification."
                     tag="graphql, type"
-                    example="="
+                    example=""
                   />
                 </div>
                 <div className="col-6 mb-3 mb-md-4 ">
