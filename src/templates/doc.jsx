@@ -281,7 +281,7 @@ const DocPage = ({ data }) => {
   const post = data.markdownRemark;
   // Last modified date - bottom
   // Last modified time - top 
-  // const { lastModifiedDate, lastModifiedTime } = data.markdownRemark.fields;
+  const { lastModifiedDate, lastModifiedTime } = data.markdownRemark.fields;
   // Breadcrumbs (top of page) & Previous and Next Links (bottom of page) 
   const { parentLink, subParentLink, previous, next } = data;
 
@@ -315,7 +315,7 @@ const DocPage = ({ data }) => {
   console.log(post.html)
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} slug={post.fields.slug} lastModifiedTime={post.frontmatter.updated} />
+      <SEO title={post.frontmatter.title} slug={post.fields.slug} lastModifiedTime={lastModifiedTime} />
       <DocWrapper className="container-fluid">
         <div className="row row-eq-height">
           <nav className="col-sm-12 col-md-4 col-lg-3 left-nav-re">
@@ -325,9 +325,9 @@ const DocPage = ({ data }) => {
             <div className="row row-eq-height">
               <main className="col-sm-12 col-md-12 col-lg-9 offset-lg-0 col-xl-7 doc-page ml-xl-5">
                 <BreadCrumbsLinks data={{ parentLink, subParentLink }} />
-                <p className='small mb-0'>By {post.frontmatter.author} &mdash; 
+            { post.frontmatter.author &&  <p className='small mb-0'>By {post.frontmatter.author} &mdash; 
                     <small className="font-italic">{date}</small>
-                  </p>
+                  </p>}
               
                 <h1>{post.frontmatter.title}</h1>
                 <div id="LoadDoc" />
@@ -343,10 +343,13 @@ const DocPage = ({ data }) => {
                     : null
                 }
                 <div className='row'>
-                <p className='small'>tags:
+                <p className='small col-8'>tags:
                 {post.frontmatter.tag && <span> {post.frontmatter.tag}</span>}</p>
-                
+                {lastModifiedDate && <p className='col-4 small'>
+                  <small className="font-italic">Last modified: {lastModifiedDate}</small>
+                </p>}
                 </div>
+                
                 {/* Qualtrics */}
                 <LoadQualtrics />
                 <PreviousAndNextLinks data={{ previous, next }} />

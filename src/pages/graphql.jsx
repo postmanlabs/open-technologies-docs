@@ -15,6 +15,7 @@ import 'prismjs/themes/prism-tomorrow.css';
 import BreadCrumbsLinks from '../components/modules/BreadCrumbsLinks';
 import PreviousAndNextLinks from '../components/modules/PreviousAndNextLinks';
 import { BaseLinkStyles } from 'aether-marketing';
+import {IntrospectionCode, QueryCode, MutationCode, SubscriptionCode, LiveQueryCode, CustomScalarCode } from './graphql/codeData.jsx';
 
 const DocWrapper = styled.div`
   /* Used for Deeplinking */   
@@ -336,6 +337,7 @@ const ContextualStyles = styled.div`
 
 
 `
+
 const GraphQLPage = ({data}) => {
   
   const { parentLink, subParentLink, previous, next } = data;
@@ -378,13 +380,7 @@ const GraphQLPage = ({data}) => {
                     description="Introspection is the capability of returning parts of a schema or the full schema from a GraphQL API using a special client query."
                     tag="graphql, api"
                     example='Sending a query to a GraphQL API using the "__schema" will return type information about a named object or all of the types in a GraphQL schema.'
-                    code="{
-                      __schema {                     
-                       types {                    
-                        name                     
-                       }                     
-                      }  
-                     }"
+                    code={IntrospectionCode}
                   />
                 </div>
                 <div className="col-lg-6  mb-3 mb-md-4 ">
@@ -401,10 +397,7 @@ const GraphQLPage = ({data}) => {
                     description="A query is a read-only operation. It enables the user to request specific fields from objects and receive only those fields, avoiding over- or under-fetching. *Cover both schema description and client description.*"
                     tag="graphql, api, operation, type, schema, client"
                     example="Client Query"
-                    code="type Query { 
-                      users: [User]
-                      user(id: ID!): User
-                    }"
+                    code={QueryCode}
                   />
                 </div>
                 <div className="col-lg-6  mb-3 mb-md-4 ">
@@ -413,15 +406,7 @@ const GraphQLPage = ({data}) => {
                     description="A mutation is a write operation followed by a fetch. It enables the user to mutate (add, update, or delete) specified fields and then query the modified value on the object returned. "
                     tag="graphql, operation"
                     example="schema"
-                    code="type Mutation {
-
-                      createUser(name: String!, email: String!): User
-                    
-                      updateUser(id: ID!, name: String, email: String): User
-                    
-                      deleteUser(id: ID!): User
-                    
-                    }"
+                    code={MutationCode}
                   />
                 </div>
                 <div className="col-lg-6 mb-3 mb-md-4 ">
@@ -431,11 +416,7 @@ const GraphQLPage = ({data}) => {
                     A subscription is a type of operation that allows a client to receive real-time updates from a server by establishing a long-running connection. When the server's data changes, the server can push updates to the subscribed client through this connection."
                     tag="graphql, operation"
                     example=""
-                    code="{subscription onFilmAdded(id: ID!, filmID: ID) {
-                      filmAdded(id: $id, filmID: $filmID) {
-                        title
-                      }
-                    }}"
+                    code={SubscriptionCode}
                   />
                 </div>
                 <div className="col-lg-6 mb-3 mb-md-4 ">
@@ -445,19 +426,7 @@ const GraphQLPage = ({data}) => {
                     GraphQL live queries allow a client to subscribe to real-time updates from a GraphQL server. Instead of making a request to the server and receiving a one-time response, the client can establish a long-running connection with the server and receive updates in real time as they happen."
                     tag="subscription, real-time, non-spec"
                     example=""
-                    code='// Subscribe to real-time updates on the current temperature in a city
-                    const query = `
-                      subscription {                    
-                    temperature(city: "San Francisco")                    
-                      }
-                    `;
-                    
-                    // Create a function to handle updates from the server
-                    const handleUpdate = (temperature) => {                   
-                      console.log(`The temperature in San Francisco is now ${temperature}°F`);                   
-                    };   
-                    // Send the subscription request to the server and pass the update handler function              
-                    client.subscribe({ query, handleUpdate });'
+                    code={LiveQueryCode}
                   />
                 </div>
                 <div className="col-lg-6 mb-3 mb-md-4 ">
@@ -470,7 +439,7 @@ const GraphQLPage = ({data}) => {
                     String: A UTF-8 character sequence.
                     Boolean: true or false.
                     ID: The ID scalar type represents a unique identifier, often used to refetch an object or as the key for a cache. The ID type is serialized in the same way as a String; however, defining it as an ID signifies that it is not intended to be human‐readable."
-                    code=''
+                    
                   />
                 </div>
                 <div className="col-lg-6 mb-3 mb-md-4 ">
@@ -479,18 +448,7 @@ const GraphQLPage = ({data}) => {
                     description="The most common custom scalar type in GraphQL schemas is DateTime, because it isn't a built-in scalar or described in the specification. Custom Scalars can also be used to define other units of measure or whatever is needed by a given implementation."
                     tag="schema, scalars, type"
                     example="scalar DateTime"
-                    code='type Cake {
-                      id: ID!
-                      name: String!
-                      price: Float
-                      available: Boolean!
-                      hasFrosting: Boolean!
-                      hasFilling: Boolean!
-                      hasToppingOption: Boolean!
-                      toppingKind: String
-                      whenCreated: DateTime!
-                      lastUpdated: DateTime!
-                      }'
+                    code=''
                   />
                 </div>
                 <div className="col-lg-6 mb-3 mb-md-4 ">
@@ -499,7 +457,7 @@ const GraphQLPage = ({data}) => {
                     description=""
                     tag=""
                     example=""
-                    code=''
+                    code={CustomScalarCode}
                   />
                 </div>
                
