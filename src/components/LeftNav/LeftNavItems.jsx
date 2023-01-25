@@ -30,21 +30,21 @@
 
 export const leftNavItems = [ 
   
-  {
-    name: 'Collections',
-    parentSlug: 'collections',
-    url: '/collections/page1',
-    subMenuItems1: [
-      {
-        name: 'Page1',
-        url: '/collections/page1/',
-      },     
-      {
-        name: 'Page2',
-        url: '/collections/page2/',
-      },         
-    ],
-  },
+  // {
+  //   name: 'Collections',
+  //   parentSlug: 'collections',
+  //   url: '/collections/page1',
+  //   subMenuItems1: [
+  //     {
+  //       name: 'Page1',
+  //       url: '/collections/page1/',
+  //     },     
+  //     {
+  //       name: 'Page2',
+  //       url: '/collections/page2/',
+  //     },         
+  //   ],
+  // },
   {
     name: 'GraphQL',
     parentSlug: 'graphql',

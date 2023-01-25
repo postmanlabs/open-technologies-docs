@@ -2,6 +2,8 @@ import React from 'react';
 const { v4: uuidv4 } = require('uuid');
 import styled from 'styled-components';
 import Highlight, {defaultProps} from "prism-react-renderer";
+import owl from "prism-react-renderer/themes/nightOwlLight";
+
 
 const CardWrapper = styled.div`
   margin-bottom: 32px;
@@ -75,6 +77,16 @@ const CardWrapper = styled.div`
   white-space: pre-wrap;
   font-size: 12px;
 }
+.plain, .punctuation {
+  color: rgb(204, 204, 204)!important;
+}
+.function, .operator {
+  color: rgb(240, 141, 73)!important;;
+}
+
+.token.string {
+  color: rgb(126, 198, 153)!important;
+}
 `
 
 const Tag = styled.p`
@@ -92,14 +104,6 @@ export const ConceptCard = ({
     title, description, tag, example, code
   }) => {
     // const item = tag.split(', ');
-    const exampleCode = `
-    (function someDemo() {
-      var test = "Hello World!";
-      console.log(test);
-    })();
-    
-    return () => <App />;
-    `;
 return(
     <CardWrapper className="landing-card h-100">
       
@@ -130,7 +134,7 @@ return(
             <p className='mb-0 text-uppercase small'>Example</p>
             {example && <p>{example}</p>}
             {code && (
-              <Highlight  {...defaultProps} code={code} language="scheme">
+              <Highlight theme={owl} {...defaultProps} code={code} language="json">
                  {({ className, style, tokens, getLineProps, getTokenProps }) => (
                     <pre className={className} style={style}>
                       {tokens.map((line, i) => (

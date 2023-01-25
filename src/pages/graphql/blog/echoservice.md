@@ -112,6 +112,7 @@ In the createPerson mutation, the PersonInput parameter is declared as non-null 
 ```scheme
 createPerson(person: PersonInput!): Person!
 ```
+
 A new person object cannot be created without user input; the non-null check assures that a user cannot perform the mutation if an argument is not given. You will get the following error message:
 
 ```scheme
@@ -119,6 +120,7 @@ A new person object cannot be created without user input; the non-null check ass
 ```
 
 ### Envelop Plugins in Yoga
+
 GraphQL Yoga provides built-in support to add and consume plugins via the Envelop library. We used the useReadinessCheck plugin to add a check if the service is ready to perform.
 
 ```scheme
@@ -126,7 +128,7 @@ const yoga = createYoga({
   schema,
   plugins: [
     useReadinessCheck({
-      endpoint: '/knockknock', 
+      endpoint: '/knockknock',
       check: async () => {
         await checkAvailable()
       }
@@ -150,9 +152,11 @@ type Person {
 ```
 
 ### Subscription protocols
+
 Subscriptions are events to which you can subscribe. In the above schema, we defined a ```greetings``` event that, when subscribed to, returns a stream of greetings. A web socket connection or server-side events might be utilised to return this stream. Yoga has built-pport for server-side events. We did, however, use a web socket connection for the echo service. More about GraphQL over web sockets is available here.
 
 ### Testing
+
 The ```yoga.fetch``` method helped us test the operations we defined. The following is an example of a test we wrote for querying the ```hello``` field.
 
 ```scheme
