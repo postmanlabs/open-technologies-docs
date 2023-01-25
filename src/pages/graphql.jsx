@@ -15,7 +15,7 @@ import 'prismjs/themes/prism-tomorrow.css';
 import BreadCrumbsLinks from '../components/modules/BreadCrumbsLinks';
 import PreviousAndNextLinks from '../components/modules/PreviousAndNextLinks';
 import { BaseLinkStyles } from 'aether-marketing';
-import {IntrospectionCode, QueryCode, MutationCode, SubscriptionCode, LiveQueryCode, CustomScalarCode } from './graphql/codeData.jsx';
+
 
 const DocWrapper = styled.div`
   /* Used for Deeplinking */   
@@ -337,7 +337,68 @@ const ContextualStyles = styled.div`
 
 
 `
+const IntrospectionCode = `
+{
+  __schema {                     
+   types {                    
+      name                     
+    }                     
+  }  
+ }
+`
 
+ const QueryCode = `
+type Query { 
+    users: [User]
+    user(id: ID!): User
+  }
+`
+
+ const MutationCode = `
+type Mutation {
+    createUser(name: String!, email: String!): User  
+    updateUser(id: ID!, name: String, email: String): User  
+    deleteUser(id: ID!): User 
+  }
+`
+ const SubscriptionCode = `
+{
+  subscription onFilmAdded(id: ID!, filmID: ID) {
+    filmAdded(id: $id, filmID: $filmID) {
+      title
+    }
+  }
+}
+`
+ const LiveQueryCode = `
+// Subscribe to real-time updates on the current temperature in a city
+const query = 
+  subscription {                    
+temperature(city: "San Francisco")                    
+  }
+;
+
+// Create a function to handle updates from the server
+const handleUpdate = (temperature) => {                   
+  
+};   
+// Send the subscription request to the server and pass the update handler function         
+client.subscribe({ query, handleUpdate });
+`
+ const CustomScalarCode = `
+type Cake {
+    id: ID!
+    name: String!
+    price: Float
+    available: Boolean!
+    hasFrosting: Boolean!
+    hasFilling: Boolean!
+    hasToppingOption: Boolean!
+    toppingKind: String
+    whenCreated: DateTime!
+    lastUpdated: DateTime!
+    }
+`
 const GraphQLPage = ({data}) => {
   
   const { parentLink, subParentLink, previous, next } = data;
