@@ -3,7 +3,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
-import { LandingCard } from '../components/MarketingPages/Cards';
 import {ConceptCard } from '../components/MarketingPages/ConceptCards';
 import DynamicLink from '../components/Shared/DynamicLink';
 import EditDoc from '../components/Shared/EditDoc';
@@ -274,6 +273,9 @@ const RightColumnWrapper = styled.aside`
 .postmanaut-dab {
   max-width: 250px;
 }
+.dynamic-link  {
+  width: 100;
+}
 `
 const ContextualStyles = styled.div`
 
@@ -379,7 +381,7 @@ const GraphQLPage = ({data}) => {
                     code="{
                       __schema {                     
                        types {                    
-                          name                     
+                        name                     
                        }                     
                       }  
                      }"
@@ -399,7 +401,7 @@ const GraphQLPage = ({data}) => {
                     description="A query is a read-only operation. It enables the user to request specific fields from objects and receive only those fields, avoiding over- or under-fetching. *Cover both schema description and client description.*"
                     tag="graphql, api, operation, type, schema, client"
                     example="Client Query"
-                    code="type Query {
+                    code="type Query { 
                       users: [User]
                       user(id: ID!): User
                     }"
@@ -442,16 +444,20 @@ const GraphQLPage = ({data}) => {
                     description="
                     GraphQL live queries allow a client to subscribe to real-time updates from a GraphQL server. Instead of making a request to the server and receiving a one-time response, the client can establish a long-running connection with the server and receive updates in real time as they happen."
                     tag="subscription, real-time, non-spec"
-                    example="Subscribe to real-time updates on the current temperature in a city"
-                    code='const query = `
-
-                    subscription {
-                  
-                      temperature(city: "San Francisco")
-                  
-                    }
-                  
-                  `;'
+                    example=""
+                    code='// Subscribe to real-time updates on the current temperature in a city
+                    const query = `
+                      subscription {                    
+                    temperature(city: "San Francisco")                    
+                      }
+                    `;
+                    
+                    // Create a function to handle updates from the server
+                    const handleUpdate = (temperature) => {                   
+                      console.log(`The temperature in San Francisco is now ${temperature}°F`);                   
+                    };   
+                    // Send the subscription request to the server and pass the update handler function              
+                    client.subscribe({ query, handleUpdate });'
                   />
                 </div>
                 <div className="col-lg-6 mb-3 mb-md-4 ">
@@ -459,9 +465,9 @@ const GraphQLPage = ({data}) => {
                     title="Scalar Type"
                     description="GraphQL specifies a list of scalar types to identify the data structure of an object field. The list of built-in scalars is given in the Example below."
                     tag="schema, scalars"
-                    example="Int: A signed 32‐bit integer.
+                    example="Int: A signed 32-bit integer.
                     Float: A signed double-precision floating-point value.
-                    String: A UTF‐8 character sequence.
+                    String: A UTF-8 character sequence.
                     Boolean: true or false.
                     ID: The ID scalar type represents a unique identifier, often used to refetch an object or as the key for a cache. The ID type is serialized in the same way as a String; however, defining it as an ID signifies that it is not intended to be human‐readable."
                     code=''
@@ -474,27 +480,16 @@ const GraphQLPage = ({data}) => {
                     tag="schema, scalars, type"
                     example="scalar DateTime"
                     code='type Cake {
-
                       id: ID!
-                    
                       name: String!
-                    
                       price: Float
-                    
                       available: Boolean!
-                    
                       hasFrosting: Boolean!
-                    
                       hasFilling: Boolean!
-                    
                       hasToppingOption: Boolean!
-                    
                       toppingKind: String
-                    
                       whenCreated: DateTime!
-                    
                       lastUpdated: DateTime!
-                    
                       }'
                   />
                 </div>
@@ -507,23 +502,14 @@ const GraphQLPage = ({data}) => {
                     code=''
                   />
                 </div>
-                {/* <div className="col-6 mb-3 mb-md-4 ">
-                <ConceptCard
-                    title="Interface"
-                    description=""
-                    tag=""
-                    example=""
-                    code=''
-                  />
-                </div> */}
-                
+               
                 </div>
               
               
                 <PreviousAndNextLinks data={{ previous, next }} />
               </main>
               <RightColumnWrapper className="col-sm-12 col-md-12 col-lg-3 offset-lg-0 col-xl-3 offset-xl-1 right-column">
-                <hr className="d-block d-lg-none" />
+                
                 <EditDoc />
                 <ContextualStyles >
                   <div className='contextual-links__section'>
@@ -532,7 +518,43 @@ const GraphQLPage = ({data}) => {
                 <div className="contextual-links__link" >
                   <DynamicLink url="https://www.postman.com/downloads/" name="API-First Transformation Book" />
                 </div>
-                  
+                {/* <div className="contextual-links__link" >
+                  <DynamicLink  url="https://www.postman.com/downloads/" name="API-First Transformation Book" />
+                  </div> */}
+                  </ContextualStyles>
+                  <ContextualStyles >
+                  <div className='contextual-links__section'>
+                 Blogs
+                  </div>
+                <div className="contextual-links__link" >
+                  <DynamicLink url="https://www.docdocgo.dev/" name="DocDocGo" />
+                  </div> <div className="contextual-links__link" >
+                  <DynamicLink url="https://www.docdocgo.dev/tag/graphql-101/" name="GraphQL Series" />
+                  </div>
+                  <div className="contextual-links__link" >
+                  <DynamicLink url="https://www.blog.postman.com/" name="Postman Blog" />
+                </div>
+                <div className='contextual-links__section'>
+                 Events
+                  </div>
+                  <div className="contextual-links__link" >
+                  <DynamicLink url="https://www.apollographql.com/events/virtual-event/graphql-summit/" name="GraphQL Summit" />
+                </div>
+                <div className='contextual-links__section'>
+                 Resources
+                  </div>
+                  <div className="contextual-links__link" >
+                  <DynamicLink url="https://github.com/postman-open-technologies/graphql/" name="Postman GraphQL Repo" />
+                </div>
+                <div className="contextual-links__link" >
+                  <DynamicLink url="https://2022.stateofgraphql.com/en-US/" name="The State of GraphQL 2022" />
+                </div>
+                {/* <div className='contextual-links__section'>
+                 Social
+                  </div>
+                  <div className="contextual-links__link" >
+                  <DynamicLink url="https://github.com/postman-open-technologies/graphql/" name="Postman GraphQL Repo" />
+                </div> */}
                   </ContextualStyles>
                 <div className="sticky">
                   <div> 
@@ -543,6 +565,7 @@ const GraphQLPage = ({data}) => {
                     </p>
 
                   </div>
+                  
                   <figure className="postmanaut-dab mt-1">
                     <img src="https://voyager.postman.com/illustration/postmanaut-posing-dancing-postman-illustration.svg" alt="Posmanaut dancing. Illustration." className="img-fluid" />
                   </figure>

@@ -5,6 +5,7 @@ page_id:  "how-to-build-an-echo-service-for-graphQL"
 warning: false
 updated: 2023-01-22
 author: Meenakshi Dhanani
+tag: "echo, graphql"
 contextual_links:
   - type: section
     name: "Latest News"
@@ -19,7 +20,7 @@ contextual_links:
   # - type: subtitle
   #   name: "Videos"
   - type: link
-    name: "Postman Blog"
+    name: "GraphQL 101 Series"
     url:  "https://blog.postman.com/"
   - type: link
     name: "Jan's Blog"
