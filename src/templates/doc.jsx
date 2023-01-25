@@ -312,6 +312,7 @@ const DocPage = ({ data }) => {
     );
   })()
   const date = new Date(post.frontmatter.updated).toISOString().split("T")[0];
+  console.log(post.html)
   return (
     <Layout>
       <SEO title={post.frontmatter.title} slug={post.fields.slug} lastModifiedTime={post.frontmatter.updated} />
@@ -324,6 +325,10 @@ const DocPage = ({ data }) => {
             <div className="row row-eq-height">
               <main className="col-sm-12 col-md-12 col-lg-9 offset-lg-0 col-xl-7 doc-page ml-xl-5">
                 <BreadCrumbsLinks data={{ parentLink, subParentLink }} />
+                <p className='small mb-0'>By {post.frontmatter.author} &mdash; 
+                    <small className="font-italic">{date}</small>
+                  </p>
+              
                 <h1>{post.frontmatter.title}</h1>
                 <div id="LoadDoc" />
                 {
@@ -338,10 +343,9 @@ const DocPage = ({ data }) => {
                     : null
                 }
                 <div className='row'>
-                  <p className='col-8'>
-                    <small className="font-italic">Last modified: {date}</small>
-                  </p>
-                  <p className='col-4'><small className='font-italic'>Author {post.frontmatter.author}</small></p>
+                <p className='small'>tags:
+                {post.frontmatter.tag && <span> {post.frontmatter.tag}</span>}</p>
+                
                 </div>
                 {/* Qualtrics */}
                 <LoadQualtrics />
@@ -382,6 +386,7 @@ export const query = graphql`
         title
         updated
         author
+        tag
         contextual_links {
           type
           name
