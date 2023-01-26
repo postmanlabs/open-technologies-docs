@@ -1,21 +1,21 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
+import React, { useState }  from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
-import {ConceptCard } from '../components/MarketingPages/ConceptCards';
+import { ConceptCard } from '../components/MarketingPages/ConceptCards';
 import DynamicLink from '../components/Shared/DynamicLink';
 import EditDoc from '../components/Shared/EditDoc';
 import { leftNavItems } from '../components/LeftNav/LeftNavItems';
 import LeftNav from '../components/LeftNav/LeftNav';
 import SEO from '../components/seo';
-// const { v4: uuidv4 } = require('uuid');
+const { v4: uuidv4 } = require('uuid');
 import styled from 'styled-components';
 import 'prismjs/themes/prism-tomorrow.css';
 import BreadCrumbsLinks from '../components/modules/BreadCrumbsLinks';
 import PreviousAndNextLinks from '../components/modules/PreviousAndNextLinks';
 import { BaseLinkStyles } from 'aether-marketing';
-
+import Data from './Data';
 
 const DocWrapper = styled.div`
   /* Used for Deeplinking */   
@@ -337,72 +337,133 @@ const ContextualStyles = styled.div`
 
 
 `
-const IntrospectionCode = `
-{
-  __schema {                     
-   types {                    
-      name                     
-    }                     
-  }  
- }
-`
+// const IntrospectionCode = `
+// {
+//   __schema {                     
+//    types {                    
+//       name                     
+//     }                     
+//   }  
+//  }
+// `
 
- const QueryCode = `
-type Query { 
-    users: [User]
-    user(id: ID!): User
-  }
-`
+//  const QueryCode = `
+// type Query { 
+//     users: [User]
+//     user(id: ID!): User
+//   }
+// `
 
- const MutationCode = `
-type Mutation {
-    createUser(name: String!, email: String!): User  
-    updateUser(id: ID!, name: String, email: String): User  
-    deleteUser(id: ID!): User 
-  }
-`
- const SubscriptionCode = `
-{
-  subscription onFilmAdded(id: ID!, filmID: ID) {
-    filmAdded(id: $id, filmID: $filmID) {
-      title
-    }
-  }
-}
-`
- const LiveQueryCode = `
-// Subscribe to real-time updates on the current temperature in a city
-const query = 
-  subscription {                    
-temperature(city: "San Francisco")                    
-  }
-;
+//  const MutationCode = `
+// type Mutation {
+//     createUser(name: String!, email: String!): User  
+//     updateUser(id: ID!, name: String, email: String): User  
+//     deleteUser(id: ID!): User 
+//   }
+// `
+//  const SubscriptionCode = `
+// {
+//   subscription onFilmAdded(id: ID!, filmID: ID) {
+//     filmAdded(id: $id, filmID: $filmID) {
+//       title
+//     }
+//   }
+// }
+// `
+//  const LiveQueryCode = `
+// // Subscribe to real-time updates on the current temperature in a city
+// const query = 
+//   subscription {                    
+// temperature(city: "San Francisco")                    
+//   }
+// ;
 
-// Create a function to handle updates from the server
-const handleUpdate = (temperature) => {                   
+// // Create a function to handle updates from the server
+// const handleUpdate = (temperature) => {                   
   
-};   
-// Send the subscription request to the server and pass the update handler function         
-client.subscribe({ query, handleUpdate });
-`
- const CustomScalarCode = `
-type Cake {
-    id: ID!
-    name: String!
-    price: Float
-    available: Boolean!
-    hasFrosting: Boolean!
-    hasFilling: Boolean!
-    hasToppingOption: Boolean!
-    toppingKind: String
-    whenCreated: DateTime!
-    lastUpdated: DateTime!
+// };   
+// // Send the subscription request to the server and pass the update handler function         
+// client.subscribe({ query, handleUpdate });
+// `
+//  const CustomScalarCode = `
+// type Cake {
+//     id: ID!
+//     name: String!
+//     price: Float
+//     available: Boolean!
+//     hasFrosting: Boolean!
+//     hasFilling: Boolean!
+//     hasToppingOption: Boolean!
+//     toppingKind: String
+//     whenCreated: DateTime!
+//     lastUpdated: DateTime!
+//     }
+// `
+
+const Tag = styled.button`
+    border-radius: 20px;
+    border: transparent;
+    width: fit-content;
+    padding: 3px 10px;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    margin-right: 5px;
+    &.graphql[data-text=graphql] {
+        background-color: rgb(45, 81, 170)!important;
+    }
+    &.api {
+        background-color: rgb(216, 245, 200);
+        color: black;
+    }
+    &.schema {
+        background-color: rgb(102, 102, 102);
+    }
+    &.type {
+        background-color: rgb(163, 198, 252);
+        color: black;
+    }
+    &.operation{
+        background-color: rgb(250, 216, 122);
+        color: black;
+    }
+    &.subscription {
+        background-color: rgb(92, 197, 72);
+    }
+    &.real-time {
+        background-color: rgb(81, 188,251);
+    }
+    &.non-spec {
+        background-color: rgb(203, 243, 234);
+        color: black;
+    }
+    &.scalars {
+        background-color: rgb(202,89,49);
+    }
+    &.client {
+        background-color: rgb(177, 121, 35);
+    }
+    &.all {
+      background-color: orange;
     }
 `
+
+ 
+const filterItem = (curcat) => {
+    const newItem = Data.filter((newVal) => {
+      return newVal.tag === curcat; 
+          // comparing category for displaying data
+    });
+    setItem(newItem);
+  };
+
 const GraphQLPage = ({data}) => {
-  
-  const { parentLink, subParentLink, previous, next } = data;
 
+  const [item, setItem] = useState(Data);
+  const { parentLink, subParentLink, previous, next } = data;
+  
+  
+const tagItems = [...new Set(Data.map((Val) => Val.tag))]
   return (
     <Layout>
       <SEO title="Postman GraphQL"
@@ -418,109 +479,49 @@ const GraphQLPage = ({data}) => {
               <main className="col-sm-12 col-md-12 col-lg-9 offset-lg-0 col-xl-7 doc-page ml-xl-5">
               <BreadCrumbsLinks data={{ parentLink, subParentLink }} />
                 {/* Qualtrics */}
-                
-              <h1>GraphQL</h1>
+
+                <h1>GraphQL</h1>
               <h2 className="mt-5 mb-3">GraphQL Concepts</h2>
 
               <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem numquam vitae ratione eveniet fuga assumenda id dolor corrupti. Aperiam ab a reiciendis, odit dignissimos tempore minima autem cum animi pariatur!
               </p>
-          
+     
+                  <p className=''>Filter by tag:</p>
+                <div className="d-flex justify-content-center mb-3">
+        {tagItems.map((Val, id) => {
+          return (
+            <Tag
+            className={Val}
+              data-text={Val}
+              key={id}
+              onClick={() => filterItem(Val)}
+            >
+              {Val}
+            </Tag>
+          );
+        })}
+        <Tag
+          className="all"
+          onClick={() => setItem(Data)}
+        >
+          All
+        </Tag>
+       </div>
+     
               <div className="row justify-content-evenly">
-                <div className="col-lg-6 mb-3 mb-md-4 ">
+              {item.map((Val) => (  <div key={uuidv4()} className="col-lg-6 mb-3 mb-md-4 ">
+              
                   <ConceptCard
-                        title="Schema"
-                        description="A GraphQL schema is a list of object types that define all of the data available to clients of the API."
-                        tag="graphql, api"
-                        example="this is the example"
+                  
+                       title={Val.title}
+                       description={Val.description}
+                       tag={Val.tag}
+                       code={Val.code}
                       />
-                  </div>
-                <div className="col-lg-6 mb-3 mb-md-4 ">
-                <ConceptCard
-                    title="Introspection"
-                    description="Introspection is the capability of returning parts of a schema or the full schema from a GraphQL API using a special client query."
-                    tag="graphql, api"
-                    example='Sending a query to a GraphQL API using the "__schema" will return type information about a named object or all of the types in a GraphQL schema.'
-                    code={IntrospectionCode}
-                  />
-                </div>
-                <div className="col-lg-6  mb-3 mb-md-4 ">
-                <ConceptCard
-                    title="Types"
-                    description="Types describe the objects that are part of your GraphQL schema. There are eight types defined by the GraphQL specification."
-                    tag="graphql, type"
-                    example=""
-                  />
-                </div>
-                <div className="col-lg-6  mb-3 mb-md-4 ">
-                <ConceptCard
-                    title="Query"
-                    description="A query is a read-only operation. It enables the user to request specific fields from objects and receive only those fields, avoiding over- or under-fetching. *Cover both schema description and client description.*"
-                    tag="graphql, api, operation, type, schema, client"
-                    example="Client Query"
-                    code={QueryCode}
-                  />
-                </div>
-                <div className="col-lg-6  mb-3 mb-md-4 ">
-                <ConceptCard
-                    title="Mutation"
-                    description="A mutation is a write operation followed by a fetch. It enables the user to mutate (add, update, or delete) specified fields and then query the modified value on the object returned. "
-                    tag="graphql, operation"
-                    example="schema"
-                    code={MutationCode}
-                  />
-                </div>
-                <div className="col-lg-6 mb-3 mb-md-4 ">
-                <ConceptCard
-                    title="Subscription"
-                    description="
-                    A subscription is a type of operation that allows a client to receive real-time updates from a server by establishing a long-running connection. When the server's data changes, the server can push updates to the subscribed client through this connection."
-                    tag="graphql, operation"
-                    example=""
-                    code={SubscriptionCode}
-                  />
-                </div>
-                <div className="col-lg-6 mb-3 mb-md-4 ">
-                <ConceptCard
-                    title="Live Queries"
-                    description="
-                    GraphQL live queries allow a client to subscribe to real-time updates from a GraphQL server. Instead of making a request to the server and receiving a one-time response, the client can establish a long-running connection with the server and receive updates in real time as they happen."
-                    tag="subscription, real-time, non-spec"
-                    example=""
-                    code={LiveQueryCode}
-                  />
-                </div>
-                <div className="col-lg-6 mb-3 mb-md-4 ">
-                <ConceptCard
-                    title="Scalar Type"
-                    description="GraphQL specifies a list of scalar types to identify the data structure of an object field. The list of built-in scalars is given in the Example below."
-                    tag="schema, scalars"
-                    example="Int: A signed 32-bit integer.
-                    Float: A signed double-precision floating-point value.
-                    String: A UTF-8 character sequence.
-                    Boolean: true or false.
-                    ID: The ID scalar type represents a unique identifier, often used to refetch an object or as the key for a cache. The ID type is serialized in the same way as a String; however, defining it as an ID signifies that it is not intended to be human‐readable."
-                    
-                  />
-                </div>
-                <div className="col-lg-6 mb-3 mb-md-4 ">
-                <ConceptCard
-                    title="Custom Scalar Type"
-                    description="The most common custom scalar type in GraphQL schemas is DateTime, because it isn't a built-in scalar or described in the specification. Custom Scalars can also be used to define other units of measure or whatever is needed by a given implementation."
-                    tag="schema, scalars, type"
-                    example="scalar DateTime"
-                    code=''
-                  />
-                </div>
-                <div className="col-lg-6 mb-3 mb-md-4 ">
-                <ConceptCard
-                    title="Union Type"
-                    description=""
-                    tag=""
-                    example=""
-                    code={CustomScalarCode}
-                  />
-                </div>
+                      
+                  </div>))}
+                
                
                 </div>
               
