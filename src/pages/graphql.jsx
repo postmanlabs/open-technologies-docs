@@ -337,125 +337,33 @@ const ContextualStyles = styled.div`
 
 
 `
-// const IntrospectionCode = `
-// {
-//   __schema {                     
-//    types {                    
-//       name                     
-//     }                     
-//   }  
-//  }
-// `
 
-//  const QueryCode = `
-// type Query { 
-//     users: [User]
-//     user(id: ID!): User
-//   }
-// `
+import { TagButtonStyles } from '../../styles/Tag';
 
-//  const MutationCode = `
-// type Mutation {
-//     createUser(name: String!, email: String!): User  
-//     updateUser(id: ID!, name: String, email: String): User  
-//     deleteUser(id: ID!): User 
-//   }
-// `
-//  const SubscriptionCode = `
-// {
-//   subscription onFilmAdded(id: ID!, filmID: ID) {
-//     filmAdded(id: $id, filmID: $filmID) {
-//       title
-//     }
-//   }
-// }
-// `
-//  const LiveQueryCode = `
-// // Subscribe to real-time updates on the current temperature in a city
-// const query = 
-//   subscription {                    
-// temperature(city: "San Francisco")                    
-//   }
-// ;
-
-// // Create a function to handle updates from the server
-// const handleUpdate = (temperature) => {                   
-  
-// };   
-// // Send the subscription request to the server and pass the update handler function         
-// client.subscribe({ query, handleUpdate });
-// `
-//  const CustomScalarCode = `
-// type Cake {
-//     id: ID!
-//     name: String!
-//     price: Float
-//     available: Boolean!
-//     hasFrosting: Boolean!
-//     hasFilling: Boolean!
-//     hasToppingOption: Boolean!
-//     toppingKind: String
-//     whenCreated: DateTime!
-//     lastUpdated: DateTime!
-//     }
-// `
-
-const Tag = styled.button`
-    border-radius: 20px;
-    border: transparent;
-    width: fit-content;
-    padding: 3px 10px;
-    color: white;
-    font-size: 10px;
-    font-weight: bold;
-    margin-right: 5px;
-    &.graphql[data-text=graphql] {
-        background-color: rgb(45, 81, 170)!important;
+function countTag(tag) {
+  const counts = tag
+  .map((tags) => tags.id).flat().reduce((acc, id) => {
+    const existingTag = acc[tags.id];
+    if (existingTag) {
+      existingTag += 1;
+    } else {
+      acc[tags] = {
+        id: tag.id,
+        name: tags,
+        count: 1,
+      };
     }
-    &.api {
-        background-color: rgb(216, 245, 200);
-        color: black;
-    }
-    &.schema {
-        background-color: rgb(102, 102, 102);
-    }
-    &.type {
-        background-color: rgb(163, 198, 252);
-        color: black;
-    }
-    &.operation{
-        background-color: rgb(250, 216, 122);
-        color: black;
-    }
-    &.subscription {
-        background-color: rgb(92, 197, 72);
-    }
-    &.real-time {
-        background-color: rgb(81, 188,251);
-    }
-    &.non-spec {
-        background-color: rgb(203, 243, 234);
-        color: black;
-    }
-    &.scalars {
-        background-color: rgb(202,89,49);
-    }
-    &.client {
-        background-color: rgb(177, 121, 35);
-    }
-    &.all {
-      background-color: orange;
-    }
-`
-
+    return acc;
+  }, {})
+}
  
-const filterItem = (curcat) => {
-    const newItem = Data.filter((newVal) => {
-      return newVal.tag === curcat; 
-          // comparing category for displaying data
-    });
-    setItem(newItem);
-  };
+// const filterItem = (curcat) => {
+//     const newItem = Data.filter((newVal) => {
+//       return newVal.tag === curcat; 
+//           // comparing category for displaying data
+//     });
+//     setItem(newItem);
+//   };
 
 const GraphQLPage = ({data}) => {
 
@@ -491,22 +399,22 @@ const tagItems = [...new Set(Data.map((Val) => Val.tag))]
                 <div className="d-flex justify-content-center mb-3">
         {tagItems.map((Val, id) => {
           return (
-            <Tag
+            <TagButtonStyles
             className={Val}
               data-text={Val}
               key={id}
               onClick={() => filterItem(Val)}
             >
               {Val}
-            </Tag>
+            </TagButtonStyles>
           );
         })}
-        <Tag
+        <TagButtonStyles
           className="all"
           onClick={() => setItem(Data)}
         >
           All
-        </Tag>
+        </TagButtonStyles>
        </div>
      
               <div className="row justify-content-evenly">
