@@ -6,7 +6,7 @@ const FilterButtons = ({ filterItem, setItem, cardItems }) => {
     // console.log(cardItems, "button")
   return (
     <>
-      <div className="d-flex justify-content-center mx-auto mb-3">
+      <div className="d-flex justify-content-center mx-auto mb-4">
         {cardItems.map((tag, id) => {
           return (
             <TagButtonStyles
@@ -16,15 +16,15 @@ const FilterButtons = ({ filterItem, setItem, cardItems }) => {
                 onClick={() => filterItem(tag)}
             >
                     {tag}
-                </TagButtonStyles>
+            </TagButtonStyles>
           );
         })}
          <TagButtonStyles
-                    className="all"
-                    onClick={() => setItem(Data)}
-                  >
-                    All
-                  </TagButtonStyles>
+            className="all"
+            onClick={() => setItem(Data)}
+            >
+              All
+          </TagButtonStyles>
 
       </div>
     </>

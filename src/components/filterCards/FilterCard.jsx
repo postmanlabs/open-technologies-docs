@@ -2,9 +2,6 @@ import React from "react";
 import { ConceptCard } from "../MarketingPages/ConceptCards";
 // const { v4: uuidv4 } = require('uuid');
 
-
-
-
 const FilterCard = ({ item }) => {
   // console.log(item, "card")
   return (
