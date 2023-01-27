@@ -15,8 +15,6 @@ contextual_links:
     url:  "https://blog.postman.com/"
   - type: section
     name: "Collaborate with us"
-  - type: subtitle
-    name: "over 50 public GitHub repositories"
   - type: link
     name: "Postman's Github"
     url: "https://github.com/postmanlabs"
@@ -24,7 +22,7 @@ contextual_links:
     name: "Open Technologies Github"
     url: "https://github.com/postman-open-technologies"
   - type: section
-    name: Specs
+    name: Specs we contribute to
   - type: link
     name: JSON Schema
     url: "https://json-schema.org/"

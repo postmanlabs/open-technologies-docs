@@ -312,7 +312,7 @@ const DocPage = ({ data }) => {
     );
   })()
   const date = new Date(post.frontmatter.updated).toISOString().split("T")[0];
-  console.log(post.html)
+
   return (
     <Layout>
       <SEO title={post.frontmatter.title} slug={post.fields.slug} lastModifiedTime={lastModifiedTime} />
@@ -363,12 +363,12 @@ const DocPage = ({ data }) => {
                     <p>
                       <span className="font-weight-bold">Open Technologies</span> 
                       <br></br>
-                      Postman's central instance for Open Source—using, contributing to, and creating Open Source software, specifications, libraries, and other components that the API industry relies on both today and tomorrow.
+                      Postman's hub for Open Source software, specs, libraries, and other components that the API industry relies on.
                     </p>
                   
                   </div>
                   <figure className="postmanaut-dab mt-1">
-                    <img src="https://voyager.postman.com/illustration/postmanaut-posing-dancing-postman-illustration.svg" alt="Posmanaut dancing. Illustration." className="img-fluid" />
+                    <img src="https://voyager.postman.com/illustration/ventura-abled.png" alt="Posmanaut dancing. Illustration." className="img-fluid" />
                   </figure>
                 </div>
               </RightColumnWrapper>
