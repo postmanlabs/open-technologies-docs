@@ -1,50 +1,51 @@
-const base64 = require('base-64');
-const fs = require('fs');
-const path = require('path');
-const fetch = require('node-fetch');
-const sh = require('shelljs');
-const { minify } = require('terser');
+const base64 = require("base-64")
+const fs = require("fs")
+const path = require("path")
+const fetch = require("node-fetch")
+const sh = require("shelljs")
+const { minify } = require("terser")
 const requestOptions = {
-  method: 'GET',
+  method: "GET",
   headers: {
-    bff: 'e2e'
+    bff: "e2e",
   },
-  redirect: 'follow'
-};
-
-async function compress(t) {
-  const result = await minify(t, {});
-
-  return result;
+  redirect: "follow",
 }
 
-const host = process.env.PM_TECH_RT || '';
+async function compress(t) {
+  const result = await minify(t, {})
 
-const fetchPmTech = () => new Promise((resolve) => {
-  fetch(host, requestOptions).then((resp) => {
-    if (resp) {
-      resp.json().then((data) => {
-        const tag = data['open-technologies-docs'];
-        const script = base64.decode(data.version[tag]);
-        compress(script).then((compressed) => {
-          sh.exec('mkdir -p bff-data');
-          sh.exec('touch bff-data/pmTech.js');
+  return result
+}
 
-          fs.writeFile(
-            path.join('bff-data', 'pmTech.js'),
-            compressed.code,
-            (er) => {
-              if (er) {
-                throw er;
+const host = process.env.PM_TECH_RT || ""
+
+const fetchPmTech = () =>
+  new Promise((resolve) => {
+    fetch(host, requestOptions).then((resp) => {
+      if (resp) {
+        resp.json().then((data) => {
+          const tag = data["open-technologies-docs"]
+          const script = base64.decode(data.version[tag])
+          compress(script).then((compressed) => {
+            sh.exec("mkdir -p bff-data")
+            sh.exec("touch bff-data/pmTech.js")
+
+            fs.writeFile(
+              path.join("bff-data", "pmTech.js"),
+              compressed.code,
+              (er) => {
+                if (er) {
+                  throw er
+                }
               }
-            },
-          );
+            )
 
-          resolve(compressed.code);
-        });
-      });
-    }
-  });
-});
+            resolve(compressed.code)
+          })
+        })
+      }
+    })
+  })
 
-module.exports = fetchPmTech;
+module.exports = fetchPmTech

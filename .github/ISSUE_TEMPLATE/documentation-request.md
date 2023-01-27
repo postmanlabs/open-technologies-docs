@@ -1,10 +1,9 @@
 ---
 name: Documentation request
 about: Suggest ideas for new documentation
-title: ''
+title: ""
 labels: enhancement
 assignees: OlliesWorld
-
 ---
 
 **Is your request related to a problem? Please describe.**

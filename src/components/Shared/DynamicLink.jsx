@@ -1,16 +1,20 @@
-import { Link } from 'gatsby';
-import React from 'react';
+import { Link } from "gatsby"
+import React from "react"
 
 const DynamicLink = ({ className, url, name }) => {
-  const classes = className ? ` ${className}` : '';
-  if (url.substring(0, 4) === 'http') {
+  const classes = className ? ` ${className}` : ""
+  if (url.substring(0, 4) === "http") {
     return (
-      <a className={`dynamic-link__external${classes}`} href={url} >{name}</a>
-    );
+      <a className={`dynamic-link__external${classes}`} href={url}>
+        {name}
+      </a>
+    )
   }
   return (
-    <Link className={`dynamic-link__internal${classes}`} to={url}>{name}</Link>
-  );
-};
+    <Link className={`dynamic-link__internal${classes}`} to={url}>
+      {name}
+    </Link>
+  )
+}
 
-export default DynamicLink;
+export default DynamicLink

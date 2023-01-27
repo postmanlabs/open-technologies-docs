@@ -1,12 +1,12 @@
-import React from 'react';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
-import styled from 'styled-components';
-import { BaseLink } from 'aether-marketing'
+import React from "react"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
+import styled from "styled-components"
+import { BaseLink } from "aether-marketing"
 
 const CardWrapper = styled.div`
   margin-bottom: 32px;
   text-align: left !important;
-  
+
   .landing-card__top {
     background: transparent;
     margin: 0;
@@ -22,23 +22,19 @@ const CardWrapper = styled.div`
     &-description {
       margin-bottom: 25px;
       font-size: 16px;
-      
     }
-    &-title{
+    &-title {
       width: 85%;
-     
     }
     a {
-      
       margin-bottom: 48px;
-      
     }
   }
-  .title_link  {
+  .title_link {
     color: black !important;
   }
-  
-   a:hover {
+
+  a:hover {
     color: ${(props) => props.theme.colors.blue_60} !important;
     text-decoration: none;
     border: none !important;
@@ -46,39 +42,48 @@ const CardWrapper = styled.div`
 `
 
 const SquaredUpThumbnailWrapper = styled.div`
-  img { 
+  img {
     border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  margin-bottom: 24px;
+    border-top-right-radius: 8px;
+    margin-bottom: 24px;
   }
-`;
+`
 
-export const LandingCard = ({
-  title, description, link, icon, cta, image
-}) => (
+export const LandingCard = ({ title, description, link, icon, cta, image }) => (
   <CardWrapper className="landing-card h-100">
     <div className="landing-card__top">
-     {icon && icon ? (<div className="landing-card__image">
-        <img src={icon} alt={title} aria-hidden="true"/>
-      </div>) : (<SquaredUpThumbnailWrapper> <img src={image} alt={title} aria-hidden="true"/></SquaredUpThumbnailWrapper>)}
+      {icon && icon ? (
+        <div className="landing-card__image">
+          <img src={icon} alt={title} aria-hidden="true" />
+        </div>
+      ) : (
+        <SquaredUpThumbnailWrapper>
+          {" "}
+          <img src={image} alt={title} aria-hidden="true" />
+        </SquaredUpThumbnailWrapper>
+      )}
     </div>
     <div className="landing-card__content text-left">
-      <h3 className="landing-card__content-title h4  mb-4"><a href={link} target="_blank" rel="noopener" className='title_link'>{title}</a></h3>
+      <h3 className="landing-card__content-title h4  mb-4">
+        <a href={link} target="_blank" rel="noopener" className="title_link">
+          {title}
+        </a>
+      </h3>
       <p className="landing-card__content-description">{description}</p>
-      <BaseLink 
-        src={link} 
-        linkType="arrowLink"
-        target="same-tab"
-      >
+      <BaseLink src={link} linkType="arrowLink" target="same-tab">
         {cta}
       </BaseLink>
     </div>
   </CardWrapper>
-);
+)
 
 // Landing Card with containing an outbound link
 export const LandingCardWithOutboundLink = ({
-  title, description, link, icon, cta,
+  title,
+  description,
+  link,
+  icon,
+  cta,
 }) => (
   <CardWrapper className="landing-card h-100">
     <div className="landing-card__top">
@@ -89,24 +94,24 @@ export const LandingCardWithOutboundLink = ({
     <div className="landing-card__content">
       <h3 className="landing-card__content-title h4">{title}</h3>
       <p className="landing-card__content-description">{description}</p>
-      <OutboundLink href={link} className="btn btn__primary">{cta}</OutboundLink>
+      <OutboundLink href={link} className="btn btn__primary">
+        {cta}
+      </OutboundLink>
     </div>
   </CardWrapper>
-);
+)
 
-export const SmallCard = ({
-  title, text, link, href,
-}) => (
+export const SmallCard = ({ title, text, link, href }) => (
   <div className="row small-card justify-content-center">
-    <div className="col-md-3 col-xs-12 col-lg-2 small-card__title">
-      {title}
-    </div>
+    <div className="col-md-3 col-xs-12 col-lg-2 small-card__title">{title}</div>
     <div className="col-md-4 col-xs-12 small-card__text">
       {text}
-      <a className="link-style" href={href}>{link}</a>
+      <a className="link-style" href={href}>
+        {link}
+      </a>
     </div>
   </div>
-);
+)
 
 export const IconCard = ({
   items,
@@ -124,7 +129,6 @@ export const IconCard = ({
   link3,
 }) => (
   <div className="row icon-card justify-content-center">
-
     <div className="col-xs-9 col-sm-5 col-md-4 col-lg-4 icon-card__left">
       {/* left image column */}
       <div className="row">
@@ -135,12 +139,17 @@ export const IconCard = ({
         </div>
         {/* left text column */}
         <div className="col-9 col-sm-6 col-md-7 col-lg-9 icon-card__left-text">
-          <div><p icon-card__item>{items}</p></div>
-          <div><h4>{title}</h4></div>
-          <div><p>{description}</p></div>
+          <div>
+            <p icon-card__item>{items}</p>
+          </div>
+          <div>
+            <h4>{title}</h4>
+          </div>
+          <div>
+            <p>{description}</p>
+          </div>
         </div>
       </div>
-
     </div>
 
     <div className="col-sm-5 col-md-3 icon-card__right">
@@ -150,52 +159,61 @@ export const IconCard = ({
             <h6>{heading1}</h6>
           </div>
           <div className="row">
-            <p><a className="link-style" href={href1}>{link1}</a></p>
+            <p>
+              <a className="link-style" href={href1}>
+                {link1}
+              </a>
+            </p>
           </div>
           <div className="row">
             <h6>{heading2}</h6>
           </div>
           <div className="row">
-            <p><a className="link-style" href={href2}>{link2}</a></p>
+            <p>
+              <a className="link-style" href={href2}>
+                {link2}
+              </a>
+            </p>
           </div>
           <div className="row">
             <h6>{heading3}</h6>
           </div>
           <div className="row">
-            <p><a className="link-style" href={href3}>{link3}</a></p>
+            <p>
+              <a className="link-style" href={href3}>
+                {link3}
+              </a>
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
-);
+)
 
-export const LabeledCard = ({
-  link, label, title, description,
-}) => (
+export const LabeledCard = ({ link, label, title, description }) => (
   <a href={link} className="no-deco">
     <div className="labeled-card try-it-yourself-card">
       <div className="labeled-card-content">
-        <label htmlFor="LabeledCard" className="labeled-card-content-label">{label}</label>
+        <label htmlFor="LabeledCard" className="labeled-card-content-label">
+          {label}
+        </label>
         <h3 className="labeled-card-content-title">{title}</h3>
         <p className="labeled-card-content-description">{description}</p>
       </div>
     </div>
   </a>
-);
+)
 
-export const SecondaryCard = ({
-  title,
-  description,
-  ctaLink,
-  cta,
-}) => (
+export const SecondaryCard = ({ title, description, ctaLink, cta }) => (
   <div className="secondary-card secondary-card-content text-center h-100">
     <h4 className="secondary-card-content-title">{title}</h4>
     <p className="secondary-card-content-description">{description}</p>
-    <a className="btn btn__secondary-light mb-0" href={ctaLink}>{cta}</a>
+    <a className="btn btn__secondary-light mb-0" href={ctaLink}>
+      {cta}
+    </a>
   </div>
-);
+)
 
 export const TransparentCard = ({ icon, title, text }) => (
   <div className="transparent-card">
@@ -203,7 +221,7 @@ export const TransparentCard = ({ icon, title, text }) => (
     <h3>{title}</h3>
     <p>{text}</p>
   </div>
-);
+)
 
 // this card has been removed from page, keeping code for future reference
 export const QaCard = ({ title, content, cta }) => (
@@ -213,4 +231,4 @@ export const QaCard = ({ title, content, cta }) => (
       <p>{content}</p>
     </a>
   </div>
-);
+)

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
 /* DO NOT EDIT MINIFIED NORMAILZE CSS */
@@ -351,4 +351,4 @@ button.close:not(:disabled):not(.disabled):hover {
   opacity: 1;
 }
 `
-export default GlobalStyle;
+export default GlobalStyle

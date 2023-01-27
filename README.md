@@ -16,8 +16,8 @@ The secondary top navbar as well as the left and right navbars can be adjusted/e
 **TLDR;
 Clone down repo, create new GitHub repo, push up changes to new repo, contact MarketingEngineering for deployment**
 
-* Clone down this repo and rename it.
-* In your terminal run:
+- Clone down this repo and rename it.
+- In your terminal run:
 
 ```
 
@@ -25,8 +25,8 @@ npm run nvmrc; nvm use; npm i
 
 ```
 
-* Create a new GitHub repo under the PostmanLabs organisation.
-* In your terminal run:
+- Create a new GitHub repo under the PostmanLabs organisation.
+- In your terminal run:
 
 ```shell
 
