@@ -363,7 +363,7 @@ const DocPage = ({ data }) => {
                     <p>
                       <span className="font-weight-bold">Open Technologies</span> 
                       <br></br>
-                       help with providing a safe space to grow and flourish.
+                      Postman's central instance for Open Source—using, contributing to, and creating Open Source software, specifications, libraries, and other components that the API industry relies on both today and tomorrow.
                     </p>
                   
                   </div>
