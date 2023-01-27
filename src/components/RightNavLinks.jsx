@@ -69,59 +69,50 @@ export default function RightNavLinks() {
         <EditDoc />
                 <ContextualStyles >
                   <div className='contextual-links__section'>
-                  Latest News
+                  Get to know us
                   </div>
                 <div className="contextual-links__link" >
-                  <DynamicLink url="https://www.postman.com/downloads/" name="API-First Transformation Book" />
+                  <DynamicLink url="https://www.postman.com/company/open-philosophy/" name="The Postman Open Philosophy" />
                 </div>
-                {/* <div className="contextual-links__link" >
-                  <DynamicLink  url="https://www.postman.com/downloads/" name="API-First Transformation Book" />
-                  </div> */}
-                  
-                  <div className='contextual-links__section'>
-                 Blogs
-                  </div>
-                <div className="contextual-links__link" >
-                  <DynamicLink url="https://www.docdocgo.dev/" name="DocDocGo" />
-                  </div> <div className="contextual-links__link" >
-                  <DynamicLink url="https://www.docdocgo.dev/tag/graphql-101/" name="GraphQL Series" />
-                  </div>
                   <div className="contextual-links__link" >
                   <DynamicLink url="https://www.blog.postman.com/" name="Postman Blog" />
                 </div>
                 <div className='contextual-links__section'>
-                 Events
+                 Collaborate with us
                   </div>
                   <div className="contextual-links__link" >
-                  <DynamicLink url="https://www.apollographql.com/events/virtual-event/graphql-summit/" name="GraphQL Summit" />
-                </div>
-                <div className='contextual-links__section'>
-                 Resources
-                  </div>
-                  <div className="contextual-links__link" >
-                  <DynamicLink url="https://github.com/postman-open-technologies/graphql/" name="Postman GraphQL Repo" />
+                  <DynamicLink url="https://github.com/postmanlabs" name="Postman's Github" />
                 </div>
                 <div className="contextual-links__link" >
-                  <DynamicLink url="https://2022.stateofgraphql.com/en-US/" name="The State of GraphQL 2022" />
+                  <DynamicLink url="https://github.com/postman-open-technologies" name="Open Technologies Github" />
                 </div>
-                {/* <div className='contextual-links__section'>
-                 Social
+                <div className='contextual-links__section'>
+                Specs we contribute to
                   </div>
                   <div className="contextual-links__link" >
-                  <DynamicLink url="https://github.com/postman-open-technologies/graphql/" name="Postman GraphQL Repo" />
-                </div> */}
+                  <DynamicLink url="https://json-schema.org/" name="JSON Schema" />
+                </div>
+                <div className="contextual-links__link" >
+                  <DynamicLink url="https://www.asyncapi.com/" name="Async API" />
+                </div>
+                <div className="contextual-links__link" >
+                  <DynamicLink url="https://www.openapis.org/" name="OpenAPI" />
+                </div>
+                <div className="contextual-links__link" >
+                  <DynamicLink url="https://graphql.org/" name="GraphQL" />
+                </div>
                   </ContextualStyles>
                 <div className="sticky">
                   <div> 
                     <p>
                       <span className="font-weight-bold">Open Technologies</span> 
                       <br></br>
-                       help with providing a safe space to grow and flourish.
+                      Postman's hub for Open Source software, specs, libraries, and other components that the API industry relies on.
                     </p>
 
                   </div>
                   <figure className="postmanaut-dab mt-1">
-                    <img src="https://voyager.postman.com/illustration/postmanaut-posing-dancing-postman-illustration.svg" alt="Posmanaut dancing. Illustration." className="img-fluid" />
+                    <img src="https://voyager.postman.com/illustration/ventura-abled.png" alt="Venutra abled. Illustration." className="img-fluid" />
                   </figure>
                 </div>
         </>

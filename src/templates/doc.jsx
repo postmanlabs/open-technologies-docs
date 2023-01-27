@@ -3,8 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
-import ContextualLinks from '../components/ContextualLinks/ContextualLinks';
-import EditDoc from '../components/Shared/EditDoc';
+import RightNavLinks from '../components/RightNavLinks'
+// import ContextualLinks from '../components/ContextualLinks/ContextualLinks';
+// import EditDoc from '../components/Shared/EditDoc';
 import { leftNavItems } from '../components/LeftNav/LeftNavItems';
 import LeftNav from '../components/LeftNav/LeftNav';
 import SEO from '../components/seo';
@@ -356,9 +357,9 @@ const DocPage = ({ data }) => {
               </main>
               <RightColumnWrapper className="col-sm-12 col-md-12 col-lg-3 offset-lg-0 col-xl-3 offset-xl-1 right-column">
                 <hr className="d-block d-lg-none" />
-                <EditDoc />
-                <DisplayContextualLinks data={data} />
-                <div className="sticky">
+                {/* <EditDoc /> */}
+                <RightNavLinks />
+                {/* <div className="sticky">
                   <div> 
                     <p>
                       <span className="font-weight-bold">Open Technologies</span> 
@@ -368,9 +369,9 @@ const DocPage = ({ data }) => {
                   
                   </div>
                   <figure className="postmanaut-dab mt-1">
-                    <img src="https://voyager.postman.com/illustration/ventura-abled.png" alt="Posmanaut dancing. Illustration." className="img-fluid" />
+                    <img src="https://voyager.postman.com/illustration/ventura-abled.png" alt="Ventura abled. Illustration." className="img-fluid" />
                   </figure>
-                </div>
+                </div> */}
               </RightColumnWrapper>
             </div>
           </div>
