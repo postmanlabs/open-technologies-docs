@@ -6,41 +6,37 @@ warning: false
 updated: 2021-09-29
 contextual_links:
   - type: section
-    name: "Latest News"
+    name: "Get to know us"
   - type: link
-    name: "API-First Transformation Book"
-    url: "https://www.postman.com/downloads/"
-  - type: link
-    name: "Postman's Philosophy"
-    url: "https://www.postman.com/book/api-first-transformation/"
-  - type: section
-    name: "Open Tech Team Blogs"
-  # - type: subtitle
-  #   name: "Videos"
+    name: "The Postman Open Philosophy"
+    url: "https://www.postman.com/company/open-philosophy/"
   - type: link
     name: "Postman Blog"
     url:  "https://blog.postman.com/"
-  - type: link
-    name: "Jan's Blog"
-    url: "https://dev.to/jansche/"
-  
   - type: section
-    name: "Where to find us"
+    name: "Collaborate with us"
+  - type: subtitle
+    name: "over 50 public GitHub repositories"
   - type: link
-    name: "Github"
+    name: "Postman's Github"
+    url: "https://github.com/postmanlabs"
+  - type: link
+    name: "Open Technologies Github"
     url: "https://github.com/postman-open-technologies"
+  - type: section
+    name: Specs
   - type: link
-    name: "Twitter"
-    url: ""
+    name: JSON Schema
+    url: "https://json-schema.org/"
   - type: link
-    name: "Mastodon"
-    url: ""
+    name: Async API
+    url: "https://www.asyncapi.com/"
   - type: link
-    name: "Discord"
-    url:  ""
-  - type: dynamic_blog
-    name: "Postman Blog Posts"
-    blog_tag: "openapi"
+    name: OpenAPI
+    url: "https://www.openapis.org/"
+  - type: link
+    name: GraphQL
+    url: "https://graphql.org/"
 ---
 
 APIs provide an opportunity for deep integration with existing API gateway solutions across the API lifecycle, allowing API contracts to be published and synced, rate limits, logging, caching, and other gateway capabilities to be configured and automated as part of the API lifecycle. Understanding the API gateway landscape and how they contribute to your work is an important part of anyone contributing to API operations–whether business or technical.
