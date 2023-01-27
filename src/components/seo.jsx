@@ -64,7 +64,7 @@
          },
          {
            property: 'og:image',
-           content: 'https://voyager.postman.com/social-preview/learning-center/postman-learning-center-social-preview.jpg',
+           content: '"https://voyager.postman.com/illustration/ventura-abled.png"',
          },
          {
            property: 'og:type',
@@ -80,19 +80,19 @@
          },
          {
            name: 'twitter:title',
-           content: `${title} | Postman Open Tech`,
+           content: `${title} | Postman Open Technology`,
          },
          {
            property: 'twitter:description',
-           content: `${title}: documentation for Postman Open Tech, the collaboration platform for API development. Create better APIs—faster.`,
+           content: `${title}: documentation for Postman Open Technology, the collaboration platform for API development. Create better APIs—faster.`,
          },
          {
            property: 'twitter:domain',
-           content: 'https://learning.postman.com',
+           content: 'https://learning.postman.com/open-tech',
          },
          {
            property: 'twitter:image',
-           content: 'https://voyager.postman.com/social-preview/learning-center/postman-learning-center-social-preview.jpg',
+           content: '"https://voyager.postman.com/illustration/ventura-abled.png"',
          },
          {
            property: 'twitter:site',
