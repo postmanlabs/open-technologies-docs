@@ -3,7 +3,7 @@ const { v4: uuidv4 } = require('uuid');
 import styled from 'styled-components';
 import Highlight, {defaultProps} from "prism-react-renderer";
 import owl from "prism-react-renderer/themes/nightOwlLight";
-
+import { TagStyles } from "../filterCards/Tag";
 
 const CardWrapper = styled.div`
   margin-bottom: 32px;
@@ -89,21 +89,12 @@ const CardWrapper = styled.div`
 }
 `
 
-const Tag = styled.p`
-    border-radius: 20px;
-    width: fit-content;
-    padding: 3px 10px;
-    color: white;
-    font-size: 10px;
-    font-weight: bold;
-    margin-right: 10px;
-`
 
 
 export const ConceptCard = ({
     title, description, tag, example, code
   }) => {
-    // const item = tag.split(', ');
+    
 return(
     <CardWrapper className="landing-card h-100">
       
@@ -116,16 +107,16 @@ return(
             <div className='row ml-1'>          
              {tag.split(", ").map(item => (
               <div key={uuidv4()}>
-                {item === 'api' &&  (<Tag className="api" >{item}</Tag>)}
-                {item === 'graphql' &&  (<Tag className="graphql" >{item}</Tag>)}
-                {item === 'schema' &&  (<Tag className="schema" >{item}</Tag>)}
-                {item === 'type' &&  (<Tag className="type" >{item}</Tag>)}
-                {item === 'operation' &&  (<Tag className="operation" >{item}</Tag>)}
-                {item === 'subscription' &&  (<Tag className="subscription" >{item}</Tag>)}
-                {item === 'real-time' &&  (<Tag className="real-time" >{item}</Tag>)}
-                {item === 'non-spec' &&  (<Tag className="non-spec" >{item}</Tag>)}     
-                {item === 'scalars' &&  (<Tag className="scalars" >{item}</Tag>)}     
-                {item === 'client' &&  (<Tag className="operation" >{item}</Tag>)}
+                {item === 'api' &&  (<TagStyles className="api" >{item}</TagStyles>)}
+                {item === 'graphql' &&  (<TagStyles className="graphql" >{item}</TagStyles>)}
+                {item === 'schema' &&  (<TagStyles className="schema" >{item}</TagStyles>)}
+                {item === 'type' &&  (<TagStyles className="type" >{item}</TagStyles>)}
+                {item === 'operation' &&  (<TagStyles className="operation" >{item}</TagStyles>)}
+                {item === 'subscription' &&  (<TagStyles className="subscription" >{item}</TagStyles>)}
+                {item === 'real-time' &&  (<TagStyles className="real-time" >{item}</TagStyles>)}
+                {item === 'non-spec' &&  (<TagStyles className="non-spec" >{item}</TagStyles>)}     
+                {item === 'scalars' &&  (<TagStyles className="scalars" >{item}</TagStyles>)}     
+                {item === 'client' &&  (<TagStyles className="operation" >{item}</TagStyles>)}
               </div>
                 ))}    
        </div>
