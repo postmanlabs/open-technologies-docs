@@ -1,92 +1,85 @@
-const fs = require('fs');
-const sh = require('shelljs');
-const crypto = require('crypto');
-const pingWebHook = require('./build/pingWebHook');
-const fetchBlogPosts = require('./build/fetchBlogPosts');
-const fetchFooter = require('./build/fetchFooter');
-const fetchNavbar = require('./build/fetchNavbar');
-const fetchPmTech = require('./build/fetchPmTech');
-const { allow } = require('./package.json');
+const fs = require("fs")
+const sh = require("shelljs")
+const crypto = require("crypto")
+const pingWebHook = require("./build/pingWebHook")
+const fetchBlogPosts = require("./build/fetchBlogPosts")
+const fetchFooter = require("./build/fetchFooter")
+const fetchNavbar = require("./build/fetchNavbar")
+const fetchPmTech = require("./build/fetchPmTech")
+const { allow } = require("./package.json")
 
-const { pmTech: allowedPmTech } = allow;
-const delay = 1000;
+const { pmTech: allowedPmTech } = allow
+const delay = 1000
 const runtime = {
-  pm: [''],
-};
+  pm: [""],
+}
 
 if (process.env.PM_TECH) {
-  sh.exec('mkdir -p public');
+  sh.exec("mkdir -p public")
 
   Object.keys(runtime).forEach((key) => {
     if (runtime[key][0]) {
-      const fileBuffer = fs.readFileSync(runtime[key][0]);
-      const hashSum = crypto.createHash('sha1');
-      const ext = runtime[key][0]
-        .split('/')
-        .pop()
-        .split('.')
-        .pop();
+      const fileBuffer = fs.readFileSync(runtime[key][0])
+      const hashSum = crypto.createHash("sha1")
+      const ext = runtime[key][0].split("/").pop().split(".").pop()
 
-      hashSum.update(fileBuffer);
+      hashSum.update(fileBuffer)
 
-      const hex = hashSum.digest('hex');
+      const hex = hashSum.digest("hex")
 
-      runtime[key].push(`_${hex}.${ext}`);
+      runtime[key].push(`_${hex}.${ext}`)
 
-      sh.exec(`cp ${runtime[key][0]} public/${runtime[key][1]}`);
+      sh.exec(`cp ${runtime[key][0]} public/${runtime[key][1]}`)
     }
-  });
+  })
 }
 
 const prefetch = async () => {
-  sh.exec('mkdir -p bff-data');
-  await pingWebHook();
-  fetchBlogPosts();
-  fetchFooter();
-  fetchNavbar();
+  sh.exec("mkdir -p bff-data")
+  await pingWebHook()
+  fetchBlogPosts()
+  fetchFooter()
+  fetchNavbar()
 
-  let pmTech = '';
+  let pmTech = ""
 
   if (process.env.PM_TECH_RT) {
-    pmTech = await fetchPmTech();
+    pmTech = await fetchPmTech()
 
-    pmTech = pmTech;
+    pmTech = pmTech
 
-    sh.exec('mkdir -p public');
+    sh.exec("mkdir -p public")
 
     Object.keys(runtime).forEach((key) => {
       if (runtime[key][0]) {
-        const fileBuffer = fs.readFileSync(runtime[key][0]);
-        const hashSum = crypto.createHash('sha1');
-        const ext = runtime[key][0]
-          .split('/')
-          .pop()
-          .split('.')
-          .pop();
+        const fileBuffer = fs.readFileSync(runtime[key][0])
+        const hashSum = crypto.createHash("sha1")
+        const ext = runtime[key][0].split("/").pop().split(".").pop()
 
-        hashSum.update(fileBuffer);
+        hashSum.update(fileBuffer)
 
-        const hex = hashSum.digest('hex');
+        const hex = hashSum.digest("hex")
 
-        runtime[key].push(`_${hex}.${ext}`);
+        runtime[key].push(`_${hex}.${ext}`)
 
         setTimeout(() => {
-          sh.exec(`cp ${runtime[key][0]} public/${runtime[key][1]}`);
-        }, delay);
+          sh.exec(`cp ${runtime[key][0]} public/${runtime[key][1]}`)
+        }, delay)
       }
-    });
+    })
   }
 
-  const UACode = 'UA-43979731-18';
-  const GTMCode = 'GTM-M42M5N';
+  const UACode = "UA-43979731-18"
+  const GTMCode = "GTM-M42M5N"
   const googleTagManager = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','${GTMCode}');`;
+})(window,document,'script','dataLayer','${GTMCode}');`
 
-  const script = (process.env.PM_TECH_RT
-      && `
+  const script =
+    (process.env.PM_TECH_RT &&
+      `
 ${pmTech}
 setTimeout(function(){
   var propertyName = 'open-technologies-docs';
@@ -114,16 +107,16 @@ setTimeout(function(){
     }
   }
 }, 1000);
-`)
-|| `
+`) ||
+    `
   console.info('Postman OSS');
-`;
+`
 
-  fs.writeFile('bff.json', JSON.stringify({ script }), (err) => {
+  fs.writeFile("bff.json", JSON.stringify({ script }), (err) => {
     if (err) {
-      throw err;
+      throw err
     }
-  });
-};
+  })
+}
 
-prefetch();
+prefetch()

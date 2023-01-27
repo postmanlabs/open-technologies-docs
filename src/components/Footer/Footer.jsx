@@ -1,28 +1,29 @@
-import React, {useState} from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import styled from 'styled-components';
+import React, { useState } from "react"
+import { v4 as uuidv4 } from "uuid"
+import styled from "styled-components"
 // import footerDataLocal from '../../../build/footerDev.json';
-import footerData from '../../../bff-data/footer.json';
-
+import footerData from "../../../bff-data/footer.json"
 
 const FooterWrapper = styled.footer`
   border-top: 1px solid ${(props) => props.theme.colors.grey_30};
   background-color: ${(props) => props.theme.colors.grey_00};
   font-size: 14px;
   color: ${(props) => props.theme.colors.grey_50};
-.copyright {
-  font-size: 12px;
-}
-.column {
-  margin-left: 0px;
-}
-.footer-col-title {
-  font-size: 16px !important;
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  line-height: 1.4;
-  margin-bottom: 8px; 
-}
+  .copyright {
+    font-size: 12px;
+  }
+  .column {
+    margin-left: 0px;
+  }
+  .footer-col-title {
+    font-size: 16px !important;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", Helvetica, Arial,
+      sans-serif;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
 `
 
 const ColumnWrapper = styled.ul`
@@ -30,27 +31,27 @@ const ColumnWrapper = styled.ul`
     list-style-type: none;
     margin-bottom: 0;
   }
-  
-a {
-  color: ${(props) => props.theme.colors.grey_50};
-  text-transform: none;
-  font-weight: 400;
-  display: block;
-  line-height: 1.7;
-  padding: 5px 0;
-  &:hover {
-    color: ${(props) => props.theme.colors.blue_50};
-    text-decoration: none;
+
+  a {
+    color: ${(props) => props.theme.colors.grey_50};
+    text-transform: none;
+    font-weight: 400;
+    display: block;
+    line-height: 1.7;
+    padding: 5px 0;
+    &:hover {
+      color: ${(props) => props.theme.colors.blue_50};
+      text-decoration: none;
+    }
+    span {
+      border: 1px solid ${(props) => props.theme.colors.blue_10};
+      border-radius: ${(props) => props.theme.borderRadius.medium};
+      padding: 0 7px 0 4px;
+      display: inline-block;
+      white-space: pre;
+      margin-left: 6px;
+    }
   }
-  span {
-    border: 1px solid ${(props) => props.theme.colors.blue_10};
-    border-radius: ${(props) => props.theme.borderRadius.medium};
-    padding: 0 7px 0 4px;
-    display: inline-block;
-    white-space: pre;
-    margin-left: 6px;
-  }
-}
 `
 
 const FooterImgWrapper = styled.div`
@@ -74,40 +75,38 @@ const SocialSVGWrapper = styled.div`
   }
 `
 
-const triggerGA = (category, label) => (
-  category
-  && label
-  && window.pm
-  && window.pm.ga('send', 'event', category, 'Click', label)
-);
+const triggerGA = (category, label) =>
+  category &&
+  label &&
+  window.pm &&
+  window.pm.ga("send", "event", category, "Click", label)
 
 // Helper function for rel attribute in link or button
 function relStringGenerator(target) {
-  if (target === '') {
-    return null;
+  if (target === "") {
+    return null
   }
-  if (target === 'blank') {
-    return 'noopener';
+  if (target === "blank") {
+    return "noopener"
   }
-  return null;
+  return null
 }
 // // Helper function for target attribute in link or button
 function targetStringGenerator(target) {
-  if (target === '') {
-    return null;
+  if (target === "") {
+    return null
   }
-  if (target === 'blank') {
-    return '_blank';
+  if (target === "blank") {
+    return "_blank"
   }
-  return null;
+  return null
 }
 
 const Footer = () => {
-
   const [data] = useState(footerData)
 
-  const columns = data.items.slice(0, 5);
-   
+  const columns = data.items.slice(0, 5)
+
   return (
     <FooterWrapper>
       <section id="Footer" className="section">
@@ -117,7 +116,11 @@ const Footer = () => {
               <div className="row">
                 {/* Copyright */}
                 <FooterImgWrapper className="col-8 offset-2 col-md-3 offset-md-0 col-lg-2 order-12 order-md-0 pad-md-right align-self-center">
-                  <img className="footer-img mb-5" src='https://voyager.postman.com/illustration/postman-footer-rocket-launch.svg' alt="Postman" />
+                  <img
+                    className="footer-img mb-5"
+                    src="https://voyager.postman.com/illustration/postman-footer-rocket-launch.svg"
+                    alt="Postman"
+                  />
                   <span className="col-12 d-none d-md-block copyright">
                     {data.copyright}
                   </span>
@@ -130,8 +133,8 @@ const Footer = () => {
                         {item.title}
                       </h2>
                       <ColumnWrapper className="column">
-                        {(item.items
-                          && item.items.map((link) => (
+                        {(item.items &&
+                          item.items.map((link) => (
                             <li className="column-row" key={uuidv4()}>
                               <a
                                 className="column-link"
@@ -140,7 +143,7 @@ const Footer = () => {
                                 rel={relStringGenerator(link.target)}
                                 target={targetStringGenerator(link.target)}
                                 onClick={() => {
-                                  triggerGA(link.category, link.label);
+                                  triggerGA(link.category, link.label)
                                 }}
                               >
                                 {link.span ? (
@@ -153,8 +156,8 @@ const Footer = () => {
                                 )}
                               </a>
                             </li>
-                          )))
-                          || ''}
+                          ))) ||
+                          ""}
                       </ColumnWrapper>
                     </nav>
                   ))}
@@ -167,12 +170,15 @@ const Footer = () => {
                         aria-labelledby={item.arialabelledby}
                         className="mb-5"
                       >
-                        <h2 className="footer-col-title" id={item.arialabelledby}>
+                        <h2
+                          className="footer-col-title"
+                          id={item.arialabelledby}
+                        >
                           {item.title}
                         </h2>
                         <ColumnWrapper className="column">
-                          {(item.items
-                            && item.items.map((link) => (
+                          {(item.items &&
+                            item.items.map((link) => (
                               <li className="column-row" key={uuidv4()}>
                                 <a
                                   className="column-link"
@@ -181,7 +187,7 @@ const Footer = () => {
                                   rel={relStringGenerator(link.target)}
                                   target={targetStringGenerator(link.target)}
                                   onClick={() => {
-                                    triggerGA(link.category, link.label);
+                                    triggerGA(link.category, link.label)
                                   }}
                                 >
                                   {link.span ? (
@@ -194,8 +200,8 @@ const Footer = () => {
                                   )}
                                 </a>
                               </li>
-                            )))
-                            || ''}
+                            ))) ||
+                            ""}
                         </ColumnWrapper>
                       </nav>
                     </div>
@@ -207,12 +213,15 @@ const Footer = () => {
                         aria-labelledby={item.arialabelledby}
                         className="mb-5"
                       >
-                        <h2 className="footer-col-title" id={item.arialabelledby}>
+                        <h2
+                          className="footer-col-title"
+                          id={item.arialabelledby}
+                        >
                           {item.title}
                         </h2>
                         <ColumnWrapper className="column">
-                          {(item.items
-                            && item.items.map((link) => (
+                          {(item.items &&
+                            item.items.map((link) => (
                               <li className="column-row" key={uuidv4()}>
                                 <a
                                   className="column-link"
@@ -221,7 +230,7 @@ const Footer = () => {
                                   rel={relStringGenerator(link.target)}
                                   target={targetStringGenerator(link.target)}
                                   onClick={() => {
-                                    triggerGA(link.category, link.label);
+                                    triggerGA(link.category, link.label)
                                   }}
                                 >
                                   {link.span ? (
@@ -234,8 +243,8 @@ const Footer = () => {
                                   )}
                                 </a>
                               </li>
-                            )))
-                            || ''}
+                            ))) ||
+                            ""}
                         </ColumnWrapper>
                       </nav>
                     </div>
@@ -249,8 +258,8 @@ const Footer = () => {
                         {item.title}
                       </h2>
                       <ColumnWrapper className="column">
-                        {(item.items
-                          && item.items.map((link) => (
+                        {(item.items &&
+                          item.items.map((link) => (
                             <li className="column-row" key={uuidv4()}>
                               <a
                                 className="column-link"
@@ -259,7 +268,7 @@ const Footer = () => {
                                 rel={relStringGenerator(link.target)}
                                 target={targetStringGenerator(link.target)}
                                 onClick={() => {
-                                  triggerGA(link.category, link.label);
+                                  triggerGA(link.category, link.label)
                                 }}
                               >
                                 {link.span ? (
@@ -272,12 +281,11 @@ const Footer = () => {
                                 )}
                               </a>
                             </li>
-                          )))
-                          || ''}
+                          ))) ||
+                          ""}
                       </ColumnWrapper>
                     </nav>
                   ))}
-
                 </div>
                 {/* Social media icons */}
                 <div className="col-6 col-md-2 order-4 order-md-5">
@@ -288,23 +296,24 @@ const Footer = () => {
                           aria-labelledby={item.arialabelledby}
                           className="mb-5"
                         >
-                          <h2 className="footer-col-title" id={item.arialabelledby}>
+                          <h2
+                            className="footer-col-title"
+                            id={item.arialabelledby}
+                          >
                             {item.title}
                           </h2>
                           <ColumnWrapper className="column">
-                            {(item.items
-                              && item.items.map((link) => (
+                            {(item.items &&
+                              item.items.map((link) => (
                                 <li className="column-row" key={uuidv4()}>
                                   <a
                                     className="column-link"
                                     id={link.id}
                                     href={link.url}
                                     rel={relStringGenerator(link.target)}
-                                    target={targetStringGenerator(
-                                      link.target,
-                                    )}
+                                    target={targetStringGenerator(link.target)}
                                     onClick={() => {
-                                      triggerGA(link.category, link.label);
+                                      triggerGA(link.category, link.label)
                                     }}
                                   >
                                     <div direction="row" wrap="nowrap">
@@ -330,8 +339,8 @@ const Footer = () => {
                                     </div>
                                   </a>
                                 </li>
-                              )))
-                              || ''}
+                              ))) ||
+                              ""}
                           </ColumnWrapper>
                         </nav>
                       </div>
@@ -348,7 +357,7 @@ const Footer = () => {
         </div>
       </section>
     </FooterWrapper>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

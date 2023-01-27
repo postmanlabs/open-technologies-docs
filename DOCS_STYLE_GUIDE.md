@@ -4,22 +4,22 @@ Thanks for your interest in contributing to the Postman Open Tech docs! :rocket:
 
 Check out the [contributing](CONTRIBUTING.md) guide for a step-by-step overview of making your contribution. Read on for tips on what types of language to use in your edits and additions.
 
-* [Audience](#audience)
-* [Language style](#language-style)
-    * [Grammar and word choice](#grammar-and-word-choice)
-    * [Tone](#tone)
-    * [Readability](#readability)
-* [Formatting and structure](#formatting-and-structure)
-    * [Document sections](#document-sections)
-* [Images](#images)
-* [Links](#links)
-* [Publish!](#publish)
+- [Audience](#audience)
+- [Language style](#language-style)
+  - [Grammar and word choice](#grammar-and-word-choice)
+  - [Tone](#tone)
+  - [Readability](#readability)
+- [Formatting and structure](#formatting-and-structure)
+  - [Document sections](#document-sections)
+- [Images](#images)
+- [Links](#links)
+- [Publish!](#publish)
 
 _This style guide is a work in progress, and we'll be continuing to iterate on it. Create an [issue](https://github.com/postmanlabs/open-tech/issues) if you'd like to provide feedback!_
 
 ## Audience
 
-The Postman community is diverse, and we aim to create an empathetic, inclusive learning experience for all. Remember that __not everyone reading this documentation is a developer__. Make the information as intuitive as possible to anyone who happens to visit, regardless of their technical background or skill level.
+The Postman community is diverse, and we aim to create an empathetic, inclusive learning experience for all. Remember that **not everyone reading this documentation is a developer**. Make the information as intuitive as possible to anyone who happens to visit, regardless of their technical background or skill level.
 
 For more advanced topics, if someone doesn't have the required skills to carry out a particular task yet, we want to help them get there. Provide context by indicating prerequisites and setting clear expectations, ideally linking to support information so that people can equip themselves with the necessary understanding to carry on learning. Be aware of what you're assuming people already know, but if possible link to background info rather than including it to help keep each doc focused on its core topic.
 
@@ -29,13 +29,13 @@ Postman learners speak lots of different languages, but our docs are only availa
 
 ## Language style
 
-The documentation in the [Postman Open Tech](https://learning.postman.com/open-tech) is intended to help people learn how to use Postman, so use practical instructional language wherever possible. Be specific, and "__show, don't tell__."
+The documentation in the [Postman Open Tech](https://learning.postman.com/open-tech) is intended to help people learn how to use Postman, so use practical instructional language wherever possible. Be specific, and "**show, don't tell**."
 
 ---
 
 :thumbsdown::no_entry_sign: Specify any request parameters you need to send.
 
-:thumbsup::white_check_mark: To specify parameters to send with your request, enter values either in the URL or the __Params__ editor.
+:thumbsup::white_check_mark: To specify parameters to send with your request, enter values either in the URL or the **Params** editor.
 
 ---
 
@@ -85,22 +85,22 @@ For menu interaction, use "select" instead of "click."
 
 Be careful with words that have a specific meaning in the context of Postman but that may refer to something else, including additional pointers to remove ambiguity. Consider the following terms in particular:
 
-* Collection
-* Request
-* Header (_request header vs Postman UI header_)
-* Parameter
-* API
-* Documentation (_user's API documentation vs Postman learning documentation_)
-* Workspace
-* Test
-* Environment
-* Variable
+- Collection
+- Request
+- Header (_request header vs Postman UI header_)
+- Parameter
+- API
+- Documentation (_user's API documentation vs Postman learning documentation_)
+- Workspace
+- Test
+- Environment
+- Variable
 
 ### Tone
 
 Official Postman documentation language aims to be friendly and conversational in tone, but not colloquial; not too formal or too frivolous. Think friendly teacher. :school_satchel:
 
-Avoid language that readers might typically associate with marketing material, for example words that are subjective or opinion-based, such as "great" and "amazing." By focusing on effectively showing __how__ to use a feature, docs can demonstrate _what_ the feature is and _why_ someone would want to use it along the way.
+Avoid language that readers might typically associate with marketing material, for example words that are subjective or opinion-based, such as "great" and "amazing." By focusing on effectively showing **how** to use a feature, docs can demonstrate _what_ the feature is and _why_ someone would want to use it along the way.
 
 ---
 
@@ -108,7 +108,7 @@ Avoid language that readers might typically associate with marketing material, f
 
 :thumbsup::white_check_mark: You can create visualizations of responses in Postman to present your request data in graphical formats such as charts.
 
-:thumbsup::white_check_mark: To visualize your response data, add JavaScript to the __Tests__ code for the request...
+:thumbsup::white_check_mark: To visualize your response data, add JavaScript to the **Tests** code for the request...
 
 ---
 
@@ -136,7 +136,7 @@ In general, use active voice and avoid passive structures:
 
 :thumbsdown::no_entry_sign: The request can be run by selecting the Send button.
 
-:thumbsup::white_check_mark: To run the request, select __Send__.
+:thumbsup::white_check_mark: To run the request, select **Send**.
 
 ---
 
@@ -146,9 +146,9 @@ Help users to scan content by indicating the purpose of a page, section, or sent
 
 ---
 
-:thumbsdown::no_entry_sign: Select __Tests__ and enter JavaScript code to carry out testing on your request response.
+:thumbsdown::no_entry_sign: Select **Tests** and enter JavaScript code to carry out testing on your request response.
 
-:thumbsup::white_check_mark: To carry out tests on your request response, select __Tests__ and enter JavaScript code.
+:thumbsup::white_check_mark: To carry out tests on your request response, select **Tests** and enter JavaScript code.
 
 ---
 
@@ -170,13 +170,13 @@ When using a list, everything that appears before it (before the colon) should b
 
 ---
 
-Use __bold__ to highlight names for parts of the software that the user interacts with. Include the visible name of the relevant user interface component wherever possible instead of describing it. When you refer to a feature of the user interface, capitalize names to reflect what you see in Postman:
+Use **bold** to highlight names for parts of the software that the user interacts with. Include the visible name of the relevant user interface component wherever possible instead of describing it. When you refer to a feature of the user interface, capitalize names to reflect what you see in Postman:
 
 ---
 
 :thumbsdown::no_entry_sign: Select the send button
 
-:thumbsup::white_check_mark: Select __Send__
+:thumbsup::white_check_mark: Select **Send**
 
 ---
 
@@ -208,7 +208,7 @@ The output should render with JSON syntax highlighting:
 
 ```json
 {
- "id": 1
+  "id": 1
 }
 ```
 
@@ -218,12 +218,12 @@ Indent code blocks using spaces.
 
 Use single backticks for inline references to the following API constructs:
 
-* HTTP verbs (such as `GET`, `POST`, `PUT`, `PATCH`, or `DELETE`)
-* status codes (`200 OK`)
-* parameter names
-* variable names
-* JSON object and field names
-* file types
+- HTTP verbs (such as `GET`, `POST`, `PUT`, `PATCH`, or `DELETE`)
+- status codes (`200 OK`)
+- parameter names
+- variable names
+- JSON object and field names
+- file types
 
 Use Markdown blockquotes for information you want to present as a note, for example info that isn't relevant to all readers of a page.
 
@@ -231,7 +231,7 @@ Use > to separate steps such as a sequence of clicks on user interface items:
 
 ---
 
-:thumbsup::white_check_mark: Select __View__ > __Developer__ > __Show DevTools__
+:thumbsup::white_check_mark: Select **View** > **Developer** > **Show DevTools**
 
 ---
 
@@ -249,6 +249,7 @@ If you include placeholder values in a code excerpt, highlight the section users
 
 :thumbsup::white_check_mark:
 To send a query parameter with the request, append it to the end of the URL as a key-value pair with the parameter name:
+
 <pre>/posts?category=<strong><em>draft</em></strong></pre>
 
 > Note that to do this in markdown you need to use `<pre>` tags with `<i>` or `<em>` around the highlighted section.
@@ -263,15 +264,15 @@ Each doc should begin with an introduction section. Subheadings should only appe
 
 In general, aim for the following structure:
 
-* An intro section outlining the purpose of the page and indicating / linking to any required knowledge
-* A main instructional section guiding users through a series of generic steps showing how to carry out whatever task the page represents
-    * Subheadings to indicate the steps
-    * Images to illustrate key steps or configurations
-* Any supplementary material, which will vary by topic but may include the following:
-    * Any info about carrying out the task using the Postman API
-    * Links to relevant collections
-    * Debugging info
-* Links to relevant follow-up material in a Next Steps section
+- An intro section outlining the purpose of the page and indicating / linking to any required knowledge
+- A main instructional section guiding users through a series of generic steps showing how to carry out whatever task the page represents
+  - Subheadings to indicate the steps
+  - Images to illustrate key steps or configurations
+- Any supplementary material, which will vary by topic but may include the following:
+  - Any info about carrying out the task using the Postman API
+  - Links to relevant collections
+  - Debugging info
+- Links to relevant follow-up material in a Next Steps section
 
 Add any relevant supplementary links to the sidebar using the frontmatter at the top of each docs page.
 
@@ -317,7 +318,7 @@ Use meaningful text for links, avoiding phrases such as "click here" when possib
 
 ---
 
-An exception to this is the __Run in Postman__ button, which you can refer to directly, for example "Import the collection by selecting the __Run in Postman__ button below."
+An exception to this is the **Run in Postman** button, which you can refer to directly, for example "Import the collection by selecting the **Run in Postman** button below."
 
 Include links to relevant supporting docs inline throughout your pages, but in general only link to the same location once per page—usually the first time you mention the term.
 

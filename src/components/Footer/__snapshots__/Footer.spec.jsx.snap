@@ -2,7 +2,7 @@
 
 exports[`Footer renders correctly 1`] = `
 <footer
-  className="sc-bczRLJ fiqhuZ"
+  className="sc-bczRLJ ftzfut"
 >
   <section
     className="section"
@@ -47,7 +47,7 @@ exports[`Footer renders correctly 1`] = `
                   Product
                 </h2>
                 <ul
-                  className="sc-gsnTZi kIEZAF column"
+                  className="sc-gsnTZi eKfkix column"
                 >
                   <li
                     className="column-row"
@@ -197,7 +197,7 @@ exports[`Footer renders correctly 1`] = `
                     Company
                   </h2>
                   <ul
-                    className="sc-gsnTZi kIEZAF column"
+                    className="sc-gsnTZi eKfkix column"
                   >
                     <li
                       className="column-row"
@@ -279,7 +279,7 @@ exports[`Footer renders correctly 1`] = `
                     Security and Terms
                   </h2>
                   <ul
-                    className="sc-gsnTZi kIEZAF column"
+                    className="sc-gsnTZi eKfkix column"
                   >
                     <li
                       className="column-row"
@@ -337,7 +337,7 @@ exports[`Footer renders correctly 1`] = `
                   API Categories
                 </h2>
                 <ul
-                  className="sc-gsnTZi kIEZAF column"
+                  className="sc-gsnTZi eKfkix column"
                 >
                   <li
                     className="column-row"
@@ -453,7 +453,7 @@ exports[`Footer renders correctly 1`] = `
                       Social
                     </h2>
                     <ul
-                      className="sc-gsnTZi kIEZAF column"
+                      className="sc-gsnTZi eKfkix column"
                     >
                       <li
                         className="column-row"

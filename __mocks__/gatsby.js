@@ -1,6 +1,6 @@
-const React = require('react');
+const React = require("react")
 
-const gatsby = jest.requireActual('gatsby');
+const gatsby = jest.requireActual("gatsby")
 
 module.exports = {
   ...gatsby,
@@ -17,45 +17,48 @@ module.exports = {
       replace,
       to,
       ...rest
-    }) => React.createElement('a', {
-      ...rest,
-      href: to,
-    }),
+    }) =>
+      React.createElement("a", {
+        ...rest,
+        href: to,
+      })
   ),
   StaticQuery: jest.fn(),
   useStaticQuery: jest.fn().mockImplementation(() => ({
     allMarkdownRemark: {
-      nodes: [{
-        fields: {
-          slug: '/docs/foo/slug/',
+      nodes: [
+        {
+          fields: {
+            slug: "/docs/foo/slug/",
+          },
+          frontmatter: {
+            title: "slug",
+          },
+          id: "jfkdlsajfkldsa",
         },
-        frontmatter: {
-          title: 'slug',
+        {
+          fields: {
+            slug: "/docs/foo/nested/nestedslug/",
+          },
+          frontmatter: {
+            title: "nested slug",
+          },
+          id: "jfkdlsajfkldsfa",
         },
-        id: 'jfkdlsajfkldsa',
-      },
-      {
-        fields: {
-          slug: '/docs/foo/nested/nestedslug/',
+        {
+          fields: {
+            slug: "/docs/bar/otherslug/",
+          },
+          frontmatter: {
+            title: "otherslug",
+          },
+          id: "jfkdlsajfkldsfa",
         },
-        frontmatter: {
-          title: 'nested slug',
-        },
-        id: 'jfkdlsajfkldsfa',
-      },
-      {
-        fields: {
-          slug: '/docs/bar/otherslug/',
-        },
-        frontmatter: {
-          title: 'otherslug',
-        },
-        id: 'jfkdlsajfkldsfa',
-      },
       ],
     },
     leftNavLinks: {
-      value: '{"docs":{"foo":{"slug":{"url":"/docs/foo/slug/"},"nested":{"nestedslug":{"url":"/docs/foo/nested/nestedslug/"}}},"bar":{"otherslug":{"url":"/docs/bar/otherslug/"}}}}',
+      value:
+        '{"docs":{"foo":{"slug":{"url":"/docs/foo/slug/"},"nested":{"nestedslug":{"url":"/docs/foo/nested/nestedslug/"}}},"bar":{"otherslug":{"url":"/docs/bar/otherslug/"}}}}',
     },
   })),
-};
+}

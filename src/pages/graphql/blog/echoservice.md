@@ -1,7 +1,7 @@
 ---
 title: "How to Build an Echo Service for GraphQL"
 order: 1
-page_id:  "how-to-build-an-echo-service-for-graphQL"
+page_id: "how-to-build-an-echo-service-for-graphQL"
 warning: false
 updated: 2023-01-22
 author: Meenakshi Dhanani
@@ -21,11 +21,11 @@ contextual_links:
   #   name: "Videos"
   - type: link
     name: "GraphQL 101 Series"
-    url:  "https://blog.postman.com/"
+    url: "https://blog.postman.com/"
   - type: link
     name: "Jan's Blog"
     url: "https://dev.to/jansche/"
-  
+
   - type: section
     name: "Where to find us"
   - type: link
@@ -39,8 +39,7 @@ contextual_links:
     url: ""
   - type: link
     name: "Discord"
-    url:  ""
-
+    url: ""
 ---
 
 An echo service is a minimalistic API that, like an echo, returns what you request from the server. Echo services for REST, gRPC, and Web Sockets have long been used to test clients in Postman and explore features while learning the fundamentals of each of these protocols. Postman’s GraphQL client v2 currently in pre-release, and what better way to test it than with an Echo GraphQL service? This blog post discusses the procedure for building an echo server for GraphQL, as well as some insights and lessons learned along the way. Check out the [GraphQL Echo collection](https://www.postman.com/postman/workspace/published-postman-templates/collection/63c7d7701bfb72333ca216d4?action=share&creator=13059338) to get started.
@@ -137,7 +136,7 @@ const yoga = createYoga({
 })
 ```
 
-The ```knockknock``` endpoint returns a 200 OK if the server is ready.
+The `knockknock` endpoint returns a 200 OK if the server is ready.
 
 ### Using IDs
 
@@ -153,11 +152,11 @@ type Person {
 
 ### Subscription protocols
 
-Subscriptions are events to which you can subscribe. In the above schema, we defined a ```greetings``` event that, when subscribed to, returns a stream of greetings. A web socket connection or server-side events might be utilised to return this stream. Yoga has built-pport for server-side events. We did, however, use a web socket connection for the echo service. More about GraphQL over web sockets is available here.
+Subscriptions are events to which you can subscribe. In the above schema, we defined a `greetings` event that, when subscribed to, returns a stream of greetings. A web socket connection or server-side events might be utilised to return this stream. Yoga has built-pport for server-side events. We did, however, use a web socket connection for the echo service. More about GraphQL over web sockets is available here.
 
 ### Testing
 
-The ```yoga.fetch``` method helped us test the operations we defined. The following is an example of a test we wrote for querying the ```hello``` field.
+The `yoga.fetch` method helped us test the operations we defined. The following is an example of a test we wrote for querying the `hello` field.
 
 ```scheme
 it('should return hello with default name', async () => {
@@ -177,7 +176,7 @@ it('should return hello with default name', async () => {
         `Expected 'Hello John Doe' but got ${executionResult.data.hello}`
       )
     })
-  ```
+```
 
 Learn more about testing in Yoga [here](https://the-guild.dev/graphql/yoga-server/docs/features/testing).
 
@@ -222,6 +221,6 @@ function usePostmanRedirect(args: {
       },
     }
   }
-  ```
+```
 
-  All in all, developing this service has been a fantastic learning opportunity for us. We’d love for you to test the API with the GraphQL v2 client and share your feedback with us at [https://go.pstmn.io/graphql-feedback](https://go.pstmn.io/graphql-feedback)
+All in all, developing this service has been a fantastic learning opportunity for us. We’d love for you to test the API with the GraphQL v2 client and share your feedback with us at [https://go.pstmn.io/graphql-feedback](https://go.pstmn.io/graphql-feedback)

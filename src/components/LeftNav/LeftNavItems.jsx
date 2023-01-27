@@ -27,9 +27,7 @@
   }
 */
 
-
-export const leftNavItems = [ 
-  
+export const leftNavItems = [
   // {
   //   name: 'Collections',
   //   parentSlug: 'collections',
@@ -38,73 +36,73 @@ export const leftNavItems = [
   //     {
   //       name: 'Page1',
   //       url: '/collections/page1/',
-  //     },     
+  //     },
   //     {
   //       name: 'Page2',
   //       url: '/collections/page2/',
-  //     },         
+  //     },
   //   ],
   // },
   {
-    name: 'GraphQL',
-    parentSlug: 'graphql',
-    url: '/graphql/',
+    name: "GraphQL",
+    parentSlug: "graphql",
+    url: "/graphql/",
     subMenuItems1: [
       {
-        name: 'Blog',
-        slug: '/graphql/blog/echoservice/',
-        subParentSlug: 'blog',
+        name: "Blog",
+        slug: "/graphql/blog/echoservice/",
+        subParentSlug: "blog",
         subMenuItems2: [
           {
-          name: 'How to Build an Echo Service for GraphQL',
-          url: '/graphql/blog/echoservice/',
-          }
-        ]
+            name: "How to Build an Echo Service for GraphQL",
+            url: "/graphql/blog/echoservice/",
+          },
+        ],
       },
       {
-        name: 'Page2',
-        url: '/graphql/page2/',
+        name: "Page2",
+        url: "/graphql/page2/",
       },
       {
-        name: 'Page3',
-        url: '/graphql/page3/',
-      },
-    ],
-  },
-  {
-    name: 'Specifications',
-    parentSlug: 'specifications',
-    url: '/specifications/asyncapi/',
-    subMenuItems1: [
-      {
-        name: 'Testing',
-        url: '/specifications/testing/',
-      },
-      {
-        name: 'Collections',
-        url: '/specifications/asyncapi/',
-      },     
-      {
-        name: 'OpenAPI',
-        url: '/specifications/openapi/',
-      },  
-      {
-        name: 'gRPC',
-        url: '/specifications/grpc/',
+        name: "Page3",
+        url: "/graphql/page3/",
       },
     ],
   },
   {
-    name: 'Lifecycle',
-    parentSlug: 'lifecycle',
-    url: '/lifecycle/gateways/',
+    name: "Specifications",
+    parentSlug: "specifications",
+    url: "/specifications/asyncapi/",
     subMenuItems1: [
       {
-        name: 'Gateways',
-        url: '/lifecycle/gateways/',
+        name: "Testing",
+        url: "/specifications/testing/",
+      },
+      {
+        name: "Collections",
+        url: "/specifications/asyncapi/",
+      },
+      {
+        name: "OpenAPI",
+        url: "/specifications/openapi/",
+      },
+      {
+        name: "gRPC",
+        url: "/specifications/grpc/",
       },
     ],
   },
-];
+  {
+    name: "Lifecycle",
+    parentSlug: "lifecycle",
+    url: "/lifecycle/gateways/",
+    subMenuItems1: [
+      {
+        name: "Gateways",
+        url: "/lifecycle/gateways/",
+      },
+    ],
+  },
+]
 
 // export default parentSlugItems;
