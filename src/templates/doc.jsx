@@ -344,8 +344,8 @@ const DocPage = ({ data }) => {
                     : null
                 }
                 <div className='row'>
-                <p className='small col-8'>tags:
-                {post.frontmatter.tag && <span> {post.frontmatter.tag}</span>}</p>
+                
+                {post.frontmatter.tag && (<p className='small col-8'>tags: <span> {post.frontmatter.tag}</span></p>)}
                 {lastModifiedDate && <p className='col-4 small'>
                   <small className="font-italic">Last modified: {lastModifiedDate}</small>
                 </p>}
