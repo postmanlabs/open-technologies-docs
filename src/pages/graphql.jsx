@@ -310,25 +310,22 @@ const GraphQLPage = ({data}) => {
                 
               <h1>GraphQL</h1>
               <h2 className="mt-5 mb-3">GraphQL Concepts</h2>
-
               <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem numquam vitae ratione eveniet fuga assumenda id dolor corrupti. Aperiam ab a reiciendis, odit dignissimos tempore minima autem cum animi pariatur!
               </p>
           
-              <div className="row justify-content-evenly">
-                
-              <div className="container-fluid">
-                    <div className="row">
-
-                    <FilterButtons
-                        filterItem={filterItem}
-                        setItem={setItem}
-                        cardItems={cardItems}
-                    />
-                    {console.log(item, "test")}
-                    <FilterCard item={item} />
-                    </div>
-                </div>
+              <div className="row justify-content-evenly">           
+                <div className="container-fluid">
+                      <div className="row">
+                      <FilterButtons
+                          filterItem={filterItem}
+                          setItem={setItem}
+                          cardItems={cardItems}
+                      />
+                      {console.log(item, "test")}
+                      {item && <FilterCard item={item} />}
+                      </div>
+                  </div>
                
                 </div>
               
