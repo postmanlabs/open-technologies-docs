@@ -20,7 +20,7 @@ If you run into issues when running the Open Tech locally, try the following:
 1. Enter `rm -rf node_modules; npm i` to remove all existing packages and perform a fresh install.
 1. Enter `gatsby clean` to clear the cache.
 
-If you still have issues running the Open Tech locally, feel free to [open an issue](https://github.com/postmanlabs/open-technologies-docs/issues).
+If you still have issues running the Open Technologies docs locally, feel free to [open an issue](https://github.com/postmanlabs/open-technologies-docs/issues).
 
 ### Workflow
 
@@ -33,7 +33,7 @@ We follow [Git Flow](https://guides.github.com/introduction/flow/) for changes t
 1. Check out the `develop` branch: `git checkout develop`
 1. Run `npm install` to add all dependencies.
 1. Create a new branch for your work based on develop: `git checkout -b <YOUR BRANCH NAME>` Your branch name should be something descriptive of the changes you wish to make, and can include the issue number this change is associated with. Example: `feature/1234-update-json-schema-docs`
-1. Make your changes. The  Open Technologies Doc's documentation is built from the `.md` files in the `/src/pages/docs` folder of the repo.
+1. Make your changes. The Open Technologies documentation is built from the `.md` files in the `/src/pages/docs` folder of the repo.
 1. Check your files are valid markdown by running `npm run test:mdlint` and resolve any errors.
 1. When you're ready to apply your changes, push your changed files to your forked repo:
     * `git add <FILENAMES OF CHANGED FILES>`
