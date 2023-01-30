@@ -4,37 +4,6 @@ order: 1
 page_id: "gateways"
 warning: false
 updated: 2021-09-29
-# contextual_links:
-#   - type: section
-#     name: "Get to know us"
-#   - type: link
-#     name: "The Postman Open Philosophy"
-#     url: "https://www.postman.com/company/open-philosophy/"
-#   - type: link
-#     name: "Postman Blog"
-#     url:  "https://blog.postman.com/"
-#   - type: section
-#     name: "Collaborate with us"
-#   - type: link
-#     name: "Postman's Github"
-#     url: "https://github.com/postmanlabs"
-#   - type: link
-#     name: "Open Technologies Github"
-#     url: "https://github.com/postman-open-technologies"
-#   - type: section
-#     name: Specs we contribute to
-#   - type: link
-#     name: JSON Schema
-#     url: "https://json-schema.org/"
-#   - type: link
-#     name: Async API
-#     url: "https://www.asyncapi.com/"
-#   - type: link
-#     name: OpenAPI
-#     url: "https://www.openapis.org/"
-#   - type: link
-#     name: GraphQL
-#     url: "https://graphql.org/"
 ---
 
 APIs provide an opportunity for deep integration with existing API gateway solutions across the API lifecycle, allowing API contracts to be published and synced, rate limits, logging, caching, and other gateway capabilities to be configured and automated as part of the API lifecycle. Understanding the API gateway landscape and how they contribute to your work is an important part of anyone contributing to API operations–whether business or technical.
