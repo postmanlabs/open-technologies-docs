@@ -40,7 +40,8 @@ The secondary top navbar as well as the left and right navbars are custom to thi
 **NOTE:** This site was built with Node.js v14.17.1. We recommend installing and using [nvm](https://github.com/nvm-sh/nvm) and setting your Node.js version to v14.17.1.
 
 ** TLDR;
-he usual GitHub PR process. You can run this repo locally on your machine, or you can make changes to the content by editing the Markdown files in https://github.com/postmanlabs/open-technologies-docs/tree/develop/src/pages to develop the content only.
+
+The usual GitHub PR process. You can run this repo locally on your machine, or you can make changes to the content by editing the Markdown files in https://github.com/postmanlabs/open-technologies-docs/tree/develop/src/pages to develop the content only.
 
 ## License
 
