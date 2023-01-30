@@ -1,6 +1,6 @@
 # Documentation style guide
 
-Thanks for your interest in contributing to the Postman Open Tech docs! :rocket::book::trophy:
+Thanks for your interest in contributing to the Postman Open Technologies docs! :rocket::book::trophy:
 
 Check out the [contributing](CONTRIBUTING.md) guide for a step-by-step overview of making your contribution. Read on for tips on what types of language to use in your edits and additions.
 
@@ -15,7 +15,7 @@ Check out the [contributing](CONTRIBUTING.md) guide for a step-by-step overview 
 * [Links](#links)
 * [Publish!](#publish)
 
-_This style guide is a work in progress, and we'll be continuing to iterate on it. Create an [issue](https://github.com/postmanlabs/open-tech/issues) if you'd like to provide feedback!_
+_This style guide is a work in progress, and we'll be continuing to iterate on it. Create an [issue](https://github.com/postmanlabs/open-technologies-docs/issues) if you'd like to provide feedback!_
 
 ## Audience
 
@@ -29,7 +29,7 @@ Postman learners speak lots of different languages, but our docs are only availa
 
 ## Language style
 
-The documentation in the [Postman Open Tech](https://learning.postman.com/open-tech) is intended to help people learn how to use Postman, so use practical instructional language wherever possible. Be specific, and "__show, don't tell__."
+The [Postman Open Technologies](https://learning.postman.com/open-technologies-docs) documentation is intended to help people learn how to use Postman, so use practical instructional language wherever possible. Be specific, and "__show, don't tell__."
 
 ---
 
@@ -325,9 +325,9 @@ Use relative links between docs:
 
 ---
 
-:thumbsdown::no_entry_sign: `For more on scripting in Postman, see [Intro to Scripts](https://learning.postman.com/docs/postman/scripts/intro_to_scripts/).`
+:thumbsdown::no_entry_sign: `For more on scripting in Postman, see [Intro to Scripts](https://learning.postman.com/open-technologies-docs/src/pages/graphql/page2).`
 
-:thumbsup::white_check_mark: `For more on scripting in Postman, see [Intro to Scripts](/docs/postman/scripts/intro_to_scripts/).`
+:thumbsup::white_check_mark: `For more on scripting in Postman, see [Intro to Scripts](open-technologies-docs/src/pages/graphql/page2).`
 
 ---
 
@@ -335,7 +335,7 @@ Don't display a raw URL in text, unless seeing the URL is essential to the learn
 
 ---
 
-:thumbsdown::no_entry_sign: Navigate to https://learning.postman.com
+:thumbsdown::no_entry_sign: Navigate to https://learning.postman.com/open-technologies-docs
 
 :thumbsup::white_check_mark: Send a request to `https://postman-echo.com/get`
 
