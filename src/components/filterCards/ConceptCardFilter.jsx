@@ -5,33 +5,24 @@ import FilterButtons from "./FilterButtons";
 
 const allCategories = ['All', ...new Set(items.map(item => item.tag))];
 
-// console.log(allCategories, 'all');
-
 function ConceptCardFilter() {
-  const [menuItem, setMenuItem] = useState(items);
+  const [cardItem, setCardItem] = useState(items);
   const [buttons, setButtons] = useState(allCategories);
 
   //Filter Function
-  const filter = (button) =>{
-
+  const filter = (button) => {
     if(button === 'All'){
-      setMenuItem(items);
+      setCardItem(items);
       return;
     }
-
-    const filteredData = items.filter(item => item.tag ===  button);
-    setMenuItem(filteredData)
+    const filteredData = items.filter(item => item.tag ===  button && item.tag === item.tag);
+    setCardItem(filteredData)
   }
 
-
   return (
-    <div >
-       
-                    <FilterButtons button={buttons} filter={filter} />
-                    
-                    <FilterCard menuItem={menuItem} />
-                
-               
+    <div >    
+        <FilterButtons button={buttons} filter={filter} />
+        <FilterCard cardItem={cardItem} />             
     </div>
   );
 }

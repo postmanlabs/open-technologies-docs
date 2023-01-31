@@ -51,6 +51,10 @@ export const leftNavItems = [
     url: '/graphql/',
     subMenuItems1: [
       {
+        name: 'Graphql Concepts',
+        url: '/graphql/',
+      },
+      {
         name: 'Blog',
         slug: '/graphql/blog/echoservice/',
         subParentSlug: 'blog',
@@ -97,8 +101,12 @@ export const leftNavItems = [
   {
     name: 'Lifecycle',
     parentSlug: 'lifecycle',
-    url: '/lifecycle/gateways/',
+    url: '/lifecycle/',
     subMenuItems1: [
+      {
+        name: 'Lifecycle',
+        url: '/lifecycle/'
+      },
       {
         name: 'Gateways',
         url: '/lifecycle/gateways/',

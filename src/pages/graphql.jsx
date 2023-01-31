@@ -1,21 +1,20 @@
 /* eslint-disable react/no-danger */
-import React, {useState} from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
-
 import Layout from '../components/layout';
 import RightNavLinks from '../components/RightNavLinks';
 import { leftNavItems } from '../components/LeftNav/LeftNavItems';
 import LeftNav from '../components/LeftNav/LeftNav';
 import SEO from '../components/seo';
-// const { v4: uuidv4 } = require('uuid');
 import styled from 'styled-components';
 import 'prismjs/themes/prism-tomorrow.css';
 import BreadCrumbsLinks from '../components/modules/BreadCrumbsLinks';
 import PreviousAndNextLinks from '../components/modules/PreviousAndNextLinks';
 import { BaseLinkStyles } from 'aether-marketing';
-import Data from '../components/filterCards/Data';
-import { ConceptCard } from '../components/MarketingPages/ConceptCards';
+// import Data from '../components/filterCards/Data';
+// import { ConceptCard } from '../components/MarketingPages/ConceptCards';
 import ConceptCardFilter from '../components/filterCards/ConceptCardFilter';
+
 const DocWrapper = styled.div`
   /* Used for Deeplinking */   
 h2, h3, h4 {
@@ -297,8 +296,7 @@ const GraphQLPage = ({data}) => {
               <main className="col-sm-12 col-md-12 col-lg-9 offset-lg-0 col-xl-7 doc-page ml-xl-5">
               <BreadCrumbsLinks data={{ parentLink, subParentLink }} />
                 {/* Qualtrics */}
-                
-              <h1>GraphQL</h1>
+
               <h2 className="mt-5 mb-3">GraphQL Concepts</h2>
               <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem numquam vitae ratione eveniet fuga assumenda id dolor corrupti. Aperiam ab a reiciendis, odit dignissimos tempore minima autem cum animi pariatur!
@@ -322,7 +320,7 @@ const GraphQLPage = ({data}) => {
             <PreviousAndNextLinks data={{ previous, next }} />
           </main>
               <RightColumnWrapper className="col-sm-12 col-md-12 col-lg-3 offset-lg-0 col-xl-3 offset-xl-1 right-column">
-                
+                          
                 <RightNavLinks />
                  
               </RightColumnWrapper>

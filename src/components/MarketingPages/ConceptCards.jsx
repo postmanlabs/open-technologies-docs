@@ -9,7 +9,7 @@ const CardWrapper = styled.div`
   margin-bottom: 32px;
   text-align: left !important;
   padding: 15px 10px;
-  /* border: 1px solid ${(props) => props.theme.colors.grey_10}; */
+  border: 1px solid ${(props) => props.theme.colors.grey_10};
   border-radius: 10px;
 
   .landing-card__content {
@@ -33,7 +33,7 @@ const CardWrapper = styled.div`
   }
   
    a:hover {
-    /* color: ${(props) => props.theme.colors.blue_60} !important; */
+    color: ${(props) => props.theme.colors.blue_60} !important;
     text-decoration: none;
     border: none !important;
   }
@@ -88,38 +88,25 @@ const CardWrapper = styled.div`
   color: rgb(126, 198, 153)!important;
 }
 `
-
-
-
 export const ConceptCard = ({
     title, description, tag, example, code
   }) => {
     
 return(
-    <CardWrapper className="landing-card h-100">
-      
+    <CardWrapper className="landing-card h-100">      
       <div className="landing-card__content text-left">
         <h3 className="landing-card__content-title mb-4">{title}</h3>
         <p className='mb-0 text-uppercase small'>description</p>
         <p className="landing-card__content-description"> {description}</p>
         <div>
             <p className='mb-0 text-uppercase small'>tags</p>
-            <div className='row ml-1'>          
+            <div className='row ml-1'>      
              {tag.split(", ").map(item => (
               <div key={uuidv4()}>
-                {item === 'api' &&  (<TagStyles className="api" >{item}</TagStyles>)}
-                {item === 'graphql' &&  (<TagStyles className="graphql" >{item}</TagStyles>)}
-                {item === 'schema' &&  (<TagStyles className="schema" >{item}</TagStyles>)}
-                {item === 'type' &&  (<TagStyles className="type" >{item}</TagStyles>)}
-                {item === 'operation' &&  (<TagStyles className="operation" >{item}</TagStyles>)}
-                {item === 'subscription' &&  (<TagStyles className="subscription" >{item}</TagStyles>)}
-                {item === 'real-time' &&  (<TagStyles className="real-time" >{item}</TagStyles>)}
-                {item === 'non-spec' &&  (<TagStyles className="non-spec" >{item}</TagStyles>)}     
-                {item === 'scalars' &&  (<TagStyles className="scalars" >{item}</TagStyles>)}     
-                {item === 'client' &&  (<TagStyles className="operation" >{item}</TagStyles>)}
+                <TagStyles data-text={item}>{item}</TagStyles>
               </div>
                 ))}    
-       </div>
+            </div>
         </div>
         <div>
             <p className='mb-0 text-uppercase small'>Example</p>
@@ -137,9 +124,9 @@ return(
                       ))}
                     </pre>
                   )}
-                  </Highlight>
+              </Highlight>
             )
-                  }
+            }
         </div>
       </div>
     </CardWrapper>

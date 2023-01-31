@@ -4,8 +4,8 @@ const Data = [
       title: "Schema",
       description:
         "A GraphQL schema is a list of object types that define all of the data available to clients of the API.",
-      tag: "graphql",
-    //   tag="graphql, api"
+      // tag: ["graphql", "api"],
+      tag: "graphql, api",
       example: "this is the example",
       code: "",
     },
@@ -26,7 +26,7 @@ const Data = [
       description:
         "Types describe the objects that are part of your GraphQL schema. There are eight types defined by the GraphQL specification.",
       tag: "graphql",
-      //tag="graphql, type"
+      // tag: "graphql, type",
       example: "",
     },
     {
@@ -54,7 +54,7 @@ const Data = [
       title: "Subscription",
       description:
         "A subscription is a type of operation that allows a client to receive real-time updates from a server by establishing a long-running connection. When the server's data changes, the server can push updates to the subscribed client through this connection.",
-      tag: "graphql",
+      tag: "graphql, api",
        //   tag="graphql, operation"
       example: "",
       code: "subscription onFilmAdded(id: ID!, filmID: ID) {\n filmAdded(id: $id, filmID: $filmID) {\n  title \n   }\n  }\n}",

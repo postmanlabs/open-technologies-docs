@@ -1,19 +1,16 @@
 import React from "react";
-import { TagButtonStyles } from "./Tag";
+import { TagStyles } from "./Tag";
 const { v4: uuidv4 } = require('uuid');
 
-const FilterButtons = ({ button, filter }) => {
-    console.log(button, "button")
-
+const FilterButtons = ({ button, filter }) => {    
   return (
     <>
       <div className="d-flex justify-content-center mx-auto mb-4">
       {
-                button.map((cat, i)=>{
-                    return <TagButtonStyles key={uuidv4()} data-text={cat}  type="button" onClick={()=> filter(cat)} className="btn">{cat}</TagButtonStyles>
-                })
+        button.map((tag, i)=>{
+          return <TagStyles key={uuidv4()} data-text={tag}          type="button" onClick={()=> filter(tag)} className="btn">{tag}</TagStyles>
+              })
             }
-
       </div>
     </>
   );
