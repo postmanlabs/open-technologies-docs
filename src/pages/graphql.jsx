@@ -3,8 +3,6 @@ import React, {useState} from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
-import FilterCard from "../components/filterCards/FilterCard";
-import FilterButtons from "../components/filterCards/FilterButtons";
 import RightNavLinks from '../components/RightNavLinks';
 import { leftNavItems } from '../components/LeftNav/LeftNavItems';
 import LeftNav from '../components/LeftNav/LeftNav';
@@ -16,7 +14,8 @@ import BreadCrumbsLinks from '../components/modules/BreadCrumbsLinks';
 import PreviousAndNextLinks from '../components/modules/PreviousAndNextLinks';
 import { BaseLinkStyles } from 'aether-marketing';
 import Data from '../components/filterCards/Data';
-
+import { ConceptCard } from '../components/MarketingPages/ConceptCards';
+import ConceptCardFilter from '../components/filterCards/ConceptCardFilter';
 const DocWrapper = styled.div`
   /* Used for Deeplinking */   
 h2, h3, h4 {
@@ -280,16 +279,7 @@ const RightColumnWrapper = styled.aside`
 `
  
 const GraphQLPage = ({data}) => {
-  const [item, setItem] = useState(Data);
-
-  const cardItems = [...new Set(Data.map((info) => info.tag))];
-
-  const filterItem = (curtag) => {
-    const newItem = Data.filter((newInfo) => {
-      return newInfo.tag === curtag;
-    });
-    setItem(newItem);
-  };
+ 
   const { parentLink, subParentLink, previous, next } = data;
 
   return (
@@ -317,21 +307,20 @@ const GraphQLPage = ({data}) => {
               <div className="row justify-content-evenly">           
                 <div className="container-fluid">
                       <div className="row">
-                      <FilterButtons
-                          filterItem={filterItem}
-                          setItem={setItem}
-                          cardItems={cardItems}
-                      />
-                      {console.log(item, "test")}
-                      {item && <FilterCard item={item} />}
+                        {/* {Data.map((item) => (
+                          <div className="col-lg-6 mb-3 mb-md-4"  key={item.id}>    
+                            <ConceptCard title={item.title}
+                                  description={item.description}
+                                  tag={item.tag}
+                                  code={item.code} />
+                          </div>
+                          ))} */}
+                          <ConceptCardFilter />
                       </div>
-                  </div>
-               
-                </div>
-              
-              
-                <PreviousAndNextLinks data={{ previous, next }} />
-              </main>
+                </div>     
+              </div>             
+            <PreviousAndNextLinks data={{ previous, next }} />
+          </main>
               <RightColumnWrapper className="col-sm-12 col-md-12 col-lg-3 offset-lg-0 col-xl-3 offset-xl-1 right-column">
                 
                 <RightNavLinks />

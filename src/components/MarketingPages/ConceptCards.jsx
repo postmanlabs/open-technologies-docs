@@ -9,7 +9,7 @@ const CardWrapper = styled.div`
   margin-bottom: 32px;
   text-align: left !important;
   padding: 15px 10px;
-  border: 1px solid ${(props) => props.theme.colors.grey_10};
+  /* border: 1px solid ${(props) => props.theme.colors.grey_10}; */
   border-radius: 10px;
 
   .landing-card__content {
@@ -33,7 +33,7 @@ const CardWrapper = styled.div`
   }
   
    a:hover {
-    color: ${(props) => props.theme.colors.blue_60} !important;
+    /* color: ${(props) => props.theme.colors.blue_60} !important; */
     text-decoration: none;
     border: none !important;
   }
