@@ -359,9 +359,8 @@ const platformBase = [
 ];
 
 const GraphQLPage = ({data}) => {
-  
-  const { parentLink, subParentLink, previous, next } = data;
 
+  const { parentLink, subParentLink, previous, next } = data;
   return (
     <Layout>
       <SEO title="Postman GraphQL"
@@ -402,7 +401,7 @@ const GraphQLPage = ({data}) => {
               <section className='mb-5'>
                 <h3>Consumer Stages</h3>
                 <p>The stages of the consumer lifecycle represent the other side of the coin for all API producers, but to help you in your journey we have distilled them down into the six stages that shape how not just technical, but also business consumers are engaging with API operations. Providing a handful of stages you can walk through as part of your regular work to ensure you are properly empathizing with your consumers.</p>
-                <IconList  iconList={iconList} />
+                <IconList  iconList={consumerStages} />
                 <p>The consumer side of the API lifecycle is about ensuring that as an API producer, you are considering your consumers. All of the top challenges for API producers reveal themselves when it comes to not considering the needs of those who will be consuming an API and empathizing with what they face. Do the work here to properly put yourself in your consumer's shoes on a regular basis and strengthen the trust and feedback loops that exist on this side of your API lifecycle.</p>
                 <img src="https://voyager.postman.com/illustration/producer-consumer-lifecycle.png" alt="producer to consumer lifecycle. Illustration"/>
               </section>
@@ -415,6 +414,10 @@ const GraphQLPage = ({data}) => {
                 <p>Seamless integration with this infrastructure will provide you with the base of your enterprise API platform. However, remember that all of these essential infrastructure solutions also have APIs, allowing you are seamlessly integrating their capabilities into your API operations, automating and standardizing how you deliver APIs across domains and teams.</p>
                 <p>Having a clear definition of how you will bolt the API lifecycle onto your existing software development lifecycle is essential to moving forward at the scale and velocity you desire. Your API lifecycle must map to the existing skills and infrastructure teams are using, but should allow for the growth and adaptability your company will require moving forward.</p>
               </section>
+             
+             <p className='col-4 small'>
+                  <small className="font-italic">Last modified: 2023 January 30</small>
+                </p>
                 <PreviousAndNextLinks data={{ previous, next }} />
               </main>
               <RightColumnWrapper className="col-sm-12 col-md-12 col-lg-3 offset-lg-0 col-xl-3 offset-xl-1 right-column">
