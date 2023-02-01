@@ -51,7 +51,6 @@ const CardWrapper = styled.div`
 export const ConceptCard = ({
     title, description, tag, example, code
   }) => {
-    
 return(
     <CardWrapper className="landing-card h-100">      
       <div className="landing-card__content text-left">
@@ -61,7 +60,7 @@ return(
         <div>
             <p className='mb-0 text-uppercase small'>tags</p>
             <div className='row ml-1'>      
-             {tag.split(", ").map(item => (
+             {tag.map(item => (
               <div key={uuidv4()}>
                 <TagStyles data-text={item}>{item}</TagStyles>
               </div>

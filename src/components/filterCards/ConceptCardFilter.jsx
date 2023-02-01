@@ -3,7 +3,13 @@ import items from './Data';
 import FilterCard from "./FilterCard";
 import FilterButtons from "./FilterButtons";
 
-const allCategories = ['All', ...new Set(items.map(item => item.tag))];
+const setOfTags = [ ...new Set(items.map(item => item.tag))];
+let allCategories = ['All'];
+setOfTags.forEach(item => {
+  item.forEach(category => allCategories.push(category))
+}
+)
+allCategories = [...new Set(allCategories)]
 
 function ConceptCardFilter() {
   const [cardItem, setCardItem] = useState(items);
@@ -15,7 +21,7 @@ function ConceptCardFilter() {
       setCardItem(items);
       return;
     }
-    const filteredData = items.filter(item => item.tag ===  button);
+    const filteredData = items.filter(item => item.tag.includes(button));
     setCardItem(filteredData)
   }
 
