@@ -3,7 +3,7 @@ import { ConceptCard } from "../MarketingPages/ConceptCards";
 const { v4: uuidv4 } = require('uuid');
 
 const FilterCard = ({ cardItem }) => {
-  // console.log(cardItem, "card")
+
   return (
     <>
       <div className="container-fluid">
