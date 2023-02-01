@@ -140,7 +140,7 @@ const GraphQLPage = ({data}) => {
                   {/* <Divider fullWidth/> */}
                 <div className="bloc">
                   <div className='row justify-content-center'>
-                    <img src="../../images/Community.png" alt="community Icon" width="30px" className='mr-2'/>
+                    <img src="/images/Community.png" alt="community Icon" width="30px" className='mr-2'/>
                     <h4 className=''>Meet the Team</h4>
                   </div>
               
@@ -157,7 +157,7 @@ const GraphQLPage = ({data}) => {
                 <Divider/>
                 <div className="bloc ">
                 <div className='row justify-content-center'>
-                  <img src="../../images/Multi-region.png" alt="community Icon" width="30px" className='mr-2'/> <h4>Where to find us</h4>
+                  <img src="/images/Multi-region.png" alt="community Icon" width="30px" className='mr-2'/> <h4>Where to find us</h4>
                 </div>
                  
                     <div className="contextual-links__link" >
@@ -210,7 +210,7 @@ const GraphQLPage = ({data}) => {
                   <Divider/>
                     <div className="bloc text-left">
                     <div className='row justify-content-center bg-color px-3 pt-3'>
-                      <img src="../../images/Engagement.png" alt="community Icon" width="30px" className='mr-2'/>
+                      <img src="/images/Engagement.png" alt="community Icon" width="30px" className='mr-2'/>
                       <h4 >Other links</h4>
                     </div>
                  
