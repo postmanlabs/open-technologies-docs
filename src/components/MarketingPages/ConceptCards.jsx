@@ -3,7 +3,7 @@ const { v4: uuidv4 } = require('uuid');
 import styled from 'styled-components';
 import Highlight, {defaultProps} from "prism-react-renderer";
 import owl from "prism-react-renderer/themes/nightOwlLight";
-
+import { TagStyles } from "../filterCards/Tag";
 
 const CardWrapper = styled.div`
   margin-bottom: 32px;
@@ -18,14 +18,9 @@ const CardWrapper = styled.div`
       font-size: 16px;
       
     }
-    &-title{
-      width: 85%;
-     
-    }
+    
     a {
-      
       margin-bottom: 48px;
-      
     }
   }
   .title_link  {
@@ -37,41 +32,6 @@ const CardWrapper = styled.div`
     text-decoration: none;
     border: none !important;
   }
-  .graphql {
-        background-color: rgb(45, 81, 170);
-    }
-    .api {
-        background-color: rgb(216, 245, 200);
-        color: black;
-    }
-    .schema {
-        background-color: rgb(102, 102, 102);
-    }
-    .type {
-        background-color: rgb(163, 198, 252);
-        color: black;
-    }
-    .operation{
-        background-color: rgb(250, 216, 122);
-        color: black;
-    }
-    .subscription {
-        background-color: rgb(92, 197, 72);
-    }
-    .real-time {
-        background-color: rgb(81, 188,251);
-    }
-    .non-spec {
-        background-color: rgb(203, 243, 234);
-        color: black;
-    }
-    .scalars {
-        background-color: rgb(202,89,49);
-    }
-    .client {
-        background-color: rgb(177, 121, 35);
-    }
-
 .prism-code {
   height: 100%;
   white-space: pre-wrap;
@@ -88,47 +48,24 @@ const CardWrapper = styled.div`
   color: rgb(126, 198, 153)!important;
 }
 `
-
-const Tag = styled.p`
-    border-radius: 20px;
-    width: fit-content;
-    padding: 3px 10px;
-    color: white;
-    font-size: 10px;
-    font-weight: bold;
-    margin-right: 10px;
-`
-
-
 export const ConceptCard = ({
     title, description, tag, example, code
   }) => {
-    // const item = tag.split(', ');
 return(
-    <CardWrapper className="landing-card h-100">
-      
+    <CardWrapper className="landing-card h-100">      
       <div className="landing-card__content text-left">
-        <h3 className="landing-card__content-title mb-4">{title}</h3>
+        <h4 className="landing-card__content-title mb-4">{title}</h4>
         <p className='mb-0 text-uppercase small'>description</p>
         <p className="landing-card__content-description"> {description}</p>
         <div>
             <p className='mb-0 text-uppercase small'>tags</p>
-            <div className='row ml-1'>          
-             {tag.split(", ").map(item => (
+            <div className='row ml-1'>      
+             {tag.map(item => (
               <div key={uuidv4()}>
-                {item === 'api' &&  (<Tag className="api" >{item}</Tag>)}
-                {item === 'graphql' &&  (<Tag className="graphql" >{item}</Tag>)}
-                {item === 'schema' &&  (<Tag className="schema" >{item}</Tag>)}
-                {item === 'type' &&  (<Tag className="type" >{item}</Tag>)}
-                {item === 'operation' &&  (<Tag className="operation" >{item}</Tag>)}
-                {item === 'subscription' &&  (<Tag className="subscription" >{item}</Tag>)}
-                {item === 'real-time' &&  (<Tag className="real-time" >{item}</Tag>)}
-                {item === 'non-spec' &&  (<Tag className="non-spec" >{item}</Tag>)}     
-                {item === 'scalars' &&  (<Tag className="scalars" >{item}</Tag>)}     
-                {item === 'client' &&  (<Tag className="operation" >{item}</Tag>)}
+                <TagStyles data-text={item}>{item}</TagStyles>
               </div>
                 ))}    
-       </div>
+            </div>
         </div>
         <div>
             <p className='mb-0 text-uppercase small'>Example</p>
@@ -146,9 +83,9 @@ return(
                       ))}
                     </pre>
                   )}
-                  </Highlight>
+              </Highlight>
             )
-                  }
+            }
         </div>
       </div>
     </CardWrapper>
