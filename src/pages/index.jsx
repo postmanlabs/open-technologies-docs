@@ -367,7 +367,7 @@ const IndexPage = ({data}) => {
                   </p>
                   <Button
                     onClick={() => {
-                      navigate("/collections/page1/")
+                      navigate("/lifecycle/gateways/")
                     }} 
                     className="mb-5 secondary"
                   >
