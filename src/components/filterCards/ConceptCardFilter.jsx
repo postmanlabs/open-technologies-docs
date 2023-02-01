@@ -15,7 +15,7 @@ function ConceptCardFilter() {
       setCardItem(items);
       return;
     }
-    const filteredData = items.filter(item => item.tag ===  button && item.tag === item.tag);
+    const filteredData = items.filter(item => item.tag ===  button);
     setCardItem(filteredData)
   }
 

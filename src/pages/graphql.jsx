@@ -288,12 +288,12 @@ const GraphQLPage = ({data}) => {
           slug="/graphql/" />
       <DocWrapper className="container-fluid">
         <div className="row row-eq-height">
-          <nav className="col-sm-12 col-md-4 col-lg-3 left-nav-re">
+          <nav className="col-md-4 col-lg-3 left-nav-re">
             <LeftNav leftNavItems={leftNavItems} />
           </nav>
           <div className="col">
             <div className="row row-eq-height">
-              <main className="col-sm-12 col-md-12 col-lg-9 offset-lg-0 col-xl-7 doc-page ml-xl-5">
+              <main className="col-lg-9 offset-lg-0 col-xl-7 doc-page ml-xl-5">
               <BreadCrumbsLinks data={{ parentLink, subParentLink }} />
                 {/* Qualtrics */}
 
@@ -319,7 +319,7 @@ const GraphQLPage = ({data}) => {
               </div>             
             <PreviousAndNextLinks data={{ previous, next }} />
           </main>
-              <RightColumnWrapper className="col-sm-12 col-md-12 col-lg-3 offset-lg-0 col-xl-3 offset-xl-1 right-column">
+              <RightColumnWrapper className="col-lg-2 offset-lg-0 col-xl-3 offset-xl-1 right-column">
                           
                 <RightNavLinks />
                  
