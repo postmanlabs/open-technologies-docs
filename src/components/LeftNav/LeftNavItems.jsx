@@ -48,7 +48,7 @@ export const leftNavItems = [
   {
     name: 'GraphQL',
     parentSlug: 'graphql',
-    url: '/graphql/',
+    url: '/graphql/graphqlHub',
     subMenuItems1: [
       {
         name: 'Graphql Hub',

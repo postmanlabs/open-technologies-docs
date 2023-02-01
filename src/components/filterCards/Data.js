@@ -76,8 +76,8 @@ const Data = [
       title: "Custom Scalar Type",
       description:
         "The most common custom scalar type in GraphQL schemas is DateTime, because it isn't a built-in scalar or described in the specification. Custom Scalars can also be used to define other units of measure or whatever is needed by a given implementation.",
-      tag: ["schema"],
-      example: ["scalar DateTime"],
+      tag: ["schema", "scalars", "type"],
+      example: [ "schema DateTime"],
       code: "type Cake { \n  id: ID!\n  name: String!\n  price: Float\n  available: Boolean!\n  hasFrosting: Boolean!\n  hasFilling: Boolean!\n  hasToppingOption: Boolean!\n  toppingKind: String\n  whenCreated: DateTime!\n  lastUpdated: DateTime!\n } ",
     },
     {

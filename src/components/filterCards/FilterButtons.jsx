@@ -7,7 +7,7 @@ const FilterButtons = ({ button, filter }) => {
   
   return (
     <>
-      <div className="d-flex justify-content-center mx-auto mb-4">
+      <div className="col-md-10 mx-auto mb-4 ">
       {
         button.map((tag, i)=>{
           return <TagStyles key={uuidv4()} data-text={tag} type="button" onClick={()=> filter(tag)} className="btn">{tag}</TagStyles>
