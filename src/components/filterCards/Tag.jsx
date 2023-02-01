@@ -46,6 +46,14 @@ export const TagStyles = styled.p`
   &.client, &[data-text="client"] {
     background-color: rgb(177, 121, 35);
   }
+  .null, &[data-text="null"] {
+    background-color: rgb(244, 164, 183);
+    color: black;
+  }
+  .nonnull, &[data-text="nonnull"] {
+    background-color: rgb(250, 220, 254);
+    color: black;
+  }
   &[data-text="All"] {
   background-color: orange!important;
 }
