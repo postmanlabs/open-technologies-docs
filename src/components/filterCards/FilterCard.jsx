@@ -14,6 +14,7 @@ const FilterCard = ({ cardItem }) => {
               <ConceptCard title={item.title}
                 description={item.description}
                 tag={item.tag}
+                example={item.example}
                 code={item.code}
                />
             </div>

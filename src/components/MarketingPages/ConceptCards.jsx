@@ -69,7 +69,8 @@ return(
         </div>
         <div>
             <p className='mb-0 text-uppercase small'>Example</p>
-            {example && <p>{example}</p>}
+            {example && (<div dangerouslySetInnerHTML={{ __html: example.join("") }} />)}
+            {console.log(example)}
             {code && (
               <Highlight theme={owl} {...defaultProps} code={code} language="json">
                  {({ className, style, tokens, getLineProps, getTokenProps }) => (

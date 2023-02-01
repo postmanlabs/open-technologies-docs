@@ -10,6 +10,7 @@ export const TagStyles = styled.p`
   font-weight: bold;
   background-color: magenta; //until I can figure out the filtering
   margin-right: 5px;
+  margin-bottom: 12px;
   
   &.graphql, &[data-text="graphql"] {
     background-color: rgb(45, 81, 170);
