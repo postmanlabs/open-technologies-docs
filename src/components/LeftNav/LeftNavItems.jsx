@@ -51,9 +51,14 @@ export const leftNavItems = [
     url: '/graphql/',
     subMenuItems1: [
       {
-        name: 'Graphql Concepts',
-        url: '/graphql/',
+        name: 'Graphql Hub',
+        url: '/graphql/graphqlHub',
       },
+      {
+        name: 'Graphql Concepts',
+        url: '/graphql/graphqlConcepts',
+      },
+    
       {
         name: 'Blog',
         slug: '/graphql/blog/echoservice/',
