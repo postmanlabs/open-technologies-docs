@@ -95,7 +95,7 @@ If you would like to add, edit, or replace images you are welcome to do so. Ther
 Images hosted by Postman should always be referenced as follows:
 
 ``` bash
-https://assets.postman.com/open-tech/<filename>.png
+https://assets.postman.com/open-technologies/<filename>.png
 ```
 
 ## Adding and editing code blocks

@@ -88,7 +88,7 @@
          },
          {
            property: 'twitter:domain',
-           content: 'https://learning.postman.com/open-tech',
+           content: 'https://learning.postman.com/open-technologies',
          },
          {
            property: 'twitter:image',
