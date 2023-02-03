@@ -3,7 +3,8 @@ const { v4: uuidv4 } = require('uuid');
 import styled from 'styled-components';
 import Highlight, {defaultProps} from "prism-react-renderer";
 import owl from "prism-react-renderer/themes/nightOwlLight";
-import { TagStyles } from "../filterCards/Tag";
+import { TagStyles } from "./Tag";
+
 
 const CardWrapper = styled.div`
   margin-bottom: 32px;
@@ -51,6 +52,8 @@ const CardWrapper = styled.div`
 export const ConceptCard = ({
     title, description, tag, example, code
   }) => {
+
+    console.log(tag, 'concept cards')
 return(
     <CardWrapper className="landing-card h-100">      
       <div className="landing-card__content text-left">
@@ -60,7 +63,7 @@ return(
         <div>
             <p className='mb-0 text-uppercase small'>tags</p>
             <div className='row ml-1'>      
-             {tag.map(item => (
+             {tag?.map(item => (
               <div key={uuidv4()}>
                 <TagStyles data-text={item}>{item}</TagStyles>
               </div>
@@ -69,7 +72,7 @@ return(
         </div>
         <div>
             <p className='mb-0 text-uppercase small'>Example</p>
-            {example && (<div dangerouslySetInnerHTML={{ __html: example.join("") }} />)}
+            {example && (<div dangerouslySetInnerHTML={{ __html: example }} />)}
             {code && (
               <Highlight theme={owl} {...defaultProps} code={code} language="json">
                  {({ className, style, tokens, getLineProps, getTokenProps }) => (

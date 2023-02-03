@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
+import React  from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../../components/layout';
 import RightNavLinks from '../../components/RightNavLinks';
@@ -7,11 +7,11 @@ import { leftNavItems } from '../../components/LeftNav/LeftNavItems';
 import LeftNav from '../../components/LeftNav/LeftNav';
 import SEO from '../../components/seo';
 import styled from 'styled-components';
+const { v4: uuidv4 } = require('uuid');
 import BreadCrumbsLinks from '../../components/modules/BreadCrumbsLinks';
 import PreviousAndNextLinks from '../../components/modules/PreviousAndNextLinks';
-import ConceptCardFilter from '../../components/filterCards/ConceptCardFilter';
+import ConceptCardFilter from '../../components/ConceptCardFilter';
 import { DocWrapper } from '../../../styles/DocWrapper.jsx';
-
 
 
 const RightColumnWrapper = styled.aside`
@@ -40,7 +40,7 @@ const RightColumnWrapper = styled.aside`
 `
  
 const GraphQLPage = ({data}) => {
- 
+  
   const { parentLink, subParentLink, previous, next } = data;
 
   return (
@@ -67,12 +67,13 @@ const GraphQLPage = ({data}) => {
               <div className="row justify-content-evenly">           
                 <div className="container-fluid">
                       <div className="row">
-                        {/* {Data.map((item) => (
-                          <div className="col-lg-6 mb-3 mb-md-4"  key={item.id}>    
-                            <ConceptCard title={item.title}
-                                  description={item.description}
-                                  tag={item.tag}
-                                  code={item.code} />
+                        {/* {gatsbyRepoData.resultData.records.map((item) => (
+                          <div className="col-lg-6 mb-3 mb-md-4"  key={uuidv4()}>    
+                            <ConceptCard title={item.fields.Term}
+                                  description={item.fields.Description}
+                                  tag={item.fields.Tags}
+                                  // code={item.code}
+                                  example={item.fields.Example} />
                           </div>
                           ))} */}
                           <ConceptCardFilter />

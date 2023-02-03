@@ -1,5 +1,5 @@
 import React from "react";
-import { ConceptCard } from "../MarketingPages/ConceptCards";
+import { ConceptCard } from "../filterCards/ConceptCards";
 const { v4: uuidv4 } = require('uuid');
 
 const FilterCard = ({ cardItem }) => {
@@ -11,10 +11,10 @@ const FilterCard = ({ cardItem }) => {
         { cardItem.map((item) =>{
           return (
             <div className="col-lg-6 mb-3 mb-md-4" key={uuidv4()}>    
-              <ConceptCard title={item.title}
-                description={item.description}
-                tag={item.tag}
-                example={item.example}
+              <ConceptCard title={item.fields.title}
+                description={item.fields.description}
+                tag={item.fields.tag}
+                example={item.fields.example}
                 code={item.code}
                />
             </div>

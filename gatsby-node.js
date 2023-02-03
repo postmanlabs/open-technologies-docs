@@ -9,7 +9,9 @@ const redirects = require('./redirects.json');
 // const HeaderJson = require('./src/components/Header/Header.data.json');
 const { execSync } = require("child_process")
 const ignorePaths = [];
-
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
@@ -170,4 +172,43 @@ exports.sourceNodes = async ({
   
   createNode(prepareNode(mdFrontmatterCharacterCount, 'frontmatterLength'));
   createNode(prepareNode(output.docs, 'leftNavLinks'));
+};
+
+
+const fetch = (...args) =>
+  import(`node-fetch`).then(({ default: fetch }) => fetch(...args))
+
+exports.sourceNodes = async ({ 
+  actions,
+  createNodeId,
+  createContentDigest 
+}) => {
+
+  const response = await fetch(
+    'https://api.airtable.com/v0/appHEZBQajKXcPlrg/tblu5d6IZmefS7b0Z',
+    {
+      headers: {
+        'Authorization': `Bearer ${process.env.AIRTABLE_TOKEN}`
+      },
+    },
+  );
+  const resultData = await response.json();
+  // const card_raw = JSON.parse(JSON.stringify(raw_data));
+  // const cards = card_raw.response;
+  console.log(resultData, 'node card');
+  
+    actions.createNode({
+      ...resultData,
+      // cardTest: card.id,
+      id: `example-build-time-data`,
+      // id: createNodeId(resultData.records.id),
+      // parent: null,
+      // children: [],
+      internal: {
+        type: 'resultData',
+        // content: JSON.stringify(card),
+        contentDigest: createContentDigest(resultData)
+      }
+    })
+
 };
