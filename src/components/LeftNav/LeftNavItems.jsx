@@ -56,7 +56,7 @@ export const leftNavItems = [
       },
       {
         name: 'Graphql Concepts',
-        url: '/graphql/graphqlConcepts',
+        url: '/graphql/graphqlConcepts/',
       },
     
       {

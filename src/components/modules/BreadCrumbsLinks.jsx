@@ -10,7 +10,7 @@ const BreadCrumbStyles = styled.nav`
     & a:link,
     a:visited,
     span {
-        color: ${theme.colors.grey_50};
+        color: ${theme.colors.grey_50}!important;
         transition: all 0.2s ease-in-out;
         border-bottom: 1px transparent;
     }

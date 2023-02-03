@@ -47,7 +47,7 @@ const items = gatsbyRepoData.resultData.records;
     const filteredData = items.filter(item => item.fields.tag?.includes(button));
     setCardItem(filteredData)
   }
-console.log(items, 'items')
+// console.log(items, 'items')
   return (
     <div >    
         <FilterButtons button={buttons} filter={filter} />
