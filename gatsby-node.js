@@ -185,7 +185,7 @@ exports.sourceNodes = async ({
 }) => {
 
   const response = await fetch(
-    'https://api.airtable.com/v0/appHEZBQajKXcPlrg/tblu5d6IZmefS7b0Z',
+    proceess.env.AIRTABLE_URL,
     {
       headers: {
         'Authorization': `Bearer ${process.env.AIRTABLE_TOKEN}`
