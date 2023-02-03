@@ -174,7 +174,7 @@ exports.sourceNodes = async ({
   createNode(prepareNode(output.docs, 'leftNavLinks'));
 };
 
-
+/*Airtable Data*/
 const fetch = (...args) =>
   import(`node-fetch`).then(({ default: fetch }) => fetch(...args))
 
@@ -185,7 +185,7 @@ exports.sourceNodes = async ({
 }) => {
 
   const response = await fetch(
-    'https://api.airtable.com/v0/appHEZBQajKXcPlrg/tblu5d6IZmefS7b0Z',
+    proceess.env.AIRTABLE_URL,
     {
       headers: {
         'Authorization': `Bearer ${process.env.AIRTABLE_TOKEN}`
@@ -193,20 +193,14 @@ exports.sourceNodes = async ({
     },
   );
   const resultData = await response.json();
-  // const card_raw = JSON.parse(JSON.stringify(raw_data));
-  // const cards = card_raw.response;
-  console.log(resultData, 'node card');
+  // console.log(resultData, 'node card');
   
     actions.createNode({
       ...resultData,
-      // cardTest: card.id,
       id: `example-build-time-data`,
-      // id: createNodeId(resultData.records.id),
-      // parent: null,
-      // children: [],
+      // id: createNodeId(resultData.id),
       internal: {
         type: 'resultData',
-        // content: JSON.stringify(card),
         contentDigest: createContentDigest(resultData)
       }
     })
