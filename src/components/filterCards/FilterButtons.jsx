@@ -3,7 +3,6 @@ import { TagStyles } from "./Tag";
 const { v4: uuidv4 } = require('uuid');
 
 const FilterButtons = ({ button, filter }) => { 
-  // const tags = [];
   
   return (
     <>
