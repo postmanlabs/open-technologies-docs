@@ -50,7 +50,7 @@ const CardWrapper = styled.div`
 }
 `
 export const ConceptCard = ({
-    title, description, tag, example, code
+    title, description, tag, example
   }) => {
 
     console.log(tag, 'concept cards')
@@ -72,9 +72,9 @@ return(
         </div>
         <div>
             <p className='mb-0 text-uppercase small'>Example</p>
-            {example && (<div dangerouslySetInnerHTML={{ __html: example }} />)}
-            {code && (
-              <Highlight theme={owl} {...defaultProps} code={code} language="json">
+            {/* {example && (<div dangerouslySetInnerHTML={{ __html: example }} />)} */}
+            {example && (
+              <Highlight theme={owl} {...defaultProps} code={example} language="json">
                  {({ className, style, tokens, getLineProps, getTokenProps }) => (
                     <pre className={className} style={style}>
                       {tokens.map((line, i) => (
