@@ -1,5 +1,4 @@
 import React, {  useState } from 'react';
-// import items from '../components/filterCards/Data';
 import FilterCard from "./filterCards/FilterCard";
 import FilterButtons from "./filterCards/FilterButtons";
 import { graphql, useStaticQuery } from "gatsby";
