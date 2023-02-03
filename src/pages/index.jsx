@@ -122,7 +122,7 @@ const IndexPage = ({data}) => {
     // It is equal to the appropriate prefix on build
     // Example: src: `${assetPrefix}/path/to/image.jpg`;
     const assetPrefix = data.site.siteMetadata.assetPrefix;
-    console.log(assetPrefix)
+    // console.log(assetPrefix)
 
     const callout = {
       title: "Collaborate with us",

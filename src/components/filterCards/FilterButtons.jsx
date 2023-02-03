@@ -1,15 +1,15 @@
 import React from "react";
-import { TagStyles } from "./Tag";
+import { ButtonTag } from "./Tag";
 const { v4: uuidv4 } = require('uuid');
 
 const FilterButtons = ({ button, filter }) => { 
   
   return (
     <>
-      <div className="col-md-10 mx-auto mb-4 ">
+      <div className="col-md-12 justify-content-center mx-auto mb-5">
       {
-        button.map((tag, i)=>{
-          return <TagStyles key={uuidv4()} data-text={tag} type="button" onClick={()=> filter(tag)} className="btn">{tag}</TagStyles>
+        button.sort().map((tag, i)=>{
+          return <ButtonTag key={uuidv4()} data-text={tag} type="button" onClick={()=> filter(tag)} className="btn">{tag}</ButtonTag>
               })
             }
       </div>

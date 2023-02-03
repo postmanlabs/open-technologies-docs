@@ -17,54 +17,11 @@ import {  Divider } from 'aether-marketing';
 import { DocWrapper } from '../../../styles/DocWrapper.jsx';
 
 const HubWrapper = styled.section`
-.bloc {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  z-index: 11;
-  position: relative;
-}
-.bg-grey {
-    background-color: ${(props) => props.theme.colors.blue_10};
-  }
-.bg-graphql::before {
-  background: url('https://voyager.postman.com/icon/graphql-icon-postman.svg');
-  content: "";
-  opacity: 0.2;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  top: 15px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px; 
-  opacity: 0.1;
-}
-.bg-color {
-  background-color: ${(props) => props.theme.colors.blue_10};
-}
 
-.contextual-links__link {
-    margin-bottom: 0;
-    padding: 4px 0;
-    display: block;
-    
-    a {
-      color: ${(props) => props.theme.colors.grey_50};
-      font-size: 14px;
-      text-decoration: none;
-      border-bottom: 1px solid ${(props) => props.theme.colors.grey_00};
-      transition: ${(props) => props.theme.transitions.all};
-    }
-    
-    &:hover {
-      a {
-        color: ${(props) => props.theme.colors.blue_60};
-        border-bottom: 1px solid ${(props) => props.theme.colors.blue_60};
-        transition: ${(props) => props.theme.transitions.all};
-      }
-    }
-  }
+.bloc {
+  margin-top: 25px;
+ 
+}
 `
 
 const RightColumnWrapper = styled.aside`
@@ -134,60 +91,60 @@ const GraphQLPage = ({data}) => {
               <h3>Why use GraphQL?</h3>
               <p>GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.</p>
           </section>
-          <HubWrapper>
+          <HubWrapper className='mb-5'>
               <div className="row justify-content-evenly">
-                <div className="col-lg-6 mb-3 mb-md-4 bg-grey">          
+                <div className="col-lg-6 mb-3 mb-md-4">          
                   {/* <Divider fullWidth/> */}
                 <div className="bloc">
                   <div className='row justify-content-center'>
                     <img src="/images/Community.png" alt="community Icon" width="30px" className='mr-2'/>
-                    <h4 className=''>Meet the Team</h4>
+                    <h4 >Meet the Team</h4>
                   </div>
               
-                    <div className="contextual-links__link" >
+                    <div  >
                       <DynamicLink url="https://www.linkedin.com/in/doc-jones" name="Doc Jones" />
                     </div>
-                    <div className="contextual-links__link" >
+                    <div >
                       <DynamicLink url="https://www.linkedin.com/in/meenakshi-dhanani" name="Meenakshi Dhanani" />
                     </div>
                     
                 </div>
                 </div>
-                <div className="col-lg-6 mb-3 mb-md-4 bg-graphql  ">
-                <Divider/>
+                <div className="col-lg-6 mb-3 mb-md-4">
+                
                 <div className="bloc ">
                 <div className='row justify-content-center'>
                   <img src="/images/Multi-region.png" alt="community Icon" width="30px" className='mr-2'/> <h4>Where to find us</h4>
                 </div>
                  
-                    <div className="contextual-links__link" >
-                      <DynamicLink url="https://www.linkedin.com/in/doc-jones" name="Postman Talks GraphQL" />
+                    <div >
+                      <DynamicLink url="https://www.twitter.com/getpostman" name="Postman Talks GraphQL" />
                     </div>
                  
                   
                 </div>
                   </div>
-                <div className="col-lg-6 mb-3 mb-md-4 bg-graph">
+                <div className="col-lg-6 mb-3 mb-md-4">
                   
                   <Divider/>
                     <div className="bloc">
                       <h4>New Client Info</h4>
                  
-                    <div className="contextual-links__link" >
+                    <div >
                       <DynamicLink url="https://www.postman.com" name="Documentation" />
                     </div>
 
                 </div>
                 </div>
-                <div className="col-lg-6 mb-3 mb-md-4 bg-grey">
+                <div className="col-lg-6 mb-3 mb-md-4">
                   <Divider/>
                     <div className="bloc">
-                      <h4>Other Writing</h4>
+                      <h4>Worth reading</h4>
                  
-                        <div className="contextual-links__link" >
+                        <div >
                           <DynamicLink url="https://www.docdocgo.dev/tag/graphql-101/" name="GraphQL 101 Series" />
                         </div>
-                        <div className="contextual-links__link" >
+                        <div >
                           <DynamicLink url="https://www.docdocgo.dev/" name="docdocgo" />
                         </div>
                   
@@ -198,9 +155,11 @@ const GraphQLPage = ({data}) => {
                   
                   <Divider/>
                     <div className="bloc">
+                    <div className='row justify-content-center '>
+                    <img src="/images/Events.svg" alt="community Icon" width="30px" className='mr-2'/>
                       <h4>Calender</h4>
-                 
-                    <div className="contextual-links__link" >
+                 </div>
+                    <div >
                       <DynamicLink url="https://www.postman.com" name="GraphQL Summit" />
                     </div>
 
@@ -209,12 +168,12 @@ const GraphQLPage = ({data}) => {
                 <div className="col-lg-6 mb-3 mb-md-4 ">
                   <Divider/>
                     <div className="bloc text-left">
-                    <div className='row justify-content-center bg-color px-3 pt-3'>
+                    <div className='row justify-content-center '>
                       <img src="/images/Engagement.png" alt="community Icon" width="30px" className='mr-2'/>
-                      <h4 >Other links</h4>
+                      <h4 >Places to look</h4>
                     </div>
                  
-                        <div className="contextual-links__link " >
+                        <div >
                         <SvgWrapper >
                           <svg className="button-icon--left" transform="translate(0, -1)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <title>logo-github</title>
@@ -222,7 +181,7 @@ const GraphQLPage = ({data}) => {
                           </svg> </SvgWrapper>
                           <DynamicLink url="https://www.grapqhl.org/" name="GraphQL Project" />
                         </div>
-                        <div className="contextual-links__link" >
+                        <div >
                         <SvgWrapper >
                           <svg className="button-icon--left" transform="translate(0, -1)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <title>logo-github</title>
@@ -230,7 +189,7 @@ const GraphQLPage = ({data}) => {
                           </svg> </SvgWrapper>
                           <DynamicLink url="https://github.com/graphql/foundation" name="GraphQL Foundation Board" />
                         </div>
-                        <div className="contextual-links__link" >
+                        <div >
                         <SvgWrapper >
                           <svg className="button-icon--left" transform="translate(0, -1)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <title>logo-github</title>

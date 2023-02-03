@@ -53,7 +53,7 @@ export const ConceptCard = ({
     title, description, tag, example
   }) => {
 
-    console.log(tag, 'concept cards')
+    // console.log(tag, 'concept cards')
 return(
     <CardWrapper className="landing-card h-100">      
       <div className="landing-card__content text-left">
