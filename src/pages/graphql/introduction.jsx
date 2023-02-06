@@ -80,7 +80,7 @@ const GraphQLPage = ({data}) => {
               <BreadCrumbsLinks data={{ parentLink, subParentLink }} />
                 {/* Qualtrics */}
                 <div className='row mb-4'>
-                  <img src="https://voyager.postman.com/icon/graphql-icon-postman.svg" alt="graphql icon" className='mr-3'/>
+                  <img src="https://voyager.postman.com/logo/external/graphql-icon.svg" alt="graphql icon" className='mr-3' width="50px"/>
                   <h1>GraphQL</h1>
                 </div>
             <section className="pb-4">

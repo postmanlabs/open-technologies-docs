@@ -59,7 +59,7 @@ const GraphQLPage = ({data}) => {
               <BreadCrumbsLinks data={{ parentLink, subParentLink }} />
                 {/* Qualtrics */}
 
-              <h2 className="mt-5 mb-3">GraphQL Concepts</h2>
+              <h2 className="mb-3">GraphQL Concepts</h2>
               <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem numquam vitae ratione eveniet fuga assumenda id dolor corrupti. Aperiam ab a reiciendis, odit dignissimos tempore minima autem cum animi pariatur!
               </p>
