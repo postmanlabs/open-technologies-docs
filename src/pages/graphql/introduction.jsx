@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, withPrefix } from 'gatsby';
 
 import Layout from '../../components/layout';
 import DynamicLink from '../../components/Shared/DynamicLink';
@@ -97,7 +97,7 @@ const GraphQLPage = ({data}) => {
                   {/* <Divider fullWidth/> */}
                 <div className="bloc">
                   <div className='row justify-content-center'>
-                    <img src="/images/Community.png" alt="community Icon" width="30px" className='mr-2'/>
+                    <img src={withPrefix("/images/Community.png")} alt="community Icon" width="30px" className='mr-2'/>
                     <h4 >Meet the Team</h4>
                   </div>
               
@@ -114,7 +114,7 @@ const GraphQLPage = ({data}) => {
                 
                 <div className="bloc ">
                 <div className='row justify-content-center'>
-                  <img src="/images/Multi-region.png" alt="community Icon" width="30px" className='mr-2'/> <h4>Where to find us</h4>
+                  <img src={withPrefix("/images/Multi-region.png")} alt="community Icon" width="30px" className='mr-2'/> <h4>Where to find us</h4>
                 </div>
                  
                     <div >
@@ -156,7 +156,7 @@ const GraphQLPage = ({data}) => {
                   <Divider/>
                     <div className="bloc">
                     <div className='row justify-content-center '>
-                    <img src="/images/Events.svg" alt="community Icon" width="30px" className='mr-2'/>
+                    <img src={withPrefix("/images/Events.svg")} alt="community Icon" width="30px" className='mr-2'/>
                       <h4>Calender</h4>
                  </div>
                     <div >
@@ -169,7 +169,7 @@ const GraphQLPage = ({data}) => {
                   <Divider/>
                     <div className="bloc text-left">
                     <div className='row justify-content-center '>
-                      <img src="/images/Engagement.png" alt="community Icon" width="30px" className='mr-2'/>
+                      <img src={withPrefix("/images/Engagement.png")} alt="community Icon" width="30px" className='mr-2'/>
                       <h4 >Places to look</h4>
                     </div>
                  

@@ -1,5 +1,5 @@
 import React from 'react';
-import { navigate, graphql } from 'gatsby';
+import { navigate } from 'gatsby';
 import styled from 'styled-components';
 import '../../styles/config/normalize.css';
 import Layout from '../components/layout';
@@ -25,7 +25,7 @@ const HeroWrapper = styled.section`
     .img-frame {
         border-radius: ${(props) => props.theme.borderRadius.medium};
         border: 8px solid ${(props) => props.theme.colors.grey_20};// $grey_20
-        box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.32);
+      box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.32);
     }
 `
 
@@ -117,12 +117,6 @@ input.submit {
 `;
 
 const IndexPage = ({data}) => {
-  
-    // Use this variable when referencing relative image paths
-    // It is equal to the appropriate prefix on build
-    // Example: src: `${assetPrefix}/path/to/image.jpg`;
-    const assetPrefix = data.site.siteMetadata.assetPrefix;
-    // console.log(assetPrefix)
 
     const callout = {
       title: "Collaborate with us",
@@ -493,13 +487,3 @@ const IndexPage = ({data}) => {
 }
 
 export default IndexPage;
-
-export const query = graphql`
-  query HomePageQuery {
-    site {
-      siteMetadata {
-        assetPrefix
-      }
-    }
-  }
-`

@@ -7,7 +7,6 @@ require('dotenv').config({
 });
 
 const siteUrl = process.env.SITE_URL ? process.env.SITE_URL : 'https://learning.postman.com/open-technologies'
-const PREFIX = process.env.PREFIX_PATHS === 'true' ? '/open-technologies' : '';
 
 module.exports = {
   siteMetadata: {
@@ -15,7 +14,6 @@ module.exports = {
     description: '',
     author: 'Postman',
     siteUrl: siteUrl,
-    assetPrefix: PREFIX // Non-Gatsby feature - MarkEng implementation, see MARKENG-2093
   },
   pathPrefix: '/open-technologies', // The pathPrefix key is apart of gatsby build process, can find in gatsby docs
   trailingSlash: 'always',
