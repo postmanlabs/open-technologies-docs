@@ -25,7 +25,7 @@ const HeroWrapper = styled.section`
     .img-frame {
         border-radius: ${(props) => props.theme.borderRadius.medium};
         border: 8px solid ${(props) => props.theme.colors.grey_20};// $grey_20
-      box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.32);
+        box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.32);
     }
 `
 
