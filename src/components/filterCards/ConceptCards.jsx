@@ -12,6 +12,7 @@ const CardWrapper = styled.div`
   padding: 15px 10px;
   border: 1px solid ${(props) => props.theme.colors.grey_10};
   border-radius: 10px;
+  max-width: 300px;
 
   .landing-card__content {
     &-description {
