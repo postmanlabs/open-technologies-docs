@@ -2,19 +2,19 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from '../components/layout';
+import Layout from '../../components/layout';
 
-import RightNavLinks from '../components/RightNavLinks';
-import { leftNavItems } from '../components/LeftNav/LeftNavItems';
-import LeftNav from '../components/LeftNav/LeftNav';
-import SEO from '../components/seo';
+import RightNavLinks from '../../components/RightNavLinks';
+import { leftNavItems } from '../../components/LeftNav/LeftNavItems';
+import LeftNav from '../../components/LeftNav/LeftNav';
+import SEO from '../../components/seo';
 // const { v4: uuidv4 } = require('uuid');
 import styled from 'styled-components';
 import 'prismjs/themes/prism-tomorrow.css';
-import BreadCrumbsLinks from '../components/modules/BreadCrumbsLinks';
-import PreviousAndNextLinks from '../components/modules/PreviousAndNextLinks';
+import BreadCrumbsLinks from '../../components/modules/BreadCrumbsLinks';
+import PreviousAndNextLinks from '../../components/modules/PreviousAndNextLinks';
 import { BaseLinkStyles, IconList } from 'aether-marketing';
-
+// import { BaseLinkStyles } from 'aether-marketing';
 
 const DocWrapper = styled.div`
   /* Used for Deeplinking */   
@@ -277,59 +277,59 @@ const RightColumnWrapper = styled.aside`
   width: 100;
 }
 `
-const iconList = [
-  {
-    iconSrc: "../images/description.png",
-    text: "Define - Establishing the nature, scope, and meaning of some part of API operations, providing more details about the surface area of an API, or even the lifecycle around each API, providing primary or secondary data that can be used to understand the state and purpose of each API by a human or another machine."
-  },
-  {
-    iconSrc: "../images/Vocabulary.png",
-    text: "Design - The functional shape, surface, and details of any type of an API provided in a way that can be collaborated around and shared with other stakeholders, providing a set of human and machine-readable instructions for what each API is able to do that demonstrates a great deal of thought has gone into its form and function."
-  },
-  {
-    iconSrc: "../images/Code-generator.png",
-    text: "Develop - The development of some part of APIs and the operations around them, working on something that is entirely new or improving on some existing part of the system by evolving the API or how it is operated, moving forward some part of the enterprise system in response to a new application or integration."
-  },
-  {
-    iconSrc: "../images/Contract-testing.png",
-    text: "Test - Establishing a baseline for testing, helping make sure that you are testing for each API contract, understanding availability, and performance, and then considering what other tests are required for each API, while also ensuring a testing base exists across all APIs."
-  },
-  {
-    iconSrc: "../images/Security.png",
-    text: "Secure - Ensuring that an API is secure from threats and vulnerabilities, making for a pretty wide spectrum of different processes and technologies that ensure digital resources and capabilities made available via APIs are only accessible to an intended audience and bad actors are not able to find ways to get access via an API."
-  },
-  {
-    iconSrc: "../images/API-deployment.png",
-    text: "Deploy - Using an API gateway to deploy and manage APIs provides a single or federated approach to providing access to backend services using well-defined APIs, standardizing how APIs are published to development, staging, production, or other environments, while also consistently applying authentication, logging, and the other elements needed to properly manage APIs at scale."
-  },
-  {
-    iconSrc: "https://voyager.postman.com/icon/appplication-performance-icon-postman.svg",
-    text: "Observe - View dashboards, reports, history, and logs to observe the state of a single API, the operations around it, and even across many different APIs and domains, taking advantage of the existing outputs that exist across operations to develop an awareness of API operations and how everything works."
-  },
-  {
-    iconSrc: "../images/Coverage.png",
-    text: "Distribute - Approaching the distribution of APIs in a consistent way, ensuring that all APIs are published to relevant portals and networks, but then also investing in the overall experience involved with learning about, onboarding, and putting APIs to work--measuring what is working and what is not working all along the way."
-  },
-];
+// const iconList = [
+//   {
+//     iconSrc: "/images/description.png",
+//     text: "Define - Establishing the nature, scope, and meaning of some part of API operations, providing more details about the surface area of an API, or even the lifecycle around each API, providing primary or secondary data that can be used to understand the state and purpose of each API by a human or another machine."
+//   },
+//   {
+//     iconSrc: "/images/Vocabulary.png",
+//     text: "Design - The functional shape, surface, and details of any type of an API provided in a way that can be collaborated around and shared with other stakeholders, providing a set of human and machine-readable instructions for what each API is able to do that demonstrates a great deal of thought has gone into its form and function."
+//   },
+//   {
+//     iconSrc: "/images/Code-generator.png",
+//     text: "Develop - The development of some part of APIs and the operations around them, working on something that is entirely new or improving on some existing part of the system by evolving the API or how it is operated, moving forward some part of the enterprise system in response to a new application or integration."
+//   },
+//   {
+//     iconSrc: "/images/Contract-testing.png",
+//     text: "Test - Establishing a baseline for testing, helping make sure that you are testing for each API contract, understanding availability, and performance, and then considering what other tests are required for each API, while also ensuring a testing base exists across all APIs."
+//   },
+//   {
+//     iconSrc: "/images/Security.png",
+//     text: "Secure - Ensuring that an API is secure from threats and vulnerabilities, making for a pretty wide spectrum of different processes and technologies that ensure digital resources and capabilities made available via APIs are only accessible to an intended audience and bad actors are not able to find ways to get access via an API."
+//   },
+//   {
+//     iconSrc: "/images/API-deployment.png",
+//     text: "Deploy - Using an API gateway to deploy and manage APIs provides a single or federated approach to providing access to backend services using well-defined APIs, standardizing how APIs are published to development, staging, production, or other environments, while also consistently applying authentication, logging, and the other elements needed to properly manage APIs at scale."
+//   },
+//   {
+//     iconSrc: "https://voyager.postman.com/icon/appplication-performance-icon-postman.svg",
+//     text: "Observe - View dashboards, reports, history, and logs to observe the state of a single API, the operations around it, and even across many different APIs and domains, taking advantage of the existing outputs that exist across operations to develop an awareness of API operations and how everything works."
+//   },
+//   {
+//     iconSrc: "/images/Coverage.png",
+//     text: "Distribute - Approaching the distribution of APIs in a consistent way, ensuring that all APIs are published to relevant portals and networks, but then also investing in the overall experience involved with learning about, onboarding, and putting APIs to work--measuring what is working and what is not working all along the way."
+//   },
+// ];
 const consumerStages = [
   {
-    iconSrc: "../images/description.png",
+    iconSrc: "/images/description.png",
     text: "Discover - Consumers will not spend a lot of time looking for new APIs that fit the profile of what they need. Discovering the right API can take hours, days, weeks, or be impossible. Make it easy for your consumers to find APIs by understanding where they already exist, searching, and spending their time, meeting consumers where they are."
   },
   {
-    iconSrc: "../images/Vocabulary.png",
+    iconSrc: "/images/Vocabulary.png",
     text: "Evaluate - As part of the onboarding process, API consumers should be able to play with and kick the tires on an API, either directly against the production, or via a sandbox environment. The evaluation stage is essential for consumers to understand what is possible, and how an API fits in with their objectives, allowing them to consider deeper integration."
   },
   {
-    iconSrc: "../images/Code-generator.png",
+    iconSrc: "/images/Code-generator.png",
     text: "Integrate - API consumers expect API producers to share their OpenAPI definition and provide SDKs, libraries, and snippets in the programming language of their choice. Over the last five years consumers have also begun to demand onboarding, workflow, and other collections that help them achieve integration quicker--demonstrating how the definition of integration has evolved."
   },
   {
-    iconSrc: "../images/Contract-testing.png",
+    iconSrc: "/images/Contract-testing.png",
     text: "Test - At a minimum consumers will need access to uptime and availability testing via a dashboard, as well as the tests and monitors behind them. Next, consider exploring user acceptance testing, authentication, and other types of tests that reflect the challenges and needs your API consumers will have."
   },
   {
-    iconSrc: "../images/Security.png",
+    iconSrc: "/images/Security.png",
     text: "Deploy - Using an API gateway to deploy and manage APIs provides a single or federated approach to providing access to backend services using well-defined APIs, standardizing how APIs are published to development, staging, production, or other environments, while also consistently applying authentication, logging, and the other elements needed to properly manage APIs at scale."
   },
   {
@@ -338,25 +338,25 @@ const consumerStages = [
   },
 ];
 
-const platformBase = [
-  {
-    iconSrc: "../images/description.png",
-    text: "Source Control - Git, and potentially GitHub, GitLab, or BitBucket have become the source of truth for the software development lifecycle (SDLC), and it will continue to play the same role when it comes to the API lifecycle. Ensuring that your source control is a seamless part of the API lifecycle, API governance, and as the conveyor build for your API factory floor is foundational for your platform."
-  },
-  {
-    iconSrc: "../images/Vocabulary.png",
-    text: "CI/CD - CI/CD is the foundation for making the software development lifecycle repeatable, ensuring that deployments into production are as high quality as possible. This transfers to the API lifecycle as well, providing "
-  },
-  {
-    iconSrc:  "https://voyager.postman.com/icon/appplication-performance-icon-postman.svg",
-    text: "Application Performance Management (APM) - APM solutions are essential to the observability of your APIs, but also the operations behind them. The monitoring and management of performance and availability of APIs, actively detecting and diagnosing performance problems to maintain an expected level of service, and translating API operational metrics into business are essential to realizing the API-first potential at scale--maximizing value at scale across hundreds or thousands of internal or external APIs."
-  },
-  {
-    iconSrc: "../images/Contract-testing.png",
-    text: "Test - Establishing a baseline for testing, helping make sure that you are testing for each API contract, understanding availability, and performance, and then considering what other tests are required for each API, while also ensuring a testing base exists across all APIs."
-  },
+// const platformBase = [
+//   {
+//     iconSrc: "/images/description.png",
+//     text: "Source Control - Git, and potentially GitHub, GitLab, or BitBucket have become the source of truth for the software development lifecycle (SDLC), and it will continue to play the same role when it comes to the API lifecycle. Ensuring that your source control is a seamless part of the API lifecycle, API governance, and as the conveyor build for your API factory floor is foundational for your platform."
+//   },
+//   {
+//     iconSrc: "/images/Vocabulary.png",
+//     text: "CI/CD - CI/CD is the foundation for making the software development lifecycle repeatable, ensuring that deployments into production are as high quality as possible. This transfers to the API lifecycle as well, providing "
+//   },
+//   {
+//     iconSrc:  "https://voyager.postman.com/icon/appplication-performance-icon-postman.svg",
+//     text: "Application Performance Management (APM) - APM solutions are essential to the observability of your APIs, but also the operations behind them. The monitoring and management of performance and availability of APIs, actively detecting and diagnosing performance problems to maintain an expected level of service, and translating API operational metrics into business are essential to realizing the API-first potential at scale--maximizing value at scale across hundreds or thousands of internal or external APIs."
+//   },
+//   {
+//     iconSrc: "/images/Contract-testing.png",
+//     text: "Test - Establishing a baseline for testing, helping make sure that you are testing for each API contract, understanding availability, and performance, and then considering what other tests are required for each API, while also ensuring a testing base exists across all APIs."
+//   },
   
-];
+// ];
 
 const GraphQLPage = ({data}) => {
 
@@ -387,15 +387,39 @@ const GraphQLPage = ({data}) => {
           </section>
           <section className='mb-5'>
             <h3>Producer Lifecycle Stages</h3>
-            <img   src="../images/lifecycle.png" alt="Lifecycle chart. Illustration"/>
+            <img   src="/images/lifecycle.png" alt="Lifecycle chart. Illustration"/>
             <p>After talking with hundreds of enterprises, Postman has distilled down what we see into a common definition of a modern API lifecycle, and we wanted to share it with you as a potential starting point for your own definition. While this lifecycle is not always done in a linear fashion, we recommend you consider these eight separate stages when it comes to crafting your own definition of what the API lifecycle is.
             </p>
-            <IconList  iconList={iconList} />
-            <p>There are other elements like documentation or gateways that get thrown in here when talking with different API producers, but we feel strongly that these eight areas encompass the most important aspects of how we are delivering APIs. Providing you with a definition that works for both business and technical stakeholders when it comes to finding alignment across a single API, but more importantly, hundreds or thousands of APIs.</p>
+            {/* <IconList  iconList={iconList} /> */}
+            <div className='row justify-content-center '>
+              <div className='col-2 align-self-center '>
+              <img  src="/images/description.png" alt="illustration" width="50px" height="50px"/>
+              </div>
+              <div className='col-10'>
+                <p><strong>Define</strong> - Establishing the nature, scope, and meaning of some part of API operations, providing more details about the surface area of an API, or even the lifecycle around each API, providing primary or secondary data that can be used to understand the state and purpose of each API by a human or another machine.</p>
+              </div>
+            </div>
+            <div className='row justify-content-center '>
+              <div className='col-2 align-self-center '>
+              <img  src="/images/Vocabulary.png" alt="illustration" width="50px" height="50px"/>
+              </div>
+              <div className='col-10'>
+                <p><strong>Design </strong> - The functional shape, surface, and details of any type of an API provided in a way that can be collaborated around and shared with other stakeholders, providing a set of human and machine-readable instructions for what each API is able to do that demonstrates a great deal of thought has gone into its form and function.</p>
+              </div>
+            </div>
+            <div className='row justify-content-center '>
+              <div className='col-2 align-self-center '>
+              <img  src="/images/Code-generator.png" alt="illustration" width="50px" height="50px"/>
+              </div>
+              <div className='col-10'>
+                <p><strong>Develop</strong> - The development of some part of APIs and the operations around them, working on something that is entirely new or improving on some existing part of the system by evolving the API or how it is operated, moving forward some part of the enterprise system in response to a new application or integration.</p>
+              </div>
+            </div>
+            <p >There are other elements like documentation or gateways that get thrown in here when talking with different API producers, but we feel strongly that these eight areas encompass the most important aspects of how we are delivering APIs. Providing you with a definition that works for both business and technical stakeholders when it comes to finding alignment across a single API, but more importantly, hundreds or thousands of APIs.</p>
           </section>
           <section className='mb-5'>
             <h3>Consumer Lifecycle</h3>
-            <img   src="../images/consumer-lifecycle.png" alt="Consumer Lifecycle chart. Illustration"/>
+            <img   src="/images/consumer-lifecycle.png" alt="Consumer Lifecycle chart. Illustration"/>
             <p>This is where every API producer needs to take off their day-to-day hat off and put on their API consumer hat, doing the work to consider the portion of the lifecycle speaks to the consumer experience. This portion of the lifecycle is about aknowledging that the API lifecycle is a two-sided affair, and that engagement with consumers is essential to each individual iteration of an API, but also the overall velocity each API will be able to achieve.</p>
           </section>
               <section className='mb-5'>
@@ -410,7 +434,7 @@ const GraphQLPage = ({data}) => {
                 <p>You need to develop the base for your API platform, and the producer and consumer dimensions of your API lifecycle by leveraging your existing investments across your software development lifecycle, but also the API lifecycle you are bringing into alignment.</p>
                 <h4>Your Infrastructure</h4>
                 <p>Your API platform is built on top of your existing investment in your software development lifecycle and API management. These four areas of enterprise infrastructure represent how you will map a modern API lifecycle to your existing software development lifecycle.</p>
-                <IconList  iconList={platformBase} />
+                {/* <IconList  iconList={platformBase} /> */}
                 <p>Seamless integration with this infrastructure will provide you with the base of your enterprise API platform. However, remember that all of these essential infrastructure solutions also have APIs, allowing you are seamlessly integrating their capabilities into your API operations, automating and standardizing how you deliver APIs across domains and teams.</p>
                 <p>Having a clear definition of how you will bolt the API lifecycle onto your existing software development lifecycle is essential to moving forward at the scale and velocity you desire. Your API lifecycle must map to the existing skills and infrastructure teams are using, but should allow for the growth and adaptability your company will require moving forward.</p>
               </section>
