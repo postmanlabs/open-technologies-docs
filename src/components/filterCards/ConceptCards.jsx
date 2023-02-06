@@ -2,9 +2,8 @@ import React from 'react';
 const { v4: uuidv4 } = require('uuid');
 import styled from 'styled-components';
 import Highlight, {defaultProps} from "prism-react-renderer";
-import owl from "prism-react-renderer/themes/nightOwlLight";
-import { TagStyles } from "./Tag";
 
+import { TagStyles } from "./Tag";
 
 const CardWrapper = styled.div`
   margin-bottom: 32px;
@@ -34,10 +33,14 @@ const CardWrapper = styled.div`
     text-decoration: none;
     border: none !important;
   }
-.prism-code {
+.code {
   height: 100%;
-  white-space: pre-wrap;
+  background-color: ${(props) => props.theme.colors.grey_10};
   font-size: 12px;
+  code{
+    white-space: pre-wrap;
+    color: rgb(17, 17, 18);
+  }
 }
 .plain, .punctuation {
   color: rgb(204, 204, 204)!important;
@@ -75,19 +78,21 @@ return(
             <p className='mb-0 text-uppercase small'>Example</p>
             {/* {example && (<div dangerouslySetInnerHTML={{ __html: example }} />)} */}
             {example && (
-              <Highlight theme={owl} {...defaultProps} code={example} language="json">
-                 {({ className, style, tokens, getLineProps, getTokenProps }) => (
-                    <pre className={className} style={style}>
-                      {tokens.map((line, i) => (
-                        <div {...getLineProps({ line, key: i })}>
-                          {line.map((token, key) => (
-                            <span {...getTokenProps({ token, key })} />
-                          ))}
-                        </div>
-                      ))}
-                    </pre>
-                  )}
-              </Highlight>
+              <div className='code'>
+              <code>{example}</code></div>
+              // <Highlight  {...defaultProps} code={example} language="json">
+              //    {({ className, style, tokens, getLineProps, getTokenProps }) => (
+              //       <pre className={className} style={style}>
+              //         {tokens.map((line, i) => (
+              //           <div {...getLineProps({ line, key: i })}>
+              //             {line.map((token, key) => (
+              //               <span {...getTokenProps({ token, key })} />
+              //             ))}
+              //           </div>
+              //         ))}
+              //       </pre>
+              //     )}
+              // </Highlight>
             )
             }
         </div>
