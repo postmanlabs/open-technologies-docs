@@ -48,7 +48,7 @@ export const leftNavItems = [
   {
     name: 'GraphQL',
     parentSlug: 'graphql',
-    url: '/graphql/graphqlHub/',
+    url: '/graphql/introduction/',
     subMenuItems1: [
       {
         name: 'Introduction',
@@ -56,7 +56,7 @@ export const leftNavItems = [
       },
       {
         name: 'GraphQL Concepts',
-        url: '/graphql/graphqlConcepts/',
+        url: '/graphql/graphql-concepts/',
       },
     
       {
@@ -66,43 +66,35 @@ export const leftNavItems = [
         subMenuItems2: [
           {
           name: 'How to Build an Echo Service for GraphQL',
-          url: '/graphql/blog/echoservice/',
+          url: '/graphql/blog/echo-service/',
           }
         ]
-      },
-      {
-        name: 'Page2',
-        url: '/graphql/page2/',
-      },
-      {
-        name: 'Page3',
-        url: '/graphql/page3/',
-      },
+      }
     ],
   },
-  {
-    name: 'Specifications',
-    parentSlug: 'specifications',
-    url: '/specifications/asyncapi/',
-    subMenuItems1: [
-      {
-        name: 'Testing',
-        url: '/specifications/testing/',
-      },
-      {
-        name: 'Collections',
-        url: '/specifications/asyncapi/',
-      },     
-      {
-        name: 'OpenAPI',
-        url: '/specifications/openapi/',
-      },  
-      {
-        name: 'gRPC',
-        url: '/specifications/grpc/',
-      },
-    ],
-  },
+  // {
+  //   name: 'Specifications',
+  //   parentSlug: 'specifications',
+  //   url: '/specifications/asyncapi/',
+  //   subMenuItems1: [
+  //     {
+  //       name: 'Testing',
+  //       url: '/specifications/testing/',
+  //     },
+  //     {
+  //       name: 'Collections',
+  //       url: '/specifications/asyncapi/',
+  //     },     
+  //     {
+  //       name: 'OpenAPI',
+  //       url: '/specifications/openapi/',
+  //     },  
+  //     {
+  //       name: 'gRPC',
+  //       url: '/specifications/grpc/',
+  //     },
+  //   ],
+  // },
   {
     name: 'Lifecycle',
     parentSlug: 'lifecycle',
