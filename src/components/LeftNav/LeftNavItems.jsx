@@ -29,80 +29,52 @@
 
 
 export const leftNavItems = [ 
-  
-  // {
-  //   name: 'Collections',
-  //   parentSlug: 'collections',
-  //   url: '/collections/page1',
-  //   subMenuItems1: [
-  //     {
-  //       name: 'Page1',
-  //       url: '/collections/page1/',
-  //     },     
-  //     {
-  //       name: 'Page2',
-  //       url: '/collections/page2/',
-  //     },         
-  //   ],
-  // },
+
   {
     name: 'GraphQL',
     parentSlug: 'graphql',
-    url: '/graphql/graphqlHub/',
+    url: '/graphql/',
     subMenuItems1: [
       {
-        name: 'Introduction',
-        url: '/graphql/introduction/',
-      },
-      {
         name: 'GraphQL Concepts',
-        url: '/graphql/graphqlConcepts/',
-      },
-    
+        url: '/graphql/graphql-concepts/',
+      },   
       {
         name: 'Blog',
-        slug: '/graphql/blog/echoservice/',
+        slug: '/graphql/blog/echo-service/',
         subParentSlug: 'blog',
         subMenuItems2: [
           {
           name: 'How to Build an Echo Service for GraphQL',
-          url: '/graphql/blog/echoservice/',
+          url: '/graphql/blog/echo-service/',
           }
         ]
-      },
-      {
-        name: 'Page2',
-        url: '/graphql/page2/',
-      },
-      {
-        name: 'Page3',
-        url: '/graphql/page3/',
-      },
+      }
     ],
   },
-  {
-    name: 'Specifications',
-    parentSlug: 'specifications',
-    url: '/specifications/asyncapi/',
-    subMenuItems1: [
-      {
-        name: 'Testing',
-        url: '/specifications/testing/',
-      },
-      {
-        name: 'Collections',
-        url: '/specifications/asyncapi/',
-      },     
-      {
-        name: 'OpenAPI',
-        url: '/specifications/openapi/',
-      },  
-      {
-        name: 'gRPC',
-        url: '/specifications/grpc/',
-      },
-    ],
-  },
+  // {
+  //   name: 'Specifications',
+  //   parentSlug: 'specifications',
+  //   url: '/specifications/asyncapi/',
+  //   subMenuItems1: [
+  //     {
+  //       name: 'Testing',
+  //       url: '/specifications/testing/',
+  //     },
+  //     {
+  //       name: 'Collections',
+  //       url: '/specifications/asyncapi/',
+  //     },     
+  //     {
+  //       name: 'OpenAPI',
+  //       url: '/specifications/openapi/',
+  //     },  
+  //     {
+  //       name: 'gRPC',
+  //       url: '/specifications/grpc/',
+  //     },
+  //   ],
+  // },
   {
     name: 'Lifecycle',
     parentSlug: 'lifecycle',
