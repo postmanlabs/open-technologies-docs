@@ -135,7 +135,7 @@ const GraphQLPage = ({ data }) => {
 
                       <div className="bloc">
                         <div className='row header'>
-                          <img src={withPrefix("/images/Multi-region.png")} alt="community Icon" width="30px" className='mr-2' />
+                          <img src={withPrefix("/images/Info.png")} alt="community Icon" width="30px" className='mr-2' />
                           <h4>New Client Info</h4>
                         </div>
 

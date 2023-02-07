@@ -193,12 +193,12 @@ exports.sourceNodes = async ({
     },
   );
   const resultData = await response.json();
-  // console.log(resultData, 'node card');
   
     actions.createNode({
       ...resultData,
-      id: `example-build-time-data`,
-      // id: createNodeId(resultData.id),
+      id: createNodeId(`${resultData}-id`),
+      parent: null,
+      children: [],
       internal: {
         type: 'resultData',
         contentDigest: createContentDigest(resultData)
