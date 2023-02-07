@@ -106,12 +106,9 @@ export const leftNavItems = [
   {
     name: 'Lifecycle',
     parentSlug: 'lifecycle',
-    url: '/lifecycle/gateways/',
+    url: '/lifecycle/',
     subMenuItems1: [
-      {
-        name: 'Lifecycle',
-        url: '/lifecycle/'
-      },
+      
       {
         name: 'Gateways',
         url: '/lifecycle/gateways/',
