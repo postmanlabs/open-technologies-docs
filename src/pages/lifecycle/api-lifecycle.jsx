@@ -2,17 +2,17 @@
 import React from 'react';
 import { graphql, withPrefix } from 'gatsby';
 
-import Layout from '../components/layout';
+import Layout from '../../components/layout';
 
-import RightNavLinks from '../components/RightNavLinks';
-import { leftNavItems } from '../components/LeftNav/LeftNavItems';
-import LeftNav from '../components/LeftNav/LeftNav';
-import SEO from '../components/seo';
+import RightNavLinks from '../../components/RightNavLinks';
+import { leftNavItems } from '../../components/LeftNav/LeftNavItems';
+import LeftNav from '../../components/LeftNav/LeftNav';
+import SEO from '../../components/seo';
 // const { v4: uuidv4 } = require('uuid');
 import styled from 'styled-components';
 import 'prismjs/themes/prism-tomorrow.css';
-import BreadCrumbsLinks from '../components/modules/BreadCrumbsLinks';
-import PreviousAndNextLinks from '../components/modules/PreviousAndNextLinks';
+import BreadCrumbsLinks from '../../components/modules/BreadCrumbsLinks';
+import PreviousAndNextLinks from '../../components/modules/PreviousAndNextLinks';
 import { BaseLinkStyles, IconList } from 'aether-marketing';
 // import { BaseLinkStyles } from 'aether-marketing';
 
