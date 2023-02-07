@@ -427,14 +427,14 @@ const GraphQLPage = ({ data }) => {
                   </div>
                   <div className='row justify-content-center mb-5'>
                     <div className='col-2 align-self-center '>
-                      <img src={withPrefix("https://voyager.postman.com/icon/appplication-performance-icon-postman.svg")} alt="illustration" width="50px" height="50px" />
+                      <img src="https://voyager.postman.com/icon/appplication-performance-icon-postman.svg" alt="illustration" width="50px" height="50px" />
                     </div>
                     <div className='col-10'>
                       <p><strong>Observe</strong> - View dashboards, reports, history, and logs to observe the state of a single API, the operations around it, and even across many different APIs and domains, taking advantage of the existing outputs that exist across operations to develop an awareness of API operations and how everything works.</p>
                     </div>
                   </div>
                   <p>The consumer side of the API lifecycle is about ensuring that as an API producer, you are considering your consumers. All of the top challenges for API producers reveal themselves when it comes to not considering the needs of those who will be consuming an API and empathizing with what they face. Do the work here to properly put yourself in your consumer's shoes on a regular basis and strengthen the trust and feedback loops that exist on this side of your API lifecycle.</p>
-                  <img src={withPrefix("https://voyager.postman.com/illustration/producer-consumer-lifecycle.png")} alt="producer to consumer lifecycle. Illustration" />
+                  <img src="https://voyager.postman.com/illustration/producer-consumer-lifecycle.png" alt="producer to consumer lifecycle. Illustration" />
                 </section>
                 <section className='mb-5'>
                   <h3>The Platform Base</h3>
@@ -443,7 +443,7 @@ const GraphQLPage = ({ data }) => {
                   <p className='mb-5'>Your API platform is built on top of your existing investment in your software development lifecycle and API management. These four areas of enterprise infrastructure represent how you will map a modern API lifecycle to your existing software development lifecycle.</p>
                   <div className='row justify-content-center '>
                     <div className='col-2 align-self-center '>
-                      <img src={withPrefix("/images/Source-Control.png")} alt="illustration" width="50px" height="50px" />
+                      <img src={withPrefix("/images/Source-control.png")} alt="illustration" width="50px" height="50px" />
                     </div>
                     <div className='col-10'>
                       <p><strong>Source Control</strong> - Git, and potentially GitHub, GitLab, or BitBucket have become the source of truth for the software development lifecycle (SDLC), and it will continue to play the same role when it comes to the API lifecycle. Ensuring that your source control is a seamless part of the API lifecycle, API governance, and as the conveyor build for your API factory floor is foundational for your platform.</p>

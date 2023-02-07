@@ -29,39 +29,19 @@
 
 
 export const leftNavItems = [ 
-  
-  // {
-  //   name: 'Collections',
-  //   parentSlug: 'collections',
-  //   url: '/collections/page1',
-  //   subMenuItems1: [
-  //     {
-  //       name: 'Page1',
-  //       url: '/collections/page1/',
-  //     },     
-  //     {
-  //       name: 'Page2',
-  //       url: '/collections/page2/',
-  //     },         
-  //   ],
-  // },
+
   {
     name: 'GraphQL',
     parentSlug: 'graphql',
-    url: '/graphql/introduction/',
+    url: '/graphql/',
     subMenuItems1: [
-      {
-        name: 'Introduction',
-        url: '/graphql/introduction/',
-      },
       {
         name: 'GraphQL Concepts',
         url: '/graphql/graphql-concepts/',
-      },
-    
+      },   
       {
         name: 'Blog',
-        slug: '/graphql/blog/echoservice/',
+        slug: '/graphql/blog/echo-service/',
         subParentSlug: 'blog',
         subMenuItems2: [
           {
