@@ -300,48 +300,49 @@ const IndexPage = ({data}) => {
       ],
     };
     
-    const sidexsideData = {
+    // const sidexsideData = {
       
-      "layout": "medium",
-      "divider": false,
-      "left": "media",
-      "right": "text",
-      "paddingBottom": "",
-      "paddingTop": "",
-      "backgroundColor": "",
-      "textClassName": "",
-      "textContainer": "",
-      "headerTitle": "",
-      "headerBody": [""],
-      "SideXSideTextRight": true,
-      "textPaddingBottomRight": "0px",
-      "textPaddingTopRight": "0px", 
-      "textTitleRight": "Read the blog post: How We're Protecting Your Postman API Keys in GitHub",
-      "textSubtitleRight": "",
-      "textBodyRight": [
-        "<p>Developers contribute code to open source projects in GitHub every day; unfortunately, during this process sometimes security credentials are shared by accident. So Postman has implemented a new token-scanning service in GitHub that will send you a notification if you accidentally commit a Postman API key to a public repository. This gives you a chance to respond quickly before there's any unauthorized access your data.</p>"
-      ],
-      "linkRight": [
-        {
-          "type": "arrowLink",
-          "text": "Read the Blog Post",
-          "src": "https://blog.postman.com/how-were-protecting-your-postman-api-keys-in-github/",
-          "target": "same-tab",
-          "id": "read-blog-post",
-          "gaCategory": "open-philosophy-page",
-          "gaLabel": "read-blog-post"
-        }
-      ],
-      "media": {
-        "src": "https://voyager.postman.com/illustration/postman-security-illustration.svg",
-        "alt": "Illustration of Postmanaut with lock. Illustration.",
-        "shadow": false
-      },
-      "videoRight": {},
-      "videoLeft": {},
-      "iconList": {},
-      "listTitle": ""
-    }
+    //   "layout": "medium",
+    //   "divider": false,
+    //   "left": "media",
+    //   "right": "text",
+    //   "paddingBottom": "",
+    //   "paddingTop": "",
+    //   "backgroundColor": "",
+    //   "textClassName": "",
+    //   "textContainer": "",
+    //   "headerTitle": "",
+    //   "headerBody": [""],
+    //   "SideXSideTextRight": true,
+    //   "textPaddingBottomRight": "0px",
+    //   "textPaddingTopRight": "0px", 
+    //   "textTitleRight": "Read the blog post: How We're Protecting Your Postman API Keys in GitHub",
+    //   "textSubtitleRight": "",
+    //   "textBodyRight": [
+    //     "<p>Developers contribute code to open source projects in GitHub every day; unfortunately, during this process sometimes security credentials are shared by accident. So Postman has implemented a new token-scanning service in GitHub that will send you a notification if you accidentally commit a Postman API key to a public repository. This gives you a chance to respond quickly before there's any unauthorized access your data.</p>"
+    //   ],
+    //   "linkRight": [
+    //     {
+    //       "type": "arrowLink",
+    //       "text": "Read the Blog Post",
+    //       "src": "https://blog.postman.com/how-were-protecting-your-postman-api-keys-in-github/",
+    //       "target": "same-tab",
+    //       "id": "read-blog-post",
+    //       "gaCategory": "open-philosophy-page",
+    //       "gaLabel": "read-blog-post"
+    //     }
+    //   ],
+    //   "media": {
+    //     "src": "https://voyager.postman.com/illustration/postman-security-illustration.svg",
+    //     "alt": "Illustration of Postmanaut with lock. Illustration.",
+    //     "shadow": false
+    //   },
+    //   "videoRight": {},
+    //   "videoLeft": {},
+    //   "iconList": {},
+    //   "listTitle": ""
+    // }
+
     const formdata = {
       title: "Need to talk to someone on the Open Technology team?" ,
       body:["Tell us more and a member of our team will contact you."],
@@ -361,7 +362,7 @@ const IndexPage = ({data}) => {
                   </p>
                   <Button
                     onClick={() => {
-                      navigate("/lifecycle/gateways/")
+                      navigate("/lifecycle/api-lifecycle/")
                     }} 
                     className="mb-5 secondary"
                   >
