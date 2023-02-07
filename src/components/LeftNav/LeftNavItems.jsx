@@ -56,29 +56,25 @@ export const leftNavItems = [
       }
     ],
   },
-  // {
-  //   name: 'Specifications',
-  //   parentSlug: 'specifications',
-  //   url: '/specifications/asyncapi/',
-  //   subMenuItems1: [
-  //     {
-  //       name: 'Testing',
-  //       url: '/specifications/testing/',
-  //     },
-  //     {
-  //       name: 'Collections',
-  //       url: '/specifications/asyncapi/',
-  //     },     
-  //     {
-  //       name: 'OpenAPI',
-  //       url: '/specifications/openapi/',
-  //     },  
-  //     {
-  //       name: 'gRPC',
-  //       url: '/specifications/grpc/',
-  //     },
-  //   ],
-  // },
+  {
+    name: 'Specifications',
+    parentSlug: 'specifications',
+    url: '/specifications/asyncapi/',
+    subMenuItems1: [
+      {
+        name: 'Collections',
+        url: '/specifications/asyncapi/',
+      },     
+      {
+        name: 'OpenAPI',
+        url: '/specifications/openapi/',
+      },  
+      {
+        name: 'gRPC',
+        url: '/specifications/grpc/',
+      },
+    ],
+  },
   {
     name: 'Lifecycle',
     parentSlug: 'lifecycle',
