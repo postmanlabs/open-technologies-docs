@@ -3,6 +3,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby';
 import { leftNavItems } from '../LeftNav/LeftNavItems';
 import styled from 'styled-components';
 import {theme} from '../../../styles/theme';
+import removePrefixFromCurrentPath from '../../utils/removePrefixFromCurrentPath';;
 
 // Example: Home / Getting Started /
 // a list of links separated by / to aid in navigation
@@ -39,24 +40,11 @@ class BreadCrumbsLinksComponent extends React.Component {
         url: '/'
       },
       subParentLink: {},
-      pathPrefix: props.pathPrefix
+      location: props.location
     }
   }
   componentDidMount() {
-    const { pathPrefix } = this.state;
-    let location;
-    if (typeof window !== 'undefined') {
-      location = window.location.pathname;
-      // The logic below is to make leftNavItems work
-      // Because the pathPrefix ( ex "/template/") gets prefixed AT BUILD TIME, in the LeftNavItems array.
-      // So the array of objects in leftNavItems, DO NOT HAVE THE PATH PREFIX.
-      // Since they do not, when the app is in production, the breadcrumbs break (ex. /template/route/ is not equal to /route/)
-      // In other words, our codebase below isn't aware of pathPrefix (ex "/template/") being in the location bar of the browser
-      // The prefixPath at build breaks the comparisons further down in this componentDidMount block., 
-      //  so we .replace it from the strings we are comparing against LeftNavItems.
-      location = location.replace(`${pathPrefix}/`, "/");
-      // Notice we are not setting location to any href value, we are only using it for the sake of comparing
-    }
+    const { location } = this.state;
     /* Loop over LeftNavItems.jsx */
     for (let index = 0; index < leftNavItems.length; index++) {
       /* First Menu: If matching URL, use the parent data for breadcrumb */
@@ -112,16 +100,10 @@ class BreadCrumbsLinksComponent extends React.Component {
 
 // To use a static query for the pathPreix, we need to wrap the class based component in an arrow function component
 function BreadCrumbsLinks() {
-  const data = useStaticQuery(graphql`
-    query BreadCrumbsQuery {
-      site {
-        pathPrefix
-      }
-    }
-  `)
+  const location = removePrefixFromCurrentPath();
 
   return (
-    <BreadCrumbsLinksComponent pathPrefix={data.site.pathPrefix} />
+    <BreadCrumbsLinksComponent location={location}/>
   )
 }
 
