@@ -61,18 +61,14 @@ export const leftNavItems = [
     parentSlug: 'specifications',
     url: '/specifications/openapi/',
     subMenuItems1: [
-      // {
-      //   name: 'AsyncAPI',
-      //   url: '/specifications/asyncapi/',
-      // },     
+      {
+        name: 'Collections',
+        url: '/specifications/collections/',
+      },     
       {
         name: 'OpenAPI',
         url: '/specifications/openapi/',
-      },  
-      // {
-      //   name: 'gRPC',
-      //   url: '/specifications/grpc/',
-      // },
+      }
     ],
   },
   {
