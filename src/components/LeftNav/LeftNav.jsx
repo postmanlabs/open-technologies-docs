@@ -234,7 +234,7 @@ const renderTwoLevelList = (item, runtime) => {
                           <ul>
                             {sItem.subMenuItems2.map(
                               (ssItem) => ssItem.url && (
-                                <li key={uuidv4()} className={`child ${document.location.pathname === ssItem.url ? 'currentUrl' : ''}`}>
+                                <li key={uuidv4()} className={`child ${location === ssItem.url ? 'currentUrl' : ''}`}>
                                   <Link to={ssItem.url} data-click={sItem.name} className="ssItem second-child">{ssItem.name}</Link>
                                 </li>
                               ),
