@@ -176,7 +176,8 @@ const renderTwoLevelList = (item, runtime) => {
 
     location = location.replace(`${pathPrefix}/`, "/");
     // Notice we are not setting location to any href value, we are only using it for the sake of comparing
-    
+    console.log(location)
+    console.log(location.replace(`${pathPrefix}/`, "/"));
     const active = runtime ? location.match(item.parentSlug) : '';
     return (
       <NavWrapper key={uuidv4()}>
