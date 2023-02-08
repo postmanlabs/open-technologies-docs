@@ -7,7 +7,7 @@ require('dotenv').config({
 });
 
 const siteUrl = process.env.SITE_URL ? process.env.SITE_URL : 'https://learning.postman.com/open-technologies'
-const PATH_PREFIX = '/open_technologies'
+const PATH_PREFIX = '/open-technologies'
 
 module.exports = {
   siteMetadata: {
