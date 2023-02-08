@@ -50,10 +50,7 @@ const CardWrapper = styled.div`
   font-size: 12px;
   
   code{
-    display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-  overflow: hidden;
+    padding-inline: 5px;
     white-space: pre-wrap;
     color: rgb(17, 17, 18);
   }
@@ -80,6 +77,7 @@ div.modal {
   .code {
     background-color: ${(props) => props.theme.colors.grey_20};
     width: 75%;
+    padding-inline: 5px;
   }
 }
 `
