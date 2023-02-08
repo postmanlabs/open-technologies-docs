@@ -203,7 +203,7 @@ const renderTwoLevelList = (item, runtime) => {
             <ChildItemsWrapper>
               {item.subMenuItems1.map(
                 (sItem) => (sItem.url && (
-                  <li key={uuidv4()} className={`child ${window.location.pathname === sItem.url ? 'currentUrl' : ''}`}>
+                  <li key={uuidv4()} className={`child ${location === sItem.url ? 'currentUrl' : ''}`}>
                     <Link data-click={sItem.name} to={sItem.url}>{sItem.name}</Link>
                   </li>
                 )) || (
