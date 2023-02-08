@@ -63,7 +63,6 @@ Collections let you:
 The collection format is [open source](https://github.com/postmanlabs/schemas/tree/develop/schemas/draft-07) and is the basis of [collections in Postman](https://www.postman.com/collection/). The format's portability makes it possible to share in a distributed team and run in different environments without any information loss. A single collection file can contain API requests and their parameters, multiple responses to each request, documentation, tests, execution flows, and metadata. This in turn helps developer teams collaborate, increase productivity, and work faster with APIs in any environment.
 
 
-
 ## Advantages of the collection format
 
 Collections have the following advantages:
@@ -90,11 +89,32 @@ Because collections are machine-readable, they can be used to generate both clie
 
 Aside from code, documentation is another important aspect of building APIs. Collections support documentation by default, and this documentation can be converted into a more presentable form for better consumption.
 
+#### Working with workflows
+Collections do not just define the structure of an API, but also gives you everything you need to successfully run an API request. Requests in collections can be structured together to build a step by step workflow for your API. With variables and events, you can define dynamic components/data in your collection and have each request programmatically interract with each other. For example, a collection can be used define a complete user authentication workflow(Sign Up -> Login -> Token Verification). 
+
+## Structure
+Collections are designed to be simple and portable. Their structure are as shown in the diagram below. 
+
+![Collection Structure Image](https://firebasestorage.googleapis.com/v0/b/collection-format-docs.appspot.com/o/reference-images%2Fcollection%20format%20overview%20(plain)%402x%20(1).jpg?alt=media&token=e9b6dc17-e9a3-4300-8199-8cfd80c375fc)
+
+**Item**: An Item contains an HTTP request, along with the associated metadata.
+
+**Info**: The info object contains the collection name, version, description, and schema.
+
+**Item groups**: An item group is a container for items. You can think of it as a folder for items. The folder has its own `name`, `id`, and `description`.
+
+**Request**: A request represents an HTTP request. A request can be found within an item. Requests can be specified as a string, or as a JSON object.
+
+**Events**: Events let you declare scripts that can run at certain stages in the lifecycle of your request or collection. The scripts are written in JavaScript and can be run using the [Postman Sandbox](https://github.com/postmanlabs/postman-sandbox).
 
 ## Toolings
 Collections have a wide range of toolings for different things. Here are a few of the toolings around collections and what they do.
 
-- Collection SDK
-- Collection Runtime
-- OpenAPI to Collection
-- Collection Code Generator
+- **[Collection SDK](https://github.com/postmanlabs/postman-collection)**: The collection SDK is a JavaScript module that makes it easy to programmatically work with the units of a collection. 
+- **[Collection Runtime](https://github.com/postmanlabs/postman-runtime)**: This is a low-level library used as the backbone for all collection running & request sending functionality. Open Source tools like [Newman](https://github.com/postmanlabs/newman) are built atop of the collection runtime.
+- **[Newman](https://github.com/postmanlabs/newman)**: Newman is a command line library for running collections. 
+- **[Collection Code Generator](Collection Code Generator)**: This is a Javascript module for converting collections to code snippets in over 10 programming languages.
+- **[Open API to Postman](https://github.com/postmanlabs/openapi-to-postman)**: This is a library for converting Open API definitions to collections.
+- **[Postman to Open API](https://github.com/kevinswiber/postman2openapi)**: This library converts a postman collection to an OpenAPI definition.
+
+To learn more about the collection format, head over to the [documentation](https://schema.postman.com) to understand the different units of a collection and how they are related. 
