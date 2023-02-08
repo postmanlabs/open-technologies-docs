@@ -1,6 +1,7 @@
 /* eslint-disable react/no-danger */
-import React  from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
+import { VideoComponent } from 'aether-marketing';
 import Layout from '../../components/layout';
 import RightNavLinks from '../../components/RightNavLinks';
 import { leftNavItems } from '../../components/LeftNav/LeftNavItems';
@@ -38,16 +39,16 @@ const RightColumnWrapper = styled.aside`
   width: 100;
 }
 `
- 
-const GraphQLPage = ({data}) => {
-  
+
+const GraphQLPage = ({ data }) => {
+
   const { parentLink, subParentLink, previous, next } = data;
 
   return (
     <Layout>
       <SEO title="Postman GraphQL"
-          description='GraphQL activities deliver both internal and external value for Postman.'
-          slug="/graphql/" />
+        description='GraphQL activities deliver both internal and external value for Postman.'
+        slug="/graphql/" />
       <DocWrapper className="container-fluid">
         <div className="row row-eq-height">
           <nav className="col-md-4 col-lg-3 left-nav-re">
@@ -56,36 +57,36 @@ const GraphQLPage = ({data}) => {
           <div className="col">
             <div className="row row-eq-height">
               <main className="col-lg-9 offset-lg-0 col-xl-7 doc-page ml-xl-5">
-              <BreadCrumbsLinks data={{ parentLink, subParentLink }} />
+                <BreadCrumbsLinks data={{ parentLink, subParentLink }} />
                 {/* Qualtrics */}
 
-              <h2 className="mb-3">GraphQL Concepts</h2>
-              <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem numquam vitae ratione eveniet fuga assumenda id dolor corrupti. Aperiam ab a reiciendis, odit dignissimos tempore minima autem cum animi pariatur!
-              </p>
-          
-              <div className="row justify-content-evenly">           
-                <div className="container-fluid">
-                      <div className="row">
-                        {/* {gatsbyRepoData.resultData.records.map((item) => (
-                          <div className="col-lg-6 mb-3 mb-md-4"  key={uuidv4()}>    
-                            <ConceptCard title={item.fields.Term}
-                                  description={item.fields.Description}
-                                  tag={item.fields.Tags}
-                                  // code={item.code}
-                                  example={item.fields.Example} />
-                          </div>
-                          ))} */}
-                          <ConceptCardFilter />
-                      </div>
-                </div>     
-              </div>             
-            <PreviousAndNextLinks data={{ previous, next }} />
-          </main>
+                <h2 className="mb-3">GraphQL Concepts</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem numquam vitae ratione eveniet fuga assumenda id dolor corrupti. Aperiam ab a reiciendis, odit dignissimos tempore minima autem cum animi pariatur!
+                </p>
+             
+                  {/* <VideoComponent src="https://airtable.com/embed/shrG98wQOQyr4GcZP"
+                    hostType=""
+                    paddingBottom=""
+                    paddingTop=""
+                    container=""
+                    title="graphql"
+                    border="fullwrap"
+                    mediaLayout="xlarge"  /> */}
+               
+                <div className="row justify-content-evenly">
+                  <div className="container-fluid">
+                    <div className="row">
+                      <ConceptCardFilter />
+                    </div>
+                  </div>
+                </div>
+                <PreviousAndNextLinks data={{ previous, next }} />
+              </main>
               <RightColumnWrapper className="col-lg-2 offset-lg-0 col-xl-3 offset-xl-1 right-column">
-                          
+
                 <RightNavLinks />
-                 
+
               </RightColumnWrapper>
             </div>
           </div>

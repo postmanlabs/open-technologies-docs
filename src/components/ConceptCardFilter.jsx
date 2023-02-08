@@ -13,7 +13,7 @@ function ConceptCardFilter() {
         fields {
          description: Description
          example: Example
-          tag: Tags
+         tag: Tags
          title: Term
         }
       }

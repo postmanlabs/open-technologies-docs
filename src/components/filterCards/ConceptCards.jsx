@@ -1,15 +1,13 @@
 import React from 'react';
 const { v4: uuidv4 } = require('uuid');
 import styled from 'styled-components';
-import Highlight, {defaultProps} from "prism-react-renderer";
-
 import { TagStyles } from "./Tag";
 
 const CardWrapper = styled.div`
   margin-bottom: 32px;
   text-align: left !important;
   padding: 15px 10px;
-  border: 1px solid ${(props) => props.theme.colors.grey_10};
+  border: 1px solid ${(props) => props.theme.colors.grey_20};
   border-radius: 10px;
   max-width: 300px;
 
@@ -52,52 +50,97 @@ const CardWrapper = styled.div`
 .token.string {
   color: rgb(126, 198, 153)!important;
 }
+div.modal {
+  background-color: ${(props) => props.theme.colors.grey_00}!important;
+  margin: auto;
+  height: fit-content;
+  max-width: 550px;
+  
+  .modal-header {
+    border: none;
+    padding: .25rem;
+  }
+  .code {
+    background-color: ${(props) => props.theme.colors.grey_20};
+    width: 75%;
+  }
+}
 `
 export const ConceptCard = ({
-    title, description, tag, example
-  }) => {
+  title, description, tag, example
+}) => {
+const id = title.replaceAll(' ', '-')
 
-    // console.log(tag, 'concept cards')
-return(
-    <CardWrapper className="landing-card h-100">      
+  return (
+    <>
+    <CardWrapper className="landing-card h-100" data-toggle="modal" data-target={`#${id}`}>
       <div className="landing-card__content text-left">
         <h4 className="landing-card__content-title mb-4">{title}</h4>
         <p className='mb-0 text-uppercase small'>description</p>
         <p className="landing-card__content-description"> {description}</p>
         <div>
-            <p className='mb-0 text-uppercase small'>tags</p>
-            <div className='row ml-1'>      
-             {tag?.map(item => (
+          <p className='mb-0 text-uppercase small'>tags</p>
+          <div className='row ml-1'>
+            {tag?.map(item => (
               <div key={uuidv4()}>
                 <TagStyles data-text={item}>{item}</TagStyles>
               </div>
-                ))}    
-            </div>
+            ))}
+          </div>
         </div>
         <div>
-            <p className='mb-0 text-uppercase small'>Example</p>
-            {/* {example && (<div dangerouslySetInnerHTML={{ __html: example }} />)} */}
-            {example && (
-              <div className='code'>
+          <p className='mb-0 text-uppercase small'>Example</p>
+          {/* {example && (<div dangerouslySetInnerHTML={{ __html: example }} />)} */}
+          {example && (
+            <div className='code'>
               <code>{example}</code></div>
-              // <Highlight  {...defaultProps} code={example} language="json">
-              //    {({ className, style, tokens, getLineProps, getTokenProps }) => (
-              //       <pre className={className} style={style}>
-              //         {tokens.map((line, i) => (
-              //           <div {...getLineProps({ line, key: i })}>
-              //             {line.map((token, key) => (
-              //               <span {...getTokenProps({ token, key })} />
-              //             ))}
-              //           </div>
-              //         ))}
-              //       </pre>
-              //     )}
-              // </Highlight>
-            )
-            }
+           
+          )
+          }
+        </div>
+      </div>
+      
+  {/* Modal */}
+  
+      <div className="modal fade " id={id} tabIndex="1" role="dialog" aria-labelledby={title} aria-hidden="true">
+        <div className="modal-dialog modal-dialog-centered" role="document">
+          <div className="">
+            <div className="modal-header">
+              <h4 className="landing-card__content-title mb-4">{title}</h4>
+             
+              <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+              <p className='mb-0 text-uppercase small'>description</p>
+              <p className="landing-card__content-description"> {description}</p>
+              <div>
+                <p className='mb-0 text-uppercase small'>tags</p>
+                <div className='row ml-1'>
+                  {tag?.map(item => (
+                    <div key={uuidv4()}>
+                      <TagStyles data-text={item}>{item}</TagStyles>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <p className='mb-0 text-uppercase small'>Example</p>
+                {/* {example && (<div dangerouslySetInnerHTML={{ __html: example }} />)} */}
+                {example && (
+                  <div className='code'>
+                    <code>{example}</code>
+                    </div>
+                )
+                }
+        
+            </div>
+          </div>
         </div>
       </div>
     </CardWrapper>
-)
-  };
+    </>
+  )
+};
 
