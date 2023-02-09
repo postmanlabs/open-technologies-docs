@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { leftNavItems } from '../LeftNav/LeftNavItems';
 import { handleKeyboard } from './handlePagination'
+import removePrefixFromCurrentPath from '../../utils/removePrefixFromCurrentPath';
 
 function PreviousAndNextLinks() {
   const [prevLink, setPrevious] = useState({})
   const [nextLink, setNext] = useState({})
 
   let location;
-  if (typeof window !== 'undefined') {
-    location = window.location.pathname;
-  }
+
+    location = removePrefixFromCurrentPath();
+  
   // 1. Filter data  / data reference: LeftNavItems.jsx
   const parentLinks = [];
   leftNavItems.forEach((leftNavItem) => {

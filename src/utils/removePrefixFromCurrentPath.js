@@ -12,7 +12,8 @@ const removePrefixFromCurrentPath = () => {
     `)
     
     const { pathPrefix } = queryData.site.siteMetadata;
-    let location = document.location.pathname;
+    if (typeof document !== 'undefined') {
+        let location = document.location.pathname;
 
     // The logic below is to make leftNavItems and breadcrumbs work
     // Because the pathPrefix ( ex "/template/") gets prefixed AT BUILD TIME, in the LeftNavItems array.
@@ -25,6 +26,7 @@ const removePrefixFromCurrentPath = () => {
     location = location.replace(`${pathPrefix}/`, "/");
     // Notice we are not setting location to any href value, we are only using it for the sake of comparing
     return location;
+    }
 }
 
 export default removePrefixFromCurrentPath;

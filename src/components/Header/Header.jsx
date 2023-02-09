@@ -334,7 +334,7 @@ const Header = (props) => {
         <NavStyles className="navbar navbar-expand-lg navbar-light nav-secondary blurred-container">
           <Link
             className="navbar-brand"
-            to="/lifecyce/api-lifecycle/"
+            to="/lifecycle/api-lifecycle/"
           >
             <span id="learning-center-home-link" className="nav-link uber-nav">
               Open Technologies

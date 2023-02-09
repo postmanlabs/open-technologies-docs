@@ -211,10 +211,10 @@ const GraphQLPage = ({ data }) => {
                           <DynamicLink url="https://github.com/graphql/graphql-wg" name="GraphQL Working Group" />
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </HubWrapper>
+
                 <PreviousAndNextLinks data={{ previous, next }} />
               </main>
               <RightColumnWrapper className="col-sm-12 col-md-12 col-lg-3 offset-lg-0 col-xl-3 offset-xl-1 right-column">
