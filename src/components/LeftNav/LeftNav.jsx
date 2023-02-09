@@ -1,13 +1,12 @@
 import React, { useState, useEffect }  from 'react';
-import { Link, navigate, withPrefix } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 import styled from 'styled-components';
 import removePrefixFromCurrentPath from '../../utils/removePrefixFromCurrentPath';
 
 const { v4: uuidv4 } = require('uuid');
 
 const sectionHandler = (e) => {
-  const nextPath = withPrefix(e.target.getAttribute('data-section'));
-  navigate(nextPath);
+  navigate(e.target.getAttribute('data-section'));
 };
 
 const NavWrapper = styled.ul`
