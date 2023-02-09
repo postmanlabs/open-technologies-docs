@@ -5,21 +5,21 @@ import { graphql, useStaticQuery } from "gatsby";
 
 
 function ConceptCardFilter() {  
-
-  const gatsbyRepoData = useStaticQuery(graphql`
-  query {
-    resultData {
-      records {
-        fields {
-         description: Description
-         example: Example
-         tag: Tags
-         title: Term
-        }
+ 
+ const gatsbyRepoData = useStaticQuery(graphql`
+      query {
+        resultData {
+          records {
+            fields {
+            description: Description
+            example: Example
+            tag: Tags
+            title: Term
+            }
+          }
+          id
       }
-      id
-}
-  }
+    }
   `);
 
   /*Create filter buttons*/
@@ -55,6 +55,7 @@ const items = gatsbyRepoData.resultData.records;
     </div>
   );
 }
+
 
 export default ConceptCardFilter;
 

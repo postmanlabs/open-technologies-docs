@@ -9,6 +9,8 @@ const redirects = require('./redirects.json');
 // const HeaderJson = require('./src/components/Header/Header.data.json');
 const { execSync } = require("child_process")
 const ignorePaths = [];
+const DummyData = require('./src/components/filterCards/Data.json');
+
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
@@ -175,16 +177,19 @@ exports.sourceNodes = async ({
 };
 
 /*Airtable Data*/
-const fetch = (...args) =>
-  import(`node-fetch`).then(({ default: fetch }) => fetch(...args))
 
+const fetch = require(`node-fetch`)
 exports.sourceNodes = async ({ 
   actions,
   createNodeId,
   createContentDigest 
 }) => {
 
-  const response = await fetch(
+  let response;
+  let resultData;
+
+ try {   
+  response = await fetch(
     process.env.AIRTABLE_URL,
     {
       headers: {
@@ -192,7 +197,13 @@ exports.sourceNodes = async ({
       },
     },
   );
-  const resultData = await response.json();
+   resultData = await response.json();
+} catch {
+    resultData = DummyData;
+    console.log(response, 'catch response')
+
+  }
+
   
     actions.createNode({
       ...resultData,

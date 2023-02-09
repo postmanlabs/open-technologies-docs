@@ -65,19 +65,14 @@ const GraphQLPage = ({ data }) => {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem numquam vitae ratione eveniet fuga assumenda id dolor corrupti. Aperiam ab a reiciendis, odit dignissimos tempore minima autem cum animi pariatur!
                 </p>
              
-                  {/* <VideoComponent src="https://airtable.com/embed/shrG98wQOQyr4GcZP"
-                    hostType=""
-                    paddingBottom=""
-                    paddingTop=""
-                    container=""
-                    title="graphql"
-                    border="fullwrap"
-                    mediaLayout="xlarge"  /> */}
+
                
                 <div className="row justify-content-evenly">
                   <div className="container-fluid">
                     <div className="row">
+                      {process.env.AIRTABLE_TOKEN && 
                       <ConceptCardFilter />
+                        }
                     </div>
                   </div>
                 </div>

@@ -104,10 +104,10 @@ export const ConceptCard = ({
             </div>
           </div>
           <div>
-            <p className='mb-0 text-uppercase small mb-2 truncate'>Example</p>
+            <p className='mb-0 text-uppercase small mb-2'>Example</p>
             {/* {example && (<div dangerouslySetInnerHTML={{ __html: example }} />)} */}
             {example && (
-              <div className='code'>
+              <div className='code truncate'>
                 <code>{example}</code></div>
 
             )
