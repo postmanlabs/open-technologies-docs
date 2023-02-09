@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'gatsby'
 import { leftNavItems } from '../LeftNav/LeftNavItems';
 import { handleKeyboard } from './handlePagination'
 import removePrefixFromCurrentPath from '../../utils/removePrefixFromCurrentPath';
@@ -7,9 +8,7 @@ function PreviousAndNextLinks() {
   const [prevLink, setPrevious] = useState({})
   const [nextLink, setNext] = useState({})
 
-  let location;
-
-    location = removePrefixFromCurrentPath();
+  const location = removePrefixFromCurrentPath();
   
   // 1. Filter data  / data reference: LeftNavItems.jsx
   const parentLinks = [];
@@ -83,28 +82,28 @@ function PreviousAndNextLinks() {
       <div id="previousNextLinks" className="d-flex flex-row mt-3 pagination" role="navigation">
         {prevLink && (
           <div className="mr-auto">
-            <a
+            <Link
               className="prevDoc"
               rel="prev"
-              href={prevLink.slug || prevLink.url}
+              to={prevLink.slug || prevLink.url}
               title={`Go to the previous page: ${prevLink.name}`}
               aria-label={`Go to the previous page: ${prevLink.name}`}
             >
               &#8592; {prevLink.name}
-            </a>
+            </Link>
           </div>
         )}
         {nextLink && (
           <div className="ml-auto">
-            <a
+            <Link
               className="nextDoc"
               rel="next"
-              href={nextLink.slug || nextLink.url}
+              to={nextLink.slug || nextLink.url}
               title={`Go to the next page: ${nextLink.name}`}
               aria-label={`Go to the next page: ${nextLink.name}`}
             >
               {nextLink.name} &#8594;
-            </a>
+            </Link>
           </div>
         )}
       </div>
