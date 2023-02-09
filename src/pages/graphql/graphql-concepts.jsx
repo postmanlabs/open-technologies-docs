@@ -70,9 +70,7 @@ const GraphQLPage = ({ data }) => {
                 <div className="row justify-content-evenly">
                   <div className="container-fluid">
                     <div className="row">
-                      {process.env.AIRTABLE_TOKEN && 
                       <ConceptCardFilter />
-                        }
                     </div>
                   </div>
                 </div>
