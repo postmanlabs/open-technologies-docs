@@ -4,8 +4,8 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import RightNavLinks from '../components/RightNavLinks'
-// import ContextualLinks from '../components/ContextualLinks/ContextualLinks';
-// import EditDoc from '../components/Shared/EditDoc';
+import ContextualLinks from '../components/ContextualLinks/ContextualLinks';
+import EditDoc from '../components/Shared/EditDoc';
 import { leftNavItems } from '../components/LeftNav/LeftNavItems';
 import LeftNav from '../components/LeftNav/LeftNav';
 import SEO from '../components/seo';
@@ -357,21 +357,10 @@ const DocPage = ({ data }) => {
               </main>
               <RightColumnWrapper className="col-sm-12 col-md-12 col-lg-3 offset-lg-0 col-xl-3 offset-xl-1 right-column">
                 <hr className="d-block d-lg-none" />
-                {/* <EditDoc /> */}
+                <EditDoc />
+                {data && <DisplayContextualLinks data={data} />}
                 <RightNavLinks />
-                {/* <div className="sticky">
-                  <div> 
-                    <p>
-                      <span className="font-weight-bold">Open Technologies</span> 
-                      <br></br>
-                      Postman's hub for Open Source software, specs, libraries, and other components that the API industry relies on.
-                    </p>
-                  
-                  </div>
-                  <figure className="postmanaut-dab mt-1">
-                    <img src="https://voyager.postman.com/illustration/ventura-abled.png" alt="Ventura abled. Illustration." className="img-fluid" />
-                  </figure>
-                </div> */}
+                
               </RightColumnWrapper>
             </div>
           </div>
@@ -395,7 +384,7 @@ export const query = graphql`
           type
           name
           url
-          blog_tag
+          
         }
       }
       fields {

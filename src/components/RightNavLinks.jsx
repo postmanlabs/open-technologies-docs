@@ -1,6 +1,6 @@
 import React from 'react';
 import DynamicLink from '../components/Shared/DynamicLink';
-import EditDoc from '../components/Shared/EditDoc';
+// import EditDoc from '../components/Shared/EditDoc';
 import styled from 'styled-components';
 
 const ContextualStyles = styled.div`
@@ -66,7 +66,7 @@ const ContextualStyles = styled.div`
 export default function RightNavLinks() {
     return (
         <>
-        <EditDoc />
+        {/* <EditDoc /> */}
                 <ContextualStyles >
                   <div className='contextual-links__section'>
                   Get to know us
