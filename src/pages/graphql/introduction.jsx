@@ -16,6 +16,9 @@ import PreviousAndNextLinks from '../../components/modules/PreviousAndNextLinks'
 import { DocWrapper } from '../../../styles/DocWrapper.jsx';
 
 const HubWrapper = styled.section`
+.calendar a {
+  border: none !important;
+}
 .bloc {
   border: 1px solid ${(props) => props.theme.colors.grey_20};
   margin-top: 25px;
@@ -168,18 +171,17 @@ const GraphQLPage = ({ data }) => {
                     <div className="col-lg-6 mb-3 mb-md-4 bg-grey">
 
 
-                      <div className="bloc">
+                      <div className="bloc calendar">
                         <div className='row header '>
-                          <img src={withPrefix("/images/Events.svg")} alt="community Icon" width="30px" className='mr-2' />
-                          <h4>Calender</h4>
+                         <h4>GraphQL Public Calendar</h4>
                         </div>
-                        <div >
-                          <DynamicLink url="https://www.postman.com" name="GraphQL Summit" />
-                        </div>
+                        <a url="https://calendar.google.com/calendar/u/0/embed?src=linuxfoundation.org_ik79t9uuj2p32i3r203dgv5mo8@group.calendar.google.com&ctz=America/New_York">
+                        <img src={withPrefix("/images/Events.svg")} alt="community Icon" width="100px" className='mr-2' /></a>
+                       <p className='small mb-0'>(click for calendar)</p>
+                    
                       </div>
                     </div>
                     <div className="col-lg-6 mb-3 mb-md-4 ">
-
                       <div className="bloc text-left">
                         <div className='row header'>
                           <img src={withPrefix("/images/Engagement.png")} alt="community Icon" width="30px" className='mr-2' />
