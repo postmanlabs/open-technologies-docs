@@ -39,7 +39,6 @@ const items = gatsbyRepoData.resultData.records;
   //Filter Function for cards showing from choice
   const filter = (button) => {
     if (button === 'All') {
-      console.log(items)
       setCardItem(items);
     } else {
       const filteredData = items.filter(item => item.fields.tag?.includes(button));
