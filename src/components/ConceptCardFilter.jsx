@@ -3,7 +3,6 @@ import FilterCard from "./filterCards/FilterCard";
 import FilterButtons from "./filterCards/FilterButtons";
 import { graphql, useStaticQuery } from "gatsby";
 
-
 function ConceptCardFilter() {  
  
  const gatsbyRepoData = useStaticQuery(graphql`
@@ -23,7 +22,6 @@ function ConceptCardFilter() {
   `);
 
   /*Create filter buttons*/
-// console.log(gatsbyRepoData.resultData.records, 'all data')
 const setOfTags = [ ...new Set(gatsbyRepoData.resultData.records.filter(q => !!q).map(item => item.fields.tag).filter(q => !!q))];
 
 let allCategories = ['All'];
@@ -33,24 +31,31 @@ setOfTags?.forEach(item => {
 )
 
 allCategories = [...new Set(allCategories)];
-
 const items = gatsbyRepoData.resultData.records;
 
   const [cardItem, setCardItem] = useState(items);
-  const [buttons, setButtons] = useState(allCategories);
+  const [buttons] = useState(allCategories);
+  const [ activeButton, setButton] = useState('')
   //Filter Function for cards showing from choice
   const filter = (button) => {
-    if(button === 'All'){
+    if (button === 'All') {
       setCardItem(items);
-      return;
+    } else {
+      const filteredData = items.filter(item => item.fields.tag?.includes(button));
+      setCardItem(filteredData)
     }
-    const filteredData = items.filter(item => item.fields.tag?.includes(button));
-    setCardItem(filteredData)
+
+    let tags = document.querySelectorAll(`p.btn[data-text]`)
+    tags.forEach(tag => {
+      if (tag.innerHTML
+        === button) {
+        setButton(tag.innerHTML)
+      }
+    })
   }
-// console.log(items, 'items')
   return (
     <div >    
-        <FilterButtons button={buttons} filter={filter} />
+      <FilterButtons button={buttons} activeButton={activeButton}  filter={filter} />
         <FilterCard cardItem={cardItem} />             
     </div>
   );

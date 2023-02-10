@@ -8,7 +8,7 @@ export const TagStyles = styled.p`
   color: white;
   font-size: 10px;
   font-weight: bold;
-  background-color: magenta; //until I can figure out the filtering
+  background-color: transparent; //until I can figure out the filtering
   margin-right: 5px;
   margin-bottom: 12px;
   
@@ -80,7 +80,7 @@ export const TagStyles = styled.p`
     color: black;
   }
   &[data-text="All"] {
-  background-color: orange!important;
+  background-color: orange;
 }
 `
 export const ButtonTag = styled.p `
@@ -88,7 +88,7 @@ margin: 0;
 font-weight: bold;
 text-transform: uppercase;
 
-  &[data-text="graphql"]:hover {
+  &[data-text="graphql"]:hover, &[data-text="graphql"]&.active {
     background-color: rgb(45, 81, 170);
   }
 &[data-text="api"]:hover {
@@ -102,7 +102,7 @@ text-transform: uppercase;
     background-color: rgb(163, 198, 252);
     color: black;
   }
-  &[data-text="operation"]:hover {
+  &[data-text="operation"]:hover, &[data-text="operation"]&.active {
     background-color: rgb(250, 216, 122);
     color: black;
   }
@@ -122,18 +122,18 @@ text-transform: uppercase;
   &[data-text="client"]:hover {
     background-color: rgb(177, 121, 35);
   }
-  &[data-text="null"]:hover {
+  &[data-text="null"]:hover, &[data-text="null"]&.active  {
     background-color: rgb(244, 164, 183);
     color: black;
   }
-  &[data-text="nonnull"]:hover {
+  &[data-text="nonnull"]:hover, &[data-text="nonnull"]&.active {
     background-color: rgb(250, 220, 254);
     color: black;
   }
   &[data-text="permissions"]:hover {
     background-color: rgb(98, 40, 170);
   }
-  &[data-text="field-level"]:hover {
+  &[data-text="field-level"]:hover{
     background-color: ${(props) => props.theme.colors.grey_10};
     color: black;
   }
@@ -160,7 +160,7 @@ text-transform: uppercase;
     color: black;
   }
   
-  &[data-text="All"] {
-  background-color: orange!important;
+  &[data-text="All"],  &[data-text="All"]&.active {
+  background-color: orange;
 }
 `
