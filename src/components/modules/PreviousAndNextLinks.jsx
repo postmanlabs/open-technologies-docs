@@ -85,7 +85,7 @@ function PreviousAndNextLinks() {
             <Link
               className="prevDoc"
               rel="prev"
-              to={prevLink.slug || prevLink.url}
+              to={ prevLink.url  || '/'}
               title={`Go to the previous page: ${prevLink.name}`}
               aria-label={`Go to the previous page: ${prevLink.name}`}
             >
@@ -98,7 +98,7 @@ function PreviousAndNextLinks() {
             <Link
               className="nextDoc"
               rel="next"
-              to={nextLink.slug || nextLink.url}
+              to={ nextLink.url  || nextLink.href}
               title={`Go to the next page: ${nextLink.name}`}
               aria-label={`Go to the next page: ${nextLink.name}`}
             >
