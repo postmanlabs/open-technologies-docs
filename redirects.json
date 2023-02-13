@@ -1,6 +1,6 @@
 [
 	{
-		"from": "/concepts/",
-		"to": "/docs/"
+		"from": "/",
+		"to": "/lifecycle/api-lifecycle/"
 	}
 ]
