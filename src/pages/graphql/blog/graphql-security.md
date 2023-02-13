@@ -1,7 +1,7 @@
 ---
-title: "The Why of GraphQL Security"
+title: "The Whys of GraphQL Security"
 order: 2
-page_id:  "how-to-build-an-echo-service-for-graphQL"
+page_id:  "the-whys-of-graphql-security"
 warning: false
 updated: 2023-02-13
 author: Doc Jones

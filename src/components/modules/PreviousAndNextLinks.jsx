@@ -68,19 +68,19 @@ function PreviousAndNextLinks() {
       }
     })
   }
-
+if(previous !== undefined && next !== undefined){
   useEffect(() => {
     setPrevious(previous);
     setNext(next);
     handleKeyboard();
   }, []);
-
+}
 
   return (
     <>
       <hr />
       <div id="previousNextLinks" className="d-flex flex-row mt-3 pagination" role="navigation">
-        {prevLink && (
+        {prevLink  && (
           <div className="mr-auto">
             <Link
               className="prevDoc"
