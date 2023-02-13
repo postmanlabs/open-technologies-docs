@@ -6,40 +6,6 @@ warning: false
 updated: 2023-01-22
 author: Meenakshi Dhanani
 tag: "echo, graphql"
-contextual_links:
-  - type: section
-    name: "Latest News"
-  - type: link
-    name: "API-First Transformation Book"
-    url: "https://www.postman.com/downloads/"
-  - type: link
-    name: "Postman's Philosophy"
-    url: "https://www.postman.com/book/api-first-transformation/"
-  - type: section
-    name: "Blogs"
-  # - type: subtitle
-  #   name: "Videos"
-  - type: link
-    name: "GraphQL 101 Series"
-    url:  "https://blog.postman.com/"
-  - type: link
-    name: "Jan's Blog"
-    url: "https://dev.to/jansche/"
-  
-  - type: section
-    name: "Where to find us"
-  - type: link
-    name: "Github"
-    url: "https://github.com/postman-open-technologies"
-  - type: link
-    name: "Twitter"
-    url: ""
-  - type: link
-    name: "Mastodon"
-    url: ""
-  - type: link
-    name: "Discord"
-    url:  ""
 
 ---
 

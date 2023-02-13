@@ -51,7 +51,11 @@ export const leftNavItems = [
           {
           name: 'How to Build an Echo Service for GraphQL',
           url: '/graphql/blog/echo-service/',
-          }
+          },
+          {
+            name: 'The Why of GraphQL Security',
+            url: '/graphql/blog/graphql-security/',
+            }
         ]
       }
     ],
