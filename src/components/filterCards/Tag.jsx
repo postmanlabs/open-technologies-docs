@@ -87,6 +87,7 @@ export const ButtonTag = styled.p`
 margin: 0;
 font-weight: bold;
 text-transform: uppercase;
+border: 2px solid ${(props) => props.theme.colors.grey_10};
 
   &[data-text="graphql"]:hover, &[data-text="graphql"]&.active {
     background-color: rgb(45, 81, 170);
