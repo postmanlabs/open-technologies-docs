@@ -5,8 +5,8 @@ import { handleKeyboard } from './handlePagination'
 import removePrefixFromCurrentPath from '../../utils/removePrefixFromCurrentPath';
 
 function PreviousAndNextLinks() {
-  const [prevLink, setPrevious] = useState({})
-  const [nextLink, setNext] = useState({})
+  const [prevLink, setPrevious] = useState()
+  const [nextLink, setNext] = useState()
 
   const location = removePrefixFromCurrentPath();
   

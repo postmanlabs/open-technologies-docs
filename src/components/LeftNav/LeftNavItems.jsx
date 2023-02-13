@@ -29,7 +29,6 @@
 
 
 export const leftNavItems = [ 
-
   {
     name: 'GraphQL',
     parentSlug: 'graphql',
@@ -49,13 +48,13 @@ export const leftNavItems = [
         subParentSlug: 'blog',
         subMenuItems2: [
           {
-          name: 'How to Build an Echo Service for GraphQL',
-          url: '/graphql/blog/echo-service/',
+            name: 'How to Build an Echo Service for GraphQL',
+            url: '/graphql/blog/echo-service/',
           },
           {
             name: 'The Why of GraphQL Security',
             url: '/graphql/blog/graphql-security/',
-            }
+          }
         ]
       }
     ],
@@ -89,7 +88,7 @@ export const leftNavItems = [
         url: '/lifecycle/gateways/',
       },
     ],
-  },
+  }
 ];
 
 // export default parentSlugItems;
