@@ -16,6 +16,9 @@ import PreviousAndNextLinks from '../../components/modules/PreviousAndNextLinks'
 import { DocWrapper } from '../../../styles/DocWrapper.jsx';
 
 const HubWrapper = styled.section`
+.calendar a {
+  border: none !important;
+}
 .bloc {
   border: 1px solid ${(props) => props.theme.colors.grey_20};
   margin-top: 25px;
@@ -93,7 +96,6 @@ const GraphQLPage = ({ data }) => {
                 </div>
                 <section className="pb-4">
                   <h3 >What is GraphQL?</h3>
-
                   <p>
                     GraphQL is a query language for APIs, and a server-side runtime for executing queries using a type system you define for your data.</p>
                   <h3>Why use GraphQL?</h3>
@@ -102,90 +104,60 @@ const GraphQLPage = ({ data }) => {
                 <HubWrapper className='mb-5'>
                   <div className="row justify-content-evenly">
                     <div className="col-lg-6 mb-3 mb-md-4">
-
-                      <div className="bloc">
-                        <div className='header row'>
-                          <img src={withPrefix("/images/Community.png")} alt="community Icon" width="30px" className='mr-2' />
-                          <h4 >Meet the Team</h4>
-                        </div>
-
+                      <div className="mb-2">
+                        <img src={withPrefix("/images/Community.png")} alt="community Icon" width="50px" className='mr-2' />
+                        <h4 >Meet the Team</h4>
                         <div className='mb-1'>
-                          <DynamicLink url="https://www.linkedin.com/in/doc-jones" name="Doc Jones" />
+                          <DynamicLink url="https://www.linkedin.com/in/doc-jones" name="Doc Jones →" />
                         </div>
-
                         <div >
-                          <DynamicLink url="https://www.linkedin.com/in/meenakshi-dhanani" name="Meenakshi Dhanani" />
-                        </div>
-
-                      </div>
-                    </div>
-                    <div className="col-lg-6 mb-3 mb-md-4">
-
-                      <div className="bloc ">
-                        <div className='row header '>
-                          <img src={withPrefix("/images/Multi-region.png")} alt="community Icon" width="30px" className='mr-2' /> <h4>Where to find us</h4>
-                        </div>
-
-                        <div >
-                          <DynamicLink url="https://www.twitter.com/getpostman" name="Postman Talks GraphQL" />
+                          <DynamicLink url="https://www.linkedin.com/in/meenakshi-dhanani" name="Meenakshi Dhanani →" />
                         </div>
                       </div>
                     </div>
                     <div className="col-lg-6 mb-3 mb-md-4">
-
-                      <div className="bloc">
-                        <div className='row header'>
-                          <img src={withPrefix("/images/Info.png")} alt="community Icon" width="30px" className='mr-2' />
-                          <h4>New Client Info</h4>
-                        </div>
-
+                      <div className="mb-2">
+                        <img src={withPrefix("/images/Multi-region.png")} alt="community Icon" width="50px" className='mr-2' />
+                        <h4>Where to find us</h4>
                         <div >
-                          <DynamicLink url="https://www.postman.com" name="Documentation" />
+                          <DynamicLink url="https://www.twitter.com/getpostman" name="Postman Talks GraphQL →" />
                         </div>
-
                       </div>
                     </div>
                     <div className="col-lg-6 mb-3 mb-md-4">
-
-                      <div className="bloc">
-                        <div className='row header'>
-                          <img src={withPrefix("/images/Documentation.png")} alt="community Icon" width="30px" className='mr-2' />
-                          <h4>Worth reading</h4>
+                      <div className="mb-2">
+                        <img src={withPrefix("/images/Info.png")} alt="community Icon" width="50px" className='mr-2' />
+                        <h4>New Client Info</h4>
+                        <div >
+                          <DynamicLink url="https://www.postman.com" name="Documentation →" />
                         </div>
-
-
+                      </div>
+                    </div>
+                    <div className="col-lg-6 mb-3 mb-md-4">
+                      <div className="mb-2">
+                        <img src={withPrefix("/images/Documentation.png")} alt="community Icon" width="50px" className='mr-2' />
+                        <h4>Worth reading</h4>
                         <div className='mb-1'>
-                          <DynamicLink url="https://www.docdocgo.dev/tag/graphql-101/" name="GraphQL 101 Series" />
+                          <DynamicLink url="https://www.docdocgo.dev/tag/graphql-101/" name="GraphQL 101 Series →" />
                         </div>
-
-                        <div >
-                          <DynamicLink url="https://www.docdocgo.dev/" name="docdocgo" />
+                        <div>
+                          <DynamicLink url="https://www.docdocgo.dev/" name="docdocgo →" />
                         </div>
-
                       </div>
-
                     </div>
                     <div className="col-lg-6 mb-3 mb-md-4 bg-grey">
+                      <div className="">
+                        <img src={withPrefix("/images/Events.svg")} alt="community Icon" width="50px" className='mr-2' />
+                        <h4>Calendar</h4>
 
-
-                      <div className="bloc">
-                        <div className='row header '>
-                          <img src={withPrefix("/images/Events.svg")} alt="community Icon" width="30px" className='mr-2' />
-                          <h4>Calender</h4>
-                        </div>
-                        <div >
-                          <DynamicLink url="https://www.postman.com" name="GraphQL Summit" />
-                        </div>
+                        <DynamicLink url="https://calendar.google.com/calendar/u/0/embed?src=linuxfoundation.org_ik79t9uuj2p32i3r203dgv5mo8@group.calendar.google.com&ctz=America/New_York" name="GraphQL Public Calendar →">
+                        </DynamicLink>
                       </div>
                     </div>
                     <div className="col-lg-6 mb-3 mb-md-4 ">
-
-                      <div className="bloc text-left">
-                        <div className='row header'>
-                          <img src={withPrefix("/images/Engagement.png")} alt="community Icon" width="30px" className='mr-2' />
-                          <h4 >Places to look</h4>
-                        </div>
-
+                      <div className="">
+                        <img src={withPrefix("/images/Engagement.png")} alt="community Icon" width="50px" className='mr-2' />
+                        <h4 >Places to look</h4>
                         <div className='mb-1'>
                           <SvgWrapper >
                             <svg className="button-icon--left" transform="translate(0, -1)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -218,9 +190,7 @@ const GraphQLPage = ({ data }) => {
                 <PreviousAndNextLinks data={{ previous, next }} />
               </main>
               <RightColumnWrapper className="col-sm-12 col-md-12 col-lg-3 offset-lg-0 col-xl-3 offset-xl-1 right-column">
-
                 <RightNavLinks />
-
               </RightColumnWrapper>
             </div>
           </div>
