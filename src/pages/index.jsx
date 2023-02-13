@@ -348,143 +348,144 @@ const IndexPage = ({data}) => {
       body:["Tell us more and a member of our team will contact you."],
       legal: "By clicking 'Become a partner' below, you agree to the processing of personal data you provide in accordance with Postman's Privacy Policy. Postman respects your privacy, and information collected on this site is for the sole purpose of matching you with appropriate studies."
     }
-    return (
-      <Layout>
-        <SEO title="Open Technology" slug="/" />
-        <div className="container-fluid">
-          <HeroWrapper className="row section align-items-center hero" >
-            <div className="container">
-              <div className="row">
-                <div className="col-sm-12 col-md-5 col-lg-6 align-self-center">
-                  <h1>Postman Open Technology</h1>
-                  <p className="subtitle">
-                  Open Tech is Postman's central instance for Open Source&mdash;using, contributing to, and creating Open Source software, specifications, libraries, and other components that the API industry relies on both today and tomorrow.
-                  </p>
-                  <Button
-                    onClick={() => {
-                      navigate("/lifecycle/api-lifecycle/")
-                    }} 
-                    className="mb-5 secondary"
-                  >
-                    Explore the Docs
-                  </Button>
-                </div>
-                <div className="col-sm-12 col-md-6 col-lg-6 align-self-center">
-                  <img
-                    src="https://voyager.postman.com/illustration/postman-learning-center-documentation-illustration.svg"
-                    width="637"
-                    height="411"
-                    className="hero-image img-fluid"
-                    alt="Postmanaut sitting at computer. Illustration."
-                  />
-                </div>
-              </div>
-            </div>
-          </HeroWrapper>
-        </div>
-        <Divider fullWidth />
-        <CallOut body={maincallout.body} divider="false" paddingBottomStyles="0px" />
+    // return (
+    //   <Layout>
+    //     <SEO title="Open Technology" slug="/" />
+    //     <div className="container-fluid">
+    //       <HeroWrapper className="row section align-items-center hero" >
+    //         <div className="container">
+    //           <div className="row">
+    //             <div className="col-sm-12 col-md-5 col-lg-6 align-self-center">
+    //               <h1>Postman Open Technology</h1>
+    //               <p className="subtitle">
+    //               Open Tech is Postman's central instance for Open Source&mdash;using, contributing to, and creating Open Source software, specifications, libraries, and other components that the API industry relies on both today and tomorrow.
+    //               </p>
+    //               <Button
+    //                 onClick={() => {
+    //                   navigate("/lifecycle/api-lifecycle/")
+    //                 }} 
+    //                 className="mb-5 secondary"
+    //               >
+    //                 Explore the Docs
+    //               </Button>
+    //             </div>
+    //             <div className="col-sm-12 col-md-6 col-lg-6 align-self-center">
+    //               <img
+    //                 src="https://voyager.postman.com/illustration/postman-learning-center-documentation-illustration.svg"
+    //                 width="637"
+    //                 height="411"
+    //                 className="hero-image img-fluid"
+    //                 alt="Postmanaut sitting at computer. Illustration."
+    //               />
+    //             </div>
+    //           </div>
+    //         </div>
+    //       </HeroWrapper>
+    //     </div>
+    //     <Divider fullWidth />
+    //     <CallOut body={maincallout.body} divider="false" paddingBottomStyles="0px" />
     
-        <div className="container">
-            <Feature
-            paddingTop={tools.paddingTop}
-            paddingBottom={tools.paddingBottom}
-            divider={tools.divider}
-            title={tools.title}
-            body={tools.body}
-            media={tools.media}
-            backgroundColor={tools.backgroundColor}
-            items={tools.items}
-            bodyLink={tools.bodyLink}
-          />
+    //     <div className="container">
+    //         <Feature
+    //         paddingTop={tools.paddingTop}
+    //         paddingBottom={tools.paddingBottom}
+    //         divider={tools.divider}
+    //         title={tools.title}
+    //         body={tools.body}
+    //         media={tools.media}
+    //         backgroundColor={tools.backgroundColor}
+    //         items={tools.items}
+    //         bodyLink={tools.bodyLink}
+    //       />
           
-          <CallOut title={callout.title} textAlign="left"
-          body={callout.body} link={callout.link}
-           />
+    //       <CallOut title={callout.title} textAlign="left"
+    //       body={callout.body} link={callout.link}
+    //        />
           
-         <h2 className='my-5'>Form is a mockup, does NOT work</h2>
-      <SectionStyles >
-        <div className="container">
-          <div className="row">
+    //      <h2 className='my-5'>Form is a mockup, does NOT work</h2>
+    //   <SectionStyles >
+    //     <div className="container">
+    //       <div className="row">
          
-            <div className="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-0 mb-5 mb-lg-0 ">
-              <ContentContainer className="text-left">
-              <TextSection
-                  subtitle={formdata.subtitle}
-                  layout={formdata.layout}
-                  button={formdata.button}
-                  backgroundColor={formdata.backgroundColor}
-                  paddingTop="0px"
-                  title={formdata.title}
-                  body={formdata.body}
-                />
-              </ContentContainer>
+    //         <div className="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-0 mb-5 mb-lg-0 ">
+    //           <ContentContainer className="text-left">
+    //           <TextSection
+    //               subtitle={formdata.subtitle}
+    //               layout={formdata.layout}
+    //               button={formdata.button}
+    //               backgroundColor={formdata.backgroundColor}
+    //               paddingTop="0px"
+    //               title={formdata.title}
+    //               body={formdata.body}
+    //             />
+    //           </ContentContainer>
   
-                <div className="text-center">
-                  <img alt="Postmanaut on hoverboard. Illustration." className="img-fluid" src="https://voyager.postman.com/illustration/get-in-touch-postman-hoverboard-illustration.svg" />
-                </div>
+    //             <div className="text-center">
+    //               <img alt="Postmanaut on hoverboard. Illustration." className="img-fluid" src="https://voyager.postman.com/illustration/get-in-touch-postman-hoverboard-illustration.svg" />
+    //             </div>
            
-            </div>
-            <div className="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-0 pl-lg-5">
-              {/* <FormV7 form={form} /> */}
-              <InputStyled>
-                  <form>
-                      <label>
-                        Name:
-                        <input type="text" name="name" />
-                      </label>
-                      <label>
-                        Email
-                        <input type="text" name="email" />
-                      </label>
-                      <br/>
-                      <label>
-                        How can Open Tech help you?<br/>
-                        <textarea rows="10" type="text" name="message" />
-                      </label>
-                      <input className='submit' type="submit" value="Submit" />
-                    </form>
-                </InputStyled>
-               <Paragraph className='small'>{formdata.legal}</Paragraph>             
-            </div>
-          </div>
-        </div>
-      </SectionStyles>
+    //         </div>
+    //         <div className="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-0 pl-lg-5">
+    //           {/* <FormV7 form={form} /> */}
+    //           <InputStyled>
+    //               <form>
+    //                   <label>
+    //                     Name:
+    //                     <input type="text" name="name" />
+    //                   </label>
+    //                   <label>
+    //                     Email
+    //                     <input type="text" name="email" />
+    //                   </label>
+    //                   <br/>
+    //                   <label>
+    //                     How can Open Tech help you?<br/>
+    //                     <textarea rows="10" type="text" name="message" />
+    //                   </label>
+    //                   <input className='submit' type="submit" value="Submit" />
+    //                 </form>
+    //             </InputStyled>
+    //            <Paragraph className='small'>{formdata.legal}</Paragraph>             
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </SectionStyles>
       
-         <Divider />
-          <h2 className='text-center mt-5'>From the Postman Blog</h2>
-         <div className="row justify-content-center mt-5">
-              <div className="col-md-6 col-lg-4 mb-5">
-              <LandingCard
-                     title="Introducing Postman’s Open Data and Research Intelligence Initiative"
-                     description="Data has become a digital commodity that we can no longer survive without. It drives our global economy, national and international policies,..."
-                    link="https://blog.postman.com/introducing-postman-open-data-and-research-intelligence-initiative/"
-                    cta="Read the blog"
-                    image="https://blog.postman.com/wp-content/uploads/2022/09/Introducing-Postman-Open-Data-and-Research-Intelligence-Initiative@2x.jpg"
-                  />
-                </div>
-                <div className="col-md-6 col-lg-4 mb-5">
-              <LandingCard
-                    title="Don't Panic: A Developer's Guide to Building Secure GraphQL APIs"
-                    description="At this year's API Specifications Conference (ASC), Postman Developer Advocate Meenakshi Dhanani shared the dos and don'ts of designing secure GraphQL APIs."
-                    link="https://blog.postman.com/how-to-build-secure-graphql-apis/"
-                    cta="Read the blog"
-                    image="https://blog.postman.com/wp-content/uploads/2022/12/Dont-Panic-A-Developers-Guide-to-Building-Secure-GraphQL-APIs-v2@2x.jpg"
-                  />
-                </div>
-                <div className="col-md-6 col-lg-4 mb-5">
-              <LandingCard
-                    title="OpenAPI Does What Swagger Don't"
-                    description="At this year's API Specifications Conference (ASC), Postman OpenAPI Technical Lead Arnaud Lauret (also known in the community as the API Handyman!"
-                    link="https://blog.postman.com/openapi-does-what-swagger-dont/"
-                    cta="Read the blog"
-                    image="https://blog.postman.com/wp-content/uploads/2022/11/ASC-2022-Recap-OpenAPI-Does-What-Swagger-Dont-V1@2x.jpg"
-                  />
-                </div>
-                </div>
-        </div>
-      </Layout>
-    );
+    //      <Divider />
+    //       <h2 className='text-center mt-5'>From the Postman Blog</h2>
+    //      <div className="row justify-content-center mt-5">
+    //           <div className="col-md-6 col-lg-4 mb-5">
+    //           <LandingCard
+    //                  title="Introducing Postman’s Open Data and Research Intelligence Initiative"
+    //                  description="Data has become a digital commodity that we can no longer survive without. It drives our global economy, national and international policies,..."
+    //                 link="https://blog.postman.com/introducing-postman-open-data-and-research-intelligence-initiative/"
+    //                 cta="Read the blog"
+    //                 image="https://blog.postman.com/wp-content/uploads/2022/09/Introducing-Postman-Open-Data-and-Research-Intelligence-Initiative@2x.jpg"
+    //               />
+    //             </div>
+    //             <div className="col-md-6 col-lg-4 mb-5">
+    //           <LandingCard
+    //                 title="Don't Panic: A Developer's Guide to Building Secure GraphQL APIs"
+    //                 description="At this year's API Specifications Conference (ASC), Postman Developer Advocate Meenakshi Dhanani shared the dos and don'ts of designing secure GraphQL APIs."
+    //                 link="https://blog.postman.com/how-to-build-secure-graphql-apis/"
+    //                 cta="Read the blog"
+    //                 image="https://blog.postman.com/wp-content/uploads/2022/12/Dont-Panic-A-Developers-Guide-to-Building-Secure-GraphQL-APIs-v2@2x.jpg"
+    //               />
+    //             </div>
+    //             <div className="col-md-6 col-lg-4 mb-5">
+    //           <LandingCard
+    //                 title="OpenAPI Does What Swagger Don't"
+    //                 description="At this year's API Specifications Conference (ASC), Postman OpenAPI Technical Lead Arnaud Lauret (also known in the community as the API Handyman!"
+    //                 link="https://blog.postman.com/openapi-does-what-swagger-dont/"
+    //                 cta="Read the blog"
+    //                 image="https://blog.postman.com/wp-content/uploads/2022/11/ASC-2022-Recap-OpenAPI-Does-What-Swagger-Dont-V1@2x.jpg"
+    //               />
+    //             </div>
+    //             </div>
+    //     </div>
+    //   </Layout>
+    // );
+    return <div />
 }
 
 export default IndexPage;
