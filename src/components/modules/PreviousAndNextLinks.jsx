@@ -89,14 +89,12 @@ function PreviousAndNextLinks() {
               title={`Go to the previous page: ${prevLink.name}`}
               aria-label={`Go to the previous page: ${prevLink.name}`}
             >
-              {console.log(prevLink.name, "prev")}
               &#8592; {prevLink.name}
             </Link>
           </div>
         )}
         {nextLink && (
           <div className="ml-auto">
-            {console.log(nextLink.name, 'next')}
             <Link
               className="nextDoc"
               rel="next"
