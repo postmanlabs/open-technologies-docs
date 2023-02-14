@@ -86,7 +86,7 @@ export const leftNavItems = [
         url: '/blog/echo-service/',
       },
       {
-        name: 'The Why of GraphQL Security',
+        name: 'The Whys of GraphQL Security',
         url: '/blog/graphql-security/',
       }
     ]
