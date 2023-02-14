@@ -385,7 +385,7 @@ const Header = (props) => {
                   className="nav-link uber-nav"
                   href="https://www.postman.com/open-technologies/"
                 >
-                  Learn More
+                  Learn more
                 </a>
               </li>
             </ul>
