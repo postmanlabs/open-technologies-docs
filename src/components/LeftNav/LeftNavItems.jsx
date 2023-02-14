@@ -42,11 +42,11 @@ export const leftNavItems = [
       {
         name: 'GraphQL',
         subParentSlug: 'graphql',
-        slug: '/specifications/graphql/introduction/',
+        slug: '/specifications/graphql/graphql-hub/',
         subMenuItems2: [
           {
-            name: 'Introduction',
-            url: '/specifications/graphql/introduction/',
+            name: 'GraphQL Hub',
+            url: '/specifications/graphql/graphql-hub/',
           },
           {
             name: 'GraphQL Concepts',

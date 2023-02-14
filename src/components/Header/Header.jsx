@@ -372,20 +372,20 @@ const Header = (props) => {
             id="navbarSupportedContentBottom"
           >
             <ul className="property-context-menu navbar-nav ml-auto">
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link
                   className="nav-link uber-nav"
                   to="/specifications/collections/"
                 >
                   Docs
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <a
                   className="nav-link uber-nav"
                   href="https://www.postman.com/open-technologies/"
                 >
-                  Learn more
+                  Who we are
                 </a>
               </li>
             </ul>
