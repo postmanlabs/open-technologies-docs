@@ -18,7 +18,7 @@ Next, we chose to start with the schema. During this phase, we discussed the fie
 
 Here’s the schema that we came up with:
 
-```scheme
+```graphql
 schema {
   query: Query
   mutation: Mutation
@@ -58,13 +58,13 @@ We had some interesting insights and discussions while working on this project. 
 
 In GraphQL, the input keyword is used to describe an object that may be used as an input parameter. Instead of duplicating each individual argument, this object may be reused across different operations. The input type PersonInput for example, has been utilised in both the query and the mutation.
 
-```scheme
+```graphql
 type Query {
     hello(person: PersonInput): String!
 }
 ```
 
-```scheme
+```graphql
 type Mutation {
     createPerson(person: PersonInput!): Person!
 }
@@ -75,13 +75,13 @@ type Mutation {
 The GraphQL schema allows you to specify a field or collection of values as non-null. By default, every field is nullable. Using this distinction, many errors caused by null values may be avoided during the parsing step itself.
 In the createPerson mutation, the PersonInput parameter is declared as non-null represented by !
 
-```scheme
+```graphql
 createPerson(person: PersonInput!): Person!
 ```
 
 A new person object cannot be created without user input; the non-null check assures that a user cannot perform the mutation if an argument is not given. You will get the following error message:
 
-```scheme
+```graphql
 "message": "Field \"createPerson\" argument \"person\" of type \"PersonInput!\" is required, but it was not provided."
 ```
 
@@ -89,7 +89,7 @@ A new person object cannot be created without user input; the non-null check ass
 
 GraphQL Yoga provides built-in support to add and consume plugins via the Envelop library. We used the useReadinessCheck plugin to add a check if the service is ready to perform.
 
-```scheme
+```graphql
 const yoga = createYoga({
   schema,
   plugins: [
@@ -109,7 +109,7 @@ The ```knockknock``` endpoint returns a 200 OK if the server is ready.
 
 In GraphQL, ID is used to uniquely identify objects. Because each GraphQL request is made to a single ‘/graphql’ endpoint, unlike REST, the URL cannot help distinguish between resources or aid in caching. In the echo service, a createPerson mutation returns an object of type Person that includes an id field that uniquely identifies each person.
 
-```scheme
+```graphql
 type Person {
     id: ID!
     name: String!
@@ -125,7 +125,7 @@ Subscriptions are events to which you can subscribe. In the above schema, we def
 
 The ```yoga.fetch``` method helped us test the operations we defined. The following is an example of a test we wrote for querying the ```hello``` field.
 
-```scheme
+```graphql
 it('should return hello with default name', async () => {
       const response = await yoga.fetch('http://localhost:1337/graphql', {
         method: 'POST',
