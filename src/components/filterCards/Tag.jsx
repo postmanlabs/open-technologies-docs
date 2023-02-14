@@ -21,6 +21,7 @@ export const TagStyles = styled.p`
   }
   &.schema, &[data-text="schema"] {
     background-color: rgb(102, 102, 102);
+    color: white;
   }
   &.type, &[data-text="type"] {
     background-color: rgb(163, 198, 252);
@@ -30,7 +31,7 @@ export const TagStyles = styled.p`
     background-color: rgb(250, 216, 122);
     color: black;
   }
-  &.subscription, &[data-text="subcription"] {
+  &.subscription, &[data-text="subscription"] {
     background-color: rgb(92, 197, 72);
   }
   &.real-time, &[data-text="real-time"] {
@@ -79,15 +80,22 @@ export const TagStyles = styled.p`
     background-color: rgb(138, 217, 196);
     color: black;
   }
+  &[data-text="caching"] {
+    background-color: ${(props) => props.theme.colors.orange_60};
+  }
+  &[data-text="Authorization"] {
+    background-color: magenta;
+    color: black;
+  }
   &[data-text="All"] {
   background-color: orange;
 }
 `
 export const ButtonTag = styled.p`
-margin: 0;
+margin: 4px;
 font-weight: bold;
 text-transform: uppercase;
-border: 2px solid ${(props) => props.theme.colors.grey_10};
+border: 2px solid ${(props) => props.theme.colors.grey_20};
 
   &[data-text="graphql"]:hover, &[data-text="graphql"]&.active {
     background-color: rgb(45, 81, 170);
@@ -106,7 +114,7 @@ border: 2px solid ${(props) => props.theme.colors.grey_10};
     background-color: rgb(250, 216, 122);
     color: black;
   }
-  &[data-text="subcription"]:hover, &[data-text="subcription"]&.active {
+  &[data-text="subscription"]:hover, &[data-text="subscription"]&.active {
     background-color: rgb(92, 197, 72);
   }
   &[data-text="real-time"]:hover, &[data-text="real-time"]&.active {
@@ -132,9 +140,10 @@ border: 2px solid ${(props) => props.theme.colors.grey_10};
   }
   &[data-text="permissions"]:hover, &[data-text="permissions"]&.active {
     background-color: rgb(98, 40, 170);
+    color: white;
   }
   &[data-text="field-level"]:hover,  &[data-text="field-level"]&.active{
-    background-color: ${(props) => props.theme.colors.grey_10};
+    background-color: ${(props) => props.theme.colors.grey_20};
     color: black;
   }
   &[data-text="implementation"]:hover, &[data-text="implementation"]&.active {
@@ -158,6 +167,10 @@ border: 2px solid ${(props) => props.theme.colors.grey_10};
   &[data-text="Authorization"]:hover, &[data-text="Authorization"]&.active {
     background-color: magenta;
     color: black;
+  }
+  &[data-text="caching"]:hover, &[data-text="caching"]&.active {
+    background-color: ${(props) => props.theme.colors.orange_50};
+    color: white;
   }
   
   &[data-text="All"]:hover , &[data-text="All"]&.active {
