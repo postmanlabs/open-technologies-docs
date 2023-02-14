@@ -375,7 +375,7 @@ const Header = (props) => {
               <li className="nav-item">
                 <Link
                   className="nav-link uber-nav"
-                  to="/lifecycle/api-lifecycle/"
+                  to="/specifications/collections/"
                 >
                   Docs
                 </Link>

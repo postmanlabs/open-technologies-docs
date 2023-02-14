@@ -2,18 +2,18 @@
 import React from 'react';
 import { graphql, withPrefix } from 'gatsby';
 
-import Layout from '../../components/layout';
-import DynamicLink from '../../components/Shared/DynamicLink';
-import RightNavLinks from '../../components/RightNavLinks';
-import { leftNavItems } from '../../components/LeftNav/LeftNavItems';
-import LeftNav from '../../components/LeftNav/LeftNav';
-import SEO from '../../components/seo';
+import Layout from '../../../components/layout';
+import DynamicLink from '../../../components/Shared/DynamicLink';
+import RightNavLinks from '../../../components/RightNavLinks';
+import { leftNavItems } from '../../../components/LeftNav/LeftNavItems';
+import LeftNav from '../../../components/LeftNav/LeftNav';
+import SEO from '../../../components/seo';
 // const { v4: uuidv4 } = require('uuid');
 import styled from 'styled-components';
 import 'prismjs/themes/prism-tomorrow.css';
-import BreadCrumbsLinks from '../../components/modules/BreadCrumbsLinks';
-import PreviousAndNextLinks from '../../components/modules/PreviousAndNextLinks';
-import { DocWrapper } from '../../../styles/DocWrapper.jsx';
+import BreadCrumbsLinks from '../../../components/modules/BreadCrumbsLinks';
+import PreviousAndNextLinks from '../../../components/modules/PreviousAndNextLinks';
+import { DocWrapper } from '../../../../styles/DocWrapper';
 
 const HubWrapper = styled.section`
 .calendar a {

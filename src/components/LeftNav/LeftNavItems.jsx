@@ -29,45 +29,32 @@
 
 
 export const leftNavItems = [ 
-  {
-    name: 'GraphQL',
-    parentSlug: 'graphql',
-    url: '/graphql/introduction/',
-    subMenuItems1: [
-      {
-        name: 'Introduction',
-        url: '/graphql/introduction/',
-      },
-      {
-        name: 'GraphQL Concepts',
-        url: '/graphql/graphql-concepts/',
-      },   
-      {
-        name: 'Blog',
-        slug: '/graphql/blog/echo-service/',
-        subParentSlug: 'blog',
-        subMenuItems2: [
-          {
-            name: 'How to Build an Echo Service for GraphQL',
-            url: '/graphql/blog/echo-service/',
-          },
-          {
-            name: 'The Why of GraphQL Security',
-            url: '/graphql/blog/graphql-security/',
-          }
-        ]
-      }
-    ],
-  },
+  
   {
     name: 'Specifications',
     parentSlug: 'specifications',
-    url: '/specifications/openapi/',
+    url: '/specifications/collections/',
     subMenuItems1: [
       {
         name: 'Collections',
         url: '/specifications/collections/',
-      },     
+      },   
+      {
+        name: 'GraphQL',
+        subParentSlug: 'graphql',
+        slug: '/specifications/graphql/introduction/',
+        subMenuItems2: [
+          {
+            name: 'Introduction',
+            url: '/specifications/graphql/introduction/',
+          },
+          {
+            name: 'GraphQL Concepts',
+            url: '/specifications/graphql/graphql-concepts/',
+          },   
+          
+        ],
+      },  
       {
         name: 'OpenAPI',
         url: '/specifications/openapi/',
@@ -86,8 +73,23 @@ export const leftNavItems = [
       {
         name: 'Gateways',
         url: '/lifecycle/gateways/',
-      },
+      }
     ],
+  },
+  {
+    name: 'Blog',
+    url: '/blog/echo-service/',
+    parentSlug: 'blog',
+    subMenuItems1: [
+      {
+        name: 'How to Build an Echo Service for GraphQL',
+        url: '/blog/echo-service/',
+      },
+      {
+        name: 'The Why of GraphQL Security',
+        url: '/blog/graphql-security/',
+      }
+    ]
   }
 ];
 
