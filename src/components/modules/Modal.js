@@ -1,3 +1,4 @@
+import {  withPrefix } from 'gatsby';
 /* Used on doc.jsx */
 export function useModal(parsedHtml, e) {
   let images = parsedHtml.querySelectorAll('img');
@@ -22,7 +23,7 @@ function Modal (create_id, images, i) {
     ${images[i].width === 0 ? (
       `<ModalWrapper>
       <a data-target=#${create_id} class="modal-link" data-toggle="modal">
-      <img src=${images[i].src || ''} alt="${images[i].alt || ''}" width=${images[i].width || ''}></img>
+      <img src=${withPrefix(images[i].src) || ''} alt="${images[i].alt || ''}" width=${images[i].width || ''}></img>
     </a>
     <div id=${create_id} class="modal modal-link fade" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-dialog-centered" role="document" >
@@ -57,7 +58,7 @@ function Modal (create_id, images, i) {
     `
     )
       : (`
-        <img src=${images[i].src || ''} alt="${images[i].alt || ''}" width=${images[i].width || ''}></img>`
+        <img src=${withPrefix(images[i].src) || ''} alt="${images[i].alt || ''}" width=${images[i].width || ''}></img>`
       )}
     `
   )
