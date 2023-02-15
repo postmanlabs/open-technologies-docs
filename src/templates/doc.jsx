@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
 import React, { useState, useEffect } from 'react';
-import { graphql } from 'gatsby';
+import { graphql, withPrefix } from 'gatsby';
 
 import Layout from '../components/layout';
 import RightNavLinks from '../components/RightNavLinks'

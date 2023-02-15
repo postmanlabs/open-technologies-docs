@@ -50,7 +50,7 @@ The [GraphQL Echo Postman collection](https://www.postman.com/postman/workspace/
 
 >Mutation example
 
-<img  src="/images/graphqlv2-subscription.gif"  alt="Subscription example. gif" />
+<img  src="/images/graphqlv2-subscription.gif" alt="Subscription example. gif" />
 
 >Subscription example
 
