@@ -16,8 +16,7 @@ module.exports = {
     author: 'Postman',
     siteUrl: siteUrl,
     pathPrefix: PATH_PREFIX
-  },
-  assetPrefix: `https://learning.postman-beta.com/open-technologies/`,
+  }, 
   pathPrefix: PATH_PREFIX, // The pathPrefix key is apart of gatsby build process, can find in gatsby docs
   trailingSlash: 'always',
   plugins: [
