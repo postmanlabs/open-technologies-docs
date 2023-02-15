@@ -88,8 +88,7 @@ const GraphQLPage = ({ data }) => {
           <div className="col">
             <div className="row row-eq-height">
               <main className="col-lg-9 offset-lg-0 col-xl-7 doc-page ml-xl-5">
-                <BreadCrumbsLinks data={{ parentLink, subParentLink }} />
-                {/* Qualtrics */}
+                <BreadCrumbsLinks data={{ parentLink, subParentLink }} />            
                 <div className='row mb-4'>
                   <img src="https://voyager.postman.com/logo/external/graphql-icon.svg" alt="graphql icon" className='mr-3' width="50px" />
                   <h1>GraphQL</h1>
@@ -186,7 +185,7 @@ const GraphQLPage = ({ data }) => {
                     </div>
                   </div>
                 </HubWrapper>
-
+   {/* Qualtrics */}
                 <PreviousAndNextLinks data={{ previous, next }} />
               </main>
               <RightColumnWrapper className="col-sm-12 col-md-12 col-lg-3 offset-lg-0 col-xl-3 offset-xl-1 right-column">
