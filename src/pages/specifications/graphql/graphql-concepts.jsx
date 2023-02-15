@@ -58,15 +58,10 @@ const GraphQLPage = ({ data }) => {
             <div className="row row-eq-height">
               <main className="col-lg-9 offset-lg-0 col-xl-7 doc-page ml-xl-5">
                 <BreadCrumbsLinks data={{ parentLink, subParentLink }} />
-                {/* Qualtrics */}
-
                 <h2 className="mb-3">GraphQL Concepts</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem numquam vitae ratione eveniet fuga assumenda id dolor corrupti. Aperiam ab a reiciendis, odit dignissimos tempore minima autem cum animi pariatur!
-                </p>
-             
-
-               
+                </p>              
                 <div className="row justify-content-evenly">
                   <div className="container-fluid">
                     <div className="row">
@@ -74,6 +69,7 @@ const GraphQLPage = ({ data }) => {
                     </div>
                   </div>
                 </div>
+                {/* Qualtrics */}
                 <PreviousAndNextLinks data={{ previous, next }} />
               </main>
               <RightColumnWrapper className="col-lg-2 offset-lg-0 col-xl-3 offset-xl-1 right-column">
