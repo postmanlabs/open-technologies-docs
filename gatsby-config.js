@@ -11,7 +11,7 @@ const PATH_PREFIX = '/open-technologies'
 
 module.exports = {
   assetPrefix: 'https://learning.postman-beta.com/open-technologies',
-  // pathPrefix: PATH_PREFIX, // The pathPrefix key is apart of gatsby build process, can find in gatsby docs
+  pathPrefix: PATH_PREFIX, // The pathPrefix key is apart of gatsby build process, can find in gatsby docs
   siteMetadata: {
     title: 'Postman Open Technology Doc',
     description: '',
