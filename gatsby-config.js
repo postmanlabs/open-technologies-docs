@@ -1,7 +1,4 @@
-// require('dotenv').config({
-//   path: `.env.${process.env.GATSBY_ACTIVE_ENV}`,
-// });
-
+const path = require('path');
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
@@ -52,7 +49,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {
-              destinationDir: 'open-technologies',
+              destinationDir: f => `open-technologies/${f.hash}-${f.name}`,
             },
           },
           {
