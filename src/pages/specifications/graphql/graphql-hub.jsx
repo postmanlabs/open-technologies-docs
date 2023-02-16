@@ -102,49 +102,44 @@ const GraphQLPage = ({ data }) => {
                 </section>
                 <HubWrapper className='mb-5'>
                   <div className="row justify-content-evenly">
-                    <div className="col-lg-6 mb-3 mb-md-4">
+                    <div className="col-lg-6 mb-5">
                       <div className="mb-2">
                         <img src={withPrefix("/images/Community.png")} alt="community Icon" width="50px" className='mr-2' />
                         <h4 >Meet the Team</h4>
                         <div className='mb-1'>
-                          <DynamicLink url="https://www.linkedin.com/in/doc-jones" name="Doc Jones →" />
+                          <DynamicLink url="https://www.linkedin.com/in/doc-jones" name="Doc Jones - GraphQL Lead →" />
                         </div>
                         <div >
-                          <DynamicLink url="https://www.linkedin.com/in/meenakshi-dhanani" name="Meenakshi Dhanani →" />
+                          <DynamicLink url="https://www.linkedin.com/in/meenakshi-dhanani" name="Meenakshi Dhanani Developer - Relations Engineer →" />
                         </div>
                       </div>
                     </div>
-                    <div className="col-lg-6 mb-3 mb-md-4">
-                      <div className="mb-2">
-                        <img src={withPrefix("/images/Multi-region.png")} alt="community Icon" width="50px" className='mr-2' />
-                        <h4>Where to find us</h4>
-                        <div >
-                          <DynamicLink url="https://www.twitter.com/getpostman" name="Postman Talks GraphQL →" />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-6 mb-3 mb-md-4">
+                    <div className="col-lg-6 mb-5">
                       <div className="mb-2">
                         <img src={withPrefix("/images/Info.png")} alt="community Icon" width="50px" className='mr-2' />
-                        <h4>New Client Info</h4>
+                        <h4>Latest Updates</h4>
                         <div >
-                          <DynamicLink url="https://www.postman.com" name="Documentation →" />
+                          <DynamicLink url="https://spec.graphql.org/October2021/" name="Getting Started Guide for New GraphQL Client →" />
+                        </div>
+                        <div >
+                          <DynamicLink url="https://spec.graphql.org/October2021/" name="The GraphQL Conference 2023 CFP Open March 20th →" />
+                        </div>
+                        <div >
+                          <DynamicLink url="https://spec.graphql.org/October2021/" name="New Directives to be released in GraphQL Spec 2023 →" />
                         </div>
                       </div>
                     </div>
-                    <div className="col-lg-6 mb-3 mb-md-4">
+                    <div className="col-lg-6 mb-5">
                       <div className="mb-2">
-                        <img src={withPrefix("/images/Documentation.png")} alt="community Icon" width="50px" className='mr-2' />
-                        <h4>Worth reading</h4>
-                        <div className='mb-1'>
-                          <DynamicLink url="https://www.docdocgo.dev/tag/graphql-101/" name="GraphQL 101 Series →" />
-                        </div>
-                        <div>
-                          <DynamicLink url="https://www.docdocgo.dev/" name="docdocgo →" />
+                        <img src={withPrefix("/images/description.png")} alt="description. Icon" width="50px" className='mr-2' />
+                        <h4>GraphQL Specifications</h4>
+                        <div >
+                          <DynamicLink url="https://spec.graphql.org/October2021/" name="GraphQL Specification 2021 →" />
                         </div>
                       </div>
                     </div>
-                    <div className="col-lg-6 mb-3 mb-md-4 bg-grey">
+                    
+                    <div className="col-lg-6 mb-5">
                       <div className="">
                         <img src={withPrefix("/images/Events.svg")} alt="community Icon" width="50px" className='mr-2' />
                         <h4>Calendar</h4>
@@ -153,33 +148,56 @@ const GraphQLPage = ({ data }) => {
                         </DynamicLink>
                       </div>
                     </div>
-                    <div className="col-lg-6 mb-3 mb-md-4 ">
-                      <div className="">
-                        <img src={withPrefix("/images/Engagement.png")} alt="community Icon" width="50px" className='mr-2' />
-                        <h4 >Places to look</h4>
+                    
+                    <div className="col-lg-6 mb-5">
+                      <div className="mb-2">
+                        <img src={withPrefix("/images/Contract.png")} alt="contract. Icon" width="50px" className='mr-2' />
+                        <h4>GraphQL Meeting Summaries 2023</h4>
                         <div className='mb-1'>
-                          <SvgWrapper >
-                            <svg className="button-icon--left" transform="translate(0, -1)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                              <title>logo-github</title>
-                              <g fill="#212121"><path fillRule="evenodd" clipRule="evenodd" fill="#212121" d="M8,0.2c-4.4,0-8,3.6-8,8c0,3.5,2.3,6.5,5.5,7.6 C5.9,15.9,6,15.6,6,15.4c0-0.2,0-0.7,0-1.4C3.8,14.5,3.3,13,3.3,13c-0.4-0.9-0.9-1.2-0.9-1.2c-0.7-0.5,0.1-0.5,0.1-0.5 c0.8,0.1,1.2,0.8,1.2,0.8C4.4,13.4,5.6,13,6,12.8c0.1-0.5,0.3-0.9,0.5-1.1c-1.8-0.2-3.6-0.9-3.6-4c0-0.9,0.3-1.6,0.8-2.1 c-0.1-0.2-0.4-1,0.1-2.1c0,0,0.7-0.2,2.2,0.8c0.6-0.2,1.3-0.3,2-0.3c0.7,0,1.4,0.1,2,0.3c1.5-1,2.2-0.8,2.2-0.8 c0.4,1.1,0.2,1.9,0.1,2.1c0.5,0.6,0.8,1.3,0.8,2.1c0,3.1-1.9,3.7-3.7,3.9C9.7,12,10,12.5,10,13.2c0,1.1,0,1.9,0,2.2 c0,0.2,0.1,0.5,0.6,0.4c3.2-1.1,5.5-4.1,5.5-7.6C16,3.8,12.4,0.2,8,0.2z" /></g>
-                            </svg> </SvgWrapper>
-                          <DynamicLink url="https://www.grapqhl.org/" name="GraphQL Project" />
+                          <DynamicLink url="https://www.postman.com" name="GraphQL Spec working group →" />
                         </div>
                         <div className='mb-1'>
-                          <SvgWrapper >
-                            <svg className="button-icon--left" transform="translate(0, -1)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                              <title>logo-github</title>
-                              <g fill="#212121"><path fillRule="evenodd" clipRule="evenodd" fill="#212121" d="M8,0.2c-4.4,0-8,3.6-8,8c0,3.5,2.3,6.5,5.5,7.6 C5.9,15.9,6,15.6,6,15.4c0-0.2,0-0.7,0-1.4C3.8,14.5,3.3,13,3.3,13c-0.4-0.9-0.9-1.2-0.9-1.2c-0.7-0.5,0.1-0.5,0.1-0.5 c0.8,0.1,1.2,0.8,1.2,0.8C4.4,13.4,5.6,13,6,12.8c0.1-0.5,0.3-0.9,0.5-1.1c-1.8-0.2-3.6-0.9-3.6-4c0-0.9,0.3-1.6,0.8-2.1 c-0.1-0.2-0.4-1,0.1-2.1c0,0,0.7-0.2,2.2,0.8c0.6-0.2,1.3-0.3,2-0.3c0.7,0,1.4,0.1,2,0.3c1.5-1,2.2-0.8,2.2-0.8 c0.4,1.1,0.2,1.9,0.1,2.1c0.5,0.6,0.8,1.3,0.8,2.1c0,3.1-1.9,3.7-3.7,3.9C9.7,12,10,12.5,10,13.2c0,1.1,0,1.9,0,2.2 c0,0.2,0.1,0.5,0.6,0.4c3.2-1.1,5.5-4.1,5.5-7.6C16,3.8,12.4,0.2,8,0.2z" /></g>
-                            </svg> </SvgWrapper>
-                          <DynamicLink url="https://github.com/graphql/foundation" name="GraphQL Foundation Board" />
+                          <DynamicLink url="https://www.postman.com" name="GraphQL Composite Schema →" />
                         </div>
                         <div >
-                          <SvgWrapper >
-                            <svg className="button-icon--left" transform="translate(0, -1)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                              <title>logo-github</title>
-                              <g fill="#212121"><path fillRule="evenodd" clipRule="evenodd" fill="#212121" d="M8,0.2c-4.4,0-8,3.6-8,8c0,3.5,2.3,6.5,5.5,7.6 C5.9,15.9,6,15.6,6,15.4c0-0.2,0-0.7,0-1.4C3.8,14.5,3.3,13,3.3,13c-0.4-0.9-0.9-1.2-0.9-1.2c-0.7-0.5,0.1-0.5,0.1-0.5 c0.8,0.1,1.2,0.8,1.2,0.8C4.4,13.4,5.6,13,6,12.8c0.1-0.5,0.3-0.9,0.5-1.1c-1.8-0.2-3.6-0.9-3.6-4c0-0.9,0.3-1.6,0.8-2.1 c-0.1-0.2-0.4-1,0.1-2.1c0,0,0.7-0.2,2.2,0.8c0.6-0.2,1.3-0.3,2-0.3c0.7,0,1.4,0.1,2,0.3c1.5-1,2.2-0.8,2.2-0.8 c0.4,1.1,0.2,1.9,0.1,2.1c0.5,0.6,0.8,1.3,0.8,2.1c0,3.1-1.9,3.7-3.7,3.9C9.7,12,10,12.5,10,13.2c0,1.1,0,1.9,0,2.2 c0,0.2,0.1,0.5,0.6,0.4c3.2-1.1,5.5-4.1,5.5-7.6C16,3.8,12.4,0.2,8,0.2z" /></g>
-                            </svg> </SvgWrapper>
-                          <DynamicLink url="https://github.com/graphql/graphql-wg" name="GraphQL Working Group" />
+                          <DynamicLink url="https://www.postman.com" name="GraphQL Board →" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-6 mb-5">
+                      <div className="mb-2">
+                        <img src={withPrefix("/images/Community-love.png")} alt="community with heart. Icon" width="50px" className='mr-2' />
+                        <h4>GraphQL Community</h4>
+                        <div className='mb-1'>
+                          <DynamicLink url="https://www.discordapp.com/" name="Discord →" />
+                        </div>
+                        <div className='mb-1'>
+                          <DynamicLink url="https://www.stackoverflow.com/" name="Stack Overflow →" />
+                        </div>
+                        <div className='mb-1'>
+                          <DynamicLink url="https://www.reddit.com/" name="Reddit →" />
+                        </div>
+                        <div>
+                          <DynamicLink url="https://www.twitter.com/" name="Twitter →" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-6 mb-5">
+                      <div className="">
+                        <img src={withPrefix("/images/Engagement.png")} alt="community Icon" width="50px" className='mr-2' />
+                        <h4 >Contribute to GraphQL</h4>
+                        <div className='mb-1'>
+                    
+                          <DynamicLink url="https://www.grapqhl.org/" name="GraphQL Spec working group →" />
+                        </div>
+                        <div >
+                          <DynamicLink url="https://graphql.js" name="GraphQL.js →" />
+                        </div>
+                        <div className='mb-1'>                      
+                          <DynamicLink url="https://github.com/graphql/foundation" name="Composite Schema working group →" />
+                        </div>                  
+                        <div >
+                          <DynamicLink url="https://github.com/graphql/graphql-wg" name="GraphiQL →" />
                         </div>
                       </div>
                     </div>
