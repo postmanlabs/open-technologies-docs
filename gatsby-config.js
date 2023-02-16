@@ -10,6 +10,8 @@ const siteUrl = process.env.SITE_URL ? process.env.SITE_URL : 'https://learning.
 const PATH_PREFIX = '/open-technologies'
 
 module.exports = {
+  pathPrefix: PATH_PREFIX, // The pathPrefix key is apart of gatsby build process, can find in gatsby docs
+  // assetPrefix: 'https://learning.postman-beta.com/open-technologies',
   siteMetadata: {
     title: 'Postman Open Technology Doc',
     description: '',
@@ -17,7 +19,6 @@ module.exports = {
     siteUrl: siteUrl,
     pathPrefix: PATH_PREFIX
   }, 
-  pathPrefix: PATH_PREFIX, // The pathPrefix key is apart of gatsby build process, can find in gatsby docs
   trailingSlash: 'always',
   plugins: [
     'gatsby-plugin-react-helmet',
