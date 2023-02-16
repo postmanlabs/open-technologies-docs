@@ -47,23 +47,9 @@ module.exports = {
           'gatsby-remark-check-links',
           'gatsby-remark-responsive-iframe',
           {
-            resolve: "gatsby-remark-images-anywhere",
+            resolve: "gatsby-remark-copy-linked-files",
             options: {
-              staticDir: "static",
-              createMarkup: ({
-                src,
-                srcSet,
-                sizes,
-                aspectRatio,
-                alt,
-                base64,
-                presentationWidth,
-              }) => {
-                return `<custom-image src="${src}" srcset="${srcSet}" sizes="${sizes}" aspectratio="${aspectRatio}" alt="${alt}" base64="${base64}" presentationwidth="${presentationWidth}"></custom-image>`
-              },
-              sharpMethod: "fluid",
-              // Additional sharp image arguments: https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/
-              // maxWidth: 650,
+              destinationDir: f => `open-technologies/${f.name}`,
             },
           },
           {

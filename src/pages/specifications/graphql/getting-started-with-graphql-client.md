@@ -42,7 +42,7 @@ The [GraphQL Echo Postman collection](https://www.postman.com/postman/workspace/
 
 >Load the schema using intropsection
 
-<img  src="/images/graphqlv2-queries.gif"  alt="Querying the Echo API. gif" />
+<img  src="/images/description.png"  alt="Querying the Echo API. gif" />
 
 >Querying the Echo API
 
