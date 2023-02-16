@@ -51,6 +51,12 @@ module.exports = {
           'gatsby-remark-check-links',
           'gatsby-remark-responsive-iframe',
           {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              destinationDir: 'open-technologies',
+            },
+          },
+          {
             resolve: 'gatsby-remark-prismjs',
             options: {
               classPrefix: 'language-',

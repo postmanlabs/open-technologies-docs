@@ -1,6 +1,4 @@
 /* Used on doc.jsx */
-import {  withPrefix } from 'gatsby';
-
 export function useModal(parsedHtml, e) {
   let images = parsedHtml.querySelectorAll('img');
   
@@ -26,7 +24,7 @@ function Modal (create_id, images, i) {
     ${images[i].width === 0 ? (
       `<ModalWrapper>
       <a data-target=#${create_id} class="modal-link" data-toggle="modal">
-      <img src=${`{withPrefix(images[i].src)}` || ''}  alt="${images[i].alt || ''}" width=${images[i].width || ''}/>
+      <img src=${images[i].src || ''}  alt="${images[i].alt || ''}" width=${images[i].width || ''}/>
     </a>
     <div id=${create_id} class="modal modal-link fade" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-dialog-centered" role="document" >
@@ -53,7 +51,7 @@ function Modal (create_id, images, i) {
               </svg>
             </button>
           </div>
-          <img class="modal-responsive" src=${`{withPrefix(images[i].src)}` || ''} alt="${images[i].alt || ''}" width=${images[i].width || ''}></img>
+          <img class="modal-responsive" src=${images[i].src || ''} alt="${images[i].alt || ''}" width=${images[i].width || ''}></img>
         </div>   
       </div>
     </div>
@@ -61,7 +59,7 @@ function Modal (create_id, images, i) {
     `
     )
       : (`
-        <img src=${`{withPrefix(images[i].src)}` || ''} alt="${images[i].alt || ''}" width=${images[i].width || ''}></img>`
+        <img src=${images[i].src || ''} alt="${images[i].alt || ''}" width=${images[i].width || ''}></img>`
       )}
     `
   )

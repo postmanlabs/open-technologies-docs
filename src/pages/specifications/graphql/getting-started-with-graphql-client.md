@@ -1,7 +1,7 @@
 ---
 title: "Getting Started with new GraphQL Client"
 order: 1
-page_id: "Getting Started with new GraphQL Client"
+page_id: "getting-started-with-new-graphql-client"
 warning: false
 updated: 2023-02-15
 
