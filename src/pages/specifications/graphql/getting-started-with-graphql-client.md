@@ -1,7 +1,7 @@
 ---
-title: "Getting Started with new GraphQL Client"
+title: "Getting started with new GraphQL Client"
 order: 1
-page_id: "Getting Started with new GraphQL Client"
+page_id: "getting-Started-with-new-graphql-client"
 warning: false
 updated: 2023-02-15
 
@@ -34,7 +34,7 @@ We are also bringing Subscription support closer to the overall GraphQL experien
 
 Make a client that celebrates the power of exploring data and is purpose-built for GraphQL.
 
-### Get Started with our Echo Service
+### Get started with our Echo Service
 
 The [GraphQL Echo Postman collection](https://www.postman.com/postman/workspace/published-postman-templates/collection/63c7d7701bfb72333ca216d4?action=share&creator=13059338) contains requests to help you get started using the [GraphQL Echo API](https://graphql.postman-echo.com/graphql) using the new GraphQL client. Here are a few screenshots from the collection:
 
@@ -54,7 +54,7 @@ The [GraphQL Echo Postman collection](https://www.postman.com/postman/workspace/
 
 >Subscription example
 
-### Example Collections to Explore
+### Example Collections to explore
 
 You can use Postman collections from public GraphQL APIs to try out our new GraphQL client or choose your own.
 
@@ -66,6 +66,8 @@ You can use Postman collections from public GraphQL APIs to try out our new Grap
 
 * [GraphQL Public APIs](https://github.com/IvanGoncharov/graphql-apis)
 
-### How to submit your Feedback
+### How to submit your feedback
 
 You can provide us with your feedback, including screenshots if you would like to use those, and share your general experience using the new GraphQL Client.  We are eager to learn of any bugs you encounter or features you believe need to be added to future versions of the client.
+
+[Feedback Form.](https://docs.google.com/forms/d/1nq3s_PsYHA4BgozVlVilkIo_ira8_uu1pfpqWCjxozw/edit)

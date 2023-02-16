@@ -58,7 +58,7 @@ const GraphQLPage = ({ data }) => {
             <div className="row row-eq-height">
               <main className="col-lg-9 offset-lg-0 col-xl-7 doc-page ml-xl-5">
                 <BreadCrumbsLinks data={{ parentLink, subParentLink }} />
-                <h2 className="mb-3">GraphQL Concepts</h2>
+                <h2 className="mb-3">GraphQL concepts</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem numquam vitae ratione eveniet fuga assumenda id dolor corrupti. Aperiam ab a reiciendis, odit dignissimos tempore minima autem cum animi pariatur!
                 </p>              
