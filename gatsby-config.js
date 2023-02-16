@@ -23,7 +23,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/static/images`,
       },
     },
     {
@@ -46,12 +46,12 @@ module.exports = {
           'gatsby-remark-autolink-headers',
           'gatsby-remark-check-links',
           'gatsby-remark-responsive-iframe',
-          {
-            resolve: "gatsby-remark-copy-linked-files",
-            options: {
-              destinationDir: f => `open-technologies/${f.name}`,
-            },
-          },
+          // {
+          //   resolve: "gatsby-remark-copy-linked-files",
+          //   options: {
+          //     destinationDir: '/open-technologies',
+          //   },
+          // },
           {
             resolve: 'gatsby-remark-prismjs',
             options: {
