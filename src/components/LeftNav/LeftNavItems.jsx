@@ -53,7 +53,7 @@ export const leftNavItems = [
             url: '/specifications/graphql/graphql-concepts/',
           },   
           {
-            name: 'Getting Started with new GraphQL Client',
+            name: 'Getting started with new GraphQL Client',
             url: '/specifications/graphql/getting-started-with-graphql-client/',
           },  
         ],

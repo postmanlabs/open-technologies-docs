@@ -118,13 +118,13 @@ const GraphQLPage = ({ data }) => {
                       <div className="mb-2">
                         <img src={withPrefix("/images/Info.png")} alt="community Icon" width="50px" className='mr-2' />
                         <h4>Latest Updates</h4>
-                        <div >
+                        <div className="mb-2">
                           <DynamicLink url="https://spec.graphql.org/October2021/" name="Getting Started Guide for New GraphQL Client →" />
                         </div>
-                        <div >
+                        <div className="mb-2">
                           <DynamicLink url="https://spec.graphql.org/October2021/" name="The GraphQL Conference 2023 CFP Open March 20th →" />
                         </div>
-                        <div >
+                        <div className="mb-2">
                           <DynamicLink url="https://spec.graphql.org/October2021/" name="New Directives to be released in GraphQL Spec 2023 →" />
                         </div>
                       </div>
