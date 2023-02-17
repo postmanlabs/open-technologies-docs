@@ -38,19 +38,19 @@ Make a client that celebrates the power of exploring data and is purpose-built f
 
 The [GraphQL Echo Postman collection](https://www.postman.com/postman/workspace/published-postman-templates/collection/63c7d7701bfb72333ca216d4?action=share&creator=13059338) contains requests to help you get started using the [GraphQL Echo API](https://graphql.postman-echo.com/graphql) using the new GraphQL client. Here are a few screenshots from the collection:
 
-<img  src="/images/graphqlv2-introspection.gif"  alt="Load the schema using intropsection. gif" />
+<img  src="/open-technologies/images/graphqlv2-introspection.gif"  alt="Load the schema using intropsection. gif" />
 
 >Load the schema using intropsection
 
-<img  src="/images/graphqlv2-queries.gif"  alt="Querying the Echo API. gif" />
+<img  src="/open-technologies/images/graphqlv2-queries.gif"  alt="Querying the Echo API. gif" />
 
 >Querying the Echo API
 
-<img  src="/images/graphqlv2-mutation.gif"  alt="Mutation example. gif" />
+<img  src="/open-technologies/images/graphqlv2-mutation.gif"  alt="Mutation example. gif" />
 
 >Mutation example
 
-<img  src="/images/graphqlv2-subscription.gif" alt="Subscription example. gif" />
+<img  src="/open-technologies/images/graphqlv2-subscription.gif" alt="Subscription example. gif" />
 
 >Subscription example
 
