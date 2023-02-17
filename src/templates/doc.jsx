@@ -278,14 +278,14 @@ const RightColumnWrapper = styled.aside`
 }
 `
 
-const prefixImgSrcOfParsedHtml = (parsedHtml, siteUrl, pathPrefix) => {
+const prefixImgSrcOfParsedHtml = (parsedHtml, domainName) => {
   // This function prefixes all relative image srcs of the parsedHTML's image srcs with the pathPrefix defined in the gatsby-config.js file
   let images = parsedHtml.querySelectorAll('img');
   images.forEach((image) => {
     const src = url.parse(image.src);
-    const unprefixedSiteUrl = siteUrl.replace(pathPrefix, '');
-    // If the unprefixedSiteUrl plus the img path is equal to the image src, then the image src is relative and needs to be prefixed
-    if (unprefixedSiteUrl + src.pathname === image.src) {
+    // if the domain name (ex learning.postman-beta.com) + the images path name (ex /images/image.png) is equal to the image src (ex https://learning.postman-beta.com/images/image.png
+    // Then we know that the image src is a relative path and we need to prefix it with the pathPrefix defined in the gatsby-config.js file
+    if (domainName + src.pathname === image.src) {
       image.src = withPrefix(src.pathname);
     }
   });
@@ -294,7 +294,7 @@ const prefixImgSrcOfParsedHtml = (parsedHtml, siteUrl, pathPrefix) => {
 const DocPage = ({ data }) => {
   const [modalData] = useState(data.markdownRemark);
   const post = data.markdownRemark;
-  const { siteUrl, pathPrefix } = data.site.siteMetadata;
+  const { domainName } = data.site.siteMetadata;
   // Last modified date - bottom
   // Last modified time - top 
   const { lastModifiedDate, lastModifiedTime } = data.markdownRemark.fields;
@@ -322,7 +322,7 @@ const DocPage = ({ data }) => {
       // As a result, Gatsby's withPrefix functionality at built time does not work, since it skips all absolute paths.
       // So we need to manually add the prefix by calling withPrefix on the image srcs.
       // This function prefixes the parsedHTML's image srcs with the pathPrefix defined in the gatsby-config.js file
-      prefixImgSrcOfParsedHtml(parsedHTML, siteUrl, pathPrefix);
+      prefixImgSrcOfParsedHtml(parsedHTML, domainName);
       // allows images to display as modal when clicked
       useModal(parsedHTML);
       document.getElementById("LoadDoc").innerHTML = parsedHTML.body.innerHTML;   
@@ -415,8 +415,7 @@ export const query = graphql`
     }
     site {
       siteMetadata {
-        siteUrl
-        pathPrefix
+        domainName
       }
     }
   }
