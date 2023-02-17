@@ -106,7 +106,7 @@ const GraphQLPage = ({ data }) => {
                       <div className="mb-2">
                         <img src={withPrefix("/images/Community.png")} alt="community Icon" width="50px" className='mr-2' />
                         <h4 >Meet the Team</h4>
-                        <div className='mb-1'>
+                        <div className='mb-2'>
                           <DynamicLink url="https://www.linkedin.com/in/doc-jones" name="Doc Jones - GraphQL Lead →" />
                         </div>
                         <div >
@@ -133,7 +133,7 @@ const GraphQLPage = ({ data }) => {
                       <div className="mb-2">
                         <img src={withPrefix("/images/description.png")} alt="description. Icon" width="50px" className='mr-2' />
                         <h4>GraphQL Specifications</h4>
-                        <div >
+                        <div className='mb-2'>
                           <DynamicLink url="https://spec.graphql.org/October2021/" name="GraphQL Specification 2021 →" />
                         </div>
                         <div >
@@ -156,10 +156,10 @@ const GraphQLPage = ({ data }) => {
                       <div className="mb-2">
                         <img src={withPrefix("/images/Contract.png")} alt="contract. Icon" width="50px" className='mr-2' />
                         <h4>GraphQL Meeting Summaries 2023</h4>
-                        <div className='mb-1'>
+                        <div className='mb-2'>
                           <DynamicLink url="https://github.com/graphql/graphql-wg" name="GraphQL working group →" />
                         </div>
-                        <div className='mb-1'>
+                        <div className='mb-2'>
                           <DynamicLink url="https://www.postman.com" name="GraphQL Composite Schema →" />
                         </div>
                         <div >
@@ -171,13 +171,13 @@ const GraphQLPage = ({ data }) => {
                       <div className="mb-2">
                         <img src={withPrefix("/images/Community-love.png")} alt="community with heart. Icon" width="50px" className='mr-2' />
                         <h4>GraphQL Community</h4>
-                        <div className='mb-1'>
+                        <div className='mb-2'>
                           <DynamicLink url="https://discord.gg/MmBhseqESR" name="Discord →" />
                         </div>
-                        <div className='mb-1'>
+                        <div className='mb-2'>
                           <DynamicLink url=" https://stackoverflow.com/search?q=graphql&s=8b4cbe4a-d3db-4a53-b7e9-48a56ccd5a74/" name="Stack Overflow →" />
                         </div>
-                        <div className='mb-1'>
+                        <div className='mb-2'>
                           <DynamicLink url=" https://www.reddit.com/r/graphql/" name="Reddit →" />
                         </div>
                         <div>
@@ -189,16 +189,16 @@ const GraphQLPage = ({ data }) => {
                       <div className="">
                         <img src={withPrefix("/images/Engagement.png")} alt="community Icon" width="50px" className='mr-2' />
                         <h4 >Contribute to GraphQL</h4>
-                        <div className='mb-1'>
+                        <div className='mb-2'>
                           <DynamicLink url="https://github.com/graphql/graphql-wg" name="GraphQL working group →" />
                         </div>
-                        <div className='mb-1'>
+                        <div className='mb-2'>
                           <DynamicLink url="https://github.com/graphql/dataloader" name="dataloader →" />
                         </div>
                         <div >
                           <DynamicLink url="https://github.com/graphql/graphql-js-wg" name="GraphQL.js →" />
                         </div>
-                        <div className='mb-1'>                      
+                        <div className='mb-2'>                      
                           <DynamicLink url=" https://github.com/graphql/composite-schemas-wg" name="Composite Schema working group →" />
                         </div>                  
                         <div >
