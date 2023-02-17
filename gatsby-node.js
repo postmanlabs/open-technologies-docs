@@ -185,35 +185,61 @@ exports.sourceNodes = async ({
   createContentDigest 
 }) => {
 
-  let response;
-  let resultData;
-
+  let responseCard;
+  let cardData;
+  let responseCalendar;
+  let calendarData;
  try {   
-  response = await fetch(
-    process.env.AIRTABLE_URL,
+  responseCard = await fetch(
+    process.env.AIRTABLE_CARDS_URL,
     {
       headers: {
         'Authorization': `Bearer ${process.env.AIRTABLE_TOKEN}`
       },
     },
   );
-   resultData = await response.json();
-} catch {
-    resultData = DummyData;
-    console.log(response, 'catch response')
+   cardData = await responseCard.json();
 
+   responseCalendar = await fetch(
+    process.env.AIRTABLE_CALENDAR_URL,
+    {
+      headers: {
+        'Authorization': `Bearer ${process.env.AIRTABLE_TOKEN}`
+      },
+    },
+  );
+   calendarData = await responseCalendar.json();
+} catch {
+    cardData = DummyData;
+    console.log(responseCard, 'catch response')
+    calendarData = {};
+    console.log(responseCard, 'catch response')
   }
 
-  
+  console.log(cardData, 'cardData')
+  console.log(JSON.stringify(calendarData), 'calendar')
     actions.createNode({
-      ...resultData,
-      id: createNodeId(`${resultData}-id`),
+      ...cardData,
+      // id: createNodeId(`${cardData}-id`),
+      id: `card-id-${uuidv4()}`,
       parent: null,
       children: [],
       internal: {
-        type: 'resultData',
-        contentDigest: createContentDigest(resultData)
+        type: 'cardData',
+        contentDigest: createContentDigest(cardData)
+      }
+    })
+    actions.createNode({
+      ...calendarData,
+      // id: createNodeId(`${calendarData}-id`),
+      id: `calendar-id-${uuidv4()}`,
+      parent: null,
+      children: [],
+      internal: {
+        type: 'calendarData',
+        contentDigest: createContentDigest(calendarData)
       }
     })
 
 };
+
