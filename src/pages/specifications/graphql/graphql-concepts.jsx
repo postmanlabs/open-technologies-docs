@@ -58,10 +58,14 @@ const GraphQLPage = ({ data }) => {
             <div className="row row-eq-height">
               <main className="col-lg-9 offset-lg-0 col-xl-7 doc-page ml-xl-5">
                 <BreadCrumbsLinks data={{ parentLink, subParentLink }} />
-                <h2 className="mb-3">GraphQL concepts</h2>
+                <h2 className="mb-3">Concepts</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem numquam vitae ratione eveniet fuga assumenda id dolor corrupti. Aperiam ab a reiciendis, odit dignissimos tempore minima autem cum animi pariatur!
-                </p>              
+                These cards contain the fundamental building blocks of modern GraphQL APIs. Many of them come from the GraphQL Specification, tagged spec, and the others don't, tagged non-spec. Breaking down complex technology structures into singular concepts is an important technique for simplifying and clarifying technology, making it more accessible to a wider audience, and improving communication and collaboration within the technology community.</p>
+
+                <p>A chief goal of this presentation of GraphQL concepts in addition to those listed above is clarity. When we focus on one concept at a time, we can gain a clearer understanding of that concept and its role within the larger technology structure. This can help us to better understand how the different parts of the technology work together and how we can use them to achieve our goals. A secondary goal is content reuse. It is easy to imagine how we might combine concepts to build API Blueprints, for example.</p>
+
+                <p>NOTE: To view the full concept entry, click on the card.</p>
+                        
                 <div className="row justify-content-evenly">
                   <div className="container-fluid">
                     <div className="row">
