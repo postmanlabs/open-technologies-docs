@@ -279,11 +279,11 @@ const RightColumnWrapper = styled.aside`
 `
 
 const prefixImgSrcOfParsedHtml = (parsedHtml) => {
+  // This function prefixes the parsedHTML's image srcs with the pathPrefix defined in the gatsby-config.js file
   let images = parsedHtml.querySelectorAll('img');
   images.forEach((image) => {
     const src = url.parse(image.src);
     image.src =  withPrefix(src.pathname);
-    console.log(image.src)
   });
 }
 
@@ -313,6 +313,10 @@ const DocPage = ({ data }) => {
     useEffect(() => {
       const parser = new DOMParser();
       const parsedHTML = parser.parseFromString(modalData.html, 'text/html');
+      // In the process of .parseFromString, the image srcs are converted to absolute paths.
+      // As a result, Gatsby's withPrefix functionality at built time does not work, since it skips all absolute paths.
+      // So we need to manually add the prefix by calling withPrefix on the image srcs.
+      // This function prefixes the parsedHTML's image srcs with the pathPrefix defined in the gatsby-config.js file
       prefixImgSrcOfParsedHtml(parsedHTML);
       // allows images to display as modal when clicked
       useModal(parsedHTML);
