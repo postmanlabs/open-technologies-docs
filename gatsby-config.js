@@ -17,8 +17,8 @@ module.exports = {
     siteUrl: siteUrl,
     pathPrefix: PATH_PREFIX
   },
-  assetPrefix: 'http://learning.postman.com/open-technologies/', // The assetPrefix key is apart of gatsby build process, can find in gatsby docs
-  pathPrefix: PATH_PREFIX, // The pathPrefix key is apart of gatsby build process, can find in gatsby docs
+  assetPrefix: 'open-technologies', // The assetPrefix key is apart of gatsby build process, can find in gatsby docs
+  pathPrefix: '/', // The pathPrefix key is apart of gatsby build process, can find in gatsby docs
   trailingSlash: 'always',
   plugins: [
     'gatsby-plugin-react-helmet',
