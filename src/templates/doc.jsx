@@ -1,6 +1,7 @@
 /* eslint-disable react/no-danger */
+import url from 'url';
 import React, { useState, useEffect } from 'react';
-import { graphql } from 'gatsby';
+import { graphql, withPrefix } from 'gatsby';
 
 import Layout from '../components/layout';
 import RightNavLinks from '../components/RightNavLinks'
@@ -277,6 +278,15 @@ const RightColumnWrapper = styled.aside`
 }
 `
 
+const prefixImgSrcOfParsedHtml = (parsedHtml) => {
+  let images = parsedHtml.querySelectorAll('img');
+  images.forEach((image) => {
+    const src = url.parse(image.src);
+    image.src =  withPrefix(src.pathname);
+    console.log(image.src)
+  });
+}
+
 const DocPage = ({ data }) => {
   const [modalData] = useState(data.markdownRemark);
   const post = data.markdownRemark;
@@ -303,6 +313,7 @@ const DocPage = ({ data }) => {
     useEffect(() => {
       const parser = new DOMParser();
       const parsedHTML = parser.parseFromString(modalData.html, 'text/html');
+      prefixImgSrcOfParsedHtml(parsedHTML);
       // allows images to display as modal when clicked
       useModal(parsedHTML);
       document.getElementById("LoadDoc").innerHTML = parsedHTML.body.innerHTML;   
