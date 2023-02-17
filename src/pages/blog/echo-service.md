@@ -77,6 +77,7 @@ type Query {
     hello(person: PersonInput): String!
 }
 ```
+
 ```
 type Mutation {
     createPerson(person: PersonInput!): Person!
@@ -85,7 +86,7 @@ type Mutation {
 
 ### Nullability
 
-The GraphQL schema allows you to specify a field or collection of values as non-null. By default, every field is nullable. Using this distinction, many errors caused by null values may be avoided during the parsing step itself. 
+The GraphQL schema allows you to specify a field or collection of values as non-null. By default, every field is nullable. Using this distinction, many errors caused by null values may be avoided during the parsing step itself.
 
 In the `createPerson` mutation, the `PersonInput` parameter is declared as non-null represented by !
 
@@ -101,28 +102,28 @@ A new person object cannot be created without user input; the non-null check ass
 
 ### Envelop Plugins in Yoga
 
-GraphQL Yoga provides built-in support to add and consume plugins via the [Envelop](https://the-guild.dev/graphql/envelop) library. We used the `useReadinessCheck` plugin to add a check if the service is ready to perform. 
+GraphQL Yoga provides built-in support to add and consume plugins via the [Envelop](https://the-guild.dev/graphql/envelop) library. We used the `useReadinessCheck` plugin to add a check if the service is ready to perform.
 
 ```ts
 const yoga = createYoga({
   schema,
   plugins: [
     useReadinessCheck({
-      endpoint: '/knockknock', 
+      endpoint: '/knockknock',
       check: async () => {
         await checkAvailable()
       }
     })
   ]
 })
- 
-```
-The `knockknock` endpoint returns a 200 OK if the server is ready. 
 
+```
+
+The `knockknock` endpoint returns a 200 OK if the server is ready.
 
 ### Using IDs
 
-In GraphQL, ID is used to uniquely identify objects. Because each GraphQL request is made to a single '/graphql' endpoint, unlike REST, the URL cannot help distinguish between resources or aid in caching. In the echo service, a `createPerson` mutation returns an object of type `Person` that includes an `id` field that uniquely identifies each person. 
+In GraphQL, ID is used to uniquely identify objects. Because each GraphQL request is made to a single '/graphql' endpoint, unlike REST, the URL cannot help distinguish between resources or aid in caching. In the echo service, a `createPerson` mutation returns an object of type `Person` that includes an `id` field that uniquely identifies each person.
 
 ```graphql
 type Person {
