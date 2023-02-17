@@ -78,7 +78,7 @@ type Query {
 }
 ```
 
-```
+```graphql
 type Mutation {
     createPerson(person: PersonInput!): Person!
 }
