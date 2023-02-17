@@ -278,18 +278,21 @@ const RightColumnWrapper = styled.aside`
 }
 `
 
-const prefixImgSrcOfParsedHtml = (parsedHtml) => {
-  // This function prefixes the parsedHTML's image srcs with the pathPrefix defined in the gatsby-config.js file
+const prefixImgSrcOfParsedHtml = (parsedHtml, siteUrl) => {
+  // This function prefixes all relative image srcs of the parsedHTML's image srcs with the pathPrefix defined in the gatsby-config.js file
   let images = parsedHtml.querySelectorAll('img');
   images.forEach((image) => {
     const src = url.parse(image.src);
-    image.src =  withPrefix(src.pathname);
+    if (image.src.includes(siteUrl)){
+      image.src = withPrefix(src.pathname);
+    }
   });
 }
 
 const DocPage = ({ data }) => {
   const [modalData] = useState(data.markdownRemark);
   const post = data.markdownRemark;
+  const siteUrl = data.site.siteMetadata.siteUrl;
   // Last modified date - bottom
   // Last modified time - top 
   const { lastModifiedDate, lastModifiedTime } = data.markdownRemark.fields;
@@ -317,7 +320,7 @@ const DocPage = ({ data }) => {
       // As a result, Gatsby's withPrefix functionality at built time does not work, since it skips all absolute paths.
       // So we need to manually add the prefix by calling withPrefix on the image srcs.
       // This function prefixes the parsedHTML's image srcs with the pathPrefix defined in the gatsby-config.js file
-      prefixImgSrcOfParsedHtml(parsedHTML);
+      prefixImgSrcOfParsedHtml(parsedHTML, siteUrl);
       // allows images to display as modal when clicked
       useModal(parsedHTML);
       document.getElementById("LoadDoc").innerHTML = parsedHTML.body.innerHTML;   
@@ -406,6 +409,11 @@ export const query = graphql`
         slug
         lastModifiedDate
         lastModifiedTime
+      }
+    }
+    site {
+      siteMetadata {
+        siteUrl
       }
     }
   }
