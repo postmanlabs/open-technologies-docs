@@ -288,7 +288,10 @@ const prefixImgSrcOfParsedHtml = (parsedHtml, domainName) => {
     console.log("src.host.split('.').slice(1).join('.')", src.host.split('.').slice(1).join('.'));
     console.log('domainName: ', domainName);
     if (domainName === src.host.split('.').slice(1).join('.')){
-      src.host === src.host.split('.').slice(1).join('.')
+      const withoutSubSub = src.host.split('.').slice(1).join('.');
+      console.log('withoutSubSub: ', withoutSubSub)
+      src.host === withoutSubSub;
+      console.log('inside if src.host', src.host)
     }
     console.log('src.host: ', src.host);
     if (domainName === src.host) {
