@@ -287,7 +287,10 @@ const prefixImgSrcOfParsedHtml = (parsedHtml, domainName) => {
     console.log('src.host: ', src.host);
     console.log("src.host.split('.').slice(1).join('.')", src.host.split('.').slice(1).join('.'));
     console.log('domainName: ', domainName);
-    if (domainName === src.host || domainName === src.host.split('.').slice(1).join('.')) {
+    if (domainName === src.host.split('.').slice(1).join('.')){
+      src.host === src.host.split('.').slice(1).join('.')
+    }
+    if (domainName === src.host) {
       // if the domain name (ex learning.postman-beta.com) + the images path name (ex /images/image.png) is equal to the images host (ex learning.postman-beta.com) + the images path name (ex /images/image.png)
       // Then we know that the image src is a relative path and we need to prefix it with the pathPrefix defined in the gatsby-config.js file
       if (domainName + src.pathname === (src.host + src.pathname)) {
