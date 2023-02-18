@@ -54,6 +54,7 @@ jobs:
           RELIC_PRODUCTION_APPLICATION_ID: ${{ secrets.RELIC_PRODUCTION_APPLICATION_ID }}
           PM_TECH_RT: ${{secrets.PM_TECH_RT}}
           SITE_URL: ${{secrets.BETA_SITE_URL}}
+          DOMAIN_NAME: ${{secrets.BETA_DOMAIN_NAME}}
           AIRTABLE_TOKEN: ${{secrets.AIRTABLE_TOKEN}}
           AIRTABLE_URL: ${{secrets.AIRTABLE_URL}}
         run: |
