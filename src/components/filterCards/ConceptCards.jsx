@@ -26,12 +26,25 @@ const CardWrapper = styled.div`
   }
 
   .truncate{
-      overflow: hidden;
-      overflow: hidden;
+
+    padding-inline: 5px;
+    white-space: pre-wrap;
+    color: rgb(17, 17, 18);
+    overflow: hidden;
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 4;
-      overflow: hidden;
+
+    code{
+    padding-inline: 5px;
+    white-space: pre-wrap;
+    color: rgb(17, 17, 18);
+    overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+  }
+
     }
   .title_link  {
     color: black !important;
@@ -54,6 +67,7 @@ const CardWrapper = styled.div`
     padding-inline: 5px;
     white-space: pre-wrap;
     color: rgb(17, 17, 18);
+    
   }
 }
 .plain, .punctuation {
@@ -109,8 +123,9 @@ export const ConceptCard = ({
             {/* {example && (<div dangerouslySetInnerHTML={{ __html: example }} />)} */}
             {console.log(example, 'in component')}
             {example && (
-          
-                <ReactMarkdown className='code truncate'>{example}</ReactMarkdown>
+              <div className='code truncate'>
+                <ReactMarkdown>{example}</ReactMarkdown>
+                </div>
           
 
             )
