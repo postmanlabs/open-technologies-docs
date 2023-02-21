@@ -11,18 +11,12 @@ export const TagStyles = styled.p`
   background-color: transparent; //until I can figure out the filtering
   margin-right: 5px;
   margin-bottom: 12px;
-  
-  &.graphql, &[data-text="graphql"] {
-    background-color: rgb(45, 81, 170);
-  }
-  &.api, &[data-text="api"] {
-    background-color: rgb(216, 245, 200);
-  }
-  &.schema, &[data-text="schema"] {
+
+   &[data-text="schema"] {
     background-color: rgb(102, 102, 102);
     color: white;
   }
-  &.type, &[data-text="type"] {
+  &[data-text="type"] {
     background-color: rgb(163, 198, 252);
   }
   &.operation, &[data-text="operation"] {
@@ -43,16 +37,10 @@ export const TagStyles = styled.p`
   &.client, &[data-text="client"] {
     background-color: rgb(177, 121, 35);
   }
-  .null, &[data-text="null"] {
-    background-color: rgb(244, 164, 183);
-  }
   .nonnull, &[data-text="nonnull"] {
     background-color: rgb(250, 220, 254);
   }
-  .permissions, &[data-text="permissions"] {
-    background-color: rgb(98, 40, 170);
-    color: white;
-  }
+
   .field-level, &[data-text="field-level"] {
     background-color: ${(props) => props.theme.colors.grey_10};
   }
@@ -65,9 +53,7 @@ export const TagStyles = styled.p`
    &[data-text="N +1 problem"] {
     background-color: rgb(252, 235, 186);
   }
-  &[data-text="directive"] {
-    background-color: rgb(231, 72, 98);
-  }
+
   &[data-text="inheritance"] {
     background-color: rgb(138, 217, 196);
   }
@@ -112,13 +98,6 @@ text-transform: uppercase;
 border: 2px solid ${(props) => props.theme.colors.grey_20};
 color: black;
 
-  &[data-text="graphql"]:hover, &[data-text="graphql"]&.active {
-    background-color: rgb(45, 81, 170);
-    color: white;
-  }
-  &[data-text="api"]:hover, &[data-text="api"]&.active {
-    background-color: rgb(216, 245, 200);
-  }
   &[data-text="schema"]:hover, &[data-text="schema"]&.active {
     background-color: rgb(102, 102, 102);
     color: white;
@@ -145,16 +124,10 @@ color: black;
   &[data-text="client"]:hover, &[data-text="client"]&.active {
     background-color: rgb(177, 121, 35);
   }
-  &[data-text="null"]:hover, &[data-text="null"]&.active  {
-    background-color: rgb(244, 164, 183);
-  }
   &[data-text="nonnull"]:hover, &[data-text="nonnull"]&.active {
     background-color: rgb(250, 220, 254);
   }
-  &[data-text="permissions"]:hover, &[data-text="permissions"]&.active {
-    background-color: rgb(98, 40, 170);
-    color: white;
-  }
+
   &[data-text="field-level"]:hover,  &[data-text="field-level"]&.active{
     background-color: ${(props) => props.theme.colors.grey_20};
   }
@@ -167,9 +140,7 @@ color: black;
    &[data-text="N +1 problem"]:hover, &[data-text="N +1 problem"]&.active {
     background-color: rgb(252, 235, 186);
   }
-  &[data-text="directive"]:hover, &[data-text="directive"]&.active {
-    background-color: rgb(231, 72, 98);
-  }
+
   &[data-text="inheritance"]:hover, &[data-text="inheritance"]&.active {
     background-color: rgb(138, 217, 196);
   }
