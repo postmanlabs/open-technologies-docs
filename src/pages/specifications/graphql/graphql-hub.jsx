@@ -110,7 +110,7 @@ const GraphQLPage = ({ data }) => {
                           <DynamicLink url="https://www.linkedin.com/in/doc-jones" name="Doc Jones - GraphQL Lead →" />
                         </div>
                         <div >
-                          <DynamicLink url="https://www.linkedin.com/in/meenakshi-dhanani" name="Meenakshi Dhanani Developer - Relations Engineer →" />
+                          <DynamicLink url="https://www.linkedin.com/in/meenakshi-dhanani" name="Meenakshi Dhanani - Developer Relations Engineer →" />
                         </div>
                       </div>
                     </div>
