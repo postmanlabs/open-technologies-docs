@@ -10,7 +10,7 @@ const redirects = require('./redirects.json');
 const { execSync } = require("child_process")
 const ignorePaths = [];
 const DummyData = require('./src/components/filterCards/Data.json');
-
+const DummyCalendar = require('./src/components/DummyCalendar.json');
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
@@ -211,7 +211,7 @@ exports.sourceNodes = async ({
    calendarData = await responseCalendar.json();
 } catch {
     cardData = DummyData;
-    calendarData = {};
+    calendarData = DummyCalendar;
   }
 
   // console.log(cardData, 'cardData')
