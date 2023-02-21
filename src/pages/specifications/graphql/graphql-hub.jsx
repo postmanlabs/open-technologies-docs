@@ -163,13 +163,13 @@ const GraphQLPage = ({ data }) => {
                         <img src={withPrefix("/images/Contract.png")} alt="contract. Icon" width="50px" className='mr-2' />
                         <h4>GraphQL Meeting Notes</h4>
                         <div className='mb-2'>
-                          <DynamicLink url="https://github.com/graphql/graphql-wg" name="GraphQL working group →" />
+                          <DynamicLink url="https://github.com/graphql/graphql-wg/tree/main/notes" name="GraphQL working group →" />
                         </div>
                         <div className='mb-2'>
-                          <DynamicLink url="https://www.postman.com" name="GraphQL Composite Schema →" />
+                          <DynamicLink url="https://github.com/graphql/composite-schemas-wg/tree/main/notes" name="GraphQL Composite Schema →" />
                         </div>
                         <div >
-                          <DynamicLink url="https://www.postman.com" name="GraphQL Board →" />
+                          GraphQL Board →
                         </div>
                       </div>
                     </div>
