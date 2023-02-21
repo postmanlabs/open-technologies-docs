@@ -29,45 +29,39 @@
 
 
 export const leftNavItems = [ 
-  {
-    name: 'GraphQL',
-    parentSlug: 'graphql',
-    url: '/graphql/introduction/',
-    subMenuItems1: [
-      {
-        name: 'Introduction',
-        url: '/graphql/introduction/',
-      },
-      {
-        name: 'GraphQL Concepts',
-        url: '/graphql/graphql-concepts/',
-      },   
-      {
-        name: 'Blog',
-        slug: '/graphql/blog/echo-service/',
-        subParentSlug: 'blog',
-        subMenuItems2: [
-          {
-            name: 'How to Build an Echo Service for GraphQL',
-            url: '/graphql/blog/echo-service/',
-          },
-          {
-            name: 'The Why of GraphQL Security',
-            url: '/graphql/blog/graphql-security/',
-          }
-        ]
-      }
-    ],
-  },
+  
   {
     name: 'Specifications',
     parentSlug: 'specifications',
-    url: '/specifications/openapi/',
+    url: '/specifications/collections/',
     subMenuItems1: [
       {
         name: 'Collections',
         url: '/specifications/collections/',
-      },     
+      },   
+      {
+        name: 'GraphQL',
+        subParentSlug: 'graphql',
+        slug: '/specifications/graphql/graphql/',
+        subMenuItems2: [
+          {
+            name: 'GraphQL',
+            url: '/specifications/graphql/graphql/',
+          },
+          {
+            name: 'Concepts',
+            url: '/specifications/graphql/concepts/',
+          },   
+          {
+            name: 'Getting started with new GraphQL Client',
+            url: '/specifications/graphql/getting-started-with-graphql-client/',
+          }, 
+          {
+            name: 'How to Build an Echo Service for GraphQL',
+            url: '/specifications/graphql/echo-service/',
+          }, 
+        ],
+      },  
       {
         name: 'OpenAPI',
         url: '/specifications/openapi/',
@@ -86,8 +80,23 @@ export const leftNavItems = [
       {
         name: 'Gateways',
         url: '/lifecycle/gateways/',
-      },
+      }
     ],
+  },
+  {
+    name: 'Blog',
+    url: '/blog/graphql-security/',
+    parentSlug: 'blog',
+    subMenuItems1: [
+      {
+        name: 'The Whys of GraphQL Security',
+        url: '/blog/graphql-security/',
+      },
+      {
+        name: 'The GraphQL Execution Engine',
+        url: '/blog/graphql-execution/',
+      }
+    ]
   }
 ];
 

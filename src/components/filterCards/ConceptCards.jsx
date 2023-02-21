@@ -3,20 +3,20 @@ const { v4: uuidv4 } = require('uuid');
 import styled from 'styled-components';
 import { TagStyles } from "./Tag";
 import { Divider } from 'aether-marketing';
+import ReactMarkdown from 'react-markdown';
 
 const CardWrapper = styled.div`
   margin-bottom: 32px;
-  text-align: left !important;
   padding: 15px 10px;
   border: 1px solid ${(props) => props.theme.colors.grey_20};
   border-radius: 10px;
   max-width: 300px;
 
   .landing-card__content {
+    /* max-height: 430px; */
     &-description {
       margin-bottom: 25px;
-      font-size: 16px;
-      
+      font-size: 16px;   
     }
     
     a {
@@ -25,46 +25,41 @@ const CardWrapper = styled.div`
   }
 
   .truncate{
-      overflow: hidden;
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 4;
-      overflow: hidden;
+    padding-inline: 5px;
+    white-space: pre-wrap;
+    color: rgb(17, 17, 18);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    p{
+      font-size: 14px;
     }
-  .title_link  {
-    color: black !important;
+    code{
+    white-space: pre-wrap;
+    color: rgb(17, 17, 18);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    font-size: 14px;
   }
+
+    }
   
-   a:hover {
-    color: ${(props) => props.theme.colors.blue_60} !important;
-    text-decoration: none;
-    border: none !important;
-  }
   .tag {
     margin-left: 10px;
   }
 .code {
   height: 100%;
   background-color: ${(props) => props.theme.colors.grey_10};
-  font-size: 12px;
-  
+
   code{
-    padding-inline: 5px;
     white-space: pre-wrap;
     color: rgb(17, 17, 18);
   }
 }
-.plain, .punctuation {
-  color: rgb(204, 204, 204)!important;
-}
-.function, .operator {
-  color: rgb(240, 141, 73)!important;;
-}
 
-.token.string {
-  color: rgb(126, 198, 153)!important;
-}
 div.modal {
   background-color: ${(props) => props.theme.colors.grey_00}!important;
   margin: auto;
@@ -74,13 +69,10 @@ div.modal {
 .close {
   font-size: 2rem;
 }
-  .code {
-    background-color: ${(props) => props.theme.colors.grey_20};
-    width: 75%;
-    padding-inline: 5px;
-  }
+  
 }
 `
+
 export const ConceptCard = ({
   title, description, tag, example
 }) => {
@@ -104,12 +96,13 @@ export const ConceptCard = ({
             </div>
           </div>
           <div>
-            <p className='mb-0 text-uppercase small mb-2'>Example</p>
-            {/* {example && (<div dangerouslySetInnerHTML={{ __html: example }} />)} */}
             {example && (
-              <div className='code truncate'>
-                <code>{example}</code></div>
-
+              <div>
+                <p className='mb-0 text-uppercase small mb-2'>Example</p>
+                <div className='code truncate'>
+                  <ReactMarkdown>{example}</ReactMarkdown>
+                </div>
+              </div>
             )
             }
           </div>
@@ -145,14 +138,15 @@ export const ConceptCard = ({
                   </div>
                 </div>
               </div>
-              <div className='row'>
-                <p className='col-4 mb-0 text-uppercase '>Example</p>
-                {/* {example && (<div dangerouslySetInnerHTML={{ __html: example }} />)} */}
+              <div >
                 {example && (
-                  <div className='code col-6'>
-                    <code>{example}</code>
+                  <div className='row'>
+                    <p className='col-4 mb-0 text-uppercase '>Example</p>
+                    <div className='code col-6'>
+                      <ReactMarkdown>{example}</ReactMarkdown>
+                    </div>
                   </div>
-                )
+                  ) 
                 }
 
               </div>

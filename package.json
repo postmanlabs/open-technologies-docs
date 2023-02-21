@@ -55,6 +55,7 @@
     "react-helmet": "6.1.0",
     "react-instantsearch-dom": "6.33.0",
     "react-instantsearch-hooks-web": "6.30.3",
+    "react-markdown": "8.0.5",
     "react-typography": "0.16.20",
     "s3-deploy": "1.4.0",
     "sass": "1.32.0",

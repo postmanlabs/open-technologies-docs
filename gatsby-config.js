@@ -6,7 +6,8 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-const siteUrl = process.env.SITE_URL ? process.env.SITE_URL : 'https://learning.postman.com/open-technologies'
+const SITE_URL = process.env.SITE_URL ? process.env.SITE_URL : 'https://learning.postman.com/open-technologies'
+const DOMAIN_NAME = process.env.DOMAIN_NAME ? process.env.DOMAIN_NAME : 'learning.postman.com';
 const PATH_PREFIX = '/open-technologies'
 
 module.exports = {
@@ -14,7 +15,8 @@ module.exports = {
     title: 'Postman Open Technology Doc',
     description: '',
     author: 'Postman',
-    siteUrl: siteUrl,
+    siteUrl: SITE_URL,
+    domainName: DOMAIN_NAME,
     pathPrefix: PATH_PREFIX
   },
   pathPrefix: PATH_PREFIX, // The pathPrefix key is apart of gatsby build process, can find in gatsby docs
@@ -87,8 +89,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: siteUrl,
-        sitemap:`${siteUrl}/sitemap/sitemap-index.xml`,
+        host: SITE_URL,
+        sitemap:`${SITE_URL}/sitemap/sitemap-index.xml`,
         resolveEnv: () => process.env.GATSBY_ACTIVE_ENV,
         env: {
           development: {

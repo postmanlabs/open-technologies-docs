@@ -334,7 +334,7 @@ const Header = (props) => {
         <NavStyles className="navbar navbar-expand-lg navbar-light nav-secondary blurred-container">
           <Link
             className="navbar-brand"
-            to="/lifecycle/api-lifecycle/"
+            to="/specifications/collections/"
           >
             <span id="learning-center-home-link" className="nav-link uber-nav">
               Open Technologies
@@ -372,13 +372,21 @@ const Header = (props) => {
             id="navbarSupportedContentBottom"
           >
             <ul className="property-context-menu navbar-nav ml-auto">
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link
                   className="nav-link uber-nav"
-                  to="/lifecycle/api-lifecycle/"
+                  to="/specifications/collections/"
                 >
                   Docs
                 </Link>
+              </li> */}
+              <li className="nav-item">
+                <a
+                  className="nav-link uber-nav"
+                  href="https://www.postman.com/open-technologies/"
+                >
+                  Who we are
+                </a>
               </li>
             </ul>
           </div>
