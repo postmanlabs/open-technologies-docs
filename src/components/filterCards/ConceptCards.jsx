@@ -3,8 +3,8 @@ const { v4: uuidv4 } = require('uuid');
 import styled from 'styled-components';
 import { TagStyles } from "./Tag";
 import { Divider } from 'aether-marketing';
-// import ReactMarkdown from 'react-markdown';
 
+import {micromark} from 'https://esm.sh/micromark@3'
 const CardWrapper = styled.div`
   margin-bottom: 32px;
   padding: 15px 10px;
@@ -101,7 +101,7 @@ export const ConceptCard = ({
                 <p className='mb-0 text-uppercase small mb-2'>Example</p>
                 <div className='code truncate'>
                   {/* <ReactMarkdown>{example}</ReactMarkdown> */}
-                  <div dangerouslySetInnerHTML={{ __html: example }} />
+                  <code>{example}</code>
                 </div>
               </div>
             )
