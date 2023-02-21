@@ -56,7 +56,8 @@ jobs:
           SITE_URL: ${{secrets.BETA_SITE_URL}}
           DOMAIN_NAME: ${{secrets.BETA_DOMAIN_NAME}}
           AIRTABLE_TOKEN: ${{secrets.AIRTABLE_TOKEN}}
-          AIRTABLE_URL: ${{secrets.AIRTABLE_URL}}
+          AIRTABLE_CARDS_URL: ${{secrets.AIRTABLE_CARDS_URL}}
+          AIRTABLE_CALENDAR_URL: ${{secrets.AIRTABLE_CALENDAR_URL}}
         run: |
             npm config set //registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}
             npm install

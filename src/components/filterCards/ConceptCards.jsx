@@ -3,6 +3,7 @@ const { v4: uuidv4 } = require('uuid');
 import styled from 'styled-components';
 import { TagStyles } from "./Tag";
 import { Divider } from 'aether-marketing';
+import ReactMarkdown from 'react-markdown';
 
 const CardWrapper = styled.div`
   margin-bottom: 32px;
@@ -106,9 +107,11 @@ export const ConceptCard = ({
           <div>
             <p className='mb-0 text-uppercase small mb-2'>Example</p>
             {/* {example && (<div dangerouslySetInnerHTML={{ __html: example }} />)} */}
+            {console.log(example, 'in component')}
             {example && (
-              <div className='code truncate'>
-                <code>{example}</code></div>
+          
+                <ReactMarkdown className='code truncate'>{example}</ReactMarkdown>
+          
 
             )
             }
@@ -151,7 +154,7 @@ export const ConceptCard = ({
 
                 {example && (
                   <div className='code col-6'>
-                    <code>{example}</code>
+                    <ReactMarkdown>{example}</ReactMarkdown>
                   </div>
                 )
                 }
