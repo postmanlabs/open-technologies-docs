@@ -170,7 +170,7 @@ const GraphQLPage = ({ data }) => {
                           <DynamicLink url="https://github.com/graphql/composite-schemas-wg/tree/main/notes" name="GraphQL Composite Schema →" />
                         </div>
                         <div >
-                          GraphQL Board →
+                          GraphQL Board
                         </div>
                       </div>
                     </div>

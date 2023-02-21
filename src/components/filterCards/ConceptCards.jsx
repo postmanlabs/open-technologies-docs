@@ -32,9 +32,12 @@ const CardWrapper = styled.div`
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
+
     p{
       font-size: 14px;
+      
     }
+  }
     code{
     white-space: pre-wrap;
     color: rgb(17, 17, 18);
@@ -43,10 +46,14 @@ const CardWrapper = styled.div`
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
     font-size: 14px;
+    margin-bottom: 0;
   }
 
-    }
+
+.truncate > p {
+  margin-bottom: -10px;
   
+}
   .tag {
     margin-left: 10px;
   }
@@ -54,10 +61,7 @@ const CardWrapper = styled.div`
   height: 100%;
   background-color: ${(props) => props.theme.colors.grey_10};
 
-  code{
-    white-space: pre-wrap;
-    color: rgb(17, 17, 18);
-  }
+  
 }
 
 div.modal {
