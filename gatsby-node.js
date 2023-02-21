@@ -211,9 +211,7 @@ exports.sourceNodes = async ({
    calendarData = await responseCalendar.json();
 } catch {
     cardData = DummyData;
-    // console.log(responseCard, 'catch response')
     calendarData = {};
-    // console.log(responseCard, 'catch response')
   }
 
   // console.log(cardData, 'cardData')

@@ -14,6 +14,7 @@ import 'prismjs/themes/prism-tomorrow.css';
 import BreadCrumbsLinks from '../../../components/modules/BreadCrumbsLinks';
 import PreviousAndNextLinks from '../../../components/modules/PreviousAndNextLinks';
 import { DocWrapper } from '../../../../styles/DocWrapper';
+import CalendarDates from '../../../components/calendarDates';
 
 const HubWrapper = styled.section`
 .calendar a {
@@ -110,22 +111,28 @@ const GraphQLPage = ({ data }) => {
                           <DynamicLink url="https://www.linkedin.com/in/doc-jones" name="Doc Jones - GraphQL Lead →" />
                         </div>
                         <div >
-                          <DynamicLink url="https://www.linkedin.com/in/meenakshi-dhanani" name="Meenakshi Dhanani Developer - Relations Engineer →" />
+                          <DynamicLink url="https://www.linkedin.com/in/meenakshi-dhanani" name="Meenakshi Dhanani - Developer Relations Engineer →" />
                         </div>
                       </div>
                     </div>
                     <div className="col-lg-6 mb-5">
                       <div className="mb-2">
                         <img src={withPrefix("/images/Info.png")} alt="community Icon" width="50px" className='mr-2' />
-                        <h4>Latest Updates</h4>
+                        <h4>GraphQL News</h4>
                         <div className="mb-2">
-                          <DynamicLink url="https://spec.graphql.org/October2021/" name="Getting Started Guide for New GraphQL Client →" />
+                          <DynamicLink url="" name="Postman's New GraphQL Client →" />
                         </div>
                         <div className="mb-2">
-                          <DynamicLink url="https://spec.graphql.org/October2021/" name="The GraphQL Conference 2023 CFP Open March 20th →" />
+                          <DynamicLink url="/specifications/graphql/getting-started-with-graphql-client/" name="Getting Started Guide for New GraphQL Client →" />
                         </div>
                         <div className="mb-2">
-                          <DynamicLink url="https://spec.graphql.org/October2021/" name="New Directives to be released in GraphQL Spec 2023 →" />
+                          The GraphQL Conference 2023 CFP Open March 20th →
+                        </div>
+                        <div className="mb-2">
+                          New Directives to be released in GraphQL Spec 2023 →
+                        </div>
+                        <div className="mb-2">
+                          <DynamicLink url="https://newsroom.ibm.com/IBM-Acquires-StepZen-to-Help-Enterprises-Get-More-Business-Value-from-Their-Data-and-APIs" name="IBM acquires StepZen →" />
                         </div>
                       </div>
                     </div>
@@ -146,24 +153,24 @@ const GraphQLPage = ({ data }) => {
                       <div className="">
                         <img src={withPrefix("/images/Events.svg")} alt="community Icon" width="50px" className='mr-2' />
                         <h4>Calendar</h4>
-
-                        <DynamicLink url="https://calendar.google.com/calendar/u/0/embed?src=linuxfoundation.org_ik79t9uuj2p32i3r203dgv5mo8@group.calendar.google.com&ctz=America/New_York" name="GraphQL Public Calendar →">
-                        </DynamicLink>
+                        <div className='mb-2'>
+                        <CalendarDates/>
+                        </div>
                       </div>
                     </div>
                     
                     <div className="col-lg-6 mb-5">
                       <div className="mb-2">
                         <img src={withPrefix("/images/Contract.png")} alt="contract. Icon" width="50px" className='mr-2' />
-                        <h4>GraphQL Meeting Summaries 2023</h4>
+                        <h4>GraphQL Meeting Notes</h4>
                         <div className='mb-2'>
-                          <DynamicLink url="https://github.com/graphql/graphql-wg" name="GraphQL working group →" />
+                          <DynamicLink url="https://github.com/graphql/graphql-wg/tree/main/notes" name="GraphQL working group →" />
                         </div>
                         <div className='mb-2'>
-                          <DynamicLink url="https://www.postman.com" name="GraphQL Composite Schema →" />
+                          <DynamicLink url="https://github.com/graphql/composite-schemas-wg/tree/main/notes" name="GraphQL Composite Schema →" />
                         </div>
                         <div >
-                          <DynamicLink url="https://www.postman.com" name="GraphQL Board →" />
+                          GraphQL Board →
                         </div>
                       </div>
                     </div>
@@ -193,16 +200,19 @@ const GraphQLPage = ({ data }) => {
                           <DynamicLink url="https://github.com/graphql/graphql-wg" name="GraphQL working group →" />
                         </div>
                         <div className='mb-2'>
-                          <DynamicLink url="https://github.com/graphql/dataloader" name="dataloader →" />
+                          <DynamicLink url="https://github.com/graphql/dataloader" name="DataLoader →" />
                         </div>
-                        <div >
+                        <div className='mb-2'>
                           <DynamicLink url="https://github.com/graphql/graphql-js-wg" name="GraphQL.js →" />
                         </div>
-                        <div className='mb-2'>                      
-                          <DynamicLink url=" https://github.com/graphql/composite-schemas-wg" name="Composite Schema working group →" />
+                        <div className='mb-2'>
+                          <DynamicLink url="https://github.com/graphql/composite-schemas-wg" name="Composite Schema working group →" />
                         </div>                  
-                        <div >
-                          <DynamicLink url=" https://github.com/graphql/graphiql" name="GraphiQL →" />
+                        <div className='mb-2'>
+                          <DynamicLink url="https://github.com/graphql/graphiql" name="GraphiQL →" />
+                        </div>
+                        <div className='mb-2'>                
+                          <DynamicLink url="https://github.com/graphql/graphql-playground" name="GraphQL Playground →" />
                         </div>
                       </div>
                     </div>
