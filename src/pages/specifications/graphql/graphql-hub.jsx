@@ -193,16 +193,19 @@ const GraphQLPage = ({ data }) => {
                           <DynamicLink url="https://github.com/graphql/graphql-wg" name="GraphQL working group →" />
                         </div>
                         <div className='mb-2'>
-                          <DynamicLink url="https://github.com/graphql/dataloader" name="dataloader →" />
+                          <DynamicLink url="https://github.com/graphql/dataloader" name="DataLoader →" />
                         </div>
-                        <div >
+                        <div className='mb-2'>
                           <DynamicLink url="https://github.com/graphql/graphql-js-wg" name="GraphQL.js →" />
                         </div>
-                        <div className='mb-2'>                      
-                          <DynamicLink url=" https://github.com/graphql/composite-schemas-wg" name="Composite Schema working group →" />
+                        <div className='mb-2'>
+                          <DynamicLink url="https://github.com/graphql/composite-schemas-wg" name="Composite Schema working group →" />
                         </div>                  
-                        <div >
-                          <DynamicLink url=" https://github.com/graphql/graphiql" name="GraphiQL →" />
+                        <div className='mb-2'>
+                          <DynamicLink url="https://github.com/graphql/graphiql" name="GraphiQL →" />
+                        </div>
+                        <div className='mb-2'>                
+                          <DynamicLink url="https://github.com/graphql/graphql-playground" name="GraphQL Playground →" />
                         </div>
                       </div>
                     </div>
