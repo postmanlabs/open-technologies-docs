@@ -75,7 +75,7 @@ export const TagStyles = styled.p`
     background-color: ${(props) => props.theme.colors.orange_60};
     color: white;
   }
-  &[data-text="Authorization"] {
+  &[data-text="authorization"] {
     background-color: magenta;
   }
  &[data-text="spec"] {
@@ -87,6 +87,18 @@ export const TagStyles = styled.p`
   }
  &[data-text="testing"] {
     background-color: rgb(165, 43, 66);
+    color: white;
+  }
+  &[data-text="documentation"] {
+    background-color: rgb(39, 98, 20);
+    color: white;
+  }
+  &[data-text="query"] {
+    background-color: rgb(46, 117, 179);
+    color: white;
+  }
+  &[data-text="security"] {
+    background-color: rgb(54, 114, 220);
     color: white;
   }
   &[data-text="All"] {
@@ -161,7 +173,7 @@ color: black;
   &[data-text="inheritance"]:hover, &[data-text="inheritance"]&.active {
     background-color: rgb(138, 217, 196);
   }
-  &[data-text="Authorization"]:hover, &[data-text="Authorization"]&.active {
+  &[data-text="authorization"]:hover, &[data-text="Authorization"]&.active {
     background-color: magenta;
   }
   &[data-text="caching"]:hover, &[data-text="caching"]&.active {
@@ -176,6 +188,18 @@ color: black;
   }
  &[data-text="testing"]:hover, &[data-text="testing"]&.active {
     background-color: rgb(165, 43, 66);
+    color: white;
+  }
+  &[data-text="documentation"]:hover, &[data-test="documentation"]&.active {
+    background-color: rgb(39, 98, 20);
+    color: white;
+  }
+  &[data-text="query"]:hover, &[data-type="query"]&.active {
+    background-color: rgb(46, 117, 179);
+    color: white;
+  }
+  &[data-text="security"]:hover, &[data-type="security"]&.active {
+    background-color: rgb(54, 114, 220);
     color: white;
   }
   &[data-text="All"]:hover , &[data-text="All"]&.active {

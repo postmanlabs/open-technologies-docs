@@ -148,6 +148,7 @@ export const ConceptCard = ({
               <div className='row'>
                 <p className='col-4 mb-0 text-uppercase '>Example</p>
                 {/* {example && (<div dangerouslySetInnerHTML={{ __html: example }} />)} */}
+
                 {example && (
                   <div className='code col-6'>
                     <code>{example}</code>
