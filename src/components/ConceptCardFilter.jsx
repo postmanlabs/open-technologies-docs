@@ -7,7 +7,7 @@ function ConceptCardFilter() {
  
  const gatsbyRepoData = useStaticQuery(graphql`
       query {
-        resultData {
+        cardData {
           records {
             fields {
             description: Description
@@ -22,7 +22,7 @@ function ConceptCardFilter() {
   `);
 
   /*Create filter buttons*/
-const setOfTags = [ ...new Set(gatsbyRepoData.resultData.records.filter(q => !!q).map(item => item.fields.tag).filter(q => !!q))];
+const setOfTags = [ ...new Set(gatsbyRepoData.cardData.records.filter(q => !!q).map(item => item.fields.tag).filter(q => !!q))];
 
 let allCategories = ['All'];
 setOfTags?.forEach(item => {
@@ -31,7 +31,7 @@ setOfTags?.forEach(item => {
 )
 
 allCategories = [...new Set(allCategories)];
-const items = gatsbyRepoData.resultData.records;
+const items = gatsbyRepoData.cardData.records;
 
   const [cardItem, setCardItem] = useState(items);
   const [buttons] = useState(allCategories);
@@ -63,4 +63,3 @@ const items = gatsbyRepoData.resultData.records;
 
 
 export default ConceptCardFilter;
-
