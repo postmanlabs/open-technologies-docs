@@ -1,10 +1,9 @@
 ---
 title: "How to Build an Echo Service for GraphQL"
-order: 1
+order: 2
 page_id:  "how-to-build-an-echo-service-for-graphQL"
 warning: false
 updated: 2023-01-22
-author: Meenakshi Dhanani
 tag: "echo, graphql"
 
 ---

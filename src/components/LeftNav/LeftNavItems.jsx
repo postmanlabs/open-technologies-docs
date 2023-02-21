@@ -56,6 +56,10 @@ export const leftNavItems = [
             name: 'Getting started with new GraphQL Client',
             url: '/specifications/graphql/getting-started-with-graphql-client/',
           },  
+          {
+            name: 'How to Build an Echo Service for GraphQL',
+            url: '/specifications/graphql/echo-service/',
+          },
         ],
       },  
       {
@@ -81,13 +85,9 @@ export const leftNavItems = [
   },
   {
     name: 'Blog',
-    url: '/blog/echo-service/',
+    url: '/blog/graphql-security/',
     parentSlug: 'blog',
     subMenuItems1: [
-      {
-        name: 'How to Build an Echo Service for GraphQL',
-        url: '/blog/echo-service/',
-      },
       {
         name: 'The Whys of GraphQL Security',
         url: '/blog/graphql-security/',

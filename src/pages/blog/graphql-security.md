@@ -1,6 +1,6 @@
 ---
 title: "The Whys of GraphQL Security"
-order: 2
+order: 1
 page_id:  "the-whys-of-graphql-security"
 warning: false
 updated: 2023-02-13
