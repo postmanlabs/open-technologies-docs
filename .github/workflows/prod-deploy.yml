@@ -47,7 +47,8 @@ jobs:
           PM_TECH_RT: ${{secrets.PM_TECH_RT}}
           SITE_URL: ${{secrets.PROD_SITE_URL}}
           AIRTABLE_TOKEN: ${{secrets.AIRTABLE_TOKEN}}
-          AIRTABLE_URL: ${{secrets.AIRTABLE_URL}}
+          AIRTABLE_CARDS_URL: ${{secrets.AIRTABLE_CARDS_URL}}
+          AIRTABLE_CALENDAR_URL: ${{secrets.AIRTABLE_CALENDAR_URL}}
         run: |
           npm config set //registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}
           npm install
