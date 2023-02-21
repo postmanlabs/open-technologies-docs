@@ -26,23 +26,24 @@ const CardWrapper = styled.div`
   }
 
   .truncate{
-
     padding-inline: 5px;
     white-space: pre-wrap;
     color: rgb(17, 17, 18);
     overflow: hidden;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 4;
-
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    p{
+      font-size: 14px;
+    }
     code{
-    padding-inline: 5px;
     white-space: pre-wrap;
     color: rgb(17, 17, 18);
     overflow: hidden;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    font-size: 14px;
   }
 
     }
@@ -61,13 +62,10 @@ const CardWrapper = styled.div`
 .code {
   height: 100%;
   background-color: ${(props) => props.theme.colors.grey_10};
-  font-size: 12px;
-  
+
   code{
-    padding-inline: 5px;
     white-space: pre-wrap;
     color: rgb(17, 17, 18);
-    
   }
 }
 .plain, .punctuation {
@@ -89,13 +87,10 @@ div.modal {
 .close {
   font-size: 2rem;
 }
-  .code {
-    background-color: ${(props) => props.theme.colors.grey_20};
-    width: 75%;
-    padding-inline: 5px;
-  }
+  
 }
 `
+
 export const ConceptCard = ({
   title, description, tag, example
 }) => {
@@ -119,15 +114,13 @@ export const ConceptCard = ({
             </div>
           </div>
           <div>
-            <p className='mb-0 text-uppercase small mb-2'>Example</p>
-            {/* {example && (<div dangerouslySetInnerHTML={{ __html: example }} />)} */}
-            {console.log(example, 'in component')}
             {example && (
-              <div className='code truncate'>
-                <ReactMarkdown>{example}</ReactMarkdown>
+              <div>
+                <p className='mb-0 text-uppercase small mb-2'>Example</p>
+                <div className='code truncate'>
+                  <ReactMarkdown>{example}</ReactMarkdown>
                 </div>
-          
-
+                </div>
             )
             }
           </div>
@@ -163,15 +156,15 @@ export const ConceptCard = ({
                   </div>
                 </div>
               </div>
-              <div className='row'>
-                <p className='col-4 mb-0 text-uppercase '>Example</p>
-                {/* {example && (<div dangerouslySetInnerHTML={{ __html: example }} />)} */}
-
+              <div >
                 {example && (
-                  <div className='code col-6'>
-                    <ReactMarkdown>{example}</ReactMarkdown>
+                  <div className='row'>
+                    <p className='col-4 mb-0 text-uppercase '>Example</p>
+                    <div className='code col-6'>
+                      <ReactMarkdown>{example}</ReactMarkdown>
+                    </div>
                   </div>
-                )
+                  ) 
                 }
 
               </div>
