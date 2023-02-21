@@ -155,7 +155,7 @@ const GraphQLPage = ({ data }) => {
                     <div className="col-lg-6 mb-5">
                       <div className="mb-2">
                         <img src={withPrefix("/images/Contract.png")} alt="contract. Icon" width="50px" className='mr-2' />
-                        <h4>GraphQL Meeting Summaries 2023</h4>
+                        <h4>GraphQL Meeting Notes</h4>
                         <div className='mb-2'>
                           <DynamicLink url="https://github.com/graphql/graphql-wg" name="GraphQL working group →" />
                         </div>
