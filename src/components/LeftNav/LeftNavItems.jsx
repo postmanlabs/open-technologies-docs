@@ -88,10 +88,13 @@ export const leftNavItems = [
     url: '/blog/graphql-security/',
     parentSlug: 'blog',
     subMenuItems1: [
-      
       {
         name: 'The Whys of GraphQL Security',
         url: '/blog/graphql-security/',
+      },
+      {
+        name: 'The GraphQL Execution Engine',
+        url: '/blog/graphql-execution/',
       }
     ]
   }
