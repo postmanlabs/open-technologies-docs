@@ -117,15 +117,21 @@ const GraphQLPage = ({ data }) => {
                     <div className="col-lg-6 mb-5">
                       <div className="mb-2">
                         <img src={withPrefix("/images/Info.png")} alt="community Icon" width="50px" className='mr-2' />
-                        <h4>Latest Updates</h4>
+                        <h4>GraphQL News</h4>
                         <div className="mb-2">
-                          <DynamicLink url="https://spec.graphql.org/October2021/" name="Getting Started Guide for New GraphQL Client →" />
+                          <DynamicLink url="" name="Postman's New GraphQL Client →" />
                         </div>
                         <div className="mb-2">
-                          <DynamicLink url="https://spec.graphql.org/October2021/" name="The GraphQL Conference 2023 CFP Open March 20th →" />
+                          <DynamicLink url="/specifications/graphql/getting-started-with-graphql-client/" name="Getting Started Guide for New GraphQL Client →" />
                         </div>
                         <div className="mb-2">
-                          <DynamicLink url="https://spec.graphql.org/October2021/" name="New Directives to be released in GraphQL Spec 2023 →" />
+                          The GraphQL Conference 2023 CFP Open March 20th →
+                        </div>
+                        <div className="mb-2">
+                          New Directives to be released in GraphQL Spec 2023 →
+                        </div>
+                        <div className="mb-2">
+                          <DynamicLink url="https://newsroom.ibm.com/IBM-Acquires-StepZen-to-Help-Enterprises-Get-More-Business-Value-from-Their-Data-and-APIs" name="IBM acquires StepZen →" />
                         </div>
                       </div>
                     </div>
