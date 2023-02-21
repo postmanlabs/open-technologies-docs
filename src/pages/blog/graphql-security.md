@@ -62,7 +62,7 @@ query {
 ```
 
 A malicious query could include sensitive data in this case, email. When the query is normalized by the GraphQL server email could remain even if the requester isn't authorized to recieve it.
-    
+
 ### GraphQL operation validation
 
 The GraphQL vulnerability involving operation validation refers to a security issue that occurs when a GraphQL API fails to properly validate the operations (queries, mutations, and subscriptions) sent by clients.
