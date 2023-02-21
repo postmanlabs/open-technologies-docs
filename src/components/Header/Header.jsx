@@ -4,8 +4,7 @@ import { trackCustomEvent } from 'gatsby-plugin-google-analytics';
 import $ from 'jquery';
 import {PrimaryNavbarV6, SecondaryNavbarV6, NavStyles, DropdownStyles, CTAButton} from './HeaderStyles.jsx' ; 
 import navbarData from '../../../bff-data/navbar.json';
-// For local TOPNAVBAR TESTING
-// import navbarDataLocal from '../../../build/navbarDev.json';
+import navbarDataLocal from '../../../build/navbarDev.json';
 
 // Get Cookie for Sign In toggler
 const getCookie = (a) => {
@@ -82,6 +81,14 @@ const Header = (props) => {
 
     setCookie(cookie);
     setBeta(beta);
+    
+    // runtime check to switch between prod and local data if API returns malformed
+    const navbarKeys = ['items', 'media', 'type'];
+    if (navbarKeys.every(key => Object.keys(navbarData).includes(key))) {
+      setData(navbarData)
+    } else {
+      setData(navbarDataLocal)
+    }
 
     const { waitBeforeShow } = props;
 
@@ -278,8 +285,8 @@ const Header = (props) => {
                         >
                           { item.columns && item.columns &&
                           <div className="row dropdown-col-menu">
-                            { item.columns.map((col) => (
-                              <div className="col-sm-6 col-md-4 dropdown-col" key={col.title}>
+                          {item.columns.map((col) => (       
+                              <div className={item.isWidthShort ? 'col-sm-6 col-md-6 dropdown-col' : 'col-sm-6 col-md-4 dropdown-col' } key={col.title}>
                                 <h6 className="dropdown-header">{col.title}</h6>
                                 {col.subItemsCol.map((link) => (
                                   <a
