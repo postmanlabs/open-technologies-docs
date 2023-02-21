@@ -33,7 +33,7 @@ NOTE: These security practices don’t replace the standard good practices for s
 
 Below are some examples of what can go wrong with GraphQL when security protections are overlooked or in some cases unknown. This isn’t meant to be an exhaustive list of all the ways that GraphQL can leak data or be overwhelmed by malicious queries. These few examples illustrate where and why data delivered to clients or applications can be exploited through GraphQL APIs.
 
-#### Normalizing GraphQL Queries can leak fields
+#### Normalizing GraphQL queries can leak fields
 
 Normalizing GraphQL queries refers to the process of converting complex queries into a simpler, standardized form.
 
@@ -236,7 +236,7 @@ Visit [HackerOne's GraphQL disclosures](https://hackerone.com/hacktivity?queryst
 
 ### Why GraphQL security has a brighter future
 
-As GraphQL becomes central to the operations of more enterprises the investment in security it will increase. GraphQL is the vehicle for enabling access to all kinds of data sources inside the networks of enterprises and its security is central to the protection of PPI (private personal information)and company proprietary data. There are efforts and experiments underway in established GraphQL vendors and among startups to reduce the attack surface and prevent data loss.
+As GraphQL becomes central to the operations of more enterprises the investment in security will increase. GraphQL is the vehicle for enabling access to all kinds of data sources inside the networks of enterprises and its security is central to the protection of PPI (private personal information)and company proprietary data. There are efforts and experiments underway in established GraphQL vendors and among startups to reduce the attack surface and prevent data loss.
 
 - Compliers for the query language to replace the execution engine
 - Apollo and Shopify are adopting Rust for its speed, memory safety and data race protection.
