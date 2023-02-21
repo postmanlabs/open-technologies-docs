@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import styled from 'styled-components';
-// import footerDataLocal from '../../../build/footerDev.json';
+import footerDataLocal from '../../../build/footerDev.json';
 import footerData from '../../../bff-data/footer.json';
 
 
@@ -104,7 +104,16 @@ function targetStringGenerator(target) {
 
 const Footer = () => {
 
-  const [data] = useState(footerData)
+  const [data, setData] = useState(footerData)
+  // runtime check to switch between prod and local data if API returns malformed
+  const footerKeys = ['alt', 'copyright', 'items', 'src', 'type'];
+  useEffect(() => {
+    if (footerKeys.every(key => Object.keys(footerData).includes(key))) {
+      setData(footerData)
+    } else {
+      setData(footerDataLocal)
+    }
+  }, [])
 
   const columns = data.items.slice(0, 5);
    
