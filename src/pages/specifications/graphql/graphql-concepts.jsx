@@ -60,9 +60,9 @@ const GraphQLPage = ({ data }) => {
                 <BreadCrumbsLinks data={{ parentLink, subParentLink }} />
                 <h2 className="mb-3">Concepts</h2>
                 <p>
-                These cards contain the fundamental building blocks of modern GraphQL APIs. Many of them come from the GraphQL Specification, tagged spec, and the others don't, tagged non-spec. Breaking down complex technology structures into singular concepts is an important technique for simplifying and clarifying technology, making it more accessible to a wider audience, and improving communication and collaboration within the technology community.</p>
+                These cards contain the fundamental building blocks of modern GraphQL APIs. Many of them come from the GraphQL Specification, tagged spec, and the others don't, tagged non-spec. Breaking down complex technology structures into singular concepts is an important technique for simplifying technology, making it more accessible to a wider audience, and improving communication and collaboration across the technology community.</p>
 
-                <p>A chief goal of this presentation of GraphQL concepts in addition to those listed above is clarity. When we focus on one concept at a time, we can gain a clearer understanding of that concept and its role within the larger technology structure. This can help us to better understand how the different parts of the technology work together and how we can use them to achieve our goals. A secondary goal is content reuse. It is easy to imagine how we might combine concepts to build API Blueprints, for example.</p>
+                <p>A primary goal of this presentation of GraphQL concepts in addition to those listed above is clarity. When we focus on one concept at a time, we can gain a clearer understanding of that concept and its role within the larger technology structure. This can help us to better understand how the different parts of the technology work together and how we can use them to achieve our goals. A secondary goal is content reuse. It is easy to imagine how we might combine concepts to build API Blueprints, for example.</p>
 
                 <p>NOTE: To view the full concept entry, click on the card.</p>
                         
