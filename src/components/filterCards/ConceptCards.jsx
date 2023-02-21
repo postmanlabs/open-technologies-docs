@@ -7,17 +7,16 @@ import ReactMarkdown from 'react-markdown';
 
 const CardWrapper = styled.div`
   margin-bottom: 32px;
-  text-align: left !important;
   padding: 15px 10px;
   border: 1px solid ${(props) => props.theme.colors.grey_20};
   border-radius: 10px;
   max-width: 300px;
 
   .landing-card__content {
+    /* max-height: 430px; */
     &-description {
       margin-bottom: 25px;
-      font-size: 16px;
-      
+      font-size: 16px;   
     }
     
     a {
@@ -47,15 +46,7 @@ const CardWrapper = styled.div`
   }
 
     }
-  .title_link  {
-    color: black !important;
-  }
   
-   a:hover {
-    color: ${(props) => props.theme.colors.blue_60} !important;
-    text-decoration: none;
-    border: none !important;
-  }
   .tag {
     margin-left: 10px;
   }
@@ -68,16 +59,7 @@ const CardWrapper = styled.div`
     color: rgb(17, 17, 18);
   }
 }
-.plain, .punctuation {
-  color: rgb(204, 204, 204)!important;
-}
-.function, .operator {
-  color: rgb(240, 141, 73)!important;;
-}
 
-.token.string {
-  color: rgb(126, 198, 153)!important;
-}
 div.modal {
   background-color: ${(props) => props.theme.colors.grey_00}!important;
   margin: auto;
@@ -120,7 +102,7 @@ export const ConceptCard = ({
                 <div className='code truncate'>
                   <ReactMarkdown>{example}</ReactMarkdown>
                 </div>
-                </div>
+              </div>
             )
             }
           </div>

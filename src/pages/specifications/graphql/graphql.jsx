@@ -126,10 +126,10 @@ const GraphQLPage = ({ data }) => {
                           <DynamicLink url="/specifications/graphql/getting-started-with-graphql-client/" name="Getting Started Guide for New GraphQL Client →" />
                         </div>
                         <div className="mb-2">
-                          The GraphQL Conference 2023 CFP Open March 20th →
+                          The GraphQL Conference 2023 CFP Open March 20th
                         </div>
                         <div className="mb-2">
-                          New Directives to be released in GraphQL Spec 2023 →
+                          New Directives to be released in GraphQL Spec 2023
                         </div>
                         <div className="mb-2">
                           <DynamicLink url="https://newsroom.ibm.com/IBM-Acquires-StepZen-to-Help-Enterprises-Get-More-Business-Value-from-Their-Data-and-APIs" name="IBM acquires StepZen →" />
@@ -182,10 +182,10 @@ const GraphQLPage = ({ data }) => {
                           <DynamicLink url="https://discord.gg/MmBhseqESR" name="Discord →" />
                         </div>
                         <div className='mb-2'>
-                          <DynamicLink url=" https://stackoverflow.com/search?q=graphql&s=8b4cbe4a-d3db-4a53-b7e9-48a56ccd5a74/" name="Stack Overflow →" />
+                          <DynamicLink url="https://stackoverflow.com/search?q=graphql&s=8b4cbe4a-d3db-4a53-b7e9-48a56ccd5a74/" name="Stack Overflow →" />
                         </div>
                         <div className='mb-2'>
-                          <DynamicLink url=" https://www.reddit.com/r/graphql/" name="Reddit →" />
+                          <DynamicLink url="https://www.reddit.com/r/graphql/" name="Reddit →" />
                         </div>
                         <div>
                           <DynamicLink url="https://twitter.com/GraphQL" name="Twitter →" />
