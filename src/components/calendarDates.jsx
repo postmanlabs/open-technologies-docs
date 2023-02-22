@@ -10,7 +10,7 @@ function CalendarDates() {
         calendarData {
           records {
             fields {
-            date: Start_Time(formatString: "MM-DD-YYYY")
+            date: Start_Time(formatString: "MM-DD")
             title: Title
             duration: Duration
             Link

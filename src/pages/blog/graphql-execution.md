@@ -13,7 +13,7 @@ The GraphQL execution engine is the core component of a GraphQL server that is r
 
 When a client sends a GraphQL query to a server, the query is first parsed into an abstract syntax tree (AST). The AST is then valdiated against the schema that defines the types and fields available in the GraphQL API. And finally, the resolvers are executed which generates a response.
 
-<img src="/images/graphql-response-code-block.png"  alt="GraphQL response code block. screen shot" />
+<img src="/images/graphql-response-code-block.png"  alt="GraphQL response code block. screen shot" width="670px"/>
 
 The execution engine processes the AST by recursively visiting each field in the query and resolving it by executing the appropriate resolver function. Resolver functions are user-defined functions that are responsible for fetching data from the underlying data sources (e.g. databases, REST APIs, etc.) and returning it in the appropriate format.
 
