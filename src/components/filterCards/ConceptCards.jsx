@@ -11,7 +11,6 @@ const CardWrapper = styled.div`
   border: 1px solid ${(props) => props.theme.colors.grey_20};
   border-radius: 10px;
   max-width: 300px;
-  .landing-card__content {
   &:hover {
     box-shadow: ${(props) =>
       props.altBoxShadow
@@ -25,6 +24,8 @@ const CardWrapper = styled.div`
       props.altBoxShadow
         ? props.theme.shadows.card_shadow
         : props.theme.shadows.card_shadow};
+
+  .landing-card__content {
     text-decoration: none;
     transform: translateY(-0.5rem);
   }
@@ -42,14 +43,13 @@ const CardWrapper = styled.div`
   }
 
   .truncate{
-    padding-inline: 5px;
-    white-space: pre-wrap;
     color: rgb(17, 17, 18);
     overflow: hidden;
+    white-space: pre-wrap;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
-
+    
     p{
       font-size: 14px;
     }
@@ -123,7 +123,7 @@ export const ConceptCard = ({
             <div className='mb-2'>
               <p className='mb-0 text-uppercase small mb-2'>Example</p>
               <div className='code truncate'>
-                <ReactMarkdown>{example}</ReactMarkdown>
+              <ReactMarkdown>{example && example.substring(0, 80)}</ReactMarkdown>
                 {/* <code>{example}</code> */}
               </div>
             </div>
@@ -135,9 +135,9 @@ export const ConceptCard = ({
               </div>
           </div>
         </div>
-
+</CardWrapper>
         {/* Modal */}
-
+<CardWrapper>
         <div className="modal fade " id={id} tabIndex="1" role="dialog" aria-labelledby={title} aria-hidden="true">
           <div className="modal-dialog modal-dialog-centered" role="document">
             <div className="">
