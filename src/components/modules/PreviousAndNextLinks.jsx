@@ -79,7 +79,7 @@ function PreviousAndNextLinks() {
   return (
     <>
       <hr />
-      <div id="previousNextLinks" className="d-flex flex-row mt-3 pagination" role="navigation">
+      <div id="previousNextLinks" className="d-flex flex-row justify-between mt-3 pagination" role="navigation">
         {prevLink && (
           <div className="mr-auto">
             <Link

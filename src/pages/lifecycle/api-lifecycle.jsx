@@ -3,7 +3,6 @@ import React from 'react';
 import { graphql, withPrefix } from 'gatsby';
 
 import Layout from '../../components/layout';
-
 import RightNavLinks from '../../components/RightNavLinks';
 import { leftNavItems } from '../../components/LeftNav/LeftNavItems';
 import LeftNav from '../../components/LeftNav/LeftNav';
@@ -13,8 +12,8 @@ import styled from 'styled-components';
 import 'prismjs/themes/prism-tomorrow.css';
 import BreadCrumbsLinks from '../../components/modules/BreadCrumbsLinks';
 import PreviousAndNextLinks from '../../components/modules/PreviousAndNextLinks';
-import { BaseLinkStyles, IconList } from 'aether-marketing';
-// import { BaseLinkStyles } from 'aether-marketing';
+import { BaseLinkStyles } from 'aether-marketing';
+import EditDoc from '../../components/Shared/EditDoc';
 
 const DocWrapper = styled.div`
   /* Used for Deeplinking */   
@@ -484,7 +483,7 @@ const GraphQLPage = ({ data }) => {
                 <PreviousAndNextLinks data={{ previous, next }} />
               </main>
               <RightColumnWrapper className="col-sm-12 col-md-12 col-lg-3 offset-lg-0 col-xl-3 offset-xl-1 right-column">
-
+                <EditDoc />
                 <RightNavLinks />
 
               </RightColumnWrapper>
