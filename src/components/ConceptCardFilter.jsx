@@ -14,6 +14,7 @@ function ConceptCardFilter() {
             example: Example
             tag: Tags
             title: Term
+            source: Source_article__video__documentation__etc_
             }
           }
           id
