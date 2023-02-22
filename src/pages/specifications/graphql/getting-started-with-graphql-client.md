@@ -4,8 +4,20 @@ order: 1
 page_id: "getting-Started-with-new-graphql-client"
 warning: false
 updated: 2023-02-15
-
+contextual_links:
+  - type: section
+    name: "GraphQL resources"
+  - type: link
+    name: "Postman joins GraphQL Foundation"
+    url: "https://blog.postman.com/postman-joins-graphql-foundation/"
+  - type: link
+    name: "What is GraphQL part one the Facebook years"
+    url: "https://blog.postman.com/what-is-graphql-part-one-the-facebook-years/"
+  - type: link
+    name: "How to build secure GraphQL APIs"
+    url: "https://blog.postman.com/how-to-build-secure-graphql-apis/"
 ---
+
 ### What is this?
 
 This document will serve as your quick-start guide for the early release of Postman's new GraphQL Client. Below are a few screenshots with the highlighted areas of the client to get an example schema loaded. From there, you can experiment with the new features and perform the operations common to building queries and testing a GraphQL API.

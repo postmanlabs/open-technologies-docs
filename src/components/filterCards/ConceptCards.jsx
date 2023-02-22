@@ -11,19 +11,20 @@ const CardWrapper = styled.div`
   border: 1px solid ${(props) => props.theme.colors.grey_20};
   border-radius: 10px;
   max-width: 300px;
-  &:hover {
+  
+ &:hover {
     box-shadow: ${(props) =>
-      props.altBoxShadow
-        ? props.theme.shadows.card_shadow
-        : props.theme.shadows.card_shadow};
+    props.altBoxShadow
+      ? props.theme.shadows.card_shadow
+      : props.theme.shadows.card_shadow};
     -webkit-box-shadow: ${(props) =>
-      props.altBoxShadow
-        ? props.theme.shadows.card_shadow
-        : props.theme.shadows.card_shadow};
+    props.altBoxShadow
+      ? props.theme.shadows.card_shadow
+      : props.theme.shadows.card_shadow};
     -moz-box-shadow: ${(props) =>
-      props.altBoxShadow
-        ? props.theme.shadows.card_shadow
-        : props.theme.shadows.card_shadow};
+    props.altBoxShadow
+      ? props.theme.shadows.card_shadow
+      : props.theme.shadows.card_shadow};
 
   .landing-card__content {
     text-decoration: none;
@@ -66,12 +67,12 @@ const CardWrapper = styled.div`
       display: none;
     }
  
-    }
-    
-  
+  }
+     
   .tag {
     margin-left: 10px;
   }
+
 .code {
   height: 100%;
   background-color: ${(props) => props.theme.colors.grey_10};
@@ -83,16 +84,39 @@ const CardWrapper = styled.div`
   }
 }
 
+
+  
+
+` 
+const ModalWrapper = styled.div`
 div.modal {
   background-color: ${(props) => props.theme.colors.grey_00}!important;
   margin: auto;
   height: 100vh;
   max-width: 950px;
- 
+}
+.landing-card__content {
+    text-decoration: none;
+    transform: translateY(-0.5rem);
+  }
+    /* max-height: 430px; */
+    &-description {
+      margin-bottom: 25px;
+      font-size: 16px;   
+    }
+
+ .code {
+  background-color: ${(props) => props.theme.colors.grey_10}!important;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+ }
+ code {
+  color: rgb(17, 17, 18);
+  white-space: wrap;  
+}
 .close {
   font-size: 2rem;
-}
-  
 }
 `
 
@@ -123,21 +147,21 @@ export const ConceptCard = ({
             <div className='mb-2'>
               <p className='mb-0 text-uppercase small mb-2'>Example</p>
               <div className='code truncate'>
-              <ReactMarkdown>{example && example.substring(0, 80)}</ReactMarkdown>
+                <ReactMarkdown>{example && example.substring(0, 80)}</ReactMarkdown>
                 {/* <code>{example}</code> */}
               </div>
             </div>
             <div>
-                <p className='mb-0 text-uppercase small mb-2'>Source Link</p>
-                {sourceLink && <div>
-                  <a href={sourceLink}>{sourceLink}</a>
-                </div>}
-              </div>
+              <p className='mb-0 text-uppercase small mb-2'>Source Link</p>
+              {sourceLink && <div>
+                <a href={sourceLink}>{sourceLink}</a>
+              </div>}
+            </div>
           </div>
         </div>
-</CardWrapper>
-        {/* Modal */}
-<CardWrapper>
+      </CardWrapper>
+      {/* Modal */}
+      <ModalWrapper>
         <div className="modal fade " id={id} tabIndex="1" role="dialog" aria-labelledby={title} aria-hidden="true">
           <div className="modal-dialog modal-dialog-centered" role="document">
             <div className="">
@@ -166,14 +190,13 @@ export const ConceptCard = ({
               </div>
               <div className='row mb-2'>
                 <p className='col-4 mb-0 text-uppercase'>Example</p>
-                <div className='code col-6'>
-                  {/* <ReactMarkdown>{example}</ReactMarkdown> */}
-                  <code>{example}</code>
+                <div className='code '>
+                  <ReactMarkdown>{example}</ReactMarkdown>
+                  
                 </div>
               </div>
               <div className='row'>
                 <p className='col-4 mb-0 text-uppercase'>Source Link</p>
-                <a href={sourceLink}>test</a>
                 {sourceLink && <div>
                   <a href={sourceLink}>{sourceLink}</a>
                 </div>}
@@ -181,7 +204,7 @@ export const ConceptCard = ({
             </div>
           </div>
         </div>
-      </CardWrapper>
+      </ModalWrapper>
     </>
   )
 };
