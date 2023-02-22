@@ -120,7 +120,7 @@ const GraphQLPage = ({ data }) => {
                         <img src={withPrefix("/images/Info.png")} alt="community Icon" width="50px" className='mr-2' />
                         <h4>GraphQL News</h4>
                         <div className="mb-2">
-                          <DynamicLink url="" name="Postman's New GraphQL Client →" />
+                          <DynamicLink url="/specifications/graphql/getting-started-with-graphql-client/" name="Postman's New GraphQL Client →" />
                         </div>
                         <div className="mb-2">
                           <DynamicLink url="/specifications/graphql/getting-started-with-graphql-client/" name="Getting Started Guide for New GraphQL Client →" />
