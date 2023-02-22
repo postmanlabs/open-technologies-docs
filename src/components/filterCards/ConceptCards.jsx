@@ -11,6 +11,7 @@ const CardWrapper = styled.div`
   border: 1px solid ${(props) => props.theme.colors.grey_20};
   border-radius: 10px;
   max-width: 300px;
+  position: relative;
   
  &:hover {
     box-shadow: ${(props) =>
@@ -25,7 +26,9 @@ const CardWrapper = styled.div`
     props.altBoxShadow
       ? props.theme.shadows.card_shadow
       : props.theme.shadows.card_shadow};
-
+      text-decoration: none;
+    transform: translateY(-0.5rem);
+ }
   .landing-card__content {
     text-decoration: none;
     transform: translateY(-0.5rem);
@@ -41,7 +44,7 @@ const CardWrapper = styled.div`
     a {
       margin-bottom: 48px;
     }
-  }
+  
 
   .truncate{
     color: rgb(17, 17, 18);
