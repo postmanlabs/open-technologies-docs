@@ -26,7 +26,7 @@ return (
   <div >         
     {Events.map((event) => (
       <div className='mb-2' key={uuidv4()}>
-        <a  href={event.fields.Link} target="_blank" rel="noopener">{event.fields.title} →</a>  
+        { event.fields.Link ? (<a  href={event.fields.Link} target="_blank" rel="noopener">{event.fields.title} →</a>)  : event.fields.title }
       </div>  
       ))}
               
