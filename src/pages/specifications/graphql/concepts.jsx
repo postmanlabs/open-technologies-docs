@@ -13,7 +13,8 @@ import BreadCrumbsLinks from '../../../components/modules/BreadCrumbsLinks';
 import PreviousAndNextLinks from '../../../components/modules/PreviousAndNextLinks';
 import ConceptCardFilter from '../../../components/ConceptCardFilter';
 import { DocWrapper } from '../../../../styles/DocWrapper';
-
+import DynamicLink from '../../../components/Shared/DynamicLink';
+import EditDoc from '../../../components/Shared/EditDoc';
 
 const RightColumnWrapper = styled.aside`
   margin-top: 0px;
@@ -38,6 +39,65 @@ const RightColumnWrapper = styled.aside`
 .dynamic-link  {
   width: 100;
 }
+`
+const ContextualStyles = styled.div`
+
+   .contextual-links__section {
+    margin-top: 24px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: ${(props) => props.theme.colors.grey_80};
+  }
+  .contextual-links__link {
+    margin-bottom: 0;
+    padding: 4px 0;
+    display: block;
+    
+    a {
+      color: ${(props) => props.theme.colors.grey_50};
+      font-size: 14px;
+      text-decoration: none;
+      border-bottom: 1px solid ${(props) => props.theme.colors.grey_00};
+      transition: ${(props) => props.theme.transitions.all};
+    }
+    
+    &:hover {
+      a {
+        color: ${(props) => props.theme.colors.blue_60};
+        border-bottom: 1px solid ${(props) => props.theme.colors.blue_60};
+        transition: ${(props) => props.theme.transitions.all};
+      }
+    }
+  }
+
+  .contextual-links__subtitle {
+    color: ${(props) => props.theme.colors.grey_60};
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: .7rem;
+  }
+
+  .contextual-links__alert {
+    border: 4px dashed ${(props) => props.theme.colors.grey_10};
+    border-radius: ${(props) => props.theme.borderRadius.small};
+    padding: .75rem 1.25rem;
+    color: #0C5460;
+  }
+
+  // tablet view
+  @media (min-width: 767px) and (max-width: 990px) {
+      padding-bottom: 80px;
+  }
+
+
+  // mobile view
+  @media (max-width: 767px) {
+    padding-bottom: 80px;
+  }
+
+
 `
 
 const GraphQLPage = ({ data }) => {
@@ -64,7 +124,7 @@ const GraphQLPage = ({ data }) => {
                 <p>A primary goal of this presentation of GraphQL concepts in addition to those listed above is clarity. When we focus on one concept at a time, we can gain a clearer understanding of that concept and its role within the larger technology structure. This can help us to better understand how the different parts of the technology work together and how we can use them to achieve our goals. A secondary goal is content reuse. It is easy to imagine how we might combine concepts to build API Blueprints, for example.</p>
 
                 <p>NOTE: To view the full concept entry, click on the card.</p>
-                        
+
                 <div className="row justify-content-evenly">
                   <div className="container-fluid">
                     <div className="row">
@@ -76,7 +136,22 @@ const GraphQLPage = ({ data }) => {
                 <PreviousAndNextLinks data={{ previous, next }} />
               </main>
               <RightColumnWrapper className="col-lg-2 offset-lg-0 col-xl-3 offset-xl-1 right-column">
+                <EditDoc />
 
+                <ContextualStyles >
+                  <div className='contextual-links__section'>
+                    GraphQL resources
+                  </div>
+                  <div className="contextual-links__link">
+                    <DynamicLink name="Postman joins GraphQL Foundation" url="https://blog.postman.com/postman-joins-graphql-foundation/" />
+                  </div>
+                  <div className="contextual-links__link">
+                    <DynamicLink name="What is GraphQL part one the Facebook years" url="https://blog.postman.com/what-is-graphql-part-one-the-facebook-years/" />
+                  </div>
+                  <div className="contextual-links__link">
+                    <DynamicLink name="How to build secure GraphQL APIs" url="https://blog.postman.com/how-to-build-secure-graphql-apis/" />
+                  </div>
+                </ContextualStyles>
                 <RightNavLinks />
 
               </RightColumnWrapper>

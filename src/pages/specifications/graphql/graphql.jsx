@@ -15,6 +15,7 @@ import BreadCrumbsLinks from '../../../components/modules/BreadCrumbsLinks';
 import PreviousAndNextLinks from '../../../components/modules/PreviousAndNextLinks';
 import { DocWrapper } from '../../../../styles/DocWrapper';
 import CalendarDates from '../../../components/calendarDates';
+import EditDoc from '../../../components/Shared/EditDoc';
 
 const HubWrapper = styled.section`
 .calendar a {
@@ -60,16 +61,64 @@ const RightColumnWrapper = styled.aside`
   width: 100;
 }
 `
+const ContextualStyles = styled.div`
 
-const SvgWrapper = styled.i`
-  // gets rid of weird background bug with our icons. We need to redo these.
-  background: 0 0;
-  
-  svg.button-icon--left {
-    margin-right: 7px;
-    overflow: hidden;
-    vertical-align: middle;
+   .contextual-links__section {
+    margin-top: 24px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: ${(props) => props.theme.colors.grey_80};
   }
+  .contextual-links__link {
+    margin-bottom: 0;
+    padding: 4px 0;
+    display: block;
+    
+    a {
+      color: ${(props) => props.theme.colors.grey_50};
+      font-size: 14px;
+      text-decoration: none;
+      border-bottom: 1px solid ${(props) => props.theme.colors.grey_00};
+      transition: ${(props) => props.theme.transitions.all};
+    }
+    
+    &:hover {
+      a {
+        color: ${(props) => props.theme.colors.blue_60};
+        border-bottom: 1px solid ${(props) => props.theme.colors.blue_60};
+        transition: ${(props) => props.theme.transitions.all};
+      }
+    }
+  }
+
+  .contextual-links__subtitle {
+    color: ${(props) => props.theme.colors.grey_60};
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: .7rem;
+  }
+
+  .contextual-links__alert {
+    border: 4px dashed ${(props) => props.theme.colors.grey_10};
+    border-radius: ${(props) => props.theme.borderRadius.small};
+    padding: .75rem 1.25rem;
+    color: #0C5460;
+  }
+
+  // tablet view
+  @media (min-width: 767px) and (max-width: 990px) {
+      padding-bottom: 80px;
+  }
+
+
+  // mobile view
+  @media (max-width: 767px) {
+    padding-bottom: 80px;
+  }
+
+
 `
 
 const GraphQLPage = ({ data }) => {
@@ -89,7 +138,7 @@ const GraphQLPage = ({ data }) => {
           <div className="col">
             <div className="row row-eq-height">
               <main className="col-lg-9 offset-lg-0 col-xl-7 doc-page ml-xl-5">
-                <BreadCrumbsLinks data={{ parentLink, subParentLink }} />            
+                <BreadCrumbsLinks data={{ parentLink, subParentLink }} />
                 <div className='row mb-4'>
                   <img src="https://voyager.postman.com/logo/external/graphql-icon.svg" alt="graphql icon" className='mr-3' width="50px" />
                   <h1>GraphQL</h1>
@@ -148,17 +197,17 @@ const GraphQLPage = ({ data }) => {
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="col-lg-6 mb-5">
                       <div className="">
                         <img src={withPrefix("/images/Events.svg")} alt="community Icon" width="50px" className='mr-2' />
                         <h4>Calendar</h4>
                         <div className='mb-2'>
-                        <CalendarDates/>
+                          <CalendarDates />
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="col-lg-6 mb-5">
                       <div className="mb-2">
                         <img src={withPrefix("/images/Contract.png")} alt="contract. Icon" width="50px" className='mr-2' />
@@ -207,21 +256,37 @@ const GraphQLPage = ({ data }) => {
                         </div>
                         <div className='mb-2'>
                           <DynamicLink url="https://github.com/graphql/composite-schemas-wg" name="Composite Schema working group →" />
-                        </div>                  
+                        </div>
                         <div className='mb-2'>
                           <DynamicLink url="https://github.com/graphql/graphiql" name="GraphiQL →" />
                         </div>
-                        <div className='mb-2'>                
+                        <div className='mb-2'>
                           <DynamicLink url="https://github.com/graphql/graphql-playground" name="GraphQL Playground →" />
                         </div>
                       </div>
                     </div>
                   </div>
                 </HubWrapper>
-   {/* Qualtrics */}
+                {/* Qualtrics */}
                 <PreviousAndNextLinks data={{ previous, next }} />
               </main>
               <RightColumnWrapper className="col-sm-12 col-md-12 col-lg-3 offset-lg-0 col-xl-3 offset-xl-1 right-column">
+                <EditDoc />
+
+                <ContextualStyles >
+                  <div className='contextual-links__section'>
+                    GraphQL resources
+                  </div>
+                  <div className="contextual-links__link">
+                    <DynamicLink name="Postman joins GraphQL Foundation" url="https://blog.postman.com/postman-joins-graphql-foundation/" />
+                  </div>
+                  <div className="contextual-links__link">
+                    <DynamicLink name="What is GraphQL part one the Facebook years" url="https://blog.postman.com/what-is-graphql-part-one-the-facebook-years/" />
+                  </div>
+                  <div className="contextual-links__link">
+                    <DynamicLink name="How to build secure GraphQL APIs" url="https://blog.postman.com/how-to-build-secure-graphql-apis/" />
+                  </div>
+                </ContextualStyles>
                 <RightNavLinks />
               </RightColumnWrapper>
             </div>

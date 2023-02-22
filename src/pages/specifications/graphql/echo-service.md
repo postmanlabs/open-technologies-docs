@@ -6,7 +6,18 @@ warning: false
 updated: 2023-01-22
 author: Meenakshi Dhanani
 tag: "echo, graphql"
-
+contextual_links:
+  - type: section
+    name: "GraphQL resources"
+  - type: link
+    name: "Postman joins GraphQL Foundation"
+    url: "https://blog.postman.com/postman-joins-graphql-foundation/"
+  - type: link
+    name: "What is GraphQL part one the Facebook years"
+    url: "https://blog.postman.com/what-is-graphql-part-one-the-facebook-years/"
+  - type: link
+    name: "How to build secure GraphQL APIs"
+    url: "https://blog.postman.com/how-to-build-secure-graphql-apis/"
 ---
 
 An echo service is a minimalistic API that, like an echo, returns what you request from the server. Echo services for REST, gRPC, and Web Sockets have long been used to test clients in Postman and explore features while learning the fundamentals of each of these protocols. Postman's new GraphQL client currently in open beta, and what better way to test it than with an Echo GraphQL service? This blog post discusses the procedure for building an echo server for GraphQL, as well as some insights and lessons learned along the way. Check out the [GraphQL Echo collection](https://www.postman.com/postman/workspace/published-postman-templates/collection/63c7d7701bfb72333ca216d4?action=share&creator=13059338) to get started.
