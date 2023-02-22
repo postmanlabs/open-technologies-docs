@@ -49,7 +49,7 @@ const CardWrapper = styled.div`
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
-
+    
     p{
       font-size: 14px;
     }
@@ -123,7 +123,7 @@ export const ConceptCard = ({
             <div className='mb-2'>
               <p className='mb-0 text-uppercase small mb-2'>Example</p>
               <div className='code truncate'>
-                <ReactMarkdown>{example}</ReactMarkdown>
+              <ReactMarkdown>{example && example.substring(0, 80)}</ReactMarkdown>
                 {/* <code>{example}</code> */}
               </div>
             </div>
