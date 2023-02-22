@@ -109,11 +109,15 @@ div.modal {
   background-color: ${(props) => props.theme.colors.grey_10}!important;
   height: 100%;
   width: 50%;
-  overflow: hidden;
+  padding: 5px;
  }
- code {
+ 
+
+  pre{
+    overflow: hidden;
+    code {
   color: rgb(17, 17, 18);
-  white-space: wrap;  
+  }
 }
 .close {
   font-size: 2rem;
