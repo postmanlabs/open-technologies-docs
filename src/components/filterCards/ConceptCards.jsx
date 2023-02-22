@@ -3,7 +3,7 @@ const { v4: uuidv4 } = require('uuid');
 import styled from 'styled-components';
 import { TagStyles } from "./Tag";
 import { Divider } from 'aether-marketing';
-// import ReactMarkdown from 'react-markdown';
+import ReactMarkdown from 'react-markdown';
 
 const CardWrapper = styled.div`
   margin-bottom: 32px;
@@ -32,6 +32,7 @@ const CardWrapper = styled.div`
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
+
     p{
       font-size: 14px;
     }
@@ -44,8 +45,12 @@ const CardWrapper = styled.div`
     -webkit-line-clamp: 4;
     font-size: 14px;
   }
-
+    p:not(:first-child) {
+      display: none;
     }
+ 
+    }
+    
   
   .tag {
     margin-left: 10px;
@@ -57,6 +62,7 @@ const CardWrapper = styled.div`
   code{
     white-space: pre-wrap;
     color: rgb(17, 17, 18);
+    
   }
 }
 
@@ -74,7 +80,7 @@ div.modal {
 `
 
 export const ConceptCard = ({
-  title, description, tag, example
+  title, description, tag, example, sourceLink
 }) => {
   const id = title.replaceAll(' ', '-')
 
@@ -96,16 +102,15 @@ export const ConceptCard = ({
             </div>
           </div>
           <div>
-            {example && (
+           
               <div>
                 <p className='mb-0 text-uppercase small mb-2'>Example</p>
                 <div className='code truncate'>
-                  {/* <ReactMarkdown>{example}</ReactMarkdown> */}
-                  <code>{example}</code>
+                  <ReactMarkdown>{example}</ReactMarkdown>
+                  {/* <code>{example}</code> */}
                 </div>
               </div>
-            )
-            }
+            
           </div>
         </div>
 
@@ -127,7 +132,6 @@ export const ConceptCard = ({
                 <p className='col-4 mb-0 text-uppercase '>description</p>
                 <p className="col-6 landing-card__content-description"> {description}</p>
               </div>
-              <div>
                 <div className='row mb-2'>
                   <p className='col-4 mb-0 text-uppercase '>tags</p>
                   <div className='col-6 row '>
@@ -138,9 +142,6 @@ export const ConceptCard = ({
                     ))}
                   </div>
                 </div>
-              </div>
-              <div >
-                {example && (
                   <div className='row'>
                     <p className='col-4 mb-0 text-uppercase '>Example</p>
                     <div className='code col-6'>
@@ -148,10 +149,10 @@ export const ConceptCard = ({
                       <code>{example}</code>
                   </div>
                   </div>
-                  ) 
-                }
-
-              </div>
+                    <p>Source Link</p>
+                  {sourceLink && <div>
+                    <a href={sourceLink}>{sourceLink}</a>
+                    </div>}
             </div>
           </div>
         </div>
