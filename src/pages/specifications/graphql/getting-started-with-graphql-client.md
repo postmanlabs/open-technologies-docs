@@ -82,4 +82,4 @@ You can use Postman collections from public GraphQL APIs to try out our new Grap
 
 You can provide us with your feedback, including screenshots if you would like to use those, and share your general experience using the new GraphQL Client.  We are eager to learn of any bugs you encounter or features you believe need to be added to future versions of the client.
 
-[Feedback Form.](https://docs.google.com/forms/d/1nq3s_PsYHA4BgozVlVilkIo_ira8_uu1pfpqWCjxozw/edit)
+[Feedback Form](https://docs.google.com/forms/d/1nq3s_PsYHA4BgozVlVilkIo_ira8_uu1pfpqWCjxozw/edit)
