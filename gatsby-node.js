@@ -218,7 +218,6 @@ exports.sourceNodes = async ({
   // console.log(JSON.stringify(calendarData), 'calendar')
     actions.createNode({
       ...cardData,
-      // id: createNodeId(`${cardData}-id`),
       id: `card-id-${uuidv4()}`,
       parent: null,
       children: [],
@@ -229,7 +228,6 @@ exports.sourceNodes = async ({
     })
     actions.createNode({
       ...calendarData,
-      // id: createNodeId(`${calendarData}-id`),
       id: `calendar-id-${uuidv4()}`,
       parent: null,
       children: [],
