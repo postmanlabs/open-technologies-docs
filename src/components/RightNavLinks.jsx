@@ -81,10 +81,10 @@ export default function RightNavLinks() {
                  Collaborate with us
                   </div>
                   <div className="contextual-links__link" >
-                  <DynamicLink url="https://github.com/postmanlabs" name="Postman's Github" />
+                  <DynamicLink url="https://github.com/postmanlabs" name="Postman's GitHub" />
                 </div>
                 <div className="contextual-links__link" >
-                  <DynamicLink url="https://github.com/postman-open-technologies" name="Open Technologies Github" />
+                  <DynamicLink url="https://github.com/postman-open-technologies" name="Open Technologies GitHub" />
                 </div>
                 <div className='contextual-links__section'>
                 Specs we contribute to
