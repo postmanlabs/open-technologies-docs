@@ -204,6 +204,7 @@ export const ConceptCard = ({
               </div>
               <div className='row'>
                 <p className='col-4 mb-0 text-uppercase'>Source Link</p>
+                {/* {console.log(sourceLink)} */}
                 {sourceLink && <div>
                   <a href={sourceLink}>{sourceLink}</a>
                 </div>}
