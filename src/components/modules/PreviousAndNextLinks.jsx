@@ -75,7 +75,6 @@ function PreviousAndNextLinks() {
     handleKeyboard();
   }, []);
 
-
   return (
     <>
       <hr />
@@ -84,7 +83,7 @@ function PreviousAndNextLinks() {
           <div className="mr-auto">
             <Link
               id="prevDoc"
-              rel="prev"
+              rel="prev"  
               to={ prevLink.url  || prevLink.slug}
               title={`Go to the previous page: ${prevLink.name}`}
               aria-label={`Go to the previous page: ${prevLink.name}`}
