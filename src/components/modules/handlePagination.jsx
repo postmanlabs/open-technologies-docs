@@ -1,14 +1,20 @@
 /* Use <- and -> keys to navigate between docs on web */
 export const handleKeyboard = () => {
   // const togglePrevLink = document.querySelector('.prevDoc');
-  // const toggleNextLink =  document.getElementById('nextDoc');
-  
+  // const toggleNextLink = document.querySelector('.nextDoc');
+
   document.addEventListener('keydown', (e) => {
+    const togglePrevLink =  document.getElementById('prevDoc');
+    const toggleNextLink =  document.getElementById('nextDoc');
+   if(togglePrevLink != undefined){
     if (e.key === 'ArrowLeft') {
-      document.getElementById('prevDoc').click();
+      togglePrevLink.click();
     }
+  }
+  if(toggleNextLink != undefined){
     if (e.key === 'ArrowRight') {
-      document.getElementById('nextDoc').click();
+      toggleNextLink.click();
     }
+  }
   })
 }
