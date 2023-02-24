@@ -148,7 +148,7 @@ color: black;
     background-color: magenta;
   }
   &[data-text="caching"]:hover, &[data-text="caching"]&.active {
-    background-color: ${(props) => props.theme.colors.orange_50};
+    background-color: ${(props) => props.theme.colors.orange_60};
     color: white;
   }
   &[data-text="spec"]:hover, &[data-text="spec"]&.active {
