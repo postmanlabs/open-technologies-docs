@@ -1,135 +1,135 @@
 {
-  "records": [
-    {
-        "id": "rec1NLCRTTolKRkba",
-        "createdTime": "2023-01-03T14:50:50.000Z",
-        "fields": {
-            "Example": "Valid uses of the \"!\" to indicate that a field or list can't be null applied to fields and lists.\n\nString! - returns a string that can't be null\n[Words] - returns a list and can return a null list or null members.\n[Words!] - returns a list that can be null but its members can't be\n[Words]!- returns a list that can't be null but its members can return null\n[Words!]!- returns a list that can't be null and can't have null members\n",
-            "Description": "Non-null types represent a value that cannot be null. Fields that are nonnull or where null is not an acceptable response are identified with an exclamation mark.\n",
-            "Term": "DUMMY DATA Non-null Types",
-            "Tags": [
-                "nonnull",
-                "spec"
-            ]
+    "records": [
+        {
+            "id": "rec1NLCRTTolKRkba",
+            "createdTime": "2023-01-03T14:50:50.000Z",
+            "fields": {
+                "Example": "Valid uses of the \"!\" to indicate that a field or list can't be null applied to fields and lists.\n\nString! - returns a string that can't be null\n[Words] - returns a list and can return a null list or null members.\n[Words!] - returns a list that can be null but its members can't be\n[Words]!- returns a list that can't be null but its members can return null\n[Words!]!- returns a list that can't be null and can't have null members\n",
+                "Description": "Non-null types represent a value that cannot be null. Fields that are nonnull or where null is not an acceptable response are identified with an exclamation mark.\n",
+                "Term": "DUMMY DATA Non-null Types",
+                "Tags": [
+                    "nonnull",
+                    "spec"
+                ]
+            }
+        },
+        {
+            "id": "rec2KXGE09ELJZgei",
+            "createdTime": "2022-12-14T12:37:34.000Z",
+            "fields": {
+                "Example": "\n",
+                "Description": "Federation is a pattern for building large-scale GraphQL APIs by breaking up the schema into smaller, modular parts, each owned and managed by a separate team or service. Each service defines its own part of the schema and exposes it to a gateway service that combines the schemas into a single, unified schema that clients can query.\n",
+                "Term": "DUMMY DATA Federation",
+                "Tags": [
+                    "non-spec",
+                    "schema"
+                ]
+            }
+        },
+        {
+            "id": "rec51ZynGYzsMpRhU",
+            "createdTime": "2023-01-03T14:50:07.000Z",
+            "fields": {
+                "Example": "```\ntype User {\n    id: ID!\n    name: String!\n    email: String!\n}\n\ntype Mutation {\n    createUser(name: String!, email: String!)User!\n    updateUser(id: ID!, name: String!, email: String!)User!\n    deleteUser(id: ID!)Boolean!\n\n```\n",
+                "Description": "A mutation is a write operation followed by a fetch. It enables the user to mutate (add, update, or delete) specified fields and then query the modified value on the object returned. \n",
+                "Term": "DUMMY DATA Mutation Operation",
+                "Tags": [
+                    "operation",
+                    "spec"
+                ]
+            }
+        },
+        {
+            "id": "rec6MjmBuqbaGPFHm",
+            "createdTime": "2023-02-15T11:50:16.000Z",
+            "fields": {
+                "Example": "```\n{\n  \"query\": \"query getUserDetails($id: ID!) { user(id: $id) { name email posts { title content } } }\",\n  \"variables\": { \"id\": \"123\" },\n  \"operationName\": \"getUserDetails\"\n}\n```\n\n",
+                "Description": "An operation alias is a way to assign a different name to a query or mutation operation. Operation aliases can be useful in a variety of situations, such as when you want to identify multiple queries or mutations in a single request, or when you want to make the operation name more descriptive or shorter.\n",
+                "Term": "DUMMY DATA Operation Alias",
+                "Tags": [
+                    "spec",
+                    "query"
+                ]
+            }
+        },
+        {
+            "id": "rec6iwgldViSR3XVP",
+            "createdTime": "2023-01-03T14:50:18.000Z",
+            "fields": {
+                "Example": "```\ntype Message {\n    id: ID!\n    text: String!\n    createdAt: Date!\n}\n\ntype Subcription {\n    newMessage: Message!\n}\n\nsubscription {\n    newMessage {\n        id\n        text\n        createdAt\n    }\n}\n\n```\n",
+                "Description": "Subscriptions are a feature in the GraphQL specification that allows clients to subscribe to real-time updates from the server. They are a way for clients to receive a stream of data pushed from the server as new data becomes available.\n\n\n",
+                "Term": "DUMMY DATA Subscription Operation",
+                "Tags": [
+                    "operation",
+                    "spec"
+                ]
+            }
+        },
+        {
+            "id": "rec7ttBXzOi11O3QF",
+            "createdTime": "2022-12-14T12:37:34.000Z",
+            "fields": {
+                "Example": "```\ntype Post @model @auth(rules: [\n    { allow: private, operations: [read] },\n    { allow: groups, groups: [\"admin\"] }.\n    { allow: owner, ownerField: \"author\" }]\n]) {\n    id: ID!\n    title: String!\n    author: String!\n}\n```\n\n",
+                "Description": "Permissions in GraphQL can be specified at the query level, object level, or field level. \n",
+                "Source article, video, documentation, etc.": "https://graphql.org/learn/authorization/",
+                "Term": "DUMMY DATA Field Level Authorization",
+                "Tags": [
+                    "authorization",
+                    "schema",
+                    "non-spec"
+                ]
+            }
+        },
+        {
+            "id": "rec7wzuWunPxExW3f",
+            "createdTime": "2023-01-03T14:56:20.000Z",
+            "fields": {
+                "Example": "```\n// Subscribe to real-time updates on the current temperature in a city\nconst query = `\n  subscription {\n    temperature(city: \"San Francisco\")\n  }\n`;\n\n// Create a function to handle updates from the server\nconst handleUpdate = (temperature) => {\n  console.log(`The temperature in San Francisco is now ${temperature}°F`);\n};\n\n// Send the subscription request to the server and pass the update handler function\nclient.subscribe({ query, handleUpdate });\n```\n\n\n",
+                "Description": "GraphQL live queries allow a client to subscribe to real-time updates from a GraphQL server. Instead of making a request to the server and receiving a one-time response, the client can establish a long-running connection with the server and receive updates in real time as they happen.\n",
+                "Term": "DUMMY DATA Live Queries",
+                "Tags": [
+                    "subscription",
+                    "real-time",
+                    "non-spec"
+                ]
+            }
+        },
+        {
+            "id": "rec8Sl8LTNgJ4uuOo",
+            "createdTime": "2023-01-03T15:00:11.000Z",
+            "fields": {
+                "Example": "```\n__Schema\n__Type\n__Field\n__InputValue\n__EnumValue\n__Directive\n```\n\n\n",
+                "Description": "Introspection is the capability of returning parts of a schema or the full schema from a GraphQL API using a special client query. It can be used for schema exploration, client code generation, query validation, and documentation generation. In Example, are all of the types that can introspect the schema or parts of it.\n",
+                "Term": "DUMMY DATA Introspection",
+                "Tags": [
+                    "schema",
+                    "spec"
+                ]
+            }
+        },
+        {
+            "id": "rec9XZxfKrkh16epU",
+            "createdTime": "2023-02-15T12:03:45.000Z",
+            "fields": {
+                "Example": "type Query {\n getUser(id: ID!): User @deprecated(reason: \"Use 'findUser' instead.\")\n}\nenum UserRole {\n ADMIN\n USER\n GUEST @deprecated(reason: \"Use 'ANONYMOUS' instead.\")\n}\n",
+                "Description": "Deprecation is a way to signal to clients that a particular field or enum value in a schema is being phased out and will be removed in a future version. This can help prevent breaking changes in the client code when the schema is updated.\nDeprecation is signaled by using the `@deprecated` directive, which is defined in the GraphQL specification. The directive takes an optional reason argument, which can be used to explain why the field is being deprecated and suggest an alternative.\n",
+                "Term": "DUMMY DATA Deprecation",
+                "Tags": [
+                    "spec"
+                ]
+            }
+        },
+        {
+            "id": "rec9by0LlOQLADvlS",
+            "createdTime": "2023-02-15T12:02:11.000Z",
+            "fields": {
+                "Example": "```\nquery {\n  user(id: \"123\") {\n    name\n    email\n    posts {\n      content\n      title\n      createdAt\n    }\n  }\n}\n```\n\n",
+                "Description": "In GraphQL, the order of fields in a selection set has no effect on the query results. However, some clients and tools may rely on the order of fields for display or formatting purposes, so it is often a good idea to keep fields in a logical order.\n",
+                "Term": "DUMMY DATA Field Ordering",
+                "Tags": [
+                    "spec"
+                ]
+            }
         }
-    },
-    {
-        "id": "rec2KXGE09ELJZgei",
-        "createdTime": "2022-12-14T12:37:34.000Z",
-        "fields": {
-            "Example": "\n",
-            "Description": "Federation is a pattern for building large-scale GraphQL APIs by breaking up the schema into smaller, modular parts, each owned and managed by a separate team or service. Each service defines its own part of the schema and exposes it to a gateway service that combines the schemas into a single, unified schema that clients can query.\n",
-            "Term": "DUMMY DATA Federation",
-            "Tags": [
-                "non-spec",
-                "schema"
-            ]
-        }
-    },
-    {
-        "id": "rec51ZynGYzsMpRhU",
-        "createdTime": "2023-01-03T14:50:07.000Z",
-        "fields": {
-            "Example": "```\ntype User {\n    id: ID!\n    name: String!\n    email: String!\n}\n\ntype Mutation {\n    createUser(name: String!, email: String!)User!\n    updateUser(id: ID!, name: String!, email: String!)User!\n    deleteUser(id: ID!)Boolean!\n\n```\n",
-            "Description": "A mutation is a write operation followed by a fetch. It enables the user to mutate (add, update, or delete) specified fields and then query the modified value on the object returned. \n",
-            "Term": "DUMMY DATA Mutation Operation",
-            "Tags": [
-                "operation",
-                "spec"
-            ]
-        }
-    },
-    {
-        "id": "rec6MjmBuqbaGPFHm",
-        "createdTime": "2023-02-15T11:50:16.000Z",
-        "fields": {
-            "Example": "```\n{\n  \"query\": \"query getUserDetails($id: ID!) { user(id: $id) { name email posts { title content } } }\",\n  \"variables\": { \"id\": \"123\" },\n  \"operationName\": \"getUserDetails\"\n}\n```\n\n",
-            "Description": "An operation alias is a way to assign a different name to a query or mutation operation. Operation aliases can be useful in a variety of situations, such as when you want to identify multiple queries or mutations in a single request, or when you want to make the operation name more descriptive or shorter.\n",
-            "Term": "DUMMY DATA Operation Alias",
-            "Tags": [
-                "spec",
-                "query"
-            ]
-        }
-    },
-    {
-        "id": "rec6iwgldViSR3XVP",
-        "createdTime": "2023-01-03T14:50:18.000Z",
-        "fields": {
-            "Example": "```\ntype Message {\n    id: ID!\n    text: String!\n    createdAt: Date!\n}\n\ntype Subcription {\n    newMessage: Message!\n}\n\nsubscription {\n    newMessage {\n        id\n        text\n        createdAt\n    }\n}\n\n```\n",
-            "Description": "Subscriptions are a feature in the GraphQL specification that allows clients to subscribe to real-time updates from the server. They are a way for clients to receive a stream of data pushed from the server as new data becomes available.\n\n\n",
-            "Term": "DUMMY DATA Subscription Operation",
-            "Tags": [
-                "operation",
-                "spec"
-            ]
-        }
-    },
-    {
-        "id": "rec7ttBXzOi11O3QF",
-        "createdTime": "2022-12-14T12:37:34.000Z",
-        "fields": {
-            "Example": "```\ntype Post @model @auth(rules: [\n    { allow: private, operations: [read] },\n    { allow: groups, groups: [\"admin\"] }.\n    { allow: owner, ownerField: \"author\" }]\n]) {\n    id: ID!\n    title: String!\n    author: String!\n}\n```\n\n",
-            "Description": "Permissions in GraphQL can be specified at the query level, object level, or field level. \n",
-            "Source article, video, documentation, etc.": "https://graphql.org/learn/authorization/",
-            "Term": "DUMMY DATA Field Level Authorization",
-            "Tags": [
-                "authorization",
-                "schema",
-                "non-spec"
-            ]
-        }
-    },
-    {
-        "id": "rec7wzuWunPxExW3f",
-        "createdTime": "2023-01-03T14:56:20.000Z",
-        "fields": {
-            "Example": "```\n// Subscribe to real-time updates on the current temperature in a city\nconst query = `\n  subscription {\n    temperature(city: \"San Francisco\")\n  }\n`;\n\n// Create a function to handle updates from the server\nconst handleUpdate = (temperature) => {\n  console.log(`The temperature in San Francisco is now ${temperature}°F`);\n};\n\n// Send the subscription request to the server and pass the update handler function\nclient.subscribe({ query, handleUpdate });\n```\n\n\n",
-            "Description": "GraphQL live queries allow a client to subscribe to real-time updates from a GraphQL server. Instead of making a request to the server and receiving a one-time response, the client can establish a long-running connection with the server and receive updates in real time as they happen.\n",
-            "Term": "DUMMY DATA Live Queries",
-            "Tags": [
-                "subscription",
-                "real-time",
-                "non-spec"
-            ]
-        }
-    },
-    {
-        "id": "rec8Sl8LTNgJ4uuOo",
-        "createdTime": "2023-01-03T15:00:11.000Z",
-        "fields": {
-            "Example": "```\n__Schema\n__Type\n__Field\n__InputValue\n__EnumValue\n__Directive\n```\n\n\n",
-            "Description": "Introspection is the capability of returning parts of a schema or the full schema from a GraphQL API using a special client query. It can be used for schema exploration, client code generation, query validation, and documentation generation. In Example, are all of the types that can introspect the schema or parts of it.\n",
-            "Term": "DUMMY DATA Introspection",
-            "Tags": [
-                "schema",
-                "spec"
-            ]
-        }
-    },
-    {
-        "id": "rec9XZxfKrkh16epU",
-        "createdTime": "2023-02-15T12:03:45.000Z",
-        "fields": {
-            "Example": "type Query {\n getUser(id: ID!): User @deprecated(reason: \"Use 'findUser' instead.\")\n}\nenum UserRole {\n ADMIN\n USER\n GUEST @deprecated(reason: \"Use 'ANONYMOUS' instead.\")\n}\n",
-            "Description": "Deprecation is a way to signal to clients that a particular field or enum value in a schema is being phased out and will be removed in a future version. This can help prevent breaking changes in the client code when the schema is updated.\nDeprecation is signaled by using the `@deprecated` directive, which is defined in the GraphQL specification. The directive takes an optional reason argument, which can be used to explain why the field is being deprecated and suggest an alternative.\n",
-            "Term": "DUMMY DATA Deprecation",
-            "Tags": [
-                "spec"
-            ]
-        }
-    },
-    {
-        "id": "rec9by0LlOQLADvlS",
-        "createdTime": "2023-02-15T12:02:11.000Z",
-        "fields": {
-            "Example": "```\nquery {\n  user(id: \"123\") {\n    name\n    email\n    posts {\n      content\n      title\n      createdAt\n    }\n  }\n}\n```\n\n",
-            "Description": "In GraphQL, the order of fields in a selection set has no effect on the query results. However, some clients and tools may rely on the order of fields for display or formatting purposes, so it is often a good idea to keep fields in a logical order.\n",
-            "Term": "DUMMY DATA Field Ordering",
-            "Tags": [
-                "spec"
-            ]
-        }
-    }
-  ]
+    ]
 }

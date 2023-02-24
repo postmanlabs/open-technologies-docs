@@ -89,7 +89,7 @@ The OpenAPI specification is built on a solid open-source foundation, ensuring t
 
 There are many factors at play that have pushed OpenAPI to be the specification of choice when it comes to enterprise organizations putting to work, but these elements provide a base foundation that has brought us to this moment and will continue expanding in coming years. OpenAPI is currently at version 3.1, with active discussion started regarding what version 4.0 might look like, continuing to build on the foundation that has already been laid.
 
-## Learn More
+## Learn more
 
 To learn more about the API Specification you can head over to [the learning center](https://learning.postman.com/docs/integrations/available-integrations/working-with-openAPI/) and understand how it is used as part of the Postman platform, or visit some of the follow links for the OpenAPI Initiative.
 

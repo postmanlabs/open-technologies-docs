@@ -8,7 +8,7 @@ updated: 2021-09-29
 
 APIs provide an opportunity for deep integration with existing API gateway solutions across the API lifecycle, allowing API contracts to be published and synced, rate limits, logging, caching, and other gateway capabilities to be configured and automated as part of the API lifecycle. Understanding the API gateway landscape and how they contribute to your work is an important part of anyone contributing to API operations–whether business or technical.
 
-## API Management
+## API management
 
 There are a handful of API management providers who have defined what we know as API management today, providing a suite of solutions with a gateway at the center.
 
@@ -18,7 +18,7 @@ There are a handful of API management providers who have defined what we know as
 
 There are a number of other enterprise API management providers, but these represent to the top three who also have an API for their solution.
 
-## Baked Into the Cloud
+## Baked into the cloud
 
 Around 2015, as the core capabilities of API gateways began to be commoditized, they also began being baked into the cloud across the top three cloud providers.
 
@@ -44,7 +44,7 @@ As gateways were commoditized and platform capabilities expanded, a new breed of
 
 There are other gateway solutions, but all of the gateways listed here are programmable, offering a way to automate API operations using an API, Git, and other extensible solutions.
 
-### Gateway Capabilities
+### Gateway capabilities
 
 While API management has long obfuscated exactly what is included as part of an API gateway, there are six distinct capabilities that a gateway possesses under the hood.
 
@@ -57,7 +57,7 @@ While API management has long obfuscated exactly what is included as part of an 
 
 These capabilities represent the expected value delivered by API gateway today, providing the fundamentals to strike the balance between securing digital resources and making them available.
 
-### Platform Capabilities
+### Platform capabilities
 
 There are a numer of capabilities offered by API gateway service providers to round off their offerings, but in recent years many of these capabilities have expanding into their offerings.
 
@@ -73,7 +73,7 @@ There are numerous protocols gateways utilized on the backend, ensuring that dig
 
 Gateways are the facade enterprise are using to modernize their legacy systems without always having to replace what is behind, while still meeting the needs of consumers today.
 
-### Downstream Protocols
+### Downstream protocols
 
 Inversely, there are a number of common protocols being made available downstream, supplying internal, partner, and 3rd party API consumers with the resources they need.
 
@@ -81,7 +81,7 @@ Inversely, there are a number of common protocols being made available downstrea
 
 Gateways are literally the digital gateway into the enterprise, providing a single large front door, but also many smaller doors for partners, teams, acquisitions, and other consumers.
 
-### API Contracts
+### API contracts
 
 Today’s API gateway is contract-driven, leveraging a variety of machine readable specifications, standards, and artifacts to help use deliver more consistent APIs at scale across the enterprise.
 
@@ -108,7 +108,7 @@ Gateways are being automated using a handful of mechanisms provided by the gatew
 
 Automation is delivered by your vendors, via your platform, or custom developed using gateway APIs, providing what is needed to bake gateways into the API factory floor.
 
-## Wide Distribution
+## Wide distribution
 
 While there is often a centralized gateway for the enterprise, it is increasingly common for there to be federated approaches to gateways emerging, and regional deployments pushing APIs to the edge.
 
@@ -130,7 +130,7 @@ As gateways surface area has shifted from a top-down centralized solution, it ha
 
 This expansion is putting pressure on business leadership to establish more centralized control over gateways, while not getting in the way of teams, and federating what matters most.
 
-## Standard Policies
+## Standard policies
 
 These are the areas of tests that can be applied at the gateway layer, augmenting earlier testing and governance to ensure configurations are present at the gateway.
 

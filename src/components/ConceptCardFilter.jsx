@@ -1,11 +1,11 @@
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 import FilterCard from "./filterCards/FilterCard";
 import FilterButtons from "./filterCards/FilterButtons";
 import { graphql, useStaticQuery } from "gatsby";
 
-function ConceptCardFilter() {  
- 
- const gatsbyRepoData = useStaticQuery(graphql`
+function ConceptCardFilter() {
+
+  const gatsbyData = useStaticQuery(graphql`
       query {
         cardData {
           records {
@@ -14,7 +14,7 @@ function ConceptCardFilter() {
             example: Example
             tag: Tags
             title: Term
-            Source
+            source: Source
             }
           }
           id
@@ -23,21 +23,21 @@ function ConceptCardFilter() {
   `);
 
   /*Create filter buttons*/
-const setOfTags = [ ...new Set(gatsbyRepoData.cardData.records.filter(q => !!q).map(item => item.fields.tag).filter(q => !!q))];
+  const setOfTags = [...new Set(gatsbyData.cardData.records.filter(q => !!q).map(item => item.fields.tag).filter(q => !!q))];
 
-let allCategories = ['All'];
-setOfTags?.forEach(item => {
-  item.forEach(category => allCategories.push(category))
+  let allCategories = ['All'];
+  setOfTags?.forEach(item => {
+    item.forEach(category => allCategories.push(category))
   }
-)
+  )
 
-allCategories = [...new Set(allCategories)];
+  allCategories = [...new Set(allCategories)];
 
-const items = gatsbyRepoData.cardData.records;
+  const items = gatsbyData.cardData.records;
 
   const [cardItem, setCardItem] = useState(items);
   const [buttons] = useState(allCategories);
-  const [ activeButton, setButton] = useState('')
+  const [activeButton, setButton] = useState('')
   //Filter Function for cards showing from choice
   const filter = (button) => {
     if (button === 'All') {
@@ -55,10 +55,10 @@ const items = gatsbyRepoData.cardData.records;
       }
     })
   }
-  
+
   return (
-    <div >    
-      <FilterButtons button={buttons} activeButton={activeButton}  filter={filter} />
+    <div >
+      <FilterButtons button={buttons} activeButton={activeButton} filter={filter} />
       <FilterCard cardItem={cardItem} />
     </div>
   );

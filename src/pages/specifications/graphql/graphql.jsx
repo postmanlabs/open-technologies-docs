@@ -8,7 +8,6 @@ import RightNavLinks from '../../../components/RightNavLinks';
 import { leftNavItems } from '../../../components/LeftNav/LeftNavItems';
 import LeftNav from '../../../components/LeftNav/LeftNav';
 import SEO from '../../../components/seo';
-// const { v4: uuidv4 } = require('uuid');
 import styled from 'styled-components';
 import 'prismjs/themes/prism-tomorrow.css';
 import BreadCrumbsLinks from '../../../components/modules/BreadCrumbsLinks';
@@ -16,110 +15,8 @@ import PreviousAndNextLinks from '../../../components/modules/PreviousAndNextLin
 import { DocWrapper } from '../../../../styles/DocWrapper';
 import CalendarDates from '../../../components/calendarDates';
 import EditDoc from '../../../components/Shared/EditDoc';
-
-const HubWrapper = styled.section`
-.calendar a {
-  border: none !important;
-}
-.bloc {
-  border: 1px solid ${(props) => props.theme.colors.grey_20};
-  margin-top: 25px;
-  padding-inline: 12px;
-  padding-block-end: 10px;
-}
-.header {
-  background-color: ${(props) => props.theme.colors.grey_10};
-  border-bottom: 1px solid ${(props) => props.theme.colors.grey_20};
-  margin-bottom: 10px;
-  padding-block-start: 15px;
-  padding-left: 10px;
-  
-}
-`
-
-const RightColumnWrapper = styled.aside`
-  margin-top: 0px;
-  padding-left: 40px !important;
-
-  @media (min-width:992px) {
-    margin-top: 119px;
-    padding-right: 24px;
-    padding-left: 0px !important;
-  }
-
-.sticky {
-  margin-top: 64px;
-  position: -webkit-sticky;
-  position: sticky !important;
-  top: 160px;
-}
-
-.postmanaut-dab {
-  max-width: 250px;
-}
-.dynamic-link  {
-  width: 100;
-}
-`
-const ContextualStyles = styled.div`
-
-   .contextual-links__section {
-    margin-top: 24px;
-    margin-bottom: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    color: ${(props) => props.theme.colors.grey_80};
-  }
-  .contextual-links__link {
-    margin-bottom: 0;
-    padding: 4px 0;
-    display: block;
-    
-    a {
-      color: ${(props) => props.theme.colors.grey_50};
-      font-size: 14px;
-      text-decoration: none;
-      border-bottom: 1px solid ${(props) => props.theme.colors.grey_00};
-      transition: ${(props) => props.theme.transitions.all};
-    }
-    
-    &:hover {
-      a {
-        color: ${(props) => props.theme.colors.blue_60};
-        border-bottom: 1px solid ${(props) => props.theme.colors.blue_60};
-        transition: ${(props) => props.theme.transitions.all};
-      }
-    }
-  }
-
-  .contextual-links__subtitle {
-    color: ${(props) => props.theme.colors.grey_60};
-    font-size: 15px;
-    font-weight: 600;
-    margin-top: 1rem;
-    margin-bottom: .7rem;
-  }
-
-  .contextual-links__alert {
-    border: 4px dashed ${(props) => props.theme.colors.grey_10};
-    border-radius: ${(props) => props.theme.borderRadius.small};
-    padding: .75rem 1.25rem;
-    color: #0C5460;
-  }
-
-  // tablet view
-  @media (min-width: 767px) and (max-width: 990px) {
-      padding-bottom: 80px;
-  }
-
-
-  // mobile view
-  @media (max-width: 767px) {
-    padding-bottom: 80px;
-  }
-
-
-`
+import { RightColumnWrapper } from '../../../../styles/RightColumnWrapper';
+import { ContextualStyles } from '../../../../styles/ContextualStyles';
 
 const GraphQLPage = ({ data }) => {
 
@@ -150,7 +47,7 @@ const GraphQLPage = ({ data }) => {
                   <h3>Why use GraphQL?</h3>
                   <p>GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.</p>
                 </section>
-                <HubWrapper className='mb-5'>
+                <section className='mb-5'>
                   <div className="row justify-content-evenly">
                     <div className="col-lg-6 mb-5">
                       <div className="mb-2">
@@ -266,7 +163,7 @@ const GraphQLPage = ({ data }) => {
                       </div>
                     </div>
                   </div>
-                </HubWrapper>
+                </section>
                 {/* Qualtrics */}
                 <PreviousAndNextLinks data={{ previous, next }} />
               </main>

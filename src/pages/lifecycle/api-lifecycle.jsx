@@ -7,276 +7,12 @@ import RightNavLinks from '../../components/RightNavLinks';
 import { leftNavItems } from '../../components/LeftNav/LeftNavItems';
 import LeftNav from '../../components/LeftNav/LeftNav';
 import SEO from '../../components/seo';
-// const { v4: uuidv4 } = require('uuid');
-import styled from 'styled-components';
 import 'prismjs/themes/prism-tomorrow.css';
 import BreadCrumbsLinks from '../../components/modules/BreadCrumbsLinks';
 import PreviousAndNextLinks from '../../components/modules/PreviousAndNextLinks';
-import { BaseLinkStyles } from 'aether-marketing';
 import EditDoc from '../../components/Shared/EditDoc';
-
-const DocWrapper = styled.div`
-  /* Used for Deeplinking */   
-h2, h3, h4 {
-  scroll-margin-top: 2em;
-}
-
-.doc-page {
-  a {
-    ${BaseLinkStyles.componentStyle.rules}
-  }
-  padding-left: 40px !important;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-right: 40px;
-
-  @media (min-width:992px) and (max-width: 1199px) {
-    padding-right: 32px;
-  }
-
-  @media (min-width:992px) {
-    padding-top: 64px;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-    image-rendering: -webkit-optimize-contrast;
-  }
-  img[src$='#icon'] {
-    margin-bottom: 0;
-  }
-
-  ul {
-    margin-left: 16px;
-    margin-bottom: 24px;
-
-    li::marker {
-      padding-inline-start: 39px;
-      color: ${(props) => props.theme.colors.orange_30};
-    }
-
-    &::after,
-      &::before {
-      display: inline-block;
-      direction: rtl !important;
-      margin-left: -28px !important;
-      padding-right: 16px !important;
-      width: 28px !important;
-      } 
-    
-    li {
-      margin-bottom: 8px;
-      line-height: 1.625;
-      padding: 0 0 0 16px;
-
-      li::before {
-        direction: rtl !important;
-        margin-left: -28px !important;
-        padding-right: 16px !important;
-        width: 28px !important;
-      }
-    }
-    li::before {
-      direction: rtl !important;
-      margin-left: -28px !important;
-      padding-right: 16px !important;
-      width: 28px !important;
-    }
-
-    list-style-type: '✦';
-
-    li::marker {
-      color: ${(props) => props.theme.colors.orange_30};
-  }
-
-  ol {
-    li {
-      padding-left: 10px;
-      margin-bottom: 8px;
-    }
-    li::marker {
-      color: $${(props) => props.theme.colors.grey_70};
-    }
-  } 
-
-  @media (max-width: 765px) {
-    padding-left: 30px !important;
-    padding-right: 30px !important;
-  }
-} 
-
-
-/* Blockquotes */
-blockquote {
-  box-sizing: border-box;
-  width: 100%;
-  border: solid ${(props) => props.theme.colors.grey_20} 1px;
-  border-radius: ${(props) => props.theme.borderRadius.medium};
-  padding: 16px 24px;
-  background-color: ${(props) => props.theme.colors.grey_05};
-  margin-left: 0;
-}
-blockquote code.language-text {
-  background-color: ${(props) => props.theme.colors.grey_00};
-}
-
-
-table {
-  font-size: 16px !important;
-  line-height: 1.5;
-}
-
-td {
-  padding: 10px;
-}
-
-thead:first-child:hover tr{
-  background-color: ${(props) => props.theme.colors.grey_00};
-}
-
-
-/**
-* add syntax highlighting
-*/
-.language-text {
-
-  background-color: ${(props) => props.theme.colors.grey_10};
-  color: ${(props) => props.theme.colors.grey_90};
-}
-:not(pre) > code[class*="language-"] {
-  background-color: ${(props) => props.theme.colors.grey_10};
-  color: ${(props) => props.theme.colors.grey_90};
-  padding: 1px 4px 2px !important;
-  font-size: 1.5rem !important;
-  box-shadow: inset 0 0 0 1px ${(props) => props.theme.colors.grey_30};
-  border-radius: ${(props) => props.theme.borderRadius.medium};
-}
-
-code[class*="language-"] {
-  word-break: break-word !important;
-  overflow-wrap: break-word !important;
-  
-}
-
-.gatsby-highlight {
-  background-color: ${(props) => props.theme.colors.grey_80};
-  border-radius: ${(props) => props.theme.borderRadius.small};
-  margin: 0.5em 0;
-  padding: 1em;
-  overflow: auto;
-  white-space: pre-wrap;
-  word-break: break-word;
-
-  code[class*="language-"],
-  .token.comment, 
-  .token.string,
-  .token.number,
-  .token.boolean,
-  .token.class-name,
-  .token.constant,
-  .token.parameter,
-  .token.keyword,
-  .token.operator,
-  .token.function,
-  .token.property,
-  .token.attr-name,
-  .token.attr-value,
-  .token.tag,
-  .token.punctuation {
-    font-family: 'IBM Plex Mono';
-    white-space: pre-wrap;
-    word-break: break-word;
-    line-height: 1.666rem;
-  }
-
-  /**
-  * Remove the default PrismJS theme background-color, border-radius, margin,
-  * padding and overflow.
-  * 1. Make the element just wide enough to fit its content.
-  * 2. Always fill the visible space in .gatsby-highlight.
-  * 3. Adjust the position of the line numbers
-  */
-  pre[class*="language-"] {
-    font-family: 'IBM Plex Mono';
-    background-color: transparent;
-    margin: 0;
-    padding: 0;
-    overflow: initial;
-    float: left;
-    min-width: calc(100% - 3em);
-    white-space: pre-wrap;
-    word-break: break-word;
-  }
-}
-
-.previous-next-links {
-  display: flex;
-  justify-content: space-between;
-}
-}
-.left-nav-re {
-  padding: 32px 0px 8px 0px;
-  background-color: ${(props) => props.theme.colors.grey_05};
-  font-size: 14px;
-
-  & ul {
-    margin-left: 0;
-    margin-bottom: 1.6rem !important;
-    & ul {
-      margin-left: 32px;
-      margin-top: 8px;
-      & ul {
-        margin-left: 32px;
-        margin-top: 12px;
-      }
-    }
-  }
-  @media screen and (min-width: 768px) {
-    max-width: 350px;
-  }
-
-  & li {
-    &:hover {
-      cursor: pointer;
-    }
-  }
-}
-
-.events__alert {
-    border: 4px dashed ${(props) => props.theme.colors.blue_10};
-    border-radius: ${(props) => props.theme.borderRadius.medium};
-    padding: .75rem 1.25rem;
-    /* color: #0C5460; */
-    color: ${(props) => props.theme.colors.blue_80};
-}
-`
-
-const RightColumnWrapper = styled.aside`
-  margin-top: 0px;
-  padding-left: 40px !important;
-
-  @media (min-width:992px) {
-    margin-top: 119px;
-    padding-right: 24px;
-    padding-left: 0px !important;
-  }
-
-.sticky {
-  margin-top: 64px;
-  position: -webkit-sticky;
-  position: sticky !important;
-  top: 160px;
-}
-
-.postmanaut-dab {
-  max-width: 250px;
-}
-.dynamic-link  {
-  width: 100;
-}
-`
-
+import { RightColumnWrapper } from '../../../styles/RightColumnWrapper';
+import { DocWrapper } from '../../../styles/DocWrapper';
 
 const GraphQLPage = ({ data }) => {
 
@@ -297,16 +33,16 @@ const GraphQLPage = ({ data }) => {
                 <BreadCrumbsLinks data={{ parentLink, subParentLink }} />
                 {/* Qualtrics */}
                 <section className='mb-5'>
-                  <h1>The API Lifecycle</h1>
+                  <h1>The API lifecycle</h1>
                   <p>
                     The API lifecycle is a common aspect of API operations that every business faces when it comes to delivering APIs. While there are some variances to how teams, companies, and different types of APIs are delivered, most API lifecycles are the same, despite what beliefs are on the ground floor amongst developers. When you ask different teams at different levels within the enterprise you will get many different responses about what the lifecycle is, resulting in misalignment across operations that can reduce velocity and introduce friction on a regular basis.
                   </p>
-                  <h2>A Common Vocabulary</h2>
+                  <h2>A common vocabulary</h2>
                   <p>Teams assuming they are on the same page for the stages involved with delivering an API, or each iteration of APIs, is one of the top challenges for organizations. This is why we recommend establishing a common definition for what the API lifecycle is, even if there is dissent amongst ranks around the semantics and details of the definition. A common vocabulary will help stabilize how teams discuss the delivery of APIs, with the underlying definition evolving over time--but you have to start somewhere.</p>
 
                 </section>
                 <section className='mb-5'>
-                  <h2>Producer Lifecycle Stages</h2>
+                  <h2>Producer lifecycle stages</h2>
                   <img src={withPrefix("/images/lifecycle.png")} alt="Lifecycle chart. Illustration" />
                   <p className='mb-5'>After talking with hundreds of enterprises, Postman has distilled down what we see into a common definition of a modern API lifecycle, and we wanted to share it with you as a potential starting point for your own definition. While this lifecycle is not always done in a linear fashion, we recommend you consider these eight separate stages when it comes to crafting your own definition of what the API lifecycle is.
                   </p>
@@ -377,12 +113,12 @@ const GraphQLPage = ({ data }) => {
                   <p >There are other elements like documentation or gateways that get thrown in here when talking with different API producers, but we feel strongly that these eight areas encompass the most important aspects of how we are delivering APIs. Providing you with a definition that works for both business and technical stakeholders when it comes to finding alignment across a single API, but more importantly, hundreds or thousands of APIs.</p>
                 </section>
                 <section className='mb-5'>
-                  <h2>Consumer Lifecycle</h2>
+                  <h2>Consumer lifecycle</h2>
                   <img src={withPrefix("/images/consumer-lifecycle.png")} alt="Consumer Lifecycle chart. Illustration" />
                   <p>This is where every API producer needs to take their day-to-day hat off and put on their API consumer hat, doing the work to consider the portion of the lifecycle that speaks to the consumer experience. This portion of the lifecycle is about acknowledging that the API lifecycle is a two-sided affair, and that engagement with consumers is essential to each individual iteration of an API, but also the overall velocity each API will be able to achieve.</p>
                 </section>
                 <section className='mb-5'>
-                  <h3>Consumer Stages</h3>
+                  <h3>Consumer stages</h3>
                   <p className='mb-5'>The stages of the consumer lifecycle represent the other side of the coin for all API producers, but to help you in your journey we have distilled them down into the six stages that shape how not just technical, but also business consumers are engaging with API operations. Providing a handful of stages you can walk through as part of your regular work to ensure you are properly empathizing with your consumers.</p>
                   <div className='row justify-content-center '>
                     <div className='col-2 align-self-center '>
@@ -436,7 +172,7 @@ const GraphQLPage = ({ data }) => {
                   <img src="https://voyager.postman.com/illustration/producer-consumer-lifecycle.png" alt="producer to consumer lifecycle. Illustration" />
                 </section>
                 <section className='mb-5'>
-                  <h3>The Platform Base</h3>
+                  <h3>The platform base</h3>
                   <p>You need to develop the base for your API platform, and the producer and consumer dimensions of your API lifecycle by leveraging your existing investments across your software development lifecycle, but also the API lifecycle you are bringing into alignment.</p>
                   <h4>Your Infrastructure</h4>
                   <p className='mb-5'>Your API platform is built on top of your existing investment in your software development lifecycle and API management. These four areas of enterprise infrastructure represent how you will map a modern API lifecycle to your existing software development lifecycle.</p>
