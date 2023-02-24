@@ -16,6 +16,7 @@ const FilterCard = ({ cardItem }) => {
                   description={item.fields.description}
                   tag={item.fields.tag}
                   example={item.fields.example}
+                  Source={item.fields.Source}
                   id={item.fields.id}
                 />
               </div>

@@ -43,6 +43,7 @@ const CardWrapper = styled.div`
     
     a {
       margin-bottom: 48px;
+      font-size: 14px;
     }
   
 
@@ -128,7 +129,7 @@ div.modal {
 `
 
 export const ConceptCard = ({
-  title, description, tag, example, sourceLink
+  title, description, tag, example, Source
 }) => {
   const id = title.replaceAll(' ', '-')
 
@@ -155,13 +156,12 @@ export const ConceptCard = ({
               <p className='mb-0 text-uppercase small mb-2'>Example</p>
               <div className='code truncate'>
                 <ReactMarkdown>{example && example.substring(0, 80)}</ReactMarkdown>
-                {/* <code>{example}</code> */}
               </div>
             </div>
             <div>
               <p className='mb-0 text-uppercase small mb-2'>Source Link</p>
-              {sourceLink && <div>
-                <a href={sourceLink}>{sourceLink}</a>
+              {Source && <div>
+                <a href={Source} target="_blank" rel="noopener" >{Source}</a>
               </div>}
             </div>
           </div>
@@ -204,10 +204,9 @@ export const ConceptCard = ({
               </div>
               <div className='row'>
                 <p className='col-4 mb-0 text-uppercase'>Source Link</p>
-                {/* {console.log(sourceLink)} */}
-                {sourceLink && <div>
-                  <a href={sourceLink}>{sourceLink}</a>
-                </div>}
+                {Source && <div>
+                  <a href={Source}>{Source}</a>
+                </div>} 
               </div>
             </div>
           </div>
