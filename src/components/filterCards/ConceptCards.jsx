@@ -111,14 +111,19 @@ div.modal {
 
  .code {
   background-color: ${(props) => props.theme.colors.grey_10}!important;
+  
   height: 100%;
   width: 50%;
   padding: 5px;
+  code {
+    color: black;
+  }
  }
  
 
   pre{
     overflow: hidden;
+    color: black;
     code {
   color: rgb(17, 17, 18);
   }
@@ -169,14 +174,13 @@ export const ConceptCard = ({
       </CardWrapper>
       {/* Modal */}
       <ModalWrapper>
-        <div className="modal fade " id={id} tabIndex="1" role="dialog" aria-labelledby={title} aria-hidden="true">
+        <div className="modal modal-link fade"  id={id} tabIndex="1" role="dialog" aria-labelledby={title} aria-hidden="true">
           <div className="modal-dialog modal-dialog-centered" role="document">
-            <div className="">
-              <div className="modal-header">
-
+            <div className="modal-content">
+              <div className="modal-header">             
                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
-                </button>
+                </button>              
               </div>
               <p className='mb-2'>Term</p>
               <h2 className="landing-card__content-title">{title}</h2>
@@ -205,7 +209,7 @@ export const ConceptCard = ({
               <div className='row'>
                 <p className='col-4 mb-0 text-uppercase'>Source Link</p>
                 {source && <div>
-                  <a href={source}>{source}</a>
+                  <a href={source} target="_blank" rel="noopener">{source}</a>
                 </div>}
               </div>
             </div>

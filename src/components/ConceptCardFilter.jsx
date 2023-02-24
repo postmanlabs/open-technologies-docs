@@ -23,14 +23,15 @@ function ConceptCardFilter() {
   `);
 
   /*Create filter buttons*/
-  const setOfTags = [...new Set(gatsbyData.cardData.records.filter(q => !!q).map(item => item.fields.tag).filter(q => !!q))];
+  const setOfTags = [...new Set(gatsbyData.cardData.records.map(item => item.fields.tag))];
 
   let allCategories = ['All'];
+//add tags to array
   setOfTags?.forEach(item => {
     item.forEach(category => allCategories.push(category))
   }
   )
-
+  // filter tags 
   allCategories = [...new Set(allCategories)];
 
   const items = gatsbyData.cardData.records;
