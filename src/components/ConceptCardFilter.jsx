@@ -14,7 +14,7 @@ function ConceptCardFilter() {
             example: Example
             tag: Tags
             title: Term
-            source: Source_article__video__documentation__etc_
+            Source
             }
           }
           id
@@ -28,10 +28,11 @@ const setOfTags = [ ...new Set(gatsbyRepoData.cardData.records.filter(q => !!q).
 let allCategories = ['All'];
 setOfTags?.forEach(item => {
   item.forEach(category => allCategories.push(category))
-}
+  }
 )
 
 allCategories = [...new Set(allCategories)];
+
 const items = gatsbyRepoData.cardData.records;
 
   const [cardItem, setCardItem] = useState(items);
@@ -54,10 +55,11 @@ const items = gatsbyRepoData.cardData.records;
       }
     })
   }
+  
   return (
     <div >    
       <FilterButtons button={buttons} activeButton={activeButton}  filter={filter} />
-        <FilterCard cardItem={cardItem} />             
+      <FilterCard cardItem={cardItem} />
     </div>
   );
 }

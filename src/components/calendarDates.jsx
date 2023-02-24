@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery } from "gatsby";
 const { v4: uuidv4 } = require('uuid');
 import styled from 'styled-components';
-import moment from 'moment'
+
 import Moment from 'react-moment';
 import 'moment-timezone';
 
@@ -19,7 +19,7 @@ function CalendarDates() {
         calendarData {
           records {
             fields {
-            date: Start_Time(formatString: "MM/DD/YYYY h:mma z")
+            date: Start_Time
             title: Title
             duration: Duration
             Link
@@ -31,13 +31,13 @@ function CalendarDates() {
   `);
 
 const Events = CalendarData.calendarData.records
-let local = moment();
+// let local = moment();
 
 return (
   <div >         
     {Events.map((event) => (
       <EventStyles className='mb-2' key={uuidv4()}>
-        <Moment className='mb-0 date' tz="America/Los_Angeles" format='MM/DD/YYYY ha z'>{event.fields.local}</Moment>
+        <Moment className='mb-0 date'  tz="America/Los_Angeles" format='MM/DD/YYYY h:mma z'>{event.fields.date}</Moment>
         <div>{ event.fields.Link ? (<a  href={event.fields.Link} target="_blank" rel="noopener">{event.fields.title} →</a>)  : event.fields.title }</div>
       </EventStyles>  
       ))}
