@@ -1,5 +1,5 @@
 ---
-title: "The whys of GraphQL security"
+title: "The Whys of GraphQL Security"
 order: 2
 page_id:  "the-whys-of-graphql-security"
 warning: false
@@ -13,7 +13,7 @@ Many hours, words and efforts are spent expressing the whats and hows of buildin
 
 First, it came up in a discussion about Good API Design when a colleague, Arnaud Lauret [(LinkedIn)](https://www.linkedin.com/in/arnaudlauret/), suggested starting the discussion of “Good API Design” with some questions including, “Why are you building this API?”. The second was in a discussion with Postman’s Head of Labs, Shamasis Bhattacharya [(LinkedIn)](https://www.linkedin.com/in/shamasis/). The discussion turned to the topic of GraphQL Security and he posed an important question. “What are the consequences of not implementing recommended security protections in GraphQL?” In other words, why are we doing this? In this article we consider the vulnerabilities specific to GraphQL and why we are focusing on securing GraphQL.
 
-### Why does GraphQL security natter now?
+### Why does GraphQL security matter now?
 
 GraphQL is in a hyper growth phase. Today just over 10% of enterprises were using GraphQL APIs in 2021, but by 2025 that number will grow to over 50%, according to Gartner. At the same time data continues to be a critical resource for all companies along with the preference for using mobile devices. Data and mobile clients are the use cases where the advantages of GraphQL are realized.
 
@@ -98,7 +98,7 @@ mutation {
 
 Failing to properly validate the mutation operation may execute the malicious operation and update the email address for the user, potentially compromising the security of the user's data.
 
-### GraphQL Denial of Service(DOS) attacks
+### GraphQL Denial of Service (DoS) attacks
 
 Denial of Service (DoS) attacks on GraphQL APIs can take many forms. Here are some examples:
 

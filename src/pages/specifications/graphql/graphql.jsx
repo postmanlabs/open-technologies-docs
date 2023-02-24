@@ -8,69 +8,15 @@ import RightNavLinks from '../../../components/RightNavLinks';
 import { leftNavItems } from '../../../components/LeftNav/LeftNavItems';
 import LeftNav from '../../../components/LeftNav/LeftNav';
 import SEO from '../../../components/seo';
-// const { v4: uuidv4 } = require('uuid');
 import styled from 'styled-components';
 import 'prismjs/themes/prism-tomorrow.css';
 import BreadCrumbsLinks from '../../../components/modules/BreadCrumbsLinks';
 import PreviousAndNextLinks from '../../../components/modules/PreviousAndNextLinks';
 import { DocWrapper } from '../../../../styles/DocWrapper';
 import CalendarDates from '../../../components/calendarDates';
-
-const HubWrapper = styled.section`
-.calendar a {
-  border: none !important;
-}
-.bloc {
-  border: 1px solid ${(props) => props.theme.colors.grey_20};
-  margin-top: 25px;
-  padding-inline: 12px;
-  padding-block-end: 10px;
-}
-.header {
-  background-color: ${(props) => props.theme.colors.grey_10};
-  border-bottom: 1px solid ${(props) => props.theme.colors.grey_20};
-  margin-bottom: 10px;
-  padding-block-start: 15px;
-  padding-left: 10px;
-  
-}
-`
-
-const RightColumnWrapper = styled.aside`
-  margin-top: 0px;
-  padding-left: 40px !important;
-
-  @media (min-width:992px) {
-    margin-top: 119px;
-    padding-right: 24px;
-    padding-left: 0px !important;
-  }
-
-.sticky {
-  margin-top: 64px;
-  position: -webkit-sticky;
-  position: sticky !important;
-  top: 160px;
-}
-
-.postmanaut-dab {
-  max-width: 250px;
-}
-.dynamic-link  {
-  width: 100;
-}
-`
-
-const SvgWrapper = styled.i`
-  // gets rid of weird background bug with our icons. We need to redo these.
-  background: 0 0;
-  
-  svg.button-icon--left {
-    margin-right: 7px;
-    overflow: hidden;
-    vertical-align: middle;
-  }
-`
+import EditDoc from '../../../components/Shared/EditDoc';
+import { RightColumnWrapper } from '../../../../styles/RightColumnWrapper';
+import { ContextualStyles } from '../../../../styles/ContextualStyles';
 
 const GraphQLPage = ({ data }) => {
 
@@ -89,7 +35,7 @@ const GraphQLPage = ({ data }) => {
           <div className="col">
             <div className="row row-eq-height">
               <main className="col-lg-9 offset-lg-0 col-xl-7 doc-page ml-xl-5">
-                <BreadCrumbsLinks data={{ parentLink, subParentLink }} />            
+                <BreadCrumbsLinks data={{ parentLink, subParentLink }} />
                 <div className='row mb-4'>
                   <img src="https://voyager.postman.com/logo/external/graphql-icon.svg" alt="graphql icon" className='mr-3' width="50px" />
                   <h1>GraphQL</h1>
@@ -101,7 +47,7 @@ const GraphQLPage = ({ data }) => {
                   <h3>Why use GraphQL?</h3>
                   <p>GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.</p>
                 </section>
-                <HubWrapper className='mb-5'>
+                <section className='mb-5'>
                   <div className="row justify-content-evenly">
                     <div className="col-lg-6 mb-5">
                       <div className="mb-2">
@@ -120,7 +66,7 @@ const GraphQLPage = ({ data }) => {
                         <img src={withPrefix("/images/Info.png")} alt="community Icon" width="50px" className='mr-2' />
                         <h4>GraphQL News</h4>
                         <div className="mb-2">
-                          <DynamicLink url="" name="Postman's New GraphQL Client →" />
+                          <DynamicLink url="/specifications/graphql/getting-started-with-graphql-client/" name="Postman's New GraphQL Client →" />
                         </div>
                         <div className="mb-2">
                           <DynamicLink url="/specifications/graphql/getting-started-with-graphql-client/" name="Getting Started Guide for New GraphQL Client →" />
@@ -148,17 +94,17 @@ const GraphQLPage = ({ data }) => {
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="col-lg-6 mb-5">
                       <div className="">
                         <img src={withPrefix("/images/Events.svg")} alt="community Icon" width="50px" className='mr-2' />
                         <h4>Calendar</h4>
                         <div className='mb-2'>
-                        <CalendarDates/>
+                          <CalendarDates />
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="col-lg-6 mb-5">
                       <div className="mb-2">
                         <img src={withPrefix("/images/Contract.png")} alt="contract. Icon" width="50px" className='mr-2' />
@@ -207,21 +153,37 @@ const GraphQLPage = ({ data }) => {
                         </div>
                         <div className='mb-2'>
                           <DynamicLink url="https://github.com/graphql/composite-schemas-wg" name="Composite Schema working group →" />
-                        </div>                  
+                        </div>
                         <div className='mb-2'>
                           <DynamicLink url="https://github.com/graphql/graphiql" name="GraphiQL →" />
                         </div>
-                        <div className='mb-2'>                
+                        <div className='mb-2'>
                           <DynamicLink url="https://github.com/graphql/graphql-playground" name="GraphQL Playground →" />
                         </div>
                       </div>
                     </div>
                   </div>
-                </HubWrapper>
-   {/* Qualtrics */}
+                </section>
+                {/* Qualtrics */}
                 <PreviousAndNextLinks data={{ previous, next }} />
               </main>
               <RightColumnWrapper className="col-sm-12 col-md-12 col-lg-3 offset-lg-0 col-xl-3 offset-xl-1 right-column">
+                <EditDoc />
+
+                <ContextualStyles >
+                  <div className='contextual-links__section'>
+                    GraphQL resources
+                  </div>
+                  <div className="contextual-links__link">
+                    <DynamicLink name="Postman joins GraphQL Foundation" url="https://blog.postman.com/postman-joins-graphql-foundation/" />
+                  </div>
+                  <div className="contextual-links__link">
+                    <DynamicLink name="What is GraphQL part one the Facebook years" url="https://blog.postman.com/what-is-graphql-part-one-the-facebook-years/" />
+                  </div>
+                  <div className="contextual-links__link">
+                    <DynamicLink name="How to build secure GraphQL APIs" url="https://blog.postman.com/how-to-build-secure-graphql-apis/" />
+                  </div>
+                </ContextualStyles>
                 <RightNavLinks />
               </RightColumnWrapper>
             </div>
