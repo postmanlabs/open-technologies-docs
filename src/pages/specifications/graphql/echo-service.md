@@ -1,5 +1,5 @@
 ---
-title: "How to Build an Echo Service for GraphQL"
+title: "How to build an Echo Service for GraphQL"
 order: 4
 page_id:  "how-to-build-an-echo-service-for-graphQL"
 warning: false
