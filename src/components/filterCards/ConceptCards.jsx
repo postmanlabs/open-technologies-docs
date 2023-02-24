@@ -91,7 +91,7 @@ const CardWrapper = styled.div`
 
   
 
-` 
+`
 const ModalWrapper = styled.div`
 div.modal {
   background-color: ${(props) => props.theme.colors.grey_00}!important;
@@ -129,7 +129,7 @@ div.modal {
 `
 
 export const ConceptCard = ({
-  title, description, tag, example, Source
+  title, description, tag, example, source
 }) => {
   const id = title.replaceAll(' ', '-')
 
@@ -160,8 +160,8 @@ export const ConceptCard = ({
             </div>
             <div>
               <p className='mb-0 text-uppercase small mb-2'>Source Link</p>
-              {Source && <div>
-                <a href={Source} target="_blank" rel="noopener" >{Source}</a>
+              {source && <div>
+                <a href={source} target="_blank" rel="noopener" >{source}</a>
               </div>}
             </div>
           </div>
@@ -199,14 +199,14 @@ export const ConceptCard = ({
                 <p className='col-4 mb-0 text-uppercase'>Example</p>
                 <div className='code '>
                   <ReactMarkdown>{example}</ReactMarkdown>
-                  
+
                 </div>
               </div>
               <div className='row'>
                 <p className='col-4 mb-0 text-uppercase'>Source Link</p>
-                {Source && <div>
-                  <a href={Source}>{Source}</a>
-                </div>} 
+                {source && <div>
+                  <a href={source}>{source}</a>
+                </div>}
               </div>
             </div>
           </div>

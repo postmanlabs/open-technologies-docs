@@ -16,6 +16,7 @@ import PreviousAndNextLinks from '../../../components/modules/PreviousAndNextLin
 import { DocWrapper } from '../../../../styles/DocWrapper';
 import CalendarDates from '../../../components/calendarDates';
 import EditDoc from '../../../components/Shared/EditDoc';
+import { RightColumnWrapper } from '../../../../styles/RightColumnWrapper';
 
 const HubWrapper = styled.section`
 .calendar a {
@@ -37,30 +38,7 @@ const HubWrapper = styled.section`
 }
 `
 
-const RightColumnWrapper = styled.aside`
-  margin-top: 0px;
-  padding-left: 40px !important;
 
-  @media (min-width:992px) {
-    margin-top: 119px;
-    padding-right: 24px;
-    padding-left: 0px !important;
-  }
-
-.sticky {
-  margin-top: 64px;
-  position: -webkit-sticky;
-  position: sticky !important;
-  top: 160px;
-}
-
-.postmanaut-dab {
-  max-width: 250px;
-}
-.dynamic-link  {
-  width: 100;
-}
-`
 const ContextualStyles = styled.div`
 
    .contextual-links__section {

@@ -12,9 +12,9 @@ const EventStyles = styled.div`
   }
 `
 
-function CalendarDates() {  
- 
- const CalendarData = useStaticQuery(graphql`
+function CalendarDates() {
+
+  const CalendarData = useStaticQuery(graphql`
       query {
         calendarData {
           records {
@@ -22,7 +22,7 @@ function CalendarDates() {
             date: Start_Time
             title: Title
             duration: Duration
-            Link
+            link: Link
             }
           }
           id
@@ -30,18 +30,18 @@ function CalendarDates() {
     }
   `);
 
-const Events = CalendarData.calendarData.records
-// let local = moment();
+  const Events = CalendarData.calendarData.records
+  // let local = moment();
 
-return (
-  <div >         
-    {Events.map((event) => (
-      <EventStyles className='mb-2' key={uuidv4()}>
-        <Moment className='mb-0 date'  tz="America/Los_Angeles" format='MM/DD/YYYY h:mma z'>{event.fields.date}</Moment>
-        <div>{ event.fields.Link ? (<a  href={event.fields.Link} target="_blank" rel="noopener">{event.fields.title} →</a>)  : event.fields.title }</div>
-      </EventStyles>  
+  return (
+    <div >
+      {Events.map((event) => (
+        <EventStyles className='mb-2' key={uuidv4()}>
+          <Moment className='mb-0 date' tz="America/Los_Angeles" format='MM/DD/YYYY h:mma z'>{event.fields.date}</Moment>
+          <div>{event.fields.link ? (<a href={event.fields.link} target="_blank" rel="noopener">{event.fields.title} →</a>) : event.fields.title}</div>
+        </EventStyles>
       ))}
-              
+
     </div>
   );
 }
