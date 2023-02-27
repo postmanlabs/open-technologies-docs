@@ -5,7 +5,7 @@ page_id: "collections"
 warning: false
 updated: 2023-02-08
 contextual_links:
-  - type: subtitle
+  - type: section
     name: "Blog Posts"
   - type: link
     name: "Postman Essentials: Exploring the Collection Format"
