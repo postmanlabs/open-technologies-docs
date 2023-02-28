@@ -82,7 +82,7 @@ function PreviousAndNextLinks() {
         {prevLink && (
           <div className="mr-auto">
             <Link
-              id="prevDoc"
+              className="prevDoc"
               rel="prev"  
               to={ prevLink.url  || prevLink.slug}
               title={`Go to the previous page: ${prevLink.name}`}
@@ -95,7 +95,7 @@ function PreviousAndNextLinks() {
         {nextLink && (
           <div className="ml-auto">
             <Link
-              id="nextDoc"
+              className="nextDoc"
               rel="next"
               to={ nextLink.url  || nextLink.slug}
               title={`Go to the next page: ${nextLink.name}`}
