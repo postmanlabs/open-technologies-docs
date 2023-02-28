@@ -31,12 +31,14 @@ function CalendarDates() {
   `);
 
   const Events = CalendarData.calendarData.records
-  // let local = moment();
+  //sort date chronological
+ const sortedEvents = Events.sort((a, b) => (a.fields.date.toLowerCase() < b.fields.date.toLowerCase()) ? -1 : ((b.fields.date.toLowerCase() > a.fields.date.toLowerCase()) ? 1 : 0));
 
   return (
     <div >
-      {Events.map((event) => (
+      {sortedEvents.map((event) => (
         <EventStyles className='mb-2' key={uuidv4()}>
+          
           <Moment className='mb-0 date' tz="America/Los_Angeles" format='MM/DD/YYYY h:mma z'>{event.fields.date}</Moment>
           <div>{event.fields.link ? (<a href={event.fields.link} target="_blank" rel="noopener">{event.fields.title} →</a>) : event.fields.title}</div>
         </EventStyles>

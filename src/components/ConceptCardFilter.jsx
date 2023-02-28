@@ -31,7 +31,7 @@ function ConceptCardFilter() {
     item.forEach(category => allCategories.push(category))
   }
   )
-  // filter tags 
+  // filter out dupe tags 
   allCategories = [...new Set(allCategories)];
 
   const items = gatsbyData.cardData.records;
