@@ -360,7 +360,7 @@ const Header = (props) => {
                 data-toggle="dropdown"
                 aria-expanded="false"
               >
-                Learning Center
+                Postman Open Techonologies Docs
                 <svg
                   className="arrow-icon"
                   xmlns="http://www.w3.org/2000/svg"
