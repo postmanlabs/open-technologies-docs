@@ -360,7 +360,7 @@ const Header = (props) => {
                 data-toggle="dropdown"
                 aria-expanded="false"
               >
-                Postman Open Techonologies Docs
+                Postman Open Techonologies
                 <svg
                   className="arrow-icon"
                   xmlns="http://www.w3.org/2000/svg"
@@ -383,7 +383,7 @@ const Header = (props) => {
                           <img className="d-block mx-auto" src="https://voyager.postman.com/icon/learning-documentation-icon-postman.svg" height="40px"/>
                         </div>
                         <div className="col-11">
-                          <Paragraph className="strong mb-0" >Learning Center <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="#212121"><g><path d="M10.375,3.219,6,6.719l-4.375-3.5A1,1,0,1,0,.375,4.781l5,4a1,1,0,0,0,1.25,0l5-4a1,1,0,0,0-1.25-1.562Z"></path></g></svg></Paragraph>
+                          <Paragraph className="strong mb-0" >Learning Center <svg className="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="#212121"><g><path d="M10.375,3.219,6,6.719l-4.375-3.5A1,1,0,1,0,.375,4.781l5,4a1,1,0,0,0,1.25,0l5-4a1,1,0,0,0-1.25-1.562Z"></path></g></svg></Paragraph>
                           <Paragraph className="dropdown-item-text-wrap small" style={{    'color': '#707070 !important'}}>Learn about how to get started using Postman, and read more in the product docs.</Paragraph>
                         </div>
                       </div>
@@ -396,7 +396,7 @@ const Header = (props) => {
                           <img className="d-block mx-auto" src="https://voyager.postman.com/icon/flask-science-beaker-test-icon-postman.svg" height="40px" />
                         </div>
                         <div className="col-11">
-                          <Paragraph className="strong mb-0">Labs <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="#212121"><g><path d="M10.375,3.219,6,6.719l-4.375-3.5A1,1,0,1,0,.375,4.781l5,4a1,1,0,0,0,1.25,0l5-4a1,1,0,0,0-1.25-1.562Z"></path></g></svg></Paragraph>
+                          <Paragraph className="strong mb-0">Labs <svg className="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="#212121"><g><path d="M10.375,3.219,6,6.719l-4.375-3.5A1,1,0,1,0,.375,4.781l5,4a1,1,0,0,0,1.25,0l5-4a1,1,0,0,0-1.25-1.562Z"></path></g></svg></Paragraph>
                           <Paragraph className=" dropdown-item-text-wrap small">Flows, gRPC, WebSockets! Learn about the latest cutting-edge features brewing in Postman Labs.</Paragraph>
                         </div>
                       </div>
@@ -409,7 +409,7 @@ const Header = (props) => {
                           <img className="d-block mx-auto" src="https://voyager.postman.com/icon/lifecycle.svg" height="40px" />
                         </div>
                         <div className="col-11">
-                          <Paragraph className="strong mb-0">Open Technologies <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="#212121"><g><path d="M10.375,3.219,6,6.719l-4.375-3.5A1,1,0,1,0,.375,4.781l5,4a1,1,0,0,0,1.25,0l5-4a1,1,0,0,0-1.25-1.562Z"></path></g></svg></Paragraph>
+                          <Paragraph className="strong mb-0">Open Technologies <svg className="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="#212121"><g><path d="M10.375,3.219,6,6.719l-4.375-3.5A1,1,0,1,0,.375,4.781l5,4a1,1,0,0,0,1.25,0l5-4a1,1,0,0,0-1.25-1.562Z"></path></g></svg></Paragraph>
                           <Paragraph className="dropdown-item-text-wrap small">Invest in the knowledge, specifications, standards, tooling, data, people, and organizations that define the next 50 years of the API economy.</Paragraph>
                         </div>
                       </div>
@@ -422,7 +422,7 @@ const Header = (props) => {
                           <img className="d-block mx-auto" src="https://voyager.postman.com/icon/appplication-performance-icon-postman.svg" height="40px" />
                         </div>
                         <div className="col-11">
-                          <Paragraph className="strong mb-0">Collection Format <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="#212121"><g><path d="M10.375,3.219,6,6.719l-4.375-3.5A1,1,0,1,0,.375,4.781l5,4a1,1,0,0,0,1.25,0l5-4a1,1,0,0,0-1.25-1.562Z"></path></g></svg></Paragraph>
+                          <Paragraph className="strong mb-0">Collection Format <svg className="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="#212121"><g><path d="M10.375,3.219,6,6.719l-4.375-3.5A1,1,0,1,0,.375,4.781l5,4a1,1,0,0,0,1.25,0l5-4a1,1,0,0,0-1.25-1.562Z"></path></g></svg></Paragraph>
                           <Paragraph className="dropdown-item-text-wrap small">Understand the specification behind Postman Collections. Check out the docs and support resources!</Paragraph>
                         </div>
                       </div>
