@@ -71,7 +71,7 @@
             "fields": {
                 "Example": "```\ntype Post @model @auth(rules: [\n    { allow: private, operations: [read] },\n    { allow: groups, groups: [\"admin\"] }.\n    { allow: owner, ownerField: \"author\" }]\n]) {\n    id: ID!\n    title: String!\n    author: String!\n}\n```\n\n",
                 "Description": "Permissions in GraphQL can be specified at the query level, object level, or field level. \n",
-                "Source article, video, documentation, etc.": "https://graphql.org/learn/authorization/",
+                "Source": "https://graphql.org/learn/authorization/",
                 "Term": "DUMMY DATA Field Level Authorization",
                 "Tags": [
                     "authorization",
