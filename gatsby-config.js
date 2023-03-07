@@ -12,7 +12,7 @@ const PATH_PREFIX = '/open-technologies'
 
 module.exports = {
   siteMetadata: {
-    title: 'Postman Open Technology Doc',
+    title: 'Postman Open Technologies Docs',
     description: '',
     author: 'Postman',
     siteUrl: SITE_URL,
@@ -68,8 +68,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Open Technology Doc',
-        short_name: 'Open Technology Doc',
+        name: 'Open Technologies Docs',
+        short_name: 'Open Technologies Docs',
         start_url: '/',
         background_color: '#FF6C37',
         theme_color: '#FF6C37',
