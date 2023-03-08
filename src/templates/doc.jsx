@@ -16,7 +16,6 @@ import 'prismjs/themes/prism-tomorrow.css';
 import { useModal } from '../components/modules/Modal';
 import PreviousAndNextLinks from '../components/modules/PreviousAndNextLinks';
 import BreadCrumbsLinks from '../components/modules/BreadCrumbsLinks';
-import LoadQualtrics from '../components/modules/loadQualtrics';
 import { BaseLinkStyles} from 'aether-marketing';
 
 const DocWrapper = styled.div`
@@ -377,9 +376,6 @@ const DocPage = ({ data }) => {
                   <small className="font-italic">Last modified: {lastModifiedDate}</small>
                 </p>}
                 </div>
-                
-                {/* Qualtrics */}
-                <LoadQualtrics />
                 <PreviousAndNextLinks data={{ previous, next }} />
               </main>
               <RightColumnWrapper className="col-sm-12 col-md-12 col-lg-3 offset-lg-0 col-xl-3 offset-xl-1 right-column">

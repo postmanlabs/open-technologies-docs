@@ -48,7 +48,6 @@ const GraphQLPage = ({ data }) => {
                     </div>
                   </div>
                 </div>
-                {/* Qualtrics */}
                 <PreviousAndNextLinks data={{ previous, next }} />
               </main>
               <RightColumnWrapper className="col-lg-2 offset-lg-0 col-xl-3 offset-xl-1 right-column">
