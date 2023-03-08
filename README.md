@@ -28,7 +28,7 @@ The secondary top navbar as well as the left and right navbars are custom to thi
 ```shell
 
    $ git clone https://github.com/postmanlabs/open-technologies-docs.git
-   $ cd postman-docs
+   $ cd open-technologies-docs
    $ npm run nvmrc
    $ nvm use
    $ npm install
