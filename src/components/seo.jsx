@@ -80,11 +80,11 @@
          },
          {
            name: 'twitter:title',
-           content: `${title} | Postman Open Technology`,
+           content: `${title} | Postman Open Technologies`,
          },
          {
            property: 'twitter:description',
-           content: `${title}: documentation for Postman Open Technology, the collaboration platform for API development. Create better APIs—faster.`,
+           content: `${title}: documentation for Postman Open Technologies, the collaboration platform for API development. Create better APIs—faster.`,
          },
          {
            property: 'twitter:domain',

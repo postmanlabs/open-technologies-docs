@@ -1,7 +1,7 @@
 {
-  "name": "open-technology-docs",
+  "name": "open-technologies-docs",
   "private": true,
-  "description": "Postman Open Technology documentation project",
+  "description": "Postman Open Technologies Docs",
   "version": "0.1.0",
   "dependencies": {
     "@babel/preset-react": "7.16.0",
