@@ -17,7 +17,7 @@ import { useModal } from '../components/modules/Modal';
 import PreviousAndNextLinks from '../components/modules/PreviousAndNextLinks';
 import BreadCrumbsLinks from '../components/modules/BreadCrumbsLinks';
 import LoadQualtrics from '../components/modules/loadQualtrics';
-import { BaseLinkStyles} from 'aether-marketing';
+import { BaseLinkStyles, UnorderedListStyles, OrderedListStyles } from 'aether-marketing';
 
 const DocWrapper = styled.div`
   /* Used for Deeplinking */   
@@ -49,59 +49,6 @@ h2, h3, h4 {
   }
   img[src$='#icon'] {
     margin-bottom: 0;
-  }
-
-  ul {
-    margin-left: 16px;
-    margin-bottom: 24px;
-
-    li::marker {
-      padding-inline-start: 39px;
-      color: ${(props) => props.theme.colors.orange_30};
-    }
-
-    &::after,
-      &::before {
-      display: inline-block;
-      direction: rtl !important;
-      margin-left: -28px !important;
-      padding-right: 16px !important;
-      width: 28px !important;
-      } 
-    
-    li {
-      margin-bottom: 8px;
-      line-height: 1.625;
-      padding: 0 0 0 16px;
-
-      li::before {
-        direction: rtl !important;
-        margin-left: -28px !important;
-        padding-right: 16px !important;
-        width: 28px !important;
-      }
-    }
-    li::before {
-      direction: rtl !important;
-      margin-left: -28px !important;
-      padding-right: 16px !important;
-      width: 28px !important;
-    }
-
-    list-style-type: '✦';
-
-    li::marker {
-      color: ${(props) => props.theme.colors.orange_30};
-  }
-
-  ol {
-    li {
-      padding-left: 10px;
-      margin-bottom: 8px;
-    }
-    li::marker {
-      color: $${(props) => props.theme.colors.grey_70};
-    }
   } 
 
   @media (max-width: 765px) {
@@ -277,7 +224,18 @@ const RightColumnWrapper = styled.aside`
   max-width: 250px;
 }
 `
+const DocContent = styled.div`
+ul {
+  ${UnorderedListStyles.componentStyle.rules}
+}
 
+ol {
+  ${OrderedListStyles.componentStyle.rules}
+  li > ol {
+    list-style: lower-alpha;
+  }
+} 
+`
 const prefixImgSrcOfParsedHtml = (parsedHtml, domainName) => {
   // This function prefixes all relative image srcs of the parsedHTML's image srcs with the pathPrefix defined in the gatsby-config.js file
   let images = parsedHtml.querySelectorAll('img');
@@ -353,41 +311,36 @@ const DocPage = ({ data }) => {
             <div className="row row-eq-height">
               <main className="col-sm-12 col-md-12 col-lg-9 offset-lg-0 col-xl-7 doc-page ml-xl-5">
                 <BreadCrumbsLinks data={{ parentLink, subParentLink }} />
-            { post.frontmatter.author &&  <p className='small mb-0'>By {post.frontmatter.author} &mdash; 
+                <DocContent>
+                  { post.frontmatter.author &&  <p className='small mb-0'>By {post.frontmatter.author} &mdash; 
                     <small className="font-italic">{date}</small>
                   </p>}
-              
-                <h1>{post.frontmatter.title}</h1>
-                <div id="LoadDoc" />
-                {
-                  excerptCount ?
-                    <div className='events__alert mb-3'>
-                      <p>
-                        <small>Development Notification</small>
-                        <br />
-                        <small>{`Character count: ${excerptLength} and therefore ${overIndexLimit} characters too long to be indexed by Algolia`}</small>
-                      </p>
-                    </div>
+                  <h1>{post.frontmatter.title}</h1>
+                  <div id="LoadDoc" />
+                  {
+                    excerptCount ?
+                      <div className='events__alert mb-3'>
+                        <p>
+                          <small>Development Notification</small>
+                          <br />
+                          <small>{`Character count: ${excerptLength} and therefore ${overIndexLimit} characters too long to be indexed by Algolia`}</small>
+                        </p>
+                      </div>
                     : null
-                }
-                <div className='row'>
-                
-                {post.frontmatter.tag && (<p className='small col-8'>tags: <span> {post.frontmatter.tag}</span></p>)}
-                {lastModifiedDate && <p className='col-4 small'>
-                  <small className="font-italic">Last modified: {lastModifiedDate}</small>
-                </p>}
-                </div>
-                
-                {/* Qualtrics */}
-                <LoadQualtrics />
-                <PreviousAndNextLinks data={{ previous, next }} />
+                  }
+                  <p>
+                    <small className="font-italic">Last modified: {lastModifiedDate}</small>
+                  </p>
+                  {/* Qualtrics */}
+                  <LoadQualtrics />
+                  <PreviousAndNextLinks data={{ previous, next }} />
+                </DocContent>
               </main>
               <RightColumnWrapper className="col-sm-12 col-md-12 col-lg-3 offset-lg-0 col-xl-3 offset-xl-1 right-column">
                 <hr className="d-block d-lg-none" />
                 <EditDoc />
                 {data && <DisplayContextualLinks data={data} />}
                 <RightNavLinks />
-                
               </RightColumnWrapper>
             </div>
           </div>
