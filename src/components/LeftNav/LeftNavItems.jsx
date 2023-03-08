@@ -39,20 +39,20 @@ export const leftNavItems = [
       {
         name: 'OpenAPI',
         subParentSlug: 'openapi',
-        slug: '/specifications/openapi/openapi',
+        slug: '/specifications/openapi/openapi/',
         subMenuItems2: [
         {
           name: 'OpenAPI',
-          url: '/specifications/openapi/openapi',
+          url: '/specifications/openapi/openapi/',
         },
-        {
-          name: 'Test1',
-          url: '/specifications/openapi/test1',
-        },
-        {
-          name: 'Test2',
-          url: '/specifications/openapi/test2',
-        }
+        // {
+        //   name: 'Test1',
+        //   url: '/specifications/openapi/test1/',
+        // },
+        // {
+        //   name: 'Test2',
+        //   url: '/specifications/openapi/test2/',
+        // }
         ],
       }
     ],
