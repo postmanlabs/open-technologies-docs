@@ -16,15 +16,14 @@ import 'prismjs/themes/prism-tomorrow.css';
 import { useModal } from '../components/modules/Modal';
 import PreviousAndNextLinks from '../components/modules/PreviousAndNextLinks';
 import BreadCrumbsLinks from '../components/modules/BreadCrumbsLinks';
-import LoadQualtrics from '../components/modules/loadQualtrics';
-import { BaseLinkStyles} from 'aether-marketing';
+import { BaseLinkStyles, UnorderedListStyles, OrderedListStyles} from 'aether-marketing';
+
 
 const DocWrapper = styled.div`
   /* Used for Deeplinking */   
 h2, h3, h4 {
   scroll-margin-top: 2em;
 }
-
 .doc-page {
   a {
     ${BaseLinkStyles.componentStyle.rules}
@@ -33,15 +32,12 @@ h2, h3, h4 {
   padding-top: 40px;
   padding-bottom: 40px;
   padding-right: 40px;
-
   @media (min-width:992px) and (max-width: 1199px) {
     padding-right: 32px;
   }
-
   @media (min-width:992px) {
     padding-top: 64px;
   }
-
   img {
     max-width: 100%;
     height: auto;
@@ -49,68 +45,12 @@ h2, h3, h4 {
   }
   img[src$='#icon'] {
     margin-bottom: 0;
-  }
-
-  ul {
-    margin-left: 16px;
-    margin-bottom: 24px;
-
-    li::marker {
-      padding-inline-start: 39px;
-      color: ${(props) => props.theme.colors.orange_30};
-    }
-
-    &::after,
-      &::before {
-      display: inline-block;
-      direction: rtl !important;
-      margin-left: -28px !important;
-      padding-right: 16px !important;
-      width: 28px !important;
-      } 
-    
-    li {
-      margin-bottom: 8px;
-      line-height: 1.625;
-      padding: 0 0 0 16px;
-
-      li::before {
-        direction: rtl !important;
-        margin-left: -28px !important;
-        padding-right: 16px !important;
-        width: 28px !important;
-      }
-    }
-    li::before {
-      direction: rtl !important;
-      margin-left: -28px !important;
-      padding-right: 16px !important;
-      width: 28px !important;
-    }
-
-    list-style-type: '✦';
-
-    li::marker {
-      color: ${(props) => props.theme.colors.orange_30};
-  }
-
-  ol {
-    li {
-      padding-left: 10px;
-      margin-bottom: 8px;
-    }
-    li::marker {
-      color: $${(props) => props.theme.colors.grey_70};
-    }
   } 
-
   @media (max-width: 765px) {
     padding-left: 30px !important;
     padding-right: 30px !important;
   }
 } 
-
-
 /* Blockquotes */
 blockquote {
   box-sizing: border-box;
@@ -124,27 +64,20 @@ blockquote {
 blockquote code.language-text {
   background-color: ${(props) => props.theme.colors.grey_00};
 }
-
-
 table {
   font-size: 16px !important;
   line-height: 1.5;
 }
-
 td {
   padding: 10px;
 }
-
 thead:first-child:hover tr{
   background-color: ${(props) => props.theme.colors.grey_00};
 }
-
-
 /**
 * add syntax highlighting
 */
 .language-text {
-
   background-color: ${(props) => props.theme.colors.grey_10};
   color: ${(props) => props.theme.colors.grey_90};
 }
@@ -156,13 +89,11 @@ thead:first-child:hover tr{
   box-shadow: inset 0 0 0 1px ${(props) => props.theme.colors.grey_30};
   border-radius: ${(props) => props.theme.borderRadius.medium};
 }
-
 code[class*="language-"] {
   word-break: break-word !important;
   overflow-wrap: break-word !important;
   
 }
-
 .gatsby-highlight {
   background-color: ${(props) => props.theme.colors.grey_80};
   border-radius: ${(props) => props.theme.borderRadius.small};
@@ -171,7 +102,6 @@ code[class*="language-"] {
   overflow: auto;
   white-space: pre-wrap;
   word-break: break-word;
-
   code[class*="language-"],
   .token.comment, 
   .token.string,
@@ -193,7 +123,6 @@ code[class*="language-"] {
     word-break: break-word;
     line-height: 1.666rem;
   }
-
   /**
   * Remove the default PrismJS theme background-color, border-radius, margin,
   * padding and overflow.
@@ -213,17 +142,15 @@ code[class*="language-"] {
     word-break: break-word;
   }
 }
-
 .previous-next-links {
   display: flex;
   justify-content: space-between;
 }
-}
+
 .left-nav-re {
   padding: 32px 0px 8px 0px;
   background-color: ${(props) => props.theme.colors.grey_05};
   font-size: 14px;
-
   & ul {
     margin-left: 0;
     margin-bottom: 1.6rem !important;
@@ -239,14 +166,12 @@ code[class*="language-"] {
   @media screen and (min-width: 768px) {
     max-width: 350px;
   }
-
   & li {
     &:hover {
       cursor: pointer;
     }
   }
 }
-
 .events__alert {
     border: 4px dashed ${(props) => props.theme.colors.blue_10};
     border-radius: ${(props) => props.theme.borderRadius.medium};
@@ -259,25 +184,48 @@ code[class*="language-"] {
 const RightColumnWrapper = styled.aside`
   margin-top: 0px;
   padding-left: 40px !important;
-
   @media (min-width:992px) {
     margin-top: 119px;
     padding-right: 24px;
     padding-left: 0px !important;
   }
-
 .sticky {
   margin-top: 64px;
   position: -webkit-sticky;
   position: sticky !important;
   top: 160px;
 }
-
 .postmanaut-dab {
   max-width: 250px;
 }
 `
+const DocContent = styled.div`
+ul {
+  ${UnorderedListStyles.componentStyle.rules}
+}
 
+ol {
+  ${OrderedListStyles.componentStyle.rules}
+  li > ol {
+    list-style: lower-alpha;
+  }
+} 
+//  anchor link tag styling
+a.anchor.before {
+    top: 0.2em;
+    padding-right: 8px;
+
+      width: auto;
+      height: 0.9em;
+      display: block;
+    }
+  }
+
+  a.anchor:hover {
+    display: block;
+    border: none !important;
+  }
+`
 const prefixImgSrcOfParsedHtml = (parsedHtml, domainName) => {
   // This function prefixes all relative image srcs of the parsedHTML's image srcs with the pathPrefix defined in the gatsby-config.js file
   let images = parsedHtml.querySelectorAll('img');
@@ -353,21 +301,21 @@ const DocPage = ({ data }) => {
             <div className="row row-eq-height">
               <main className="col-sm-12 col-md-12 col-lg-9 offset-lg-0 col-xl-7 doc-page ml-xl-5">
                 <BreadCrumbsLinks data={{ parentLink, subParentLink }} />
+                <DocContent>
             { post.frontmatter.author &&  <p className='small mb-0'>By {post.frontmatter.author} &mdash; 
                     <small className="font-italic">{date}</small>
                   </p>}
-              
-                <h1>{post.frontmatter.title}</h1>
-                <div id="LoadDoc" />
-                {
-                  excerptCount ?
-                    <div className='events__alert mb-3'>
-                      <p>
-                        <small>Development Notification</small>
-                        <br />
-                        <small>{`Character count: ${excerptLength} and therefore ${overIndexLimit} characters too long to be indexed by Algolia`}</small>
-                      </p>
-                    </div>
+                  <h1>{post.frontmatter.title}</h1>
+                  <div id="LoadDoc" />
+                  {
+                    excerptCount ?
+                      <div className='events__alert mb-3'>
+                        <p>
+                          <small>Development Notification</small>
+                          <br />
+                          <small>{`Character count: ${excerptLength} and therefore ${overIndexLimit} characters too long to be indexed by Algolia`}</small>
+                        </p>
+                      </div>
                     : null
                 }
                 <div className='row'>
@@ -377,17 +325,14 @@ const DocPage = ({ data }) => {
                   <small className="font-italic">Last modified: {lastModifiedDate}</small>
                 </p>}
                 </div>
-                
-                {/* Qualtrics */}
-                <LoadQualtrics />
                 <PreviousAndNextLinks data={{ previous, next }} />
+                </DocContent>
               </main>
               <RightColumnWrapper className="col-sm-12 col-md-12 col-lg-3 offset-lg-0 col-xl-3 offset-xl-1 right-column">
                 <hr className="d-block d-lg-none" />
                 <EditDoc />
                 {data && <DisplayContextualLinks data={data} />}
                 <RightNavLinks />
-                
               </RightColumnWrapper>
             </div>
           </div>
