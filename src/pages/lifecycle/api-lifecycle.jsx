@@ -31,7 +31,6 @@ const GraphQLPage = ({ data }) => {
             <div className="row row-eq-height">
               <main className="col-sm-12 col-md-12 col-lg-9 offset-lg-0 col-xl-7 doc-page ml-xl-5">
                 <BreadCrumbsLinks data={{ parentLink, subParentLink }} />
-                {/* Qualtrics */}
                 <section className='mb-5'>
                   <h1>The API lifecycle</h1>
                   <p>
