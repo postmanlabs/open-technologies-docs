@@ -18,6 +18,7 @@ import PreviousAndNextLinks from '../components/modules/PreviousAndNextLinks';
 import BreadCrumbsLinks from '../components/modules/BreadCrumbsLinks';
 import { BaseLinkStyles, UnorderedListStyles, OrderedListStyles} from 'aether-marketing';
 
+
 const DocWrapper = styled.div`
   /* Used for Deeplinking */   
 h2, h3, h4 {
@@ -145,6 +146,7 @@ code[class*="language-"] {
   display: flex;
   justify-content: space-between;
 }
+
 .left-nav-re {
   padding: 32px 0px 8px 0px;
   background-color: ${(props) => props.theme.colors.grey_05};
@@ -201,6 +203,7 @@ const DocContent = styled.div`
 ul {
   ${UnorderedListStyles.componentStyle.rules}
 }
+
 ol {
   ${OrderedListStyles.componentStyle.rules}
   li > ol {
@@ -211,18 +214,18 @@ ol {
 a.anchor.before {
     top: 0.2em;
     padding-right: 8px;
-    svg {
+
       width: auto;
       height: 0.9em;
       display: block;
     }
   }
+
   a.anchor:hover {
     display: block;
     border: none !important;
   }
 `
-
 const prefixImgSrcOfParsedHtml = (parsedHtml, domainName) => {
   // This function prefixes all relative image srcs of the parsedHTML's image srcs with the pathPrefix defined in the gatsby-config.js file
   let images = parsedHtml.querySelectorAll('img');
@@ -302,18 +305,17 @@ const DocPage = ({ data }) => {
             { post.frontmatter.author &&  <p className='small mb-0'>By {post.frontmatter.author} &mdash; 
                     <small className="font-italic">{date}</small>
                   </p>}
-              
-                <h1>{post.frontmatter.title}</h1>
-                <div id="LoadDoc" />
-                {
-                  excerptCount ?
-                    <div className='events__alert mb-3'>
-                      <p>
-                        <small>Development Notification</small>
-                        <br />
-                        <small>{`Character count: ${excerptLength} and therefore ${overIndexLimit} characters too long to be indexed by Algolia`}</small>
-                      </p>
-                    </div>
+                  <h1>{post.frontmatter.title}</h1>
+                  <div id="LoadDoc" />
+                  {
+                    excerptCount ?
+                      <div className='events__alert mb-3'>
+                        <p>
+                          <small>Development Notification</small>
+                          <br />
+                          <small>{`Character count: ${excerptLength} and therefore ${overIndexLimit} characters too long to be indexed by Algolia`}</small>
+                        </p>
+                      </div>
                     : null
                 }
                 <div className='row'>
@@ -331,7 +333,6 @@ const DocPage = ({ data }) => {
                 <EditDoc />
                 {data && <DisplayContextualLinks data={data} />}
                 <RightNavLinks />
-                
               </RightColumnWrapper>
             </div>
           </div>
