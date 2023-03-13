@@ -238,3 +238,13 @@ exports.sourceNodes = async ({
     })
 
 };
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+   resolve: {
+      fallback: {
+          url: require.resolve("url")
+      },
+    },
+  })
+};
