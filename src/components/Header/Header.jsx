@@ -406,7 +406,7 @@ const Header = (props) => {
                     </a>
                   </li>
                   <li>
-                    <a href="/specifications/collections/" className="dropdown-item mb-3">
+                    <a href="/open-technologies/specifications/collections/" className="dropdown-item mb-3">
                       <div className="row">
                         <div className="col-1 lc-icon">
                           <img className="d-block mx-auto" src="https://voyager.postman.com/icon/lifecycle.svg" height="40px" />
