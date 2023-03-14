@@ -210,21 +210,22 @@ ol {
     list-style: lower-alpha;
   }
 } 
+
 //  anchor link tag styling
 a.anchor.before {
     top: 0.2em;
     padding-right: 8px;
-
+    svg {
       width: auto;
       height: 0.9em;
       display: block;
     }
   }
-
   a.anchor:hover {
     display: block;
     border: none !important;
   }
+
 `
 const prefixImgSrcOfParsedHtml = (parsedHtml, domainName) => {
   // This function prefixes all relative image srcs of the parsedHTML's image srcs with the pathPrefix defined in the gatsby-config.js file
