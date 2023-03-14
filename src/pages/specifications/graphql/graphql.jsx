@@ -89,8 +89,11 @@ const GraphQLPage = ({ data }) => {
                         <div className='mb-2'>
                           <DynamicLink url="https://spec.graphql.org/October2021/" name="GraphQL Specification 2021 →" />
                         </div>
-                        <div >
+                        <div className='mb-2'>
                           <DynamicLink url="https://github.com/graphql/graphql-over-http" name="GraphQL Over HTTP →" />
+                        </div>
+                        <div >
+                          <DynamicLink url="https://github.com/graphql/composite-schemas-wg" name="GraphQL Composite Schemas →" />
                         </div>
                       </div>
                     </div>
