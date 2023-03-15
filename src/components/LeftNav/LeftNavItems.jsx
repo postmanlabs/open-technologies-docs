@@ -80,6 +80,10 @@ export const leftNavItems = [
       {
         name: 'The Whys of GraphQL Security',
         url: '/blog/graphql-security/',
+      },
+      {
+        name: 'Error Handling in GraphQL',
+        url: '/blog/graphql-error-handling',
       }
     ]
   }
