@@ -45,14 +45,22 @@ export const leftNavItems = [
           name: 'OpenAPI',
           url: '/specifications/openapi/openapi/',
         },
-        // {
-        //   name: 'Test1',
-        //   url: '/specifications/openapi/test1/',
-        // },
-        // {
-        //   name: 'Test2',
-        //   url: '/specifications/openapi/test2/',
-        // }
+        {
+          name: 'Structure',
+          url: '/specifications/openapi/structure/',
+        },
+        {
+          name: 'History',
+          url: '/specifications/openapi/history/',
+        },
+        {
+          name: 'Lifecycle',
+          url: '/specifications/openapi/lifecycle/',
+        },
+        {
+          name: 'Governance',
+          url: '/specifications/openapi/governance/',
+        }
         ],
       }
     ],
