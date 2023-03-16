@@ -82,8 +82,8 @@ export const leftNavItems = [
         url: '/blog/graphql-security/',
       },
       {
-        name: 'The GraphQL Execution Engine',
-        url: '/blog/graphql-execution/',
+        name: 'Error Handling in GraphQL',
+        url: '/blog/graphql-error-handling/',
       }
     ]
   }

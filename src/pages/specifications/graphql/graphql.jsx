@@ -116,7 +116,7 @@ const GraphQLPage = ({ data }) => {
                           <DynamicLink url="https://github.com/graphql/graphql-wg/tree/main/notes" name="GraphQL working group →" />
                         </div>
                         <div className='mb-2'>
-                          <DynamicLink url="https://github.com/graphql/composite-schemas-wg/tree/main/notes" name="GraphQL Composite Schema →" />
+                          <DynamicLink url="https://github.com/graphql/composite-schemas-wg/tree/main/notes" name="GraphQL Composite Schemas →" />
                         </div>
                         <div >
                           GraphQL Board
@@ -155,7 +155,7 @@ const GraphQLPage = ({ data }) => {
                           <DynamicLink url="https://github.com/graphql/graphql-js-wg" name="GraphQL.js →" />
                         </div>
                         <div className='mb-2'>
-                          <DynamicLink url="https://github.com/graphql/composite-schemas-wg" name="Composite Schema working group →" />
+                          <DynamicLink url="https://github.com/graphql/composite-schemas-wg" name="Composite Schemas working group →" />
                         </div>
                         <div className='mb-2'>
                           <DynamicLink url="https://github.com/graphql/graphiql" name="GraphiQL →" />
