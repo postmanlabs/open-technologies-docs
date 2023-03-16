@@ -83,7 +83,7 @@ export const leftNavItems = [
       },
       {
         name: 'Error Handling in GraphQL',
-        url: '/blog/graphql-error-handling',
+        url: '/blog/graphql-error-handling/',
       }
     ]
   }
