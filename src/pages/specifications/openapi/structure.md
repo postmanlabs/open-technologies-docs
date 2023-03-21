@@ -16,4 +16,3 @@ The OpenAPI specification is a textual format, written in [JSON](https://develop
 * **[Responses](https://spec.openapis.org/oas/latest.html#response-object)** - Describes the HTTP Status Codes, headers, and media types returned with each response, helping the consumer understand the structure and state of the resource.
 * **[Schema](https://spec.openapis.org/oas/latest.html#schema-object)** - Provide [JSON Schema](https://json-schema.org/) descriptions of request and response bodies, allowing these requests and responses to be validated both by the client, and by the server or gateway.
 * **[Security](https://spec.openapis.org/oas/latest.html#security-scheme-object)** - Describes the type of authentication required for accessing an API. Authentication methods such as API keys, HTTP basic and digest schemes, oAuth, mutual TLS, and bearer tokens are supported.
-
