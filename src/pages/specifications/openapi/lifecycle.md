@@ -26,4 +26,3 @@ OpenAPI contracts provide a rich opportunity for collaboration across teams, wit
 * **Comments** - An OpenAPI document opens up the opportunity to associate comments and discussion with the overall contract, but more importantly specific elements of that contract, helping make discussions as precise as they possibly can across teams and with consumers.
 
 It is hard to get teams on the same page when it comes to what an API should do. OpenAPI provides a sharable, publishable, and repeatable format that can be used to drive discussions, collaboration, and developers across API operations. Getting your team on the same page and moving in the same direction is the top benefit enterprises see from using OpenAPI.
-

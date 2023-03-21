@@ -6,7 +6,7 @@ warning: false
 updated: 2023-03-21
 ---
 
-OpenAPI is an open-source specification used for describing HTTP APIs. It provides a machine-   and human-readable format for describing the details of requests and responses. This specification establishes a contract that can be used to generate documentation, mock servers, client SDKs and test your API. 
+OpenAPI is an open-source specification used for describing HTTP APIs. It provides a machine-   and human-readable format for describing the details of requests and responses. This specification establishes a contract that can be used to generate documentation, mock servers, client SDKs and test your API.
 
 ## Purpose
 
@@ -54,4 +54,3 @@ To contribute to the ongoing OpenAPI work, understand what is happening with the
 * [Github Issues](https://github.com/OAI/OpenAPI-Specification/issues)
 * [TDC Weekly Calls](https://github.com/OAI/OpenAPI-Specification/labels/Housekeeping)
 * [Discussions](https://github.com/OAI/OpenAPI-Specification/discussions)
-

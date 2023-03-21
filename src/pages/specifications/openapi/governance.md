@@ -14,4 +14,3 @@ OpenAPI is essential to any enterprise API governance strategy. If you do not ha
 * **Security** - Spectral rules can be applied to the security definitions within an OpenAPI for any API, as well as some of the patterns involved in [OWASP](https://owasp.org/)'s Top 10 API security vulnerabilities - helping strengthen the security aspect of governance.
 
 Governance is a journey and is not something that can be solved overnight with automated Spectral rules applied to OpenAPI definitions. This is just where you should begin when it comes to governance, acknowledging that complete and up-to-date OpenAPI definitions for all APIs will be essential to your overall API journey and strategy.
-
