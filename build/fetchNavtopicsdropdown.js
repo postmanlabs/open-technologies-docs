@@ -63,7 +63,7 @@ function fetchNavtopicsdropdown() {
         }
     )
     .catch(err => {
-      console.error("Error when making BFF call... writing empty navbar.json", err)
+      console.error("Error when making BFF call... writing empty navtopicsdropdown.json", err)
       fs.writeFile(path.join(
         'bff-data',
         'navtopicsdropdown.json',
