@@ -15,7 +15,7 @@ contextual_links:
     url: "https://blog.postman.com/travelogue-of-postman-collection-format-v2/"
 
 ---
-A collection is an API specification that provides a format for representing, modeling, and organizing different parts of an API request or workflow. The format both human-readable and machine-readable, and lets you create executable workflows for your APIs.
+A collection can be used to model an API. Collections provide a way to represent, model, and organize different parts of an API request or workflow. The collection format is both human-readable and machine-readable, and lets you create executable workflows for your APIs.
 
 Collections let you:
 
@@ -25,7 +25,7 @@ Collections let you:
 * Work across the lifecycle of your API.
 * Document and test your API.
 
-The collection format is [open source](https://github.com/postmanlabs/schemas/tree/develop/schemas/draft-07) and is the basis of [collections in Postman](https://www.postman.com/collection/). The format's portability makes it possible to share in a distributed team and run in different environments without any information loss. A single collection file can contain API requests and their parameters, multiple responses to each request, documentation, tests, execution flows, and metadata. This in turn helps developer teams collaborate, increase productivity, and work faster with APIs in any environment.
+The [collection format is open source](https://github.com/postmanlabs/schemas/tree/develop/schemas/draft-07) and is the basis of [collections in Postman](https://www.postman.com/collection/). The format's portability makes it possible to share in a distributed team and run in different environments without any information loss. A single collection file can contain API requests and their parameters, multiple responses to each request, documentation, tests, execution flows, and metadata. This in turn helps developer teams collaborate, increase productivity, and work faster with APIs in any environment.
 
 ## Advantages of the collection format
 
