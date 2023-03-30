@@ -3,10 +3,10 @@ title: "Lifecycle"
 order: 5
 page_id: "openAPI"
 warning: false
-updated: 2023-03-21
+updated: 2023-03-30
 ---
 
-OpenAPI is best known for being able to generate API documentation, but it is also capable of generating mock servers, tests, security scans, client SDKs, server stubs, and other essential aspects of operating APIs. OpenAPI is much more than just any single end goal of producing a definition for an API, it provides the machine-readable details needed to guide an API forward as part of the API lifecycle. The usage of OpenAPI often depends on how far along an organization and its teams are in their API journey, and usually, it begins in service of documentation, but then will rapidly expand from there to enable other areas of the API lifecycle across organizations.
+OpenAPI is best known for being able to generate API documentation, but it is also capable of generating mock servers, tests, security scans, client SDKs, server stubs, and other essential aspects of operating APIs. OpenAPI is much more than just any single end goal of producing a definition for an API, it provides the machine-readable details needed to guide an API forward as part of the API lifecycle. The usage of OpenAPI often depends on how far along an organization and its teams are in their API journey, and usually, it begins in service of documentation, but then will rapidly expand from there to enable other areas of the API lifecycle across organizations. OpenAPI definitions can be created from existing code, either as a one-off process (pivoting to a API design-first workflow) or as part of your CI/CD pipeline.
 
 * **Documentation** - OpenAPI can be used to generate and keep documentation up to date, providing all the details needed to publish human-readable documentation that makes onboarding much easier.
 * **Client Code Generation** - OpenAPI can be used to generate code libraries and SDKs in a variety of programming languages, helping produce client or server-side code that makes it easier to work with APIs.

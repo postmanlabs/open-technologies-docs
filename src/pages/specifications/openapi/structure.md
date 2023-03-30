@@ -3,7 +3,7 @@ title: "Structure"
 order: 3
 page_id: "openAPI"
 warning: false
-updated: 2023-03-21
+updated: 2023-03-30
 ---
 
 The OpenAPI specification is a textual format, written in [JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON) or [YAML](https://yaml.org/). It is comprised of various objects with nested properties or fields, which allow you to fully describe an HTTP API.
@@ -16,3 +16,33 @@ The OpenAPI specification is a textual format, written in [JSON](https://develop
 * **[Responses](https://spec.openapis.org/oas/latest.html#response-object)** - Describes the HTTP Status Codes, headers, and media types returned with each response, helping the consumer understand the structure and state of the resource.
 * **[Schema](https://spec.openapis.org/oas/latest.html#schema-object)** - Provide [JSON Schema](https://json-schema.org/) descriptions of request and response bodies, allowing these requests and responses to be validated both by the client, and by the server or gateway.
 * **[Security](https://spec.openapis.org/oas/latest.html#security-scheme-object)** - Describes the type of authentication required for accessing an API. Authentication methods such as API keys, HTTP basic and digest schemes, oAuth, mutual TLS, and bearer tokens are supported.
+* **[Examples](https://spec.openapis.org/oas/latest.html#example-object)** - Describes examples of how to use the API.
+* **[Components](https://spec.openapis.org/oas/latest.html#components-object)** - Is a container for reusable objects within the API. These can be of any of the above objects (except `info` and `servers`).
+
+A minimal example of an OpenAPI document in YAML format is shown below:
+
+```yaml
+openapi: 3.1.0
+info:
+  title: Example API
+  version: 1.0.0
+servers:
+  - url: https://api.example.com
+    description: This API exposes one healthcheck endpoint
+paths:
+  /healthcheck:
+    get:
+      summary: Return the health status of the API
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example:
+                      Healthy
+```
