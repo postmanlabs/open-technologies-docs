@@ -3,10 +3,10 @@ title: "OpenAPI"
 order: 2
 page_id: "openAPI"
 warning: false
-updated: 2023-03-21
+updated: 2023-03-30
 ---
 
-OpenAPI is an open-source specification used for describing HTTP APIs. It provides a machine-   and human-readable format for describing the details of requests and responses. This specification establishes a contract that can be used to generate documentation, mock servers, client SDKs and test your API.
+OpenAPI (formerly known as [Swagger](../history/)) is an open-source specification used for describing HTTP APIs. It provides a machine- and human-readable format for describing the details of requests and responses. This specification establishes a contract that can be used to generate documentation, mock servers, client SDKs and test your API. OpenAPI definitions can also be created from existing API code, using annotations or introspection.
 
 ## Purpose
 

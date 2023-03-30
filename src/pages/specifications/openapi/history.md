@@ -3,7 +3,7 @@ title: "History"
 order: 4
 page_id: "history"
 warning: false
-updated: 2023-03-21
+updated: 2023-03-30
 ---
 
 In 2009, Tony Tam of Wordnik (an online dictionary service) had begun working on what would become the Swagger Specification. Used to describe Wordnik's JSON API, Swagger was used to drive Wordnik's [developer console / documentation](https://developer.wordnik.com/docs), and their server integration and code-generation efforts within the company.
@@ -30,4 +30,17 @@ Ten companies were founding members of the OpenAPI Initiative (3Scale, Apigee, C
 
 The OpenAPI Specification is now managed by a Technical Steering Committee (TSC), and since the departure of Tony Tam in 2017 this has comprised long-time contributor Ron Ratovsky of SmartBear Software, Darrel Miller of Microsoft, Jeremy Whitlock and Marsh Gardiner, both now at Google, Uri Sarid of Mulesoft, and [Mike Ralphson](https://twitter.com/PermittedSoc) of **Postman**. The TSC draw from the wider Technical Developer Community (TDC) to develop the specification in an [open](https://www.openapis.org/calendar), transparent fashion. Membership of the OpenAPI Initiative does not confer voting rights over content of the specification itself.
 
-In July 2017, the OpenAPI Initiative announced the release of version 3.0.0 of the OpenAPI Specification, containing several structural improvements, closer alignment with JSON Schema draft 5, new features such as `links` and `callbacks`, standardisation on CommonMark for descriptions and many small tweaks and clarifications. Three patch releases to the 3.0 line were made in 2017, 2018 and 2020. Version 3.1.0 of the specification was released in February 2021. Work has begun on a tentative v4 of the OpenAPI Specification, code-named '[Moonwalk](https://github.com/OAI/moonwalk/discussions)'.
+In July 2017, the OpenAPI Initiative announced the release of version 3.0.0 of the OpenAPI Specification, containing several structural improvements, closer alignment with JSON Schema draft 5, new features such as `links` and `callbacks`, standardisation on CommonMark for descriptions and many small tweaks and clarifications. Three patch releases to the 3.0 line were made in 2017, 2018 and 2020. Version 3.1.0 of the specification was released in February 2021, with full JSON Schema Draft 2020-12 compatibility and support for [webhooks](https://en.wikipedia.org/wiki/Webhook). Work has begun on a tentative v4 of the OpenAPI Specification, code-named '[Moonwalk](https://github.com/OAI/moonwalk/discussions)'.
+
+## Timeline
+
+| Date | Description |
+| --- | --- |
+| August 2011 | First release of the Swagger specification |
+| August 2012 | Release of Swagger 1.1
+| March 2014 | Release of Swagger 1.2 - first formal specification
+| September 2014 | Release of Swagger 2.0
+| December 2015 | Formation of the OpenAPI Initiative
+| July 2017 | OpenAPI 3.0 released
+| February 2021 | OpenAPI 3.1 released
+| September 2022 | Work begins on OpenAPI 4.0 - codename 'Moonwalk'
