@@ -29,11 +29,9 @@ The Postman app is designed to support all major API specification formats, incl
 
 There are a wide variety of API specification formats available, each with its own benefits. For example, [OpenAPI](https://spec.openapis.org/oas/latest.html) prioritizes human readability, making it easy for end users to understand and use your API, while [gRPC](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md) is optimized for efficient performance. By using a consistent approach and choosing the right specification for your API, you can make sure that the design and development of your API are scalable, efficient, and well-governed.
 
-For more information about working with API specification files in Postman, see [Editing an API definition](https://learning.postman.com/docs/designing-and-developing-your-api/developing-an-api/defining-an-api/) in the Postman Learning Center.
-
 ## The role of API specifications
 
-When you're building or integrating an API, your specification file serves as a [blueprint for your API](https://medium.com/better-practices/api-specifications-d87588ac874). Specifications play a major role in API standards and governance, contract testing, and the API lifecycle.
+Specifications play a major role in API standards and governance, contract testing, and the API lifecycle. When you're building or integrating an API, your specification file serves as a [blueprint for your API](https://medium.com/better-practices/api-specifications-d87588ac874). For more information about working with API specification files in Postman, see [Editing an API definition](https://learning.postman.com/docs/designing-and-developing-your-api/developing-an-api/defining-an-api/) in the Postman Learning Center.
 
 ### Standards and governance
 
