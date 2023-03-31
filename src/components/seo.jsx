@@ -27,6 +27,7 @@
        }
      `,
    );
+   {console.log(site.siteMetadata.pathPrefix, 'path')}
    return (
      <Helmet
        htmlAttributes={{
@@ -106,7 +107,8 @@
        {/* OneTrust */}
        <script type="text/javascript" src="https://cdn.cookielaw.org/consent/1cef3369-6d07-4928-b977-2d877eb670c4/OtAutoBlock.js" />
        <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="1cef3369-6d07-4928-b977-2d877eb670c4" />
-       <link rel="canonical" href={`https://learning.postman.com/${pathPrefix}${slug}`} />
+       {console.log(pathPrefix, 'path')}
+       <link rel="canonical" href={`https://learning.postman.com${site.siteMetadata.pathPrefix}${slug}`} />
      </Helmet>
    );
  }
@@ -120,6 +122,7 @@
    lang: PropTypes.string,
    meta: PropTypes.arrayOf(PropTypes.object),
    title: PropTypes.string.isRequired,
+   pathPrefix: PropTypes.string
  };
  
  export default SEO;
