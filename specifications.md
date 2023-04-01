@@ -49,7 +49,7 @@ By adhering to the conventions outlined by the specification format, you can dev
 
 ## How Postman supports specifications
 
-Postman provides financial and other resources to creator communities like [AsyncAPI](https://www.asyncapi.com/community), [OpenAPI](https://www.openapis.org/), and [JSON Schema](https://json-schema.org/#about-our-community) to allow them to focus on bringing better tooling to the broader community. Our goal is to make sure developers have the flexibility to work with APIs in any environment or workflow.
+Postman provides financial and other resources to creator communities like [AsyncAPI](https://www.asyncapi.com/community), [OpenAPI](https://www.openapis.org/), [JSON Schema](https://json-schema.org/#about-our-community), and [GraphQL](https://graphql.org/community/) to allow them to focus on bringing better tooling to the broader community. Our goal is to make sure developers have the flexibility to work with APIs in any environment or workflow.
 
 Many Postman employees lead projects like the [OpenAPI Initiative](https://www.openapis.org/), the [OpenJS Foundation](https://openjsf.org/), and the [AsyncAPI Initiative](https://www.asyncapi.com/) in addition to helping the community. Postman hosts regular open meetings, some weekly and some monthly, to promote transparency within the community. We are also a member of the [Linux Foundation](https://www.linuxfoundation.org/), supporting the growth of open-source projects and technologies while promoting innovation and trust.
 
