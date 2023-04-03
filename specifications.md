@@ -31,7 +31,7 @@ There are a wide variety of API specification formats available, each with its o
 
 ## The role of API specifications
 
-Specifications play a major role in API standards and governance, contract testing, and the API lifecycle. When you're building or integrating an API, your specification file serves as a [blueprint for your API](https://medium.com/better-practices/api-specifications-d87588ac874). For more information about working with API specification files in Postman, see [Editing an API definition](https://learning.postman.com/docs/designing-and-developing-your-api/developing-an-api/defining-an-api/) in the Postman Learning Center.
+Specifications play a major role in API standards and governance, contract testing, and the API lifecycle. When you're building or integrating an API, you create an API definition file that conforms to the specification and serves as a [blueprint for your API](https://medium.com/better-practices/api-specifications-d87588ac874). For more information about working with API definition files in Postman, see [Editing an API definition](https://learning.postman.com/docs/designing-and-developing-your-api/developing-an-api/defining-an-api/) in the Postman Learning Center.
 
 ### Standards and governance
 
@@ -39,11 +39,11 @@ API specifications provide a standard language and structure for describing APIs
 
 ### Contract testing
 
-When you want to make sure that your API is working as expected, you can validate the API implementation against the requirements you outlined in the API specification file. Create automated tests that make requests to the API and check that the responses you receive match what is expected. You can use contract tests to validate status codes, data types, and required fields, which are all defined in the API specification file. When the API works as expected, it builds trust between the API producers and consumers.
+When you want to make sure that your API is working as expected, you can validate the API implementation against the requirements you outlined in the API definition. Create automated tests that make requests to the API and check that the responses you receive match what is expected. You can use contract tests to validate status codes, data types, and required fields, which are all defined in the API definition and follow the conventions of the API specification. When the API works as expected, it builds trust between the API producers and consumers.
 
 ### Lifecycle
 
-API specifications are useful throughout the API lifecycle. When you're planning and designing an API, you start with the API specification file. Even before development begins, you can use the specification file to outline the API’s structure, endpoints, and request and response formats to make sure all collaborators and stakeholders have a common understanding of the API’s purpose and features.
+API specifications are useful throughout the API lifecycle. When you're planning and designing an API, you start with the API definition file. Even before development begins, you can use the definition to outline the API’s structure, endpoints, and request and response formats to make sure all collaborators and stakeholders have a common understanding of the API’s purpose and features.
 
 By adhering to the conventions outlined by the specification format, you can develop an API that is consistent, user-friendly, and integrates with tools. For example, by integrating with tools like [SwaggerUI](https://swagger.io/tools/swagger-ui/) for OpenAPI or [GraphiQL](https://github.com/graphql/graphiql/tree/main/packages/graphiql) for GraphQL, API documentation can be automatically generated and kept up-to-date.
 
@@ -51,7 +51,7 @@ By adhering to the conventions outlined by the specification format, you can dev
 
 Postman provides financial and other resources to creator communities like [AsyncAPI](https://www.asyncapi.com/community), [OpenAPI](https://www.openapis.org/), [JSON Schema](https://json-schema.org/#about-our-community), and [GraphQL](https://graphql.org/community/) to allow them to focus on bringing better tooling to the broader community. Our goal is to make sure developers have the flexibility to work with APIs in any environment or workflow.
 
-As part of our commitment to supporting the growth of open-source projects and promoting innovation and trust within the community, Postman is a member of the [Linux Foundation](https://www.linuxfoundation.org/). Many Postman employees lead Linux Foundation initiatives like the [GraphQL Foundation](https://graphql.org/foundation/), [OpenAPI Initiative](https://www.openapis.org/), [AsyncAPI Initiative](https://www.asyncapi.com/), and the [Electron](https://www.electronjs.org/) project within the OpenJS Foundation. Postman hosts regular open meetings related to these projects and specifications, some weekly and some monthly, to promote transparency within the community. 
+As part of our commitment to supporting the growth of open-source projects and promoting innovation and trust within the community, Postman is a member of the [Linux Foundation](https://www.linuxfoundation.org/). Many Postman employees lead Linux Foundation initiatives like the [GraphQL Foundation](https://graphql.org/foundation/), [OpenAPI Initiative](https://www.openapis.org/), [AsyncAPI Initiative](https://www.asyncapi.com/), and the [Electron](https://www.electronjs.org/) project within the OpenJS Foundation. Postman hosts regular open meetings related to these projects and specifications, some weekly and some monthly, to promote transparency within the community.
 
 For more information about how Postman Open Technologies supports specifications, see [Our Open Source API Philosophy](https://www.postman.com/company/open-philosophy/).
 
