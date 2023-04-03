@@ -96,8 +96,17 @@ const ModalWrapper = styled.div`
 div.modal {
   background-color: ${(props) => props.theme.colors.grey_00}!important;
   margin: auto;
-  height: 100vh;
+  height: 85vh;
   max-width: 950px;
+  border-radius: 6px;
+}
+div.modal-content {
+  margin-top: 10px;
+  height: 100%;
+  width: 100%;
+}
+div.modal-dialog {
+  margin-top: 0px;
 }
 .landing-card__content {
     text-decoration: none;

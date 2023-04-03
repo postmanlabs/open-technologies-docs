@@ -21,7 +21,7 @@ const GraphQLPage = ({ data }) => {
     <Layout>
       <SEO title="Postman GraphQL"
         description='GraphQL activities deliver both internal and external value for Postman.'
-        slug="/auto-flex-policy/" />
+        slug="/lifecycle/api-lifecycle/" />
       <DocWrapper className="container-fluid">
         <div className="row row-eq-height">
           <nav className="col-sm-12 col-md-4 col-lg-3 left-nav-re">
