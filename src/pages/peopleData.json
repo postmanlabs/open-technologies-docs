@@ -356,5 +356,149 @@
             "website": "https://dev.to/jansche",
             "mastodon": "https://mastodon.online/@jansche"
         }
+    },
+    {
+        "company": "testing",
+        "col": "col-12 col-lg-6 mb-5",
+        "media": {
+            "alt": "Laurent Broudoux. Postman. ",
+            "src": "/images/mike-ralphson.jpeg"
+        },
+        "speaker": {
+            "name": "Laurent Broudoux",
+            "title": "JSON schema",
+            "twitter": "https://twitter.com/jansche",
+            "linkedin": "https://www.linkedin.com/in/janschenk/",
+            "website": "https://dev.to/jansche",
+            "mastodon": "https://mastodon.online/@jansche"
+        }
+    },
+    {
+        "company": "testing",
+        "col": "col-12 col-lg-6 mb-5",
+        "media": {
+            "alt": "Yacine Kheddache. Postman. ",
+            "src": "/images/mike-ralphson.jpeg"
+        },
+        "speaker": {
+            "name": "Yacine Kheddache",
+            "title": "JSON schema",
+            "twitter": "https://twitter.com/jansche",
+            "linkedin": "https://www.linkedin.com/in/janschenk/",
+            "website": "https://dev.to/jansche",
+            "mastodon": "https://mastodon.online/@jansche"
+        }
+    },
+    {
+        "company": "codegen",
+        "col": "col-12 col-lg-6 mb-5",
+        "media": {
+            "alt": "Kevin Duffey. Postman. ",
+            "src": "/images/mike-ralphson.jpeg"
+        },
+        "speaker": {
+            "name": "Kevin Duffey",
+            "title": "JSON schema",
+            "twitter": "https://twitter.com/jansche",
+            "linkedin": "https://www.linkedin.com/in/janschenk/",
+            "website": "https://dev.to/jansche",
+            "mastodon": "https://mastodon.online/@jansche"
+        }
+    },
+    {
+        "company": "communications",
+        "col": "col-12 col-lg-6 mb-5",
+        "media": {
+            "alt": "LeTroy Gardner. Postman. ",
+            "src": "/images/mike-ralphson.jpeg"
+        },
+        "speaker": {
+            "name": "LeTroy Gardner",
+            "title": "JSON schema",
+            "twitter": "https://twitter.com/jansche",
+            "linkedin": "https://www.linkedin.com/in/janschenk/",
+            "website": "https://dev.to/jansche",
+            "mastodon": "https://mastodon.online/@jansche"
+        }
+    },
+    {
+        "company": "governance",
+        "col": "col-12 col-lg-6 mb-5",
+        "media": {
+            "alt": "Arnaud Lauret. Postman. ",
+            "src": "/images/mike-ralphson.jpeg"
+        },
+        "speaker": {
+            "name": "Arnaud Lauret",
+            "title": "JSON schema",
+            "twitter": "https://twitter.com/jansche",
+            "linkedin": "https://www.linkedin.com/in/janschenk/",
+            "website": "https://dev.to/jansche",
+            "mastodon": "https://mastodon.online/@jansche"
+        }
+    },
+    {
+        "company": "lifecycle",
+        "col": "col-12 col-lg-6 mb-5",
+        "media": {
+            "alt": "Kevin Swiber. Postman. ",
+            "src": "/images/mike-ralphson.jpeg"
+        },
+        "speaker": {
+            "name": "Kevin Swiber",
+            "title": "JSON schema",
+            "twitter": "https://twitter.com/jansche",
+            "linkedin": "https://www.linkedin.com/in/janschenk/",
+            "website": "https://dev.to/jansche",
+            "mastodon": "https://mastodon.online/@jansche"
+        }
+    },
+    {
+        "company": "products",
+        "col": "col-12 col-lg-6 mb-5",
+        "media": {
+            "alt": "Deepa Goya. Postman. ",
+            "src": "/images/mike-ralphson.jpeg"
+        },
+        "speaker": {
+            "name": "Deepa Goya",
+            "title": "JSON schema",
+            "twitter": "https://twitter.com/jansche",
+            "linkedin": "https://www.linkedin.com/in/janschenk/",
+            "website": "https://dev.to/jansche",
+            "mastodon": "https://mastodon.online/@jansche"
+        }
+    },
+    {
+        "company": "products",
+        "col": "col-12 col-lg-6 mb-5",
+        "media": {
+            "alt": "Bruno Pedro. Postman. ",
+            "src": "/images/mike-ralphson.jpeg"
+        },
+        "speaker": {
+            "name": "Bruno Pedro",
+            "title": "JSON schema",
+            "twitter": "https://twitter.com/jansche",
+            "linkedin": "https://www.linkedin.com/in/janschenk/",
+            "website": "https://dev.to/jansche",
+            "mastodon": "https://mastodon.online/@jansche"
+        }
+    },
+    {
+        "company": "data",
+        "col": "col-12 col-lg-6 mb-5",
+        "media": {
+            "alt": "Pascal Heus. Postman. ",
+            "src": "/images/mike-ralphson.jpeg"
+        },
+        "speaker": {
+            "name": "Pascal Heus",
+            "title": "JSON schema",
+            "twitter": "https://twitter.com/jansche",
+            "linkedin": "https://www.linkedin.com/in/janschenk/",
+            "website": "https://dev.to/jansche",
+            "mastodon": "https://mastodon.online/@jansche"
+        }
     }
 ]
