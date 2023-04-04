@@ -1,5 +1,5 @@
 import React from 'react';
-import { navigate } from 'gatsby';
+import { navigate, withPrefix } from 'gatsby';
 const { v4: uuidv4 } = require('uuid');
 import styled from 'styled-components';
 import { SectionHeader, Feature } from 'aether-marketing';
@@ -43,34 +43,7 @@ const HRStyles = styled.hr`
   border-top: 1px solid ${(props) => props.theme.colors.grey_30};
   margin-bottom: 0;
 `;
-// const kin = {
-//   "type": "CardPresenterHorizontal",
-//         "col": "col-12 col-lg-6 mb-5",
-//         "media":{
-//           "alt": "Kin Lane. Postman. Headhost",
-//           "src": "https://voyager.postman.com/photo/presenter/headshot-kin-lane.png"
-//         },
-//         "speaker": {
-//           "name": "Kin Lane",
-//           "twitter": "https://twitter.com/kinlane",
-//           "linkedin": "https://www.linkedin.com/in/kinlane/"
-//         }
-// }
-// const jan = {
-//   "type": "CardPresenterHorizontal",
-//         "col": "col-12 col-lg-6 mb-5",
-//         "media":{
-//           "alt": "Jan Schnek. Postman. ",
-//           "src": "/images/jan.jpeg"
-//         },
-//         "speaker": {
-//           "name": "Jan Schnek",
-//           "twitter": "https://twitter.com/jansche",
-//           "linkedin": "https://www.linkedin.com/in/janschenk/",
-//           "mastodon": "https://mastodon.online/@jansche",
-//           "website": "https://dev.to/jansche"
-//         }
-// }
+
 const header = {
   title: "Meet the teams and their tech in Postman Open Technologies.",
   body: [
@@ -183,7 +156,7 @@ class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        {console.log(peopleData)}
+        {console.log(peopleData[3].speaker.mastodon)}
         <SEO title="Learning Center" slug="/" />
         <div className="container-fluid">
           <HeroWrapper className="row section align-items-center hero">
@@ -251,7 +224,9 @@ class IndexPage extends React.Component {
                     title: people.speaker.title,
                     linkedin: people.speaker.linkedin,
                     twitter: people.speaker.twitter,
-                    website: people.speaker.website
+                    website: people.speaker.website,
+                    mastodon: people.speaker.mastodon,
+                    github: people.speaker.github
                   }}
                 /> : null
               ))
@@ -261,7 +236,7 @@ class IndexPage extends React.Component {
           </section>
           <section className="section align-items-center">
             <h3 className='mb-4'>Specifications</h3>
-            
+            <h3 className='mb-4'>OpenAPO</h3>
               <div className='row mt-4'>
                 {peopleData.map(people => (
                  people.company === 'specifications' ?
@@ -276,13 +251,117 @@ class IndexPage extends React.Component {
                       title: people.speaker.title,
                       linkedin: people.speaker.linkedin,
                       twitter: people.speaker.twitter,
-                      website: people.speaker.website
+                      website: people.speaker.website,
+                      mastodon: people.speaker.mastodon,
+                      github: people.speaker.github
                     }}
                   /> : null
                 ))
                 }
               </div>
+              </section>
+              <section className="section align-items-center">
+              <h3 className='mb-4'>JSON Schema</h3>
             
+            <div className='row mt-4'>
+              {peopleData.map(people => (
+               people.company === 'json-schema' ?
+                <CardPresenterHorizontal key={uuidv4()}
+                  col={people.col}
+                  media={{
+                    alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                    src: people.media.src
+                  }}
+                  speaker={{
+                    name: people.speaker.name,
+                    title: people.speaker.title,
+                    linkedin: people.speaker.linkedin,
+                    twitter: people.speaker.twitter,
+                    website: people.speaker.website,
+                    mastodon: people.speaker.mastodon,
+                    github: people.speaker.github
+                  }}
+                /> : null
+              ))
+              }
+            </div>
+          </section>
+          <section className="section align-items-center">
+              <h3 className='mb-4'>AsyncAPI</h3>
+            
+            <div className='row mt-4'>
+              {peopleData.map(people => (
+               people.company === 'asyncapi' ?
+                <CardPresenterHorizontal key={uuidv4()}
+                  col={people.col}
+                  media={{
+                    alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                    src: people.media.src
+                  }}
+                  speaker={{
+                    name: people.speaker.name,
+                    title: people.speaker.title,
+                    linkedin: people.speaker.linkedin,
+                    twitter: people.speaker.twitter,
+                    website: people.speaker.website,
+                    mastodon: people.speaker.mastodon,
+                    github: people.speaker.github
+                  }}
+                /> : null
+              ))
+              }
+            </div>
+          </section>
+          <section className="section align-items-center">
+              <h3 className='mb-4'>GraphQL</h3>
+            
+            <div className='row mt-4'>
+              {peopleData.map(people => (
+               people.company === 'graphql' ?
+                <CardPresenterHorizontal key={uuidv4()}
+                  col={people.col}
+                  media={{
+                    alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                    src: people.media.src
+                  }}
+                  speaker={{
+                    name: people.speaker.name,
+                    title: people.speaker.title,
+                    linkedin: people.speaker.linkedin,
+                    twitter: people.speaker.twitter,
+                    website: people.speaker.website,
+                    mastodon: people.speaker.mastodon,
+                    github: people.speaker.github
+                  }}
+                /> : null
+              ))
+              }
+            </div>
+          </section>
+          <section className="section align-items-center">
+              <h3 className='mb-4'>Collection Format</h3>
+            <div className='row mt-4'>
+              {peopleData.map(people => (
+               people.company === 'collection-format' ?
+                <CardPresenterHorizontal key={uuidv4()}
+                  col={people.col}
+                  media={{
+                    alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                    src: people.media.src
+                  }}
+                  speaker={{
+                    name: people.speaker.name,
+                    title: people.speaker.title,
+                    linkedin: people.speaker.linkedin,
+                    twitter: people.speaker.twitter,
+                    website: people.speaker.website,
+                    mastodon: people.speaker.mastodon,
+                    github: people.speaker.github
+                  }}
+                /> : null
+              ))
+              }
+            </div>
           </section>
           <section className="row section align-items-center">
             <Feature
@@ -291,7 +370,7 @@ class IndexPage extends React.Component {
               divider={feature.divider}
               title={feature.title}
               body={feature.body}
-              media={feature.media}
+              media={withPrefix(feature.media)}
               backgroundColor={feature.backgroundColor}
               items={feature.items}
               bodyLink={feature.bodyLink}
