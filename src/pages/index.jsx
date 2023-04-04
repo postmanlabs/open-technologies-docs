@@ -234,8 +234,8 @@ class IndexPage extends React.Component {
 
             </div>
           </section>
+            <h2 className='mb-4'>Specifications</h2>
           <section className="section align-items-center">
-            <h3 className='mb-4'>Specifications</h3>
             <h3 className='mb-4'>OpenAPO</h3>
               <div className='row mt-4'>
                 {peopleData.map(people => (
@@ -363,6 +363,189 @@ class IndexPage extends React.Component {
               }
             </div>
           </section>
+            <h2>Tooling</h2>
+          <section className="section align-items-center">
+              <h3 className='mb-4'>Testing & Mocking</h3>
+            <div className='row mt-4'>
+              {peopleData.map(people => (
+               people.company === 'testing' ?
+                <CardPresenterHorizontal key={uuidv4()}
+                  col={people.col}
+                  media={{
+                    alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                    src: people.media.src
+                  }}
+                  speaker={{
+                    name: people.speaker.name,
+                    title: people.speaker.title,
+                    linkedin: people.speaker.linkedin,
+                    twitter: people.speaker.twitter,
+                    website: people.speaker.website,
+                    mastodon: people.speaker.mastodon,
+                    github: people.speaker.github
+                  }}
+                /> : null
+              ))
+              }
+            </div>
+          </section>
+          <section className="section align-items-center">
+            
+              <h3 className='mb-4'>CodeGen</h3>
+            <div className='row mt-4'>
+              {peopleData.map(people => (
+               people.company === 'codegen' ?
+                <CardPresenterHorizontal key={uuidv4()}
+                  col={people.col}
+                  media={{
+                    alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                    src: people.media.src
+                  }}
+                  speaker={{
+                    name: people.speaker.name,
+                    title: people.speaker.title,
+                    linkedin: people.speaker.linkedin,
+                    twitter: people.speaker.twitter,
+                    website: people.speaker.website,
+                    mastodon: people.speaker.mastodon,
+                    github: people.speaker.github
+                  }}
+                /> : null
+              ))
+              }
+            </div>
+          </section>
+          <h2>Strategy</h2>
+          <section className="section align-items-center">
+            
+            <h3 className='mb-4'>Communications/PR</h3>
+          <div className='row mt-4'>
+            {peopleData.map(people => (
+             people.company === 'communications' ?
+              <CardPresenterHorizontal key={uuidv4()}
+                col={people.col}
+                media={{
+                  alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                  src: people.media.src
+                }}
+                speaker={{
+                  name: people.speaker.name,
+                  title: people.speaker.title,
+                  linkedin: people.speaker.linkedin,
+                  twitter: people.speaker.twitter,
+                  website: people.speaker.website,
+                  mastodon: people.speaker.mastodon,
+                  github: people.speaker.github
+                }}
+              /> : null
+            ))
+            }
+          </div>
+        </section>
+        <section className="section align-items-center">
+            
+            <h3 className='mb-4'>Governance</h3>
+          <div className='row mt-4'>
+            {peopleData.map(people => (
+             people.company === 'governance' ?
+              <CardPresenterHorizontal key={uuidv4()}
+                col={people.col}
+                media={{
+                  alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                  src: people.media.src
+                }}
+                speaker={{
+                  name: people.speaker.name,
+                  title: people.speaker.title,
+                  linkedin: people.speaker.linkedin,
+                  twitter: people.speaker.twitter,
+                  website: people.speaker.website,
+                  mastodon: people.speaker.mastodon,
+                  github: people.speaker.github
+                }}
+              /> : null
+            ))
+            }
+          </div>
+        </section>
+        <section className="section align-items-center">
+            
+            <h3 className='mb-4'>Lifecycle</h3>
+          <div className='row mt-4'>
+            {peopleData.map(people => (
+             people.company === 'lifecycle' ?
+              <CardPresenterHorizontal key={uuidv4()}
+                col={people.col}
+                media={{
+                  alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                  src: people.media.src
+                }}
+                speaker={{
+                  name: people.speaker.name,
+                  title: people.speaker.title,
+                  linkedin: people.speaker.linkedin,
+                  twitter: people.speaker.twitter,
+                  website: people.speaker.website,
+                  mastodon: people.speaker.mastodon,
+                  github: people.speaker.github
+                }}
+              /> : null
+            ))
+            }
+          </div>
+        </section>
+        <section className="section align-items-center">
+            
+            <h3 className='mb-4'>Products</h3>
+          <div className='row mt-4'>
+            {peopleData.map(people => (
+             people.company === 'products' ?
+              <CardPresenterHorizontal key={uuidv4()}
+                col={people.col}
+                media={{
+                  alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                  src: people.media.src
+                }}
+                speaker={{
+                  name: people.speaker.name,
+                  title: people.speaker.title,
+                  linkedin: people.speaker.linkedin,
+                  twitter: people.speaker.twitter,
+                  website: people.speaker.website,
+                  mastodon: people.speaker.mastodon,
+                  github: people.speaker.github
+                }}
+              /> : null
+            ))
+            }
+          </div>
+        </section>
+        <section className="section align-items-center">
+            
+            <h3 className='mb-4'>Data & Intelligence</h3>
+          <div className='row mt-4'>
+            {peopleData.map(people => (
+             people.company === 'data' ?
+              <CardPresenterHorizontal key={uuidv4()}
+                col={people.col}
+                media={{
+                  alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                  src: people.media.src
+                }}
+                speaker={{
+                  name: people.speaker.name,
+                  title: people.speaker.title,
+                  linkedin: people.speaker.linkedin,
+                  twitter: people.speaker.twitter,
+                  website: people.speaker.website,
+                  mastodon: people.speaker.mastodon,
+                  github: people.speaker.github
+                }}
+              /> : null
+            ))
+            }
+          </div>
+        </section>
           <section className="row section align-items-center">
             <Feature
               paddingTop={feature.paddingTop}
