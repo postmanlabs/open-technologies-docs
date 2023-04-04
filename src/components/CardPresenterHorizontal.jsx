@@ -35,6 +35,22 @@ function CardPresenterHorizontal({
                 {speaker.company}
               </Paragraph>}
               <div className="d-flex flex-row">
+              {speaker.github && (
+                 <a
+                 href={speaker.github}
+                 target="_blank"
+                 rel="noopener noreferrer nofollow"
+                 className="mr-1"
+                 title={`Follow ${speaker.name} on Twitter`}
+               >
+                 <SVG
+                      width="30"
+                      height="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    ><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="#FF6C37"/></SVG>
+                </a>
+                  
+                )}
                 {speaker.linkedin && (
                   <a
                     href={speaker.linkedin}
@@ -96,6 +112,22 @@ function CardPresenterHorizontal({
                     </SVG>
                   </a>
                 )}
+                {speaker.mastodon && (
+                 <a
+                 href={speaker.mastodon}
+                 target="_blank"
+                 rel="noopener noreferrer nofollow"
+                 className="mr-1"
+                 title={`Follow ${speaker.name} on Mastodon`}
+               >
+                 <SVG
+                      width="50"
+                      height="50"
+                      xmlns="http://www.w3.org/2000/svg"
+                    ><path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z" fill="#FF6C37"/> </SVG>
+                </a>
+                  
+                )}
               </div>
             </div>
           </div>
@@ -117,7 +149,9 @@ CardPresenterHorizontal.propTypes = {
     company: PropTypes.string,
     twitter: PropTypes.string,
     linkedin: PropTypes.string,
-    website: PropTypes.string
+    website: PropTypes.string,
+    mastodon: PropTypes.string,
+    github: PropTypes.string
   })
 };
 
@@ -133,7 +167,9 @@ CardPresenterHorizontal.defaultProps = {
     company: null,
     twitter: null,
     linkedin: null,
-    website: null
+    website: null,
+    mastodon: null,
+    github: null
   }
 };
 
