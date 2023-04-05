@@ -116,15 +116,10 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Samir Amzani. Postman. ",
-            "src": "/images/Julian-Berman.jpeg"
+            "src": "/images/Coverage.png"
         },
         "speaker": {
-            "name": "Samir Amzani",
-            "twitter": "https://twitter.com/JulianWasTaken",
-            "linkedin": "https://www.linkedin.com/in/julian-berman",
-            "mastodon": "https://mastodon.social/@JulianWasTaken",
-            "website": "https://til.grayvines.com/",
-            "github": "https://github.com/Julian"
+            "name": "Samir Amzani"
         }
     },
     {
