@@ -22,12 +22,12 @@ function CardPresenterHorizontal({
           </div>
           <div className="col-7 col-md-8 d-flex align-items-center">
             <div className="d-flex flex-column justify-content-center">
-              <Paragraph
-                textColor="grey_50"
-                className="strong mb-1 subtitle"
-              >
-                {speaker.name}
-              </Paragraph>
+            <Paragraph
+              className="mb-0 mr-2 d-inline"
+              dangerouslySetInnerHTML={{ __html: speaker.name }}
+            />
+                {/* {speaker.name}
+              </Paragraph> */}
               {speaker.title && <Paragraph textColor="grey_50" className="mb-1 subtitle">
                 {speaker.title}
               </Paragraph>}
