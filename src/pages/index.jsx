@@ -155,7 +155,7 @@ const data = {
   sideXSideLayout: "xlarge",
   divider: true,
   title: ["Postman Open Technologies"],
-  subtitle: ["<p class=\"subtitle\">Understand the specification behind Postman Open Technologies.<br/> Check out the docs and support resources!</p>"],
+  subtitle: ["<p class=\"subtitle\">Understand the technologies behind Postman Open Technologies.<br/> Check out the docs and support resources!</p>"],
   media: {
     class: "mt-5 mt-lg-0",
     src: "https://voyager.postman.com/illustration/ventura-abled.png", 
