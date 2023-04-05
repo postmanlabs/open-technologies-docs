@@ -7,8 +7,12 @@ export const leftNavItems = [
   {
     name: 'Specifications',
     parentSlug: 'specifications',
-    url: '/specifications/collections/',
+    url: '/specifications/overview/',
     subMenuItems1: [
+      {
+        name: 'Overview',
+        url: '/specifications/overview/',
+      },  
       {
         name: 'Collections',
         url: '/specifications/collections/',
