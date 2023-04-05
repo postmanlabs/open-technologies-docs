@@ -172,7 +172,7 @@ class IndexPage extends React.Component {
                   </p>
                   <Button
                     onClick={() => {
-                      navigate("/getting-started/overview/")
+                      navigate("/specifications/collections/")
                     }}
                     className="mb-5 secondary"
                   >
@@ -236,7 +236,7 @@ class IndexPage extends React.Component {
           </section>
             <h2 className='mb-4'>Specifications</h2>
           <section className="section align-items-center">
-            <h3 className='mb-4'>OpenAPO</h3>
+            <h3 className='mb-4'>OpenAPI</h3>
               <div className='row mt-4'>
                 {peopleData.map(people => (
                  people.company === 'specifications' ?

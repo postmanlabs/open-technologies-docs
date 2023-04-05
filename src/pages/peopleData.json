@@ -37,7 +37,6 @@
         },
         "speaker": {
             "name": "Mike Ralphson",
-            "title": "OpenAPI",
             "twitter": "https://twitter.com/PermittedSoc",
             "linkedin": "https://www.linkedin.com/in/mikeralphson/",
             "website": "https://dev.to/mikeralphson",
@@ -53,7 +52,6 @@
         },
         "speaker": {
             "name": "Julian Berman",
-            "title": "JSON schema",
             "twitter": "https://twitter.com/JulianWasTaken",
             "linkedin": "https://www.linkedin.com/in/julian-berman",
             "mastodon": "https://mastodon.social/@JulianWasTaken",
@@ -70,7 +68,6 @@
         },
         "speaker": {
             "name": "Greg Dennis",
-            "title": "JSON schema",
             "twitter": "https://twitter.com/jansche",
             "linkedin": "https://www.linkedin.com/in/janschenk/",
             "mastodon": "https://mastodon.online/@jansche",
@@ -87,7 +84,6 @@
         },
         "speaker": {
             "name": "Jason Desrosiers",
-            "title": "JSON schema",
             "twitter": "https://twitter.com/jansche",
             "linkedin": "https://www.linkedin.com/in/janschenk/",
             "mastodon": "https://mastodon.online/@jansche",
@@ -99,32 +95,28 @@
         "company": "json-schema",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Mike Ralphson. Postman. ",
-            "src": "/images/mike-ralphson.jpeg"
+            "alt": "Benjamin Granados. Postman. ",
+            "src": "/images/benjamin-granados.png"
         },
         "speaker": {
             "name": "Benjamin Granados",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "mastodon": "https://mastodon.online/",
-            "website": "https://dev.to/jansche"
+            
+            "github": "https://github.com/benjagm"
         }
     },
     {
         "company": "json-schema",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Mike Ralphson. Postman. ",
-            "src": "/images/mike-ralphson.jpeg"
+            "alt": "Ben Hutton. Postman. ",
+            "src": "/images/ben-hutton.jpeg"
         },
         "speaker": {
             "name": "Ben Hutton",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "website": "https://dev.to/jansche",
-            "mastodon": "https://mastodon.online/@jansche"
+            "twitter": "https://twitter.com/relequestual",
+            "linkedin": "https://www.linkedin.com/in/benhuttonuk/",
+            "website": "https://benhutton.me",
+            "github": "https://github.com/Relequestual"
         }
     },
     {
@@ -136,7 +128,6 @@
         },
         "speaker": {
             "name": "Samir Amzani",
-            "title": "JSON schema",
             "twitter": "https://twitter.com/JulianWasTaken",
             "linkedin": "https://www.linkedin.com/in/julian-berman",
             "mastodon": "https://mastodon.social/@JulianWasTaken",
@@ -149,16 +140,12 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Souvik De. Postman. ",
-            "src": "/images/greg-dennis.jpeg"
+            "src": "/images/souvik-de.png"
         },
         "speaker": {
             "name": "Souvik De",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "mastodon": "https://mastodon.online/@jansche",
-            "website": "https://dev.to/jansche",
-            "github": "https://github.com/gregsdennis"
+            "twitter": "https://twitter.com/souvik_ns",
+            "github": "https://github.com/Souvikns"
         }
     },
     {
@@ -170,7 +157,6 @@
         },
         "speaker": {
             "name": "Azeez Elegbede",
-            "title": "JSON schema",
             "twitter": "https://twitter.com/jansche",
             "linkedin": "https://www.linkedin.com/in/janschenk/",
             "mastodon": "https://mastodon.online/@jansche",
@@ -182,16 +168,11 @@
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Barbano Gonzalez. Postman. ",
-            "src": "/images/mike-ralphson.jpeg"
+            "alt": "Barba&#241;o Gonz&#225;lez. Postman. ",
+            "src": "/images/Coverage.png"
         },
         "speaker": {
-            "name": "Barbano Gonzalez",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "mastodon": "https://mastodon.online/",
-            "website": "https://dev.to/jansche"
+            "name": "Barba&#241;o Gonz&#225;lez"
         }
     },
     {
@@ -199,15 +180,14 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Lukasz Gornicki. Postman. ",
-            "src": "/images/mike-ralphson.jpeg"
+            "src": "/images/lukasz-gornicki.png"
         },
         "speaker": {
             "name": "Lukasz Gornicki",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "website": "https://dev.to/jansche",
-            "mastodon": "https://mastodon.online/@jansche"
+            "twitter": "https://twitter.com/derberq",
+            "linkedin": "https://www.linkedin.com/in/lukasz-gornicki-a621914/",
+            "website": "https://www.brainfart.dev/",
+            "github": "https://github.com/derberg"
         }
     },
     {
@@ -215,16 +195,14 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Jonas Lagoni. Postman. ",
-            "src": "/images/Julian-Berman.jpeg"
+            "src": "/images/jonas-lagoni.png"
         },
         "speaker": {
             "name": "Jonas Lagoni",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/JulianWasTaken",
-            "linkedin": "https://www.linkedin.com/in/julian-berman",
-            "mastodon": "https://mastodon.social/@JulianWasTaken",
-            "website": "https://til.grayvines.com/",
-            "github": "https://github.com/Julian"
+            "twitter": "https://twitter.com/jonaslagoni",
+            "linkedin": "https://www.linkedin.com/in/jonaslagoni/",
+            "website": "https://eventstack.tech/",
+            "github": "https://github.com/jonaslagoni"
         }
     },
     {
@@ -232,16 +210,14 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Fran Mendez. Postman. ",
-            "src": "/images/greg-dennis.jpeg"
+            "src": "/images/fran-mendez.jpeg"
         },
         "speaker": {
-            "name": "Fran Mendez",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "mastodon": "https://mastodon.online/@jansche",
-            "website": "https://dev.to/jansche",
-            "github": "https://github.com/gregsdennis"
+            "name": "Fran M&#233;ndez",
+            "linkedin": "https://www.linkedin.com/in/fmvilas",
+            "mastodon": "https://social.fmvilas.me/@fran",
+            "website": "https://fmvilas.me/",
+            "github": "https://github.com/fmvilas"
         }
     },
     {
@@ -249,32 +225,26 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Sergio Moya. Postman. ",
-            "src": "/images/Jason-Desrosiers.jpeg"
+            "src": "/images/sergio-moya.jpeg"
         },
         "speaker": {
             "name": "Sergio Moya",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "mastodon": "https://mastodon.online/@jansche",
-            "website": "https://dev.to/jansche",
-            "github": "https://github.com/jdesrosiers"
+            "twitter": "https://twitter.com/smoyac",
+            "linkedin": "https://www.linkedin.com/in/smoya",
+            "website": "https://smoya.dev/",
+            "github": "https://github.com/smoya"
         }
     },
     {
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Khuda Dad. Postman. ",
-            "src": "/images/mike-ralphson.jpeg"
+            "alt": "Khuda Dad Nomani. Postman. ",
+            "src": "/images/Khuda-Dad-Nomani.jpeg"
         },
         "speaker": {
-            "name": "Khuda Dad",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "mastodon": "https://mastodon.online/",
-            "website": "https://dev.to/jansche"
+            "name": "Khuda Dad Nomani",
+            "github": "https://github.com/KhudaDad414"
         }
     },
     {
@@ -282,15 +252,15 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Alejandra Quetzalli. Postman. ",
-            "src": "/images/mike-ralphson.jpeg"
+            "src": "/images/Alejandra-Quetzalli.jpeg"
         },
         "speaker": {
             "name": "Alejandra Quetzalli",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "website": "https://dev.to/jansche",
-            "mastodon": "https://mastodon.online/@jansche"
+            "twitter": "https://twitter.com/QuetzalliWrites",
+            "linkedin": "https://www.linkedin.com/in/alejandra-quetzalli/",
+            "website": "https://docsasecosystem.com/",
+            "mastodon": "https://mastodon.social/@quetzalliwritesbooks",
+            "github": "https://github.com/alequetzalli"
         }
     },
     {
@@ -298,15 +268,11 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Pedro Ramos. Postman. ",
-            "src": "/images/mike-ralphson.jpeg"
+            "src": "/images/Coverage.png"
         },
         "speaker": {
-            "name": "Pedro Ramos",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "website": "https://dev.to/jansche",
-            "mastodon": "https://mastodon.online/@jansche"
+            "name": "Pedro Ramos"
+
         }
     },
     {
@@ -314,15 +280,13 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Meenakshi Dhanani. Postman. ",
-            "src": "/images/mike-ralphson.jpeg"
+            "src": "/images/Meenakshi-Dhanani.jpeg"
         },
         "speaker": {
             "name": "Meenakshi Dhanani",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "website": "https://dev.to/jansche",
-            "mastodon": "https://mastodon.online/@jansche"
+            "twitter": "https://twitter.com/mdhananii",
+            "website": "https://meenakshi-dhanani.medium.com/",
+            "github": "https://github.com/meenakshi-dhanani"
         }
     },
     {
@@ -330,15 +294,11 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Doc Jones. Postman. ",
-            "src": "/images/mike-ralphson.jpeg"
+            "src": "/images/doc-jones.png"
         },
         "speaker": {
             "name": "Doc Jones",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "website": "https://dev.to/jansche",
-            "mastodon": "https://mastodon.online/@jansche"
+            "github": "https://github.com/doc-jonesdoc-jone"
         }
     },
     {
@@ -346,15 +306,14 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Gbadebo Beelo. Postman. ",
-            "src": "/images/mike-ralphson.jpeg"
+            "src": "/images/Gbadebo-Beelo.png"
         },
         "speaker": {
             "name": "Gbadebo Beelo",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "website": "https://dev.to/jansche",
-            "mastodon": "https://mastodon.online/@jansche"
+            "twitter": "https://twitter.com/Gbahdeyboh",
+            "linkedin": "https://www.linkedin.com/in/gbahdeyboh",
+            "website": "https://getfidia.com/gbahdeyboh/",
+            "github": "https://github.com/Gbahdeyboh"
         }
     },
     {
@@ -362,15 +321,13 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Laurent Broudoux. Postman. ",
-            "src": "/images/mike-ralphson.jpeg"
+            "src": "/images/Laurent-Broudoux.jpeg"
         },
         "speaker": {
             "name": "Laurent Broudoux",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "website": "https://dev.to/jansche",
-            "mastodon": "https://mastodon.online/@jansche"
+            "twitter": "https://twitter.com/lbroudoux",
+            "website": "https://medium.com/@lbroudoux",
+            "github": "https://github.com/lbroudoux"
         }
     },
     {
@@ -378,15 +335,14 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Yacine Kheddache. Postman. ",
-            "src": "/images/mike-ralphson.jpeg"
+            "src": "/images/Yacine-Kheddache.jpeg"
         },
         "speaker": {
             "name": "Yacine Kheddache",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "website": "https://dev.to/jansche",
-            "mastodon": "https://mastodon.online/@jansche"
+            "twitter": "https://twitter.com/YadaYac",
+            "linkedin": "https://www.linkedin.com/in/yacinekheddache/",
+            "website": "https://microcks.io/",
+            "github": "https://github.com/yada"
         }
     },
     {
@@ -394,15 +350,10 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Kevin Duffey. Postman. ",
-            "src": "/images/mike-ralphson.jpeg"
+            "src": "/images/Coverage.png"
         },
         "speaker": {
-            "name": "Kevin Duffey",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "website": "https://dev.to/jansche",
-            "mastodon": "https://mastodon.online/@jansche"
+            "name": "Kevin Duffey"
         }
     },
     {
@@ -410,15 +361,10 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "LeTroy Gardner. Postman. ",
-            "src": "/images/mike-ralphson.jpeg"
+            "src": "/images/Coverage.png"
         },
         "speaker": {
-            "name": "LeTroy Gardner",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "website": "https://dev.to/jansche",
-            "mastodon": "https://mastodon.online/@jansche"
+            "name": "LeTroy Gardner"
         }
     },
     {
@@ -426,15 +372,15 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Arnaud Lauret. Postman. ",
-            "src": "/images/mike-ralphson.jpeg"
+            "src": "/images/Arnaud-Lauret.png"
         },
         "speaker": {
             "name": "Arnaud Lauret",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "website": "https://dev.to/jansche",
-            "mastodon": "https://mastodon.online/@jansche"
+            "twitter": "https://twitter.com/apihandyman",
+            "linkedin": "https://www.linkedin.com/in/arnaudlauret",
+            "website": "https://apihandyman.io/",
+            "mastodon": "https://hachyderm.io/@arnaudlauret",
+            "github": "https://github.com/arno-di-loreto"
         }
     },
     {
@@ -442,15 +388,15 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Kevin Swiber. Postman. ",
-            "src": "/images/mike-ralphson.jpeg"
+            "src": "/images/Kevin-Swiber.jpeg"
         },
         "speaker": {
             "name": "Kevin Swiber",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "website": "https://dev.to/jansche",
-            "mastodon": "https://mastodon.online/@jansche"
+            "twitter": "https://twitter.com/kevinswiber",
+            "linkedin": "https://www.linkedin.com/in/kevinswiber",
+            "website": "https://swiber.dev/",
+            "mastodon": "https://mastodon.online/@kevinswiber@hachyderm.io",
+            "github": "https://github.com/kevinswiber"
         }
     },
     {
@@ -458,15 +404,10 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Deepa Goya. Postman. ",
-            "src": "/images/mike-ralphson.jpeg"
+            "src": "/images/Coverage.png"
         },
         "speaker": {
-            "name": "Deepa Goya",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "website": "https://dev.to/jansche",
-            "mastodon": "https://mastodon.online/@jansche"
+            "name": "Deepa Goya"
         }
     },
     {
@@ -474,15 +415,15 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Bruno Pedro. Postman. ",
-            "src": "/images/mike-ralphson.jpeg"
+            "src": "/images/bruno-pedro.jpeg"
         },
         "speaker": {
             "name": "Bruno Pedro",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "website": "https://dev.to/jansche",
-            "mastodon": "https://mastodon.online/@jansche"
+            "twitter": "https://twitter.com/bpedro",
+            "linkedin": "https://www.linkedin.com/in/bpedro/",
+            "website": "https://brunopedro.com/",
+            "mastodon": "https://follow.brunopedro.com/@bpedro",
+            "github": "https://github.com/bpedrobrun"
         }
     },
     {
@@ -490,15 +431,13 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Pascal Heus. Postman. ",
-            "src": "/images/mike-ralphson.jpeg"
+            "src": "/images/pascal-heus.png"
         },
         "speaker": {
             "name": "Pascal Heus",
-            "title": "JSON schema",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "website": "https://dev.to/jansche",
-            "mastodon": "https://mastodon.online/@jansche"
+            "twitter": "https://twitter.com/PascalHeus",
+            "linkedin": "https://www.linkedin.com/in/pascal",
+            "github": "https://github.com/kulnor"
         }
     }
 ]
