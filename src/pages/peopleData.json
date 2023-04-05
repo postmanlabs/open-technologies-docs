@@ -68,10 +68,6 @@
         },
         "speaker": {
             "name": "Greg Dennis",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "mastodon": "https://mastodon.online/@jansche",
-            "website": "https://dev.to/jansche",
             "github": "https://github.com/gregsdennis"
         }
     },
@@ -84,10 +80,6 @@
         },
         "speaker": {
             "name": "Jason Desrosiers",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "mastodon": "https://mastodon.online/@jansche",
-            "website": "https://dev.to/jansche",
             "github": "https://github.com/jdesrosiers"
         }
     },
@@ -153,15 +145,10 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Azeez Elegbede. Postman. ",
-            "src": "/images/Jason-Desrosiers.jpeg"
+            "src": "/images/Coverage.png"
         },
         "speaker": {
-            "name": "Azeez Elegbede",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "mastodon": "https://mastodon.online/@jansche",
-            "website": "https://dev.to/jansche",
-            "github": "https://github.com/jdesrosiers"
+            "name": "Azeez Elegbede"
         }
     },
     {
