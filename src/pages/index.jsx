@@ -1,14 +1,13 @@
 import React from 'react';
-import { navigate, withPrefix } from 'gatsby';
+import { withPrefix } from 'gatsby';
 const { v4: uuidv4 } = require('uuid');
 import styled from 'styled-components';
-import { SectionHeader, Feature } from 'aether-marketing';
+import { SectionHeader, Feature, Hero, Divider } from 'aether-marketing';
 import '../../styles/config/normalize.css';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-// import { LandingCard } from '../components/MarketingPages/Cards';
 import '../../styles/config/_pm-icons.css';
-import Button from '../components/Shared/Button';
+// import Button from '../components/Shared/Button';
 import peopleData from './peopleData.json';
 
 import CardPresenterHorizontal from '../components/CardPresenterHorizontal';
@@ -45,10 +44,10 @@ const HRStyles = styled.hr`
 `;
 
 const header = {
-  title: "Meet the teams and their tech in Postman Open Technologies.",
+  title: "Meet the teams and their tech in Postman Open Technologies",
   body: [
-    'As Postman\'s central instance for Open Source - using, contributing to, and creating Open Source software, specifications and libraries - we\'re all about the people, and empowering everyone to build a robust and open API industry of tomorrow.',
-    'These are the people who care about standards, tooling, specifications and data.'
+    'As Postman\'s central instance for open source - using, contributing to, and creating open source software, specifications and libraries - we\'re all about the people, and empowering everyone to build a robust and open API industry of tomorrow. ',
+    ' These are the people who care about standards, tooling, specifications, and data.'
   ],
   
 };
@@ -57,7 +56,7 @@ const feature = {
   paddingBottom: "",
   divider: false,
   backgroundColor: "",
-  title: "Platform",
+  title: "",
   body: [
     "These are the foundational ways that our teams contribute to the platform.",
   ],
@@ -151,52 +150,48 @@ const feature = {
   ],
 };
 
-
+const data = {
+  heroLayout: "sideXSide",
+  sideXSideLayout: "xlarge",
+  divider: true,
+  title: ["Postman Open Technologies"],
+  subtitle: ["<p class=\"subtitle\">Understand the specification behind Postman Open Technologies.<br/> Check out the docs and support resources!</p>"],
+  media: {
+    class: "mt-5 mt-lg-0",
+    src: "https://voyager.postman.com/illustration/ventura-abled.png", 
+    alt: "Venutra abled. Illustration.",
+  },
+  button: [
+    {
+      buttonType: "secondary",
+      text: "Explore the docs",
+      src: "/specifications/collection/",
+      target: "",
+      id: "explore-the-docs",
+      gaCategory: "explore-the-docs",
+      gaLabel: "explore-the-docs"
+    },
+    
+  ],
+};
 class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        {console.log(peopleData[3].speaker.mastodon)}
         <SEO title="Learning Center" slug="/" />
         <div className="container-fluid">
-          <HeroWrapper className="row section align-items-center hero">
-            <div className="container">
-              <div className="row">
-                <div className="col-sm-12 col-md-5 col-lg-6 align-self-center">
-                  <h1>Postman Open Technologies</h1>
-                  <p className="subtitle">
-                    Understand the specification behind Postman Open Technologies.
-                    {' '}
-                    <br />
-                    Check out the docs and support resources!
-                  </p>
-                  <Button
-                    onClick={() => {
-                      navigate("/specifications/collections/")
-                    }}
-                    className="mb-5 secondary"
-                  >
-                    Explore the Docs
-                  </Button>
-                </div>
-                <div className="col-sm-12 col-md-6 col-lg-6 align-self-center">
-                  <img src="https://voyager.postman.com/illustration/ventura-abled.png" alt="Venutra abled. Illustration." className="img-fluid" />
-                </div>
-              </div>
-            </div>
-          </HeroWrapper>
+        <Hero
+          heroLayout={data.heroLayout}
+          sideXSideLayout={data.sideXSideLayout}
+          divider={data.divider}
+          title={data.title}
+          subtitle={data.subtitle}
+          media={data.media}
+          button={data.button}
+        />
+         
         </div>
-        <div className="container ">
-          <div className="container-fluid" >
-            <HRStyles />
-          </div>
-
-          {/* <section className='col-sm-12 col-md-8 mt-5 mb-5' >
-            {header.title && <h2 >{header.title}</h2>}
-            {header.body && <p>{header.body}</p>}
-
-          </section> */}
-       
+        <div className="container mt-4 pt-4">
           <SectionHeader
             title={header.title}
             body={header.body}
@@ -204,7 +199,9 @@ class IndexPage extends React.Component {
             textAlign=""
             className="mt-4 pl-0"
             bottomMargin="40px"
+
           />
+          <Divider />
           <section className="section align-items-center">
             <h2>Teams</h2>
             <p className='mb-4'>Open Technologies is 40+ individuals working to strengthen the Postman platform and community.</p>
