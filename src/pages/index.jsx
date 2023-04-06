@@ -83,7 +83,7 @@ const feature = {
       imageSize: "icon",
       title: "GraphQL",
       subtitle: [
-        "<p>Cake cheesecake sesame snaps cake dessert gingerbread lemon drops cake icing. Powder donut jelly gummies chocolate.</p>",
+        "",
       ],
       colWidth: "col-sm-6",
       media: {
@@ -100,7 +100,7 @@ const feature = {
       imageSize: "icon",
       title: "gRPC",
       subtitle: [
-        "<p>Cake cheesecake sesame snaps cake dessert gingerbread lemon drops cake icing. Powder donut jelly gummies chocolate.</p>",
+        "",
       ],
       colWidth: "col-sm-6",
       media: {
@@ -117,7 +117,7 @@ const feature = {
       imageSize: "icon",
       title: "Websockets",
       subtitle: [
-        "<p>Cake cheesecake sesame snaps cake dessert gingerbread lemon drops cake icing. Powder donut jelly gummies chocolate.</p>",
+        "",
       ],
       colWidth: "col-sm-6",
       media: {
@@ -134,7 +134,7 @@ const feature = {
       imageSize: "icon",
       title: "Integrations",
       subtitle: [
-        "<p>Cake cheesecake sesame snaps cake dessert gingerbread lemon drops cake icing. Powder donut jelly gummies chocolate.</p>",
+        "",
       ],
       colWidth: "col-sm-6",
       media: {
@@ -165,7 +165,7 @@ const data = {
     {
       buttonType: "secondary",
       text: "Explore the docs",
-      src: "/specifications/collection/",
+      src: "/specifications/overview/",
       target: "",
       id: "explore-the-docs",
       gaCategory: "explore-the-docs",
