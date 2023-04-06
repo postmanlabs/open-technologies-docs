@@ -16,14 +16,14 @@ const header = {
     'As Postman\'s central instance for open source - using, contributing to, and creating open source software, specifications and libraries - we\'re all about the people, and empowering everyone to build a robust and open API industry of tomorrow. ',
     ' These are the people who care about standards, tooling, specifications, and data.'
   ],
-  
+
 };
 const feature = {
   paddingTop: "",
   paddingBottom: "",
   divider: false,
   backgroundColor: "",
-  title: "",
+  title: "Platform",
   body: [
     "These are the foundational ways that our teams contribute to the platform.",
   ],
@@ -125,7 +125,7 @@ const data = {
   subtitle: ["<p class=\"subtitle\">Understand the technologies behind Postman Open Technologies.<br/> Check out the docs and support resources!</p>"],
   media: {
     class: "mt-5 mt-lg-0",
-    src: "https://voyager.postman.com/illustration/ventura-abled.png", 
+    src: "https://voyager.postman.com/illustration/ventura-abled.png",
     alt: "Venutra abled. Illustration.",
   },
   button: [
@@ -138,7 +138,7 @@ const data = {
       gaCategory: "explore-the-docs",
       gaLabel: "explore-the-docs"
     },
-    
+
   ],
 };
 class IndexPage extends React.Component {
@@ -147,16 +147,16 @@ class IndexPage extends React.Component {
       <Layout>
         <SEO title="Learning Center" slug="/" />
         <div className="container-fluid">
-        <Hero
-          heroLayout={data.heroLayout}
-          sideXSideLayout={data.sideXSideLayout}
-          divider={data.divider}
-          title={data.title}
-          subtitle={data.subtitle}
-          media={data.media}
-          button={data.button}
-        />
-         
+          <Hero
+            heroLayout={data.heroLayout}
+            sideXSideLayout={data.sideXSideLayout}
+            divider={data.divider}
+            title={data.title}
+            subtitle={data.subtitle}
+            media={data.media}
+            button={data.button}
+          />
+
         </div>
         <div className="container mt-4 pt-4">
           <SectionHeader
@@ -168,7 +168,6 @@ class IndexPage extends React.Component {
             bottomMargin="40px"
 
           />
-          <Divider />
           <section className="section align-items-center">
             <h2>Teams</h2>
             <p className='mb-4'>Open Technologies is 40+ individuals working to strengthen the Postman platform and community.</p>
@@ -176,34 +175,34 @@ class IndexPage extends React.Component {
             <div className='row mt-4'>
               {peopleData.map((people) => (
                 people.company === 'leadership' ?
-                <CardPresenterHorizontal
-                key={uuidv4()}
-                  col={people.col}
-                  media={{
-                    alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
-                    src: people.media.src
-                  }}
-                  speaker={{
-                    name: people.speaker.name,
-                    title: people.speaker.title,
-                    linkedin: people.speaker.linkedin,
-                    twitter: people.speaker.twitter,
-                    website: people.speaker.website,
-                    mastodon: people.speaker.mastodon,
-                    github: people.speaker.github
-                  }}
-                /> : null
+                  <CardPresenterHorizontal
+                    key={uuidv4()}
+                    col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
+                    speaker={{
+                      name: people.speaker.name,
+                      title: people.speaker.title,
+                      linkedin: people.speaker.linkedin,
+                      twitter: people.speaker.twitter,
+                      website: people.speaker.website,
+                      mastodon: people.speaker.mastodon,
+                      github: people.speaker.github
+                    }}
+                  /> : null
               ))
               }
 
             </div>
           </section>
-            <h2 className='mb-4'>Specifications</h2>
+          <h2 className='mb-4'>Specifications</h2>
           <section className="section align-items-center">
             <h3 className='mb-4'>OpenAPI</h3>
-              <div className='row mt-4'>
-                {peopleData.map(people => (
-                 people.company === 'specifications' ?
+            <div className='row mt-4'>
+              {peopleData.map(people => (
+                people.company === 'specifications' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
                     media={{
@@ -220,296 +219,296 @@ class IndexPage extends React.Component {
                       github: people.speaker.github
                     }}
                   /> : null
-                ))
-                }
-              </div>
-              </section>
-              <section className="section align-items-center">
-              <h3 className='mb-4'>JSON Schema</h3>
-            
-            <div className='row mt-4'>
-              {peopleData.map(people => (
-               people.company === 'json-schema' ?
-                <CardPresenterHorizontal key={uuidv4()}
-                  col={people.col}
-                  media={{
-                    alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
-                    src: people.media.src
-                  }}
-                  speaker={{
-                    name: people.speaker.name,
-                    title: people.speaker.title,
-                    linkedin: people.speaker.linkedin,
-                    twitter: people.speaker.twitter,
-                    website: people.speaker.website,
-                    mastodon: people.speaker.mastodon,
-                    github: people.speaker.github
-                  }}
-                /> : null
               ))
               }
             </div>
           </section>
           <section className="section align-items-center">
-              <h3 className='mb-4'>AsyncAPI</h3>
-            
+            <h3 className='mb-4'>JSON Schema</h3>
+
             <div className='row mt-4'>
               {peopleData.map(people => (
-               people.company === 'asyncapi' ?
-                <CardPresenterHorizontal key={uuidv4()}
-                  col={people.col}
-                  media={{
-                    alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
-                    src: people.media.src
-                  }}
-                  speaker={{
-                    name: people.speaker.name,
-                    title: people.speaker.title,
-                    linkedin: people.speaker.linkedin,
-                    twitter: people.speaker.twitter,
-                    website: people.speaker.website,
-                    mastodon: people.speaker.mastodon,
-                    github: people.speaker.github
-                  }}
-                /> : null
+                people.company === 'json-schema' ?
+                  <CardPresenterHorizontal key={uuidv4()}
+                    col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
+                    speaker={{
+                      name: people.speaker.name,
+                      title: people.speaker.title,
+                      linkedin: people.speaker.linkedin,
+                      twitter: people.speaker.twitter,
+                      website: people.speaker.website,
+                      mastodon: people.speaker.mastodon,
+                      github: people.speaker.github
+                    }}
+                  /> : null
               ))
               }
             </div>
           </section>
           <section className="section align-items-center">
-              <h3 className='mb-4'>GraphQL</h3>
-            
+            <h3 className='mb-4'>AsyncAPI</h3>
+
             <div className='row mt-4'>
               {peopleData.map(people => (
-               people.company === 'graphql' ?
-                <CardPresenterHorizontal key={uuidv4()}
-                  col={people.col}
-                  media={{
-                    alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
-                    src: people.media.src
-                  }}
-                  speaker={{
-                    name: people.speaker.name,
-                    title: people.speaker.title,
-                    linkedin: people.speaker.linkedin,
-                    twitter: people.speaker.twitter,
-                    website: people.speaker.website,
-                    mastodon: people.speaker.mastodon,
-                    github: people.speaker.github
-                  }}
-                /> : null
+                people.company === 'asyncapi' ?
+                  <CardPresenterHorizontal key={uuidv4()}
+                    col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
+                    speaker={{
+                      name: people.speaker.name,
+                      title: people.speaker.title,
+                      linkedin: people.speaker.linkedin,
+                      twitter: people.speaker.twitter,
+                      website: people.speaker.website,
+                      mastodon: people.speaker.mastodon,
+                      github: people.speaker.github
+                    }}
+                  /> : null
               ))
               }
             </div>
           </section>
           <section className="section align-items-center">
-              <h3 className='mb-4'>Collection Format</h3>
+            <h3 className='mb-4'>GraphQL</h3>
+
             <div className='row mt-4'>
               {peopleData.map(people => (
-               people.company === 'collection-format' ?
-                <CardPresenterHorizontal key={uuidv4()}
-                  col={people.col}
-                  media={{
-                    alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
-                    src: people.media.src
-                  }}
-                  speaker={{
-                    name: people.speaker.name,
-                    title: people.speaker.title,
-                    linkedin: people.speaker.linkedin,
-                    twitter: people.speaker.twitter,
-                    website: people.speaker.website,
-                    mastodon: people.speaker.mastodon,
-                    github: people.speaker.github
-                  }}
-                /> : null
-              ))
-              }
-            </div>
-          </section>
-            <h2>Tooling</h2>
-          <section className="section align-items-center">
-              <h3 className='mb-4'>Testing & Mocking</h3>
-            <div className='row mt-4'>
-              {peopleData.map(people => (
-               people.company === 'testing' ?
-                <CardPresenterHorizontal key={uuidv4()}
-                  col={people.col}
-                  media={{
-                    alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
-                    src: people.media.src
-                  }}
-                  speaker={{
-                    name: people.speaker.name,
-                    title: people.speaker.title,
-                    linkedin: people.speaker.linkedin,
-                    twitter: people.speaker.twitter,
-                    website: people.speaker.website,
-                    mastodon: people.speaker.mastodon,
-                    github: people.speaker.github
-                  }}
-                /> : null
+                people.company === 'graphql' ?
+                  <CardPresenterHorizontal key={uuidv4()}
+                    col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
+                    speaker={{
+                      name: people.speaker.name,
+                      title: people.speaker.title,
+                      linkedin: people.speaker.linkedin,
+                      twitter: people.speaker.twitter,
+                      website: people.speaker.website,
+                      mastodon: people.speaker.mastodon,
+                      github: people.speaker.github
+                    }}
+                  /> : null
               ))
               }
             </div>
           </section>
           <section className="section align-items-center">
-            
-              <h3 className='mb-4'>CodeGen</h3>
+            <h3 className='mb-4'>Collection Format</h3>
             <div className='row mt-4'>
               {peopleData.map(people => (
-               people.company === 'codegen' ?
-                <CardPresenterHorizontal key={uuidv4()}
-                  col={people.col}
-                  media={{
-                    alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
-                    src: people.media.src
-                  }}
-                  speaker={{
-                    name: people.speaker.name,
-                    title: people.speaker.title,
-                    linkedin: people.speaker.linkedin,
-                    twitter: people.speaker.twitter,
-                    website: people.speaker.website,
-                    mastodon: people.speaker.mastodon,
-                    github: people.speaker.github
-                  }}
-                /> : null
+                people.company === 'collection-format' ?
+                  <CardPresenterHorizontal key={uuidv4()}
+                    col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
+                    speaker={{
+                      name: people.speaker.name,
+                      title: people.speaker.title,
+                      linkedin: people.speaker.linkedin,
+                      twitter: people.speaker.twitter,
+                      website: people.speaker.website,
+                      mastodon: people.speaker.mastodon,
+                      github: people.speaker.github
+                    }}
+                  /> : null
+              ))
+              }
+            </div>
+          </section>
+          <h2>Tooling</h2>
+          <section className="section align-items-center">
+            <h3 className='mb-4'>Testing & Mocking</h3>
+            <div className='row mt-4'>
+              {peopleData.map(people => (
+                people.company === 'testing' ?
+                  <CardPresenterHorizontal key={uuidv4()}
+                    col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
+                    speaker={{
+                      name: people.speaker.name,
+                      title: people.speaker.title,
+                      linkedin: people.speaker.linkedin,
+                      twitter: people.speaker.twitter,
+                      website: people.speaker.website,
+                      mastodon: people.speaker.mastodon,
+                      github: people.speaker.github
+                    }}
+                  /> : null
+              ))
+              }
+            </div>
+          </section>
+          <section className="section align-items-center">
+
+            <h3 className='mb-4'>CodeGen</h3>
+            <div className='row mt-4'>
+              {peopleData.map(people => (
+                people.company === 'codegen' ?
+                  <CardPresenterHorizontal key={uuidv4()}
+                    col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
+                    speaker={{
+                      name: people.speaker.name,
+                      title: people.speaker.title,
+                      linkedin: people.speaker.linkedin,
+                      twitter: people.speaker.twitter,
+                      website: people.speaker.website,
+                      mastodon: people.speaker.mastodon,
+                      github: people.speaker.github
+                    }}
+                  /> : null
               ))
               }
             </div>
           </section>
           <h2>Strategy</h2>
           <section className="section align-items-center">
-            
+
             <h3 className='mb-4'>Communications/PR</h3>
-          <div className='row mt-4'>
-            {peopleData.map(people => (
-             people.company === 'communications' ?
-              <CardPresenterHorizontal key={uuidv4()}
-                col={people.col}
-                media={{
-                  alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
-                  src: people.media.src
-                }}
-                speaker={{
-                  name: people.speaker.name,
-                  title: people.speaker.title,
-                  linkedin: people.speaker.linkedin,
-                  twitter: people.speaker.twitter,
-                  website: people.speaker.website,
-                  mastodon: people.speaker.mastodon,
-                  github: people.speaker.github
-                }}
-              /> : null
-            ))
-            }
-          </div>
-        </section>
-        <section className="section align-items-center">
-            
+            <div className='row mt-4'>
+              {peopleData.map(people => (
+                people.company === 'communications' ?
+                  <CardPresenterHorizontal key={uuidv4()}
+                    col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
+                    speaker={{
+                      name: people.speaker.name,
+                      title: people.speaker.title,
+                      linkedin: people.speaker.linkedin,
+                      twitter: people.speaker.twitter,
+                      website: people.speaker.website,
+                      mastodon: people.speaker.mastodon,
+                      github: people.speaker.github
+                    }}
+                  /> : null
+              ))
+              }
+            </div>
+          </section>
+          <section className="section align-items-center">
+
             <h3 className='mb-4'>Governance</h3>
-          <div className='row mt-4'>
-            {peopleData.map(people => (
-             people.company === 'governance' ?
-              <CardPresenterHorizontal key={uuidv4()}
-                col={people.col}
-                media={{
-                  alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
-                  src: people.media.src
-                }}
-                speaker={{
-                  name: people.speaker.name,
-                  title: people.speaker.title,
-                  linkedin: people.speaker.linkedin,
-                  twitter: people.speaker.twitter,
-                  website: people.speaker.website,
-                  mastodon: people.speaker.mastodon,
-                  github: people.speaker.github
-                }}
-              /> : null
-            ))
-            }
-          </div>
-        </section>
-        <section className="section align-items-center">
-            
+            <div className='row mt-4'>
+              {peopleData.map(people => (
+                people.company === 'governance' ?
+                  <CardPresenterHorizontal key={uuidv4()}
+                    col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
+                    speaker={{
+                      name: people.speaker.name,
+                      title: people.speaker.title,
+                      linkedin: people.speaker.linkedin,
+                      twitter: people.speaker.twitter,
+                      website: people.speaker.website,
+                      mastodon: people.speaker.mastodon,
+                      github: people.speaker.github
+                    }}
+                  /> : null
+              ))
+              }
+            </div>
+          </section>
+          <section className="section align-items-center">
+
             <h3 className='mb-4'>Lifecycle</h3>
-          <div className='row mt-4'>
-            {peopleData.map(people => (
-             people.company === 'lifecycle' ?
-              <CardPresenterHorizontal key={uuidv4()}
-                col={people.col}
-                media={{
-                  alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
-                  src: people.media.src
-                }}
-                speaker={{
-                  name: people.speaker.name,
-                  title: people.speaker.title,
-                  linkedin: people.speaker.linkedin,
-                  twitter: people.speaker.twitter,
-                  website: people.speaker.website,
-                  mastodon: people.speaker.mastodon,
-                  github: people.speaker.github
-                }}
-              /> : null
-            ))
-            }
-          </div>
-        </section>
-        <section className="section align-items-center">
-            
+            <div className='row mt-4'>
+              {peopleData.map(people => (
+                people.company === 'lifecycle' ?
+                  <CardPresenterHorizontal key={uuidv4()}
+                    col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
+                    speaker={{
+                      name: people.speaker.name,
+                      title: people.speaker.title,
+                      linkedin: people.speaker.linkedin,
+                      twitter: people.speaker.twitter,
+                      website: people.speaker.website,
+                      mastodon: people.speaker.mastodon,
+                      github: people.speaker.github
+                    }}
+                  /> : null
+              ))
+              }
+            </div>
+          </section>
+          <section className="section align-items-center">
+
             <h3 className='mb-4'>Products</h3>
-          <div className='row mt-4'>
-            {peopleData.map(people => (
-             people.company === 'products' ?
-              <CardPresenterHorizontal key={uuidv4()}
-                col={people.col}
-                media={{
-                  alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
-                  src: people.media.src
-                }}
-                speaker={{
-                  name: people.speaker.name,
-                  title: people.speaker.title,
-                  linkedin: people.speaker.linkedin,
-                  twitter: people.speaker.twitter,
-                  website: people.speaker.website,
-                  mastodon: people.speaker.mastodon,
-                  github: people.speaker.github
-                }}
-              /> : null
-            ))
-            }
-          </div>
-        </section>
-        <section className="section align-items-center">
-            
+            <div className='row mt-4'>
+              {peopleData.map(people => (
+                people.company === 'products' ?
+                  <CardPresenterHorizontal key={uuidv4()}
+                    col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
+                    speaker={{
+                      name: people.speaker.name,
+                      title: people.speaker.title,
+                      linkedin: people.speaker.linkedin,
+                      twitter: people.speaker.twitter,
+                      website: people.speaker.website,
+                      mastodon: people.speaker.mastodon,
+                      github: people.speaker.github
+                    }}
+                  /> : null
+              ))
+              }
+            </div>
+          </section>
+          <section className="section align-items-center">
+
             <h3 className='mb-4'>Data & Intelligence</h3>
-          <div className='row mt-4'>
-            {peopleData.map(people => (
-             people.company === 'data' ?
-              <CardPresenterHorizontal key={uuidv4()}
-                col={people.col}
-                media={{
-                  alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
-                  src: people.media.src
-                }}
-                speaker={{
-                  name: people.speaker.name,
-                  title: people.speaker.title,
-                  linkedin: people.speaker.linkedin,
-                  twitter: people.speaker.twitter,
-                  website: people.speaker.website,
-                  mastodon: people.speaker.mastodon,
-                  github: people.speaker.github
-                }}
-              /> : null
-            ))
-            }
-          </div>
-        </section>
+            <div className='row mt-4'>
+              {peopleData.map(people => (
+                people.company === 'data' ?
+                  <CardPresenterHorizontal key={uuidv4()}
+                    col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
+                    speaker={{
+                      name: people.speaker.name,
+                      title: people.speaker.title,
+                      linkedin: people.speaker.linkedin,
+                      twitter: people.speaker.twitter,
+                      website: people.speaker.website,
+                      mastodon: people.speaker.mastodon,
+                      github: people.speaker.github
+                    }}
+                  /> : null
+              ))
+              }
+            </div>
+          </section>
           <section className="row section align-items-center">
             <Feature
               paddingTop={feature.paddingTop}
@@ -525,7 +524,7 @@ class IndexPage extends React.Component {
           </section>
 
 
-         
+
         </div>
       </Layout>
     );
