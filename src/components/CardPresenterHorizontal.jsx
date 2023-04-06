@@ -26,14 +26,6 @@ function CardPresenterHorizontal({
               className="mb-2 mr-2 d-inline"
               dangerouslySetInnerHTML={{ __html: speaker.name }}
             />
-                {/* {speaker.name}
-              </Paragraph> */}
-              {speaker.title && <Paragraph textColor="grey_50" className="mb-1 subtitle">
-                {speaker.title}
-              </Paragraph>}
-              {speaker.company && <Paragraph textColor="grey_50" className="mb-3 subtitle">
-                {speaker.company}
-              </Paragraph>}
               <div className="d-flex flex-row">
              
                 {speaker.linkedin && (
