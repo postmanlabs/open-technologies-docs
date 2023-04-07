@@ -11,7 +11,7 @@ import {
 } from './HeaderStyles.jsx' ;
 
 import navbarData from '../../../bff-data/navbar.json';
-// import navtopicsdropdownData from '../../../bff-data/navtopicsdropdown.json';
+import navtopicsdropdownData from '../../../bff-data/navtopicsdropdown.json';
 // For local TOPNAVBAR TESTING
 import navbarDataLocal from '../../../build/navbarDev.json';
 import navtopicsdropdownDataLocal from '../../../build/navtopicsdropdownDev.json';
@@ -84,7 +84,7 @@ const Header = (props) => {
   const [cookie, setCookie] = useState('');
   const [hidden, setHidden] = useState(true);
   const [data, setData] = useState(navbarData);
-  const [dataDropdown, setDataDropdown] = useState(navtopicsdropdownDataLocal);
+  const [dataDropdown, setDataDropdown] = useState(navtopicsdropdownData);
   const [visibleHelloBar] = useState();
 
   useEffect(() => {
@@ -103,8 +103,8 @@ const Header = (props) => {
       setData(navbarDataLocal)
     }
 
-    if (navtopicsdropdownKeys.every(key => Object.keys(navtopicsdropdownDataLocal).includes(key))) {
-      setDataDropdown(navtopicsdropdownDataLocal)
+    if (navtopicsdropdownKeys.every(key => Object.keys(navtopicsdropdownData).includes(key))) {
+      setDataDropdown(navtopicsdropdownData)
     } else {
       setDataDropdown(navtopicsdropdownDataLocal)
     }
