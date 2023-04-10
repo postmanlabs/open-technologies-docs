@@ -108,7 +108,8 @@
             "twitter": "https://twitter.com/relequestual",
             "linkedin": "https://www.linkedin.com/in/benhuttonuk/",
             "website": "https://benhutton.me",
-            "github": "https://github.com/Relequestual"
+            "github": "https://github.com/Relequestual",
+            "mastodon": "https://fosstodon.org/@relequestual"
         }
     },
     {
@@ -307,6 +308,7 @@
         },
         "speaker": {
             "name": "Laurent Broudoux",
+            "linkedin": "https://www.linkedin.com/in/laurentbroudoux/",
             "twitter": "https://twitter.com/lbroudoux",
             "website": "https://medium.com/@lbroudoux",
             "github": "https://github.com/lbroudoux"
@@ -419,7 +421,8 @@
             "name": "Pascal Heus",
             "twitter": "https://twitter.com/PascalHeus",
             "linkedin": "https://www.linkedin.com/in/pascal",
-            "github": "https://github.com/kulnor"
+            "github": "https://github.com/kulnor",
+            "mastodon": "https://hachyderm.io/@plgah"
         }
     }
 ]
