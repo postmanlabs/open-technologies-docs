@@ -1,47 +1,15 @@
 import React from 'react';
 import { withPrefix } from 'gatsby';
 const { v4: uuidv4 } = require('uuid');
-import styled from 'styled-components';
 import { SectionHeader, Feature, Hero, Divider } from 'aether-marketing';
 import '../../styles/config/normalize.css';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import '../../styles/config/_pm-icons.css';
-// import Button from '../components/Shared/Button';
 import peopleData from './peopleData.json';
 
 import CardPresenterHorizontal from '../components/CardPresenterHorizontal';
-const HeroWrapper = styled.section`
-  background-color: ${(props) => props.theme.colors.grey_06};
-  padding: 48px 80px;
-    @media (max-width: 991px) {
-        padding: 40px !important;
-      }
-    .hero-image {
-        margin: 0px;
-    }
-    .img-frame {
-        border-radius: ${(props) => props.theme.borderRadius.medium};
-        border: 8px solid ${(props) => props.theme.colors.grey_20};// $grey_20
-        box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.32);
-    }
 
-    .section-image {
-      width: 100px;
-      height: 100px;
-    }
-
-    .container {
-      min-height: 400px;
-    }
-`
-
-const HRStyles = styled.hr`
-  border: 0;
-  margin-top: 0;
-  border-top: 1px solid ${(props) => props.theme.colors.grey_30};
-  margin-bottom: 0;
-`;
 
 const header = {
   title: "Meet the teams and their tech in Postman Open Technologies",
@@ -165,7 +133,7 @@ const data = {
     {
       buttonType: "secondary",
       text: "Explore the docs",
-      src: "/specifications/collection/",
+      src: withPrefix("/specifications/overview/"),
       target: "",
       id: "explore-the-docs",
       gaCategory: "explore-the-docs",
