@@ -24,7 +24,7 @@ const feature = {
   paddingBottom: "",
   divider: false,
   backgroundColor: "",
-  title: "",
+  title: "Platform",
   body: [
     "These are the foundational ways that our teams contribute to the platform.",
   ],
@@ -34,11 +34,11 @@ const feature = {
       imageSize: "icon",
       title: "Governance",
       subtitle: [
-        "<p>Cake cheesecake sesame snaps cake dessert gingerbread lemon drops cake icing. Powder donut jelly gummies chocolate.</p>",
+        "",
       ],
       colWidth: "col-sm-6",
       media: {
-        src: "/images/Governance.png",
+        src: withPrefix("/images/Governance.png"),
         alt: "Governance. Illustration.",
       },
       link: {
@@ -51,7 +51,7 @@ const feature = {
       imageSize: "icon",
       title: "GraphQL",
       subtitle: [
-        "<p>Cake cheesecake sesame snaps cake dessert gingerbread lemon drops cake icing. Powder donut jelly gummies chocolate.</p>",
+        "",
       ],
       colWidth: "col-sm-6",
       media: {
@@ -68,7 +68,7 @@ const feature = {
       imageSize: "icon",
       title: "gRPC",
       subtitle: [
-        "<p>Cake cheesecake sesame snaps cake dessert gingerbread lemon drops cake icing. Powder donut jelly gummies chocolate.</p>",
+        "",
       ],
       colWidth: "col-sm-6",
       media: {
@@ -85,11 +85,11 @@ const feature = {
       imageSize: "icon",
       title: "Websockets",
       subtitle: [
-        "<p>Cake cheesecake sesame snaps cake dessert gingerbread lemon drops cake icing. Powder donut jelly gummies chocolate.</p>",
+        "",
       ],
       colWidth: "col-sm-6",
       media: {
-        src: "/images/Websockets.png",
+        src: withPrefix("/images/Websockets.png"),
         alt: "gRPC. Illustration.",
       },
       link: {
@@ -102,11 +102,11 @@ const feature = {
       imageSize: "icon",
       title: "Integrations",
       subtitle: [
-        "<p>Cake cheesecake sesame snaps cake dessert gingerbread lemon drops cake icing. Powder donut jelly gummies chocolate.</p>",
+        "",
       ],
       colWidth: "col-sm-6",
       media: {
-        src: "/images/Integration.png",
+        src: withPrefix("/images/Integration.png"),
         alt: "gRPC. Illustration.",
       },
       link: {
