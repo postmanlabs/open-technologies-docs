@@ -189,7 +189,8 @@ class IndexPage extends React.Component {
                       twitter: people.speaker.twitter,
                       website: people.speaker.website,
                       mastodon: people.speaker.mastodon,
-                      github: people.speaker.github
+                      github: people.speaker.github,
+                      book: people.speaker.book
                     }}
                   /> : null
               ))
@@ -216,7 +217,8 @@ class IndexPage extends React.Component {
                       twitter: people.speaker.twitter,
                       website: people.speaker.website,
                       mastodon: people.speaker.mastodon,
-                      github: people.speaker.github
+                      github: people.speaker.github,
+                      book: people.speaker.book
                     }}
                   /> : null
               ))
@@ -242,7 +244,8 @@ class IndexPage extends React.Component {
                       twitter: people.speaker.twitter,
                       website: people.speaker.website,
                       mastodon: people.speaker.mastodon,
-                      github: people.speaker.github
+                      github: people.speaker.github,
+                      book: people.speaker.book
                     }}
                   /> : null
               ))
@@ -268,7 +271,8 @@ class IndexPage extends React.Component {
                       twitter: people.speaker.twitter,
                       website: people.speaker.website,
                       mastodon: people.speaker.mastodon,
-                      github: people.speaker.github
+                      github: people.speaker.github,
+                      book: people.speaker.book
                     }}
                   /> : null
               ))
@@ -294,7 +298,9 @@ class IndexPage extends React.Component {
                       twitter: people.speaker.twitter,
                       website: people.speaker.website,
                       mastodon: people.speaker.mastodon,
-                      github: people.speaker.github
+                      github: people.speaker.github,
+                      book: people.speaker.book,
+                      reddit: people.speaker.reddit
                     }}
                   /> : null
               ))
@@ -319,7 +325,8 @@ class IndexPage extends React.Component {
                       twitter: people.speaker.twitter,
                       website: people.speaker.website,
                       mastodon: people.speaker.mastodon,
-                      github: people.speaker.github
+                      github: people.speaker.github,
+                      book: people.speaker.book
                     }}
                   /> : null
               ))
@@ -345,7 +352,8 @@ class IndexPage extends React.Component {
                       twitter: people.speaker.twitter,
                       website: people.speaker.website,
                       mastodon: people.speaker.mastodon,
-                      github: people.speaker.github
+                      github: people.speaker.github,
+                      book: people.speaker.book
                     }}
                   /> : null
               ))
@@ -371,7 +379,8 @@ class IndexPage extends React.Component {
                       twitter: people.speaker.twitter,
                       website: people.speaker.website,
                       mastodon: people.speaker.mastodon,
-                      github: people.speaker.github
+                      github: people.speaker.github,
+                      book: people.speaker.book
                     }}
                   /> : null
               ))
@@ -398,7 +407,8 @@ class IndexPage extends React.Component {
                       twitter: people.speaker.twitter,
                       website: people.speaker.website,
                       mastodon: people.speaker.mastodon,
-                      github: people.speaker.github
+                      github: people.speaker.github,
+                      book: people.speaker.book
                     }}
                   /> : null
               ))
@@ -424,7 +434,8 @@ class IndexPage extends React.Component {
                       twitter: people.speaker.twitter,
                       website: people.speaker.website,
                       mastodon: people.speaker.mastodon,
-                      github: people.speaker.github
+                      github: people.speaker.github,
+                      book: people.speaker.book
                     }}
                   /> : null
               ))
@@ -450,7 +461,8 @@ class IndexPage extends React.Component {
                       twitter: people.speaker.twitter,
                       website: people.speaker.website,
                       mastodon: people.speaker.mastodon,
-                      github: people.speaker.github
+                      github: people.speaker.github,
+                      book: people.speaker.book
                     }}
                   /> : null
               ))
@@ -476,7 +488,8 @@ class IndexPage extends React.Component {
                       twitter: people.speaker.twitter,
                       website: people.speaker.website,
                       mastodon: people.speaker.mastodon,
-                      github: people.speaker.github
+                      github: people.speaker.github,
+                      book: people.speaker.book
                     }}
                   /> : null
               ))
@@ -502,7 +515,8 @@ class IndexPage extends React.Component {
                       twitter: people.speaker.twitter,
                       website: people.speaker.website,
                       mastodon: people.speaker.mastodon,
-                      github: people.speaker.github
+                      github: people.speaker.github,
+                      book: people.speaker.book
                     }}
                   /> : null
               ))

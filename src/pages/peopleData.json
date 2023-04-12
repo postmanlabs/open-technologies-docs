@@ -3,7 +3,7 @@
         "company": "leadership",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Kin Lane. Postman. Headhost",
+            "alt": "Kin Lane. Postman.",
             "src": "https://voyager.postman.com/photo/presenter/headshot-kin-lane.png"
         },
         "speaker": {
@@ -16,11 +16,11 @@
         "company": "leadership",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Jan Schnek. Postman. ",
+            "alt": "Jan Schenk. Postman.",
             "src": "/images/jan.jpeg"
         },
         "speaker": {
-            "name": "Jan Schnek",
+            "name": "Jan Schenk (he/they)",
             "twitter": "https://twitter.com/jansche",
             "linkedin": "https://www.linkedin.com/in/janschenk/",
             "mastodon": "https://mastodon.online/@jansche",
@@ -32,7 +32,7 @@
         "company": "specifications",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Mike Ralphson. Postman. ",
+            "alt": "Mike Ralphson. Postman.",
             "src": "/images/mike-ralphson.jpeg"
         },
         "speaker": {
@@ -47,15 +47,14 @@
         "company": "json-schema",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Julian Berman. Postman. ",
+            "alt": "Julian Berman. Postman.",
             "src": "/images/Julian-Berman.jpeg"
         },
         "speaker": {
-            "name": "Julian Berman",
+            "name": "Julian Berman (he/him)",
             "twitter": "https://twitter.com/JulianWasTaken",
             "linkedin": "https://www.linkedin.com/in/julian-berman",
             "mastodon": "https://mastodon.social/@JulianWasTaken",
-            "website": "https://til.grayvines.com/",
             "github": "https://github.com/Julian"
         }
     },
@@ -63,7 +62,7 @@
         "company": "json-schema",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Greg Dennis. Postman. ",
+            "alt": "Greg Dennis. Postman.",
             "src": "/images/greg-dennis.jpeg"
         },
         "speaker": {
@@ -75,24 +74,28 @@
         "company": "json-schema",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Jason Desrosiers. Postman. ",
+            "alt": "Jason Desrosiers. Postman.",
             "src": "/images/Jason-Desrosiers.jpeg"
         },
         "speaker": {
-            "name": "Jason Desrosiers",
-            "github": "https://github.com/jdesrosiers"
+            "name": "Jason Desrosiers (he/him)",
+            "github": "https://github.com/jdesrosiers",
+            "linkedin": "https://www.linkedin.com/in/jason-desrosiers/",
+            "twitter": "https://twitter.com/jasondesrosiers",
+            "mastodon": "https://mastodon.social/@jasondesrosiers"
         }
     },
     {
         "company": "json-schema",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Benjamin Granados. Postman. ",
+            "alt": "Benjamin Granados. Postman.",
             "src": "/images/benjamin-granados.png"
         },
         "speaker": {
-            "name": "Benjamin Granados",
-            
+            "name": "Benjamin Granados (he/him)",
+            "twitter": "https://twitter.com/benjagm",
+            "linkedin": "https://www.linkedin.com/in/benjagranados/",
             "github": "https://github.com/benjagm"
         }
     },
@@ -100,7 +103,7 @@
         "company": "json-schema",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Ben Hutton. Postman. ",
+            "alt": "Ben Hutton. Postman.",
             "src": "/images/ben-hutton.jpeg"
         },
         "speaker": {
@@ -116,18 +119,21 @@
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Samir Amzani. Postman. ",
-            "src": "/images/Coverage.png"
+            "alt": "Samir Amzani. Postman.",
+            "src": "/images/samir-amzani.jpeg"
         },
         "speaker": {
-            "name": "Samir Amzani"
+            "name": "Samir Amzani (he/him)",
+            "github": "https://github.com/Amzani/",
+            "linkedin": "https://www.linkedin.com/in/amzani/",
+            "website": "https://samir-amzani.medium.com/"
         }
     },
     {
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Souvik De. Postman. ",
+            "alt": "Souvik De. Postman.",
             "src": "/images/souvik-de.png"
         },
         "speaker": {
@@ -140,8 +146,8 @@
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Azeez Elegbede. Postman. ",
-            "src": "/images/Coverage.png"
+            "alt": "Azeez Elegbede. Postman.",
+            "src": "https://voyager.postman.com/illustration/ventura-abled.png"
         },
         "speaker": {
             "name": "Azeez Elegbede"
@@ -151,8 +157,8 @@
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Barba&#241;o Gonz&#225;lez. Postman. ",
-            "src": "/images/Coverage.png"
+            "alt": "Barba&#241;o Gonz&#225;lez. Postman.",
+            "src": "https://voyager.postman.com/illustration/ventura-abled.png"
         },
         "speaker": {
             "name": "Barba&#241;o Gonz&#225;lez"
@@ -162,11 +168,11 @@
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Lukasz Gornicki. Postman. ",
+            "alt": "Lukasz Gornicki. Postman.",
             "src": "/images/lukasz-gornicki.png"
         },
         "speaker": {
-            "name": "Lukasz Gornicki",
+            "name": "Lukasz Gornicki (he/him)",
             "twitter": "https://twitter.com/derberq",
             "linkedin": "https://www.linkedin.com/in/lukasz-gornicki-a621914/",
             "website": "https://www.brainfart.dev/",
@@ -177,7 +183,7 @@
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Jonas Lagoni. Postman. ",
+            "alt": "Jonas Lagoni. Postman.",
             "src": "/images/jonas-lagoni.png"
         },
         "speaker": {
@@ -192,7 +198,7 @@
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Fran Mendez. Postman. ",
+            "alt": "Fran Mendez. Postman.",
             "src": "/images/fran-mendez.jpeg"
         },
         "speaker": {
@@ -207,27 +213,30 @@
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Sergio Moya. Postman. ",
+            "alt": "Sergio Moya. Postman.",
             "src": "/images/sergio-moya.jpeg"
         },
         "speaker": {
-            "name": "Sergio Moya",
+            "name": "Sergio Moya (he/him)",
             "twitter": "https://twitter.com/smoyac",
             "linkedin": "https://www.linkedin.com/in/smoya",
             "website": "https://smoya.dev/",
-            "github": "https://github.com/smoya"
+            "github": "https://github.com/smoya",
+            "mastodon": "https://mastodon.social/@smoya"
         }
     },
     {
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Khuda Dad Nomani. Postman. ",
+            "alt": "Khuda Dad Nomani. Postman.",
             "src": "/images/Khuda-Dad-Nomani.jpeg"
         },
         "speaker": {
-            "name": "Khuda Dad Nomani",
-            "github": "https://github.com/KhudaDad414"
+            "name": "Khuda Dad Nomani (he/him)",
+            "github": "https://github.com/KhudaDad414",
+            "linkedin": "https://www.linkedin.com/in/khudadadnomani/",
+            "twitter": "https://twitter.com/KhudaDadNomani"
         }
     },
     {
@@ -251,7 +260,7 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Pedro Ramos. Postman. ",
-            "src": "/images/Coverage.png"
+            "src": "https://voyager.postman.com/illustration/ventura-abled.png"
         },
         "speaker": {
             "name": "Pedro Ramos"
@@ -262,11 +271,11 @@
         "company": "graphql",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Meenakshi Dhanani. Postman. ",
+            "alt": "Meenakshi Dhanani. Postman.",
             "src": "/images/Meenakshi-Dhanani.jpeg"
         },
         "speaker": {
-            "name": "Meenakshi Dhanani",
+            "name": "Meenakshi Dhanani (she/her)",
             "twitter": "https://twitter.com/mdhananii",
             "website": "https://meenakshi-dhanani.medium.com/",
             "github": "https://github.com/meenakshi-dhanani"
@@ -276,26 +285,27 @@
         "company": "graphql",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Doc Jones. Postman. ",
+            "alt": "Doc Jones. Postman.",
             "src": "/images/doc-jones.png"
         },
         "speaker": {
-            "name": "Doc Jones",
-            "github": "https://github.com/doc-jonesdoc-jone"
+            "name": "Doc Jones (she/her)",
+            "github": "https://github.com/doc-jonesdoc-jones",
+            "twitter": "https://twitter.com/mojosd",
+            "reddit": "https://www.reddit.com/user/Jones-doc/"
         }
     },
     {
         "company": "collection-format",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Gbadebo Beelo. Postman. ",
+            "alt": "Gbadebo Beelo. Postman.",
             "src": "/images/Gbadebo-Beelo.png"
         },
         "speaker": {
             "name": "Gbadebo Beelo",
             "twitter": "https://twitter.com/Gbahdeyboh",
             "linkedin": "https://www.linkedin.com/in/gbahdeyboh",
-            "website": "https://getfidia.com/gbahdeyboh/",
             "github": "https://github.com/Gbahdeyboh"
         }
     },
@@ -303,7 +313,7 @@
         "company": "testing",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Laurent Broudoux. Postman. ",
+            "alt": "Laurent Broudoux. Postman.",
             "src": "/images/Laurent-Broudoux.jpeg"
         },
         "speaker": {
@@ -318,7 +328,7 @@
         "company": "testing",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Yacine Kheddache. Postman. ",
+            "alt": "Yacine Kheddache. Postman.",
             "src": "/images/Yacine-Kheddache.jpeg"
         },
         "speaker": {
@@ -333,8 +343,8 @@
         "company": "codegen",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Kevin Duffey. Postman. ",
-            "src": "/images/Coverage.png"
+            "alt": "Kevin Duffey. Postman.",
+            "src": "https://voyager.postman.com/illustration/ventura-abled.png"
         },
         "speaker": {
             "name": "Kevin Duffey"
@@ -344,8 +354,8 @@
         "company": "communications",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "LeTroy Gardner. Postman. ",
-            "src": "/images/Coverage.png"
+            "alt": "LeTroy Gardner. Postman.",
+            "src": "https://voyager.postman.com/illustration/ventura-abled.png"
         },
         "speaker": {
             "name": "LeTroy Gardner"
@@ -355,31 +365,32 @@
         "company": "governance",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Arnaud Lauret. Postman. ",
+            "alt": "Arnaud Lauret. Postman.",
             "src": "/images/Arnaud-Lauret.png"
         },
         "speaker": {
-            "name": "Arnaud Lauret",
+            "name": "Arnaud Lauret (he/him)",
             "twitter": "https://twitter.com/apihandyman",
             "linkedin": "https://www.linkedin.com/in/arnaudlauret",
             "website": "https://apihandyman.io/",
             "mastodon": "https://hachyderm.io/@arnaudlauret",
-            "github": "https://github.com/arno-di-loreto"
+            "github": "https://github.com/arno-di-loreto",
+            "book": "https://www.manning.com/books/the-design-of-web-apis"
         }
     },
     {
         "company": "lifecycle",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Kevin Swiber. Postman. ",
+            "alt": "Kevin Swiber. Postman.",
             "src": "/images/Kevin-Swiber.jpeg"
         },
         "speaker": {
-            "name": "Kevin Swiber",
+            "name": "Kevin Swiber (they/them)",
             "twitter": "https://twitter.com/kevinswiber",
             "linkedin": "https://www.linkedin.com/in/kevinswiber",
             "website": "https://swiber.dev/",
-            "mastodon": "https://mastodon.online/@kevinswiber@hachyderm.io",
+            "mastodon": "https://hachyderm.io/@kevinswiber",
             "github": "https://github.com/kevinswiber"
         }
     },
@@ -387,18 +398,23 @@
         "company": "products",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Deepa Goyal. Postman. ",
-            "src": "/images/Coverage.png"
+            "alt": "Deepa Goyal. Postman.",
+            "src": "/images/deepa-goyal.jpeg"
         },
         "speaker": {
-            "name": "Deepa Goyal"
+            "name": "Deepa Goyal (She/her)",
+            "twitter": "https://twitter.com/1sprintatatime",
+            "linkedin": "https://www.linkedin.com/in/deepag",
+            "website": "https://onesprintatatime.com/",
+            "github": "https://github.com/deepagoyal",
+            "book": "https://www.amazon.com/API-Analytics-Product-Managers-understanding/dp/1803247657/ref=mp_s_a_1_1?keywords=Api+analytics+for+product+managers&qid=1676767912&sr=8-1"
         }
     },
     {
         "company": "products",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Bruno Pedro. Postman. ",
+            "alt": "Bruno Pedro. Postman.",
             "src": "/images/bruno-pedro.jpeg"
         },
         "speaker": {
@@ -414,7 +430,7 @@
         "company": "data",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Pascal Heus. Postman. ",
+            "alt": "Pascal Heus. Postman.",
             "src": "/images/pascal-heus.png"
         },
         "speaker": {
