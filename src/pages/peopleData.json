@@ -7,9 +7,11 @@
             "src": "https://voyager.postman.com/photo/presenter/headshot-kin-lane.png"
         },
         "speaker": {
-            "name": "Kin Lane",
+            "name": "Kin Lane (he/him/it)",
             "twitter": "https://twitter.com/kinlane",
-            "linkedin": "https://www.linkedin.com/in/kinlane/"
+            "linkedin": "https://www.linkedin.com/in/kinlane/",
+            "mastodon": "https://mastodon.kinlane.com/@kin",
+            "website": "https://apievangelist.com/"
         }
     },
     {
@@ -158,10 +160,12 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Barba&#241;o Gonz&#225;lez. Postman.",
-            "src": "https://voyager.postman.com/illustration/ventura-abled.png"
+            "src": "/images/barbano-gonzalez.jpeg"
         },
         "speaker": {
-            "name": "Barba&#241;o Gonz&#225;lez"
+            "name": "Barba&#241;o Gonz&#225;lez (she/her)",
+            "github": "https://github.com/Barbanio",
+            "linkedin": "https://github.com/Barbanio"
         }
     },
     {
@@ -259,11 +263,13 @@
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Pedro Ramos. Postman. ",
-            "src": "https://voyager.postman.com/illustration/ventura-abled.png"
+            "alt": "Pedro Ramos. Postman.",
+            "src": "/images/pedro-ramos.png"
         },
         "speaker": {
-            "name": "Pedro Ramos"
+            "name": "Pedro Ramos he/him)",
+            "githb": "https://github.com/peter-rr",
+            "linkedin": "https://www.linkedin.com/in/pedro-ramos-romero/"
 
         }
     },
@@ -290,6 +296,7 @@
         },
         "speaker": {
             "name": "Doc Jones (she/her)",
+            "linkedin": "https://www.linkedin.com/in/doc-jones/",
             "github": "https://github.com/doc-jonesdoc-jones",
             "twitter": "https://twitter.com/mojosd",
             "reddit": "https://www.reddit.com/user/Jones-doc/"
@@ -332,10 +339,9 @@
             "src": "/images/Yacine-Kheddache.jpeg"
         },
         "speaker": {
-            "name": "Yacine Kheddache",
+            "name": "Yacine Kheddache (he/him)",
             "twitter": "https://twitter.com/YadaYac",
             "linkedin": "https://www.linkedin.com/in/yacinekheddache/",
-            "website": "https://microcks.io/",
             "github": "https://github.com/yada"
         }
     },
@@ -355,10 +361,12 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "LeTroy Gardner. Postman.",
-            "src": "https://voyager.postman.com/illustration/ventura-abled.png"
+            "src": "/images/letroy-gardner.jpeg"
         },
         "speaker": {
-            "name": "LeTroy Gardner"
+            "name": "LeTroy Gardner (he/him)",
+            "linkedin": "https://www.linkedin.com/in/letroy-gardner-2133301b/",
+            "website": "https://myfourcast.com/"
         }
     },
     {
