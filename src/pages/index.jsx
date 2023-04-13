@@ -535,7 +535,7 @@ class IndexPage extends React.Component {
               }
             </div>
           </section>
-          <section className="row section align-items-center">
+          <section>
             <Feature
               paddingTop={feature.paddingTop}
               paddingBottom={feature.paddingBottom}

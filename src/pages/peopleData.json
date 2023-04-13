@@ -11,7 +11,8 @@
             "twitter": "https://twitter.com/kinlane",
             "linkedin": "https://www.linkedin.com/in/kinlane/",
             "mastodon": "https://mastodon.kinlane.com/@kin",
-            "website": "https://apievangelist.com/"
+            "website": "https://apievangelist.com/",
+            "github": "https://github.com/kinlane/"
         }
     },
     {
@@ -38,7 +39,7 @@
             "src": "/images/mike-ralphson.jpeg"
         },
         "speaker": {
-            "name": "Mike Ralphson",
+            "name": "Mike Ralphson (he/him)",
             "twitter": "https://twitter.com/PermittedSoc",
             "linkedin": "https://www.linkedin.com/in/mikeralphson/",
             "website": "https://dev.to/mikeralphson",
@@ -69,7 +70,10 @@
         },
         "speaker": {
             "name": "Greg Dennis",
-            "github": "https://github.com/gregsdennis"
+            "github": "https://github.com/gregsdennis",
+            "mastodon": "https://dotnet.social/@gregsdennis",
+            "linkedin": "https://www.linkedin.com/in/gregdennis/",
+            "twitter": "https://twitter.com/gregsdennis"
         }
     },
     {
@@ -149,10 +153,13 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Azeez Elegbede. Postman.",
-            "src": "https://voyager.postman.com/illustration/ventura-abled.png"
+            "src": "/images/azeez-elegbede.jpeg"
         },
         "speaker": {
-            "name": "Azeez Elegbede"
+            "name": "Azeez Elegbede (he/him)",
+            "github": "https://github.com/AceTheCreator",
+            "twitter": "https://twitter.com/_acebuild",
+            "linkedin": "https://www.linkedin.com/in/acebuild/"
         }
     },
     {
@@ -306,11 +313,11 @@
         "company": "collection-format",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Gbadebo Beelo. Postman.",
+            "alt": "Gbadebo Bello. Postman.",
             "src": "/images/Gbadebo-Beelo.png"
         },
         "speaker": {
-            "name": "Gbadebo Beelo",
+            "name": "Gbadebo Bello",
             "twitter": "https://twitter.com/Gbahdeyboh",
             "linkedin": "https://www.linkedin.com/in/gbahdeyboh",
             "github": "https://github.com/Gbahdeyboh"
@@ -350,10 +357,12 @@
         "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Kevin Duffey. Postman.",
-            "src": "https://voyager.postman.com/illustration/ventura-abled.png"
+            "src": "/images/kevin-duffey.jpeg"
         },
         "speaker": {
-            "name": "Kevin Duffey"
+            "name": "Kevin Duffey (he/him)",
+            "github": "https://github.com/kevin-postman",
+            "linkedin": "http://www.linkedin.com/in/kmd"
         }
     },
     {
@@ -366,7 +375,8 @@
         "speaker": {
             "name": "LeTroy Gardner (he/him)",
             "linkedin": "https://www.linkedin.com/in/letroy-gardner-2133301b/",
-            "website": "https://myfourcast.com/"
+            "website": "https://myfourcast.com/",
+            "twitter": "https://twitter.com/LouSealsBalls"
         }
     },
     {
@@ -410,7 +420,7 @@
             "src": "/images/deepa-goyal.jpeg"
         },
         "speaker": {
-            "name": "Deepa Goyal (She/her)",
+            "name": "Deepa Goyal (she/her)",
             "twitter": "https://twitter.com/1sprintatatime",
             "linkedin": "https://www.linkedin.com/in/deepag",
             "website": "https://onesprintatatime.com/",
