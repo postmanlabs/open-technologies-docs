@@ -1,6 +1,6 @@
 [
 	{
-		"from": "/",
-		"to": "/specifications/overview/"
+		"from": "/specifications/openapi",
+		"to": "/specifications/openapi/openapi/"
 	}
 ]
