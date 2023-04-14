@@ -88,7 +88,7 @@ const feature = {
       ],
       colWidth: "col-sm-6",
       media: {
-        src: "/images/Websockets.png",
+        src: withPrefix("/images/Websockets.png"),
         alt: "gRPC. Illustration.",
       },
       link: {
@@ -105,7 +105,7 @@ const feature = {
       ],
       colWidth: "col-sm-6",
       media: {
-        src: "/images/Integration.png",
+        src: withPrefix("/images/Integration.png"),
         alt: "gRPC. Illustration.",
       },
       link: {
