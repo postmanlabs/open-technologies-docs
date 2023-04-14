@@ -7,7 +7,8 @@
             "src": "https://voyager.postman.com/photo/presenter/headshot-kin-lane.png"
         },
         "speaker": {
-            "name": "Kin Lane (he/him/it)",
+            "name": "Kin Lane",
+            "pronouns": "(he/him/it)",
             "twitter": "https://twitter.com/kinlane",
             "linkedin": "https://www.linkedin.com/in/kinlane/",
             "mastodon": "https://mastodon.kinlane.com/@kin",
@@ -23,7 +24,8 @@
             "src": "/images/jan.jpeg"
         },
         "speaker": {
-            "name": "Jan Schenk (he/they)",
+            "name": "Jan Schenk",
+            "pronouns": " (he/they)",
             "twitter": "https://twitter.com/jansche",
             "linkedin": "https://www.linkedin.com/in/janschenk/",
             "mastodon": "https://mastodon.online/@jansche",
@@ -39,7 +41,8 @@
             "src": "/images/mike-ralphson.jpeg"
         },
         "speaker": {
-            "name": "Mike Ralphson (he/him)",
+            "name": "Mike Ralphson",
+            "pronouns": " (he/him)",
             "twitter": "https://twitter.com/PermittedSoc",
             "linkedin": "https://www.linkedin.com/in/mikeralphson/",
             "website": "https://dev.to/mikeralphson",
@@ -54,7 +57,8 @@
             "src": "/images/Julian-Berman.jpeg"
         },
         "speaker": {
-            "name": "Julian Berman (he/him)",
+            "name": "Julian Berman",
+            "pronouns": " (he/him)",
             "twitter": "https://twitter.com/JulianWasTaken",
             "linkedin": "https://www.linkedin.com/in/julian-berman",
             "mastodon": "https://mastodon.social/@JulianWasTaken",
@@ -70,6 +74,7 @@
         },
         "speaker": {
             "name": "Greg Dennis",
+            "pronouns": "",
             "github": "https://github.com/gregsdennis",
             "mastodon": "https://dotnet.social/@gregsdennis",
             "linkedin": "https://www.linkedin.com/in/gregdennis/",
@@ -84,7 +89,8 @@
             "src": "/images/Jason-Desrosiers.jpeg"
         },
         "speaker": {
-            "name": "Jason Desrosiers (he/him)",
+            "name": "Jason Desrosiers",
+            "pronouns": " (he/him)",
             "github": "https://github.com/jdesrosiers",
             "linkedin": "https://www.linkedin.com/in/jason-desrosiers/",
             "twitter": "https://twitter.com/jasondesrosiers",
@@ -99,7 +105,8 @@
             "src": "/images/benjamin-granados.png"
         },
         "speaker": {
-            "name": "Benjamin Granados (he/him)",
+            "name": "Benjamin Granados",
+            "pronouns": " (he/him)",
             "twitter": "https://twitter.com/benjagm",
             "linkedin": "https://www.linkedin.com/in/benjagranados/",
             "github": "https://github.com/benjagm"
@@ -114,6 +121,7 @@
         },
         "speaker": {
             "name": "Ben Hutton",
+            "pronouns": "",
             "twitter": "https://twitter.com/relequestual",
             "linkedin": "https://www.linkedin.com/in/benhuttonuk/",
             "website": "https://benhutton.me",
@@ -129,7 +137,8 @@
             "src": "/images/samir-amzani.jpeg"
         },
         "speaker": {
-            "name": "Samir Amzani (he/him)",
+            "name": "Samir Amzani",
+            "pronouns": " (he/him)",
             "github": "https://github.com/Amzani/",
             "linkedin": "https://www.linkedin.com/in/amzani/",
             "website": "https://samir-amzani.medium.com/"
@@ -144,8 +153,10 @@
         },
         "speaker": {
             "name": "Souvik De",
+            "pronouns": " (he/him)",
             "twitter": "https://twitter.com/souvik_ns",
-            "github": "https://github.com/Souvikns"
+            "github": "https://github.com/Souvikns",
+            "linkedin": "https://www.linkedin.com/in/souvik-de-a2b941169/"
         }
     },
     {
@@ -156,7 +167,8 @@
             "src": "/images/azeez-elegbede.jpeg"
         },
         "speaker": {
-            "name": "Azeez Elegbede (he/him)",
+            "name": "Azeez Elegbede",
+            "pronouns": " (he/him)",
             "github": "https://github.com/AceTheCreator",
             "twitter": "https://twitter.com/_acebuild",
             "linkedin": "https://www.linkedin.com/in/acebuild/"
@@ -170,7 +182,8 @@
             "src": "/images/barbano-gonzalez.jpeg"
         },
         "speaker": {
-            "name": "Barba&#241;o Gonz&#225;lez (she/her)",
+            "name": "Barba&#241;o Gonz&#225;lez",
+            "pronouns": " (she/her)",
             "github": "https://github.com/Barbanio",
             "linkedin": "https://github.com/Barbanio"
         }
@@ -183,7 +196,8 @@
             "src": "/images/lukasz-gornicki.png"
         },
         "speaker": {
-            "name": "Lukasz Gornicki (he/him)",
+            "name": "Lukasz Gornicki",
+            "pronouns": " (he/him)",
             "twitter": "https://twitter.com/derberq",
             "linkedin": "https://www.linkedin.com/in/lukasz-gornicki-a621914/",
             "website": "https://www.brainfart.dev/",
@@ -199,6 +213,7 @@
         },
         "speaker": {
             "name": "Jonas Lagoni",
+            "pronouns": "",
             "twitter": "https://twitter.com/jonaslagoni",
             "linkedin": "https://www.linkedin.com/in/jonaslagoni/",
             "website": "https://eventstack.tech/",
@@ -214,10 +229,12 @@
         },
         "speaker": {
             "name": "Fran M&#233;ndez",
+            "pronouns": " (he/him)",
             "linkedin": "https://www.linkedin.com/in/fmvilas",
             "mastodon": "https://social.fmvilas.me/@fran",
             "website": "https://fmvilas.me/",
-            "github": "https://github.com/fmvilas"
+            "github": "https://github.com/fmvilas",
+            "twitter": "https://twitter.com/fmvilas"
         }
     },
     {
@@ -228,7 +245,8 @@
             "src": "/images/sergio-moya.jpeg"
         },
         "speaker": {
-            "name": "Sergio Moya (he/him)",
+            "name": "Sergio Moya",
+            "pronouns": " (he/him)",
             "twitter": "https://twitter.com/smoyac",
             "linkedin": "https://www.linkedin.com/in/smoya",
             "website": "https://smoya.dev/",
@@ -244,7 +262,8 @@
             "src": "/images/Khuda-Dad-Nomani.jpeg"
         },
         "speaker": {
-            "name": "Khuda Dad Nomani (he/him)",
+            "name": "Khuda Dad Nomani",
+            "pronouns": " (he/him)",
             "github": "https://github.com/KhudaDad414",
             "linkedin": "https://www.linkedin.com/in/khudadadnomani/",
             "twitter": "https://twitter.com/KhudaDadNomani"
@@ -259,6 +278,7 @@
         },
         "speaker": {
             "name": "Alejandra Quetzalli",
+            "pronouns": " (she/her)",
             "twitter": "https://twitter.com/QuetzalliWrites",
             "linkedin": "https://www.linkedin.com/in/alejandra-quetzalli/",
             "website": "https://docsasecosystem.com/",
@@ -274,8 +294,9 @@
             "src": "/images/pedro-ramos.png"
         },
         "speaker": {
-            "name": "Pedro Ramos he/him)",
-            "githb": "https://github.com/peter-rr",
+            "name": "Pedro Ramos",
+            "pronouns": " (he/him)",
+            "github": "https://github.com/peter-rr",
             "linkedin": "https://www.linkedin.com/in/pedro-ramos-romero/"
 
         }
@@ -288,7 +309,8 @@
             "src": "/images/Meenakshi-Dhanani.jpeg"
         },
         "speaker": {
-            "name": "Meenakshi Dhanani (she/her)",
+            "name": "Meenakshi Dhanani",
+            "pronouns": " (she/her)",
             "twitter": "https://twitter.com/mdhananii",
             "website": "https://meenakshi-dhanani.medium.com/",
             "github": "https://github.com/meenakshi-dhanani"
@@ -302,7 +324,8 @@
             "src": "/images/doc-jones.png"
         },
         "speaker": {
-            "name": "Doc Jones (she/her)",
+            "name": "Doc Jones",
+            "pronouns": " (she/her)",
             "linkedin": "https://www.linkedin.com/in/doc-jones/",
             "github": "https://github.com/doc-jonesdoc-jones",
             "twitter": "https://twitter.com/mojosd",
@@ -318,6 +341,7 @@
         },
         "speaker": {
             "name": "Gbadebo Bello",
+            "pronouns": "",
             "twitter": "https://twitter.com/Gbahdeyboh",
             "linkedin": "https://www.linkedin.com/in/gbahdeyboh",
             "github": "https://github.com/Gbahdeyboh"
@@ -332,6 +356,7 @@
         },
         "speaker": {
             "name": "Laurent Broudoux",
+            "pronouns": "",
             "twitter": "https://twitter.com/lbroudoux",
             "website": "https://medium.com/@lbroudoux",
             "github": "https://github.com/lbroudoux",
@@ -346,7 +371,8 @@
             "src": "/images/Yacine-Kheddache.jpeg"
         },
         "speaker": {
-            "name": "Yacine Kheddache (he/him)",
+            "name": "Yacine Kheddache",
+            "pronouns": " (he/him)",
             "twitter": "https://twitter.com/YadaYac",
             "linkedin": "https://www.linkedin.com/in/yacinekheddache/",
             "github": "https://github.com/yada"
@@ -360,7 +386,8 @@
             "src": "/images/kevin-duffey.jpeg"
         },
         "speaker": {
-            "name": "Kevin Duffey (he/him)",
+            "name": "Kevin Duffey",
+            "pronouns": " (he/him)",
             "github": "https://github.com/kevin-postman",
             "linkedin": "http://www.linkedin.com/in/kmd",
             "mastodon": "https://hachyderm.io/@kduffey"
@@ -374,7 +401,8 @@
             "src": "/images/letroy-gardner.jpeg"
         },
         "speaker": {
-            "name": "LeTroy Gardner (he/him)",
+            "name": "LeTroy Gardner",
+            "pronouns": " (he/him)",
             "linkedin": "https://www.linkedin.com/in/letroy-gardner-2133301b/",
             "website": "https://myfourcast.com/",
             "twitter": "https://twitter.com/LouSealsBalls"
@@ -388,7 +416,8 @@
             "src": "/images/Arnaud-Lauret.png"
         },
         "speaker": {
-            "name": "Arnaud Lauret (he/him)",
+            "name": "Arnaud Lauret",
+            "pronouns": " (he/him)",
             "twitter": "https://twitter.com/apihandyman",
             "linkedin": "https://www.linkedin.com/in/arnaudlauret",
             "website": "https://apihandyman.io/",
@@ -405,7 +434,8 @@
             "src": "/images/Kevin-Swiber.jpeg"
         },
         "speaker": {
-            "name": "Kevin Swiber (they/them)",
+            "name": "Kevin Swiber",
+            "pronouns": " (they/them)",
             "twitter": "https://twitter.com/kevinswiber",
             "linkedin": "https://www.linkedin.com/in/kevinswiber",
             "website": "https://swiber.dev/",
@@ -421,7 +451,8 @@
             "src": "/images/deepa-goyal.jpeg"
         },
         "speaker": {
-            "name": "Deepa Goyal (she/her)",
+            "name": "Deepa Goyal",
+            "pronouns": " (she/her)",
             "twitter": "https://twitter.com/1sprintatatime",
             "linkedin": "https://www.linkedin.com/in/deepag",
             "website": "https://onesprintatatime.com/",
@@ -438,6 +469,7 @@
         },
         "speaker": {
             "name": "Bruno Pedro",
+            "pronouns": "",
             "twitter": "https://twitter.com/bpedro",
             "linkedin": "https://www.linkedin.com/in/bpedro/",
             "website": "https://brunopedro.com/",
@@ -454,6 +486,7 @@
         },
         "speaker": {
             "name": "Pascal Heus",
+            "pronouns": "",
             "twitter": "https://twitter.com/PascalHeus",
             "linkedin": "https://www.linkedin.com/in/pascal",
             "github": "https://github.com/kulnor",

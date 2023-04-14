@@ -184,6 +184,7 @@ class IndexPage extends React.Component {
                     }}
                     speaker={{
                       name: people.speaker.name,
+                      pronouns: people.speaker.pronouns,
                       title: people.speaker.title,
                       linkedin: people.speaker.linkedin,
                       twitter: people.speaker.twitter,
@@ -213,6 +214,7 @@ class IndexPage extends React.Component {
                     }}
                     speaker={{
                       name: people.speaker.name,
+                      pronouns: people.speaker.pronouns,
                       title: people.speaker.title,
                       linkedin: people.speaker.linkedin,
                       twitter: people.speaker.twitter,
@@ -241,6 +243,7 @@ class IndexPage extends React.Component {
                     }}
                     speaker={{
                       name: people.speaker.name,
+                      pronouns: people.speaker.pronouns,
                       title: people.speaker.title,
                       linkedin: people.speaker.linkedin,
                       twitter: people.speaker.twitter,
@@ -269,6 +272,7 @@ class IndexPage extends React.Component {
                     }}
                     speaker={{
                       name: people.speaker.name,
+                      pronouns: people.speaker.pronouns,
                       title: people.speaker.title,
                       linkedin: people.speaker.linkedin,
                       twitter: people.speaker.twitter,
@@ -297,6 +301,7 @@ class IndexPage extends React.Component {
                     }}
                     speaker={{
                       name: people.speaker.name,
+                      pronouns: people.speaker.pronouns,
                       title: people.speaker.title,
                       linkedin: people.speaker.linkedin,
                       twitter: people.speaker.twitter,
@@ -324,6 +329,7 @@ class IndexPage extends React.Component {
                     }}
                     speaker={{
                       name: people.speaker.name,
+                      pronouns: people.speaker.pronouns,
                       title: people.speaker.title,
                       linkedin: people.speaker.linkedin,
                       twitter: people.speaker.twitter,
@@ -352,6 +358,7 @@ class IndexPage extends React.Component {
                     }}
                     speaker={{
                       name: people.speaker.name,
+                      pronouns: people.speaker.pronouns,
                       title: people.speaker.title,
                       linkedin: people.speaker.linkedin,
                       twitter: people.speaker.twitter,
@@ -380,6 +387,7 @@ class IndexPage extends React.Component {
                     }}
                     speaker={{
                       name: people.speaker.name,
+                      pronouns: people.speaker.pronouns,
                       title: people.speaker.title,
                       linkedin: people.speaker.linkedin,
                       twitter: people.speaker.twitter,
@@ -409,6 +417,7 @@ class IndexPage extends React.Component {
                     }}
                     speaker={{
                       name: people.speaker.name,
+                      pronouns: people.speaker.pronouns,
                       title: people.speaker.title,
                       linkedin: people.speaker.linkedin,
                       twitter: people.speaker.twitter,
@@ -437,6 +446,7 @@ class IndexPage extends React.Component {
                     }}
                     speaker={{
                       name: people.speaker.name,
+                      pronouns: people.speaker.pronouns,
                       title: people.speaker.title,
                       linkedin: people.speaker.linkedin,
                       twitter: people.speaker.twitter,
@@ -465,6 +475,7 @@ class IndexPage extends React.Component {
                     }}
                     speaker={{
                       name: people.speaker.name,
+                      pronouns: people.speaker.pronouns,
                       title: people.speaker.title,
                       linkedin: people.speaker.linkedin,
                       twitter: people.speaker.twitter,
@@ -493,6 +504,7 @@ class IndexPage extends React.Component {
                     }}
                     speaker={{
                       name: people.speaker.name,
+                      pronouns: people.speaker.pronouns,
                       title: people.speaker.title,
                       linkedin: people.speaker.linkedin,
                       twitter: people.speaker.twitter,
@@ -521,6 +533,7 @@ class IndexPage extends React.Component {
                     }}
                     speaker={{
                       name: people.speaker.name,
+                      pronouns: people.speaker.pronouns,
                       title: people.speaker.title,
                       linkedin: people.speaker.linkedin,
                       twitter: people.speaker.twitter,

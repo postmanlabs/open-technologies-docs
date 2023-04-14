@@ -27,10 +27,10 @@ function CardPresenterHorizontal({
           </div>
           <div className="col-7 col-md-8 d-flex align-items-center">
             <div className="d-flex flex-column justify-content-center">
-              <h4
-                className="mb-2 mr-2 d-inline"
+              <div className='ml-0 row align-content-center'> 
+                <h4 className="mb-2 mr-2 d-inline"
                 dangerouslySetInnerHTML={{ __html: speaker.name }}
-              />
+              /><h4>{speaker.pronouns}</h4></div>
               <div className="d-flex flex-row">
 
                 {speaker.linkedin && (
@@ -164,6 +164,7 @@ CardPresenterHorizontal.propTypes = {
   }),
   speaker: PropTypes.shape({
     name: PropTypes.string,
+    pronouns: PropTypes.string,
     title: PropTypes.string,
     company: PropTypes.string,
     twitter: PropTypes.string,
@@ -184,6 +185,7 @@ CardPresenterHorizontal.defaultProps = {
   },
   speaker: {
     name: null,
+    pronouns: null,
     title: null,
     company: null,
     twitter: null,
