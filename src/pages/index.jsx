@@ -59,7 +59,7 @@ const feature = {
       },
       link: {
         text: "Learn more",
-        src: "/specifications/graphql/graphql/",
+        src: withPrefix("/specifications/graphql/graphql/"),
         target: "same-tab",
       },
     },
