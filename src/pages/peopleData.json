@@ -2,10 +2,7 @@
     {
         "company": "leadership",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Kin Lane. Postman.",
-            "src": "https://voyager.postman.com/photo/presenter/headshot-kin-lane.png"
-        },
+        
         "speaker": {
             "name": "Kin Lane",
             "pronouns": "(he/him/it)",
@@ -19,10 +16,7 @@
     {
         "company": "leadership",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Jan Schenk. Postman.",
-            "src": "/images/jan.jpeg"
-        },
+       
         "speaker": {
             "name": "Jan Schenk",
             "pronouns": " (he/they)",
@@ -36,10 +30,7 @@
     {
         "company": "specifications",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Mike Ralphson. Postman.",
-            "src": "/images/mike-ralphson.jpeg"
-        },
+        
         "speaker": {
             "name": "Mike Ralphson",
             "pronouns": " (he/him)",
@@ -52,10 +43,7 @@
     {
         "company": "json-schema",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Julian Berman. Postman.",
-            "src": "/images/Julian-Berman.jpeg"
-        },
+        
         "speaker": {
             "name": "Julian Berman",
             "pronouns": " (he/him)",
@@ -68,10 +56,7 @@
     {
         "company": "json-schema",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Greg Dennis. Postman.",
-            "src": "/images/greg-dennis.jpeg"
-        },
+        
         "speaker": {
             "name": "Greg Dennis",
             "pronouns": "",
@@ -84,10 +69,7 @@
     {
         "company": "json-schema",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Jason Desrosiers. Postman.",
-            "src": "/images/Jason-Desrosiers.jpeg"
-        },
+        
         "speaker": {
             "name": "Jason Desrosiers",
             "pronouns": " (he/him)",
@@ -100,10 +82,7 @@
     {
         "company": "json-schema",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Benjamin Granados. Postman.",
-            "src": "/images/benjamin-granados.png"
-        },
+        
         "speaker": {
             "name": "Benjamin Granados",
             "pronouns": " (he/him)",
@@ -115,10 +94,7 @@
     {
         "company": "json-schema",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Ben Hutton. Postman.",
-            "src": "/images/ben-hutton.jpeg"
-        },
+        
         "speaker": {
             "name": "Ben Hutton",
             "pronouns": "",
@@ -132,10 +108,7 @@
     {
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Samir Amzani. Postman.",
-            "src": "/images/samir-amzani.jpeg"
-        },
+        
         "speaker": {
             "name": "Samir Amzani",
             "pronouns": " (he/him)",
@@ -147,10 +120,7 @@
     {
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Souvik De. Postman.",
-            "src": "/images/souvik-de.png"
-        },
+        
         "speaker": {
             "name": "Souvik De",
             "pronouns": " (he/him)",
@@ -162,10 +132,7 @@
     {
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Azeez Elegbede. Postman.",
-            "src": "/images/azeez-elegbede.jpeg"
-        },
+      
         "speaker": {
             "name": "Azeez Elegbede",
             "pronouns": " (he/him)",
@@ -177,10 +144,7 @@
     {
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Barba&#241;o Gonz&#225;lez. Postman.",
-            "src": "/images/barbano-gonzalez.jpeg"
-        },
+        
         "speaker": {
             "name": "Barba&#241;o Gonz&#225;lez",
             "pronouns": " (she/her)",
@@ -191,10 +155,7 @@
     {
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Lukasz Gornicki. Postman.",
-            "src": "/images/lukasz-gornicki.png"
-        },
+        
         "speaker": {
             "name": "Lukasz Gornicki",
             "pronouns": " (he/him)",
@@ -207,10 +168,7 @@
     {
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Jonas Lagoni. Postman.",
-            "src": "/images/jonas-lagoni.png"
-        },
+        
         "speaker": {
             "name": "Jonas Lagoni",
             "pronouns": "",
@@ -223,10 +181,7 @@
     {
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Fran Mendez. Postman.",
-            "src": "/images/fran-mendez.jpeg"
-        },
+        
         "speaker": {
             "name": "Fran M&#233;ndez",
             "pronouns": " (he/him)",
@@ -240,10 +195,7 @@
     {
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Sergio Moya. Postman.",
-            "src": "/images/sergio-moya.jpeg"
-        },
+        
         "speaker": {
             "name": "Sergio Moya",
             "pronouns": " (he/him)",
@@ -257,10 +209,7 @@
     {
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Khuda Dad Nomani. Postman.",
-            "src": "/images/Khuda-Dad-Nomani.jpeg"
-        },
+        
         "speaker": {
             "name": "Khuda Dad Nomani",
             "pronouns": " (he/him)",
@@ -272,10 +221,7 @@
     {
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Alejandra Quetzalli. Postman. ",
-            "src": "/images/Alejandra-Quetzalli.jpeg"
-        },
+        
         "speaker": {
             "name": "Alejandra Quetzalli",
             "pronouns": " (she/her)",
@@ -289,10 +235,7 @@
     {
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Pedro Ramos. Postman.",
-            "src": "/images/pedro-ramos.png"
-        },
+       
         "speaker": {
             "name": "Pedro Ramos",
             "pronouns": " (he/him)",
@@ -304,10 +247,7 @@
     {
         "company": "graphql",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Meenakshi Dhanani. Postman.",
-            "src": "/images/Meenakshi-Dhanani.jpeg"
-        },
+        
         "speaker": {
             "name": "Meenakshi Dhanani",
             "pronouns": " (she/her)",
@@ -319,10 +259,7 @@
     {
         "company": "graphql",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Doc Jones. Postman.",
-            "src": "/images/doc-jones.png"
-        },
+       
         "speaker": {
             "name": "Doc Jones",
             "pronouns": " (she/her)",
@@ -335,10 +272,7 @@
     {
         "company": "collection-format",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Gbadebo Bello. Postman.",
-            "src": "/images/Gbadebo-Beelo.png"
-        },
+        
         "speaker": {
             "name": "Gbadebo Bello",
             "pronouns": "",
@@ -350,10 +284,7 @@
     {
         "company": "testing",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Laurent Broudoux. Postman.",
-            "src": "/images/Laurent-Broudoux.jpeg"
-        },
+        
         "speaker": {
             "name": "Laurent Broudoux",
             "pronouns": "",
@@ -366,10 +297,7 @@
     {
         "company": "testing",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Yacine Kheddache. Postman.",
-            "src": "/images/Yacine-Kheddache.jpeg"
-        },
+        
         "speaker": {
             "name": "Yacine Kheddache",
             "pronouns": " (he/him)",
@@ -381,10 +309,7 @@
     {
         "company": "codegen",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Kevin Duffey. Postman.",
-            "src": "/images/kevin-duffey.jpeg"
-        },
+        
         "speaker": {
             "name": "Kevin Duffey",
             "pronouns": " (he/him)",
@@ -393,14 +318,26 @@
             "mastodon": "https://hachyderm.io/@kduffey"
         }
     },
-    
+    {
+        "company": "communications",
+        "col": "col-12 col-lg-6 mb-5",
+        "media": {
+            "alt": "LeTroy Gardner. Postman.",
+            "src": "/images/letroy-gardner.jpeg"
+        },
+        "speaker": {
+            "name": "LeTroy Gardner",
+            "github": "OlliesWorld",
+            "pronouns": " (he/him)",
+            "linkedin": "https://www.linkedin.com/in/letroy-gardner-2133301b/",
+            "website": "https://myfourcast.com/",
+            "twitter": "https://twitter.com/LouSealsBalls"
+        }
+    },
     {
         "company": "governance",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Arnaud Lauret. Postman.",
-            "src": "/images/Arnaud-Lauret.png"
-        },
+        
         "speaker": {
             "name": "Arnaud Lauret",
             "pronouns": " (he/him)",
@@ -415,10 +352,7 @@
     {
         "company": "lifecycle",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Kevin Swiber. Postman.",
-            "src": "/images/Kevin-Swiber.jpeg"
-        },
+        
         "speaker": {
             "name": "Kevin Swiber",
             "pronouns": " (they/them)",
@@ -432,10 +366,7 @@
     {
         "company": "products",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Deepa Goyal. Postman.",
-            "src": "/images/deepa-goyal.jpeg"
-        },
+        
         "speaker": {
             "name": "Deepa Goyal",
             "pronouns": " (she/her)",
@@ -449,10 +380,7 @@
     {
         "company": "products",
         "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Bruno Pedro. Postman.",
-            "src": "/images/bruno-pedro.jpeg"
-        },
+        
         "speaker": {
             "name": "Bruno Pedro",
             "pronouns": "",
