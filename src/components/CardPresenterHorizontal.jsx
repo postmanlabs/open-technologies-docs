@@ -117,7 +117,6 @@ useEffect(async () => {
                     className="mr-1"
                     title={`Follow ${speaker.name} on Twitter`}
                   >
-                    {console.log()}
                     <SVG
                       width="30"
                       height="24"
