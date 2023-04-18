@@ -393,21 +393,7 @@
             "mastodon": "https://hachyderm.io/@kduffey"
         }
     },
-    {
-        "company": "communications",
-        "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "LeTroy Gardner. Postman.",
-            "src": "/images/letroy-gardner.jpeg"
-        },
-        "speaker": {
-            "name": "LeTroy Gardner",
-            "pronouns": " (he/him)",
-            "linkedin": "https://www.linkedin.com/in/letroy-gardner-2133301b/",
-            "website": "https://myfourcast.com/",
-            "twitter": "https://twitter.com/LouSealsBalls"
-        }
-    },
+    
     {
         "company": "governance",
         "col": "col-12 col-lg-6 mb-5",

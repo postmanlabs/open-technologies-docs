@@ -29,20 +29,21 @@ const octokit = new Octokit({
 
 useEffect(() => {
   getGithubUsers();
-}, []);
+});
 
 async function getGithubUsers() {
   const result = await octokit.request(`GET /users/${speaker.github}`);
-  console.log('result', result.data);
+  // console.log('result', result.data);
  setUser(result)
 }
-// console.log(user, 'user')
+const userData = user.data
+console.log(userData, 'user')
   return (
     <div className={`${col || 'col-lg-6 col-xl-4'}`}>
       <div className="container pl-0 pr-0">
         <div className="row my-auto justify-content-center">
           <div className="col-5 col-md-4 my-auto">
-            <img className="img-fluid rounded-circle" src={user.avatar_url ? user.avatar_url : media.src} alt={media.alt} />
+            <img className="img-fluid rounded-circle" src={userData.avatar_url} alt={media.alt} />
           </div>
           <div className="col-7 col-md-8 d-flex align-items-center">
             <div className="d-flex flex-column justify-content-center">
