@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-const { Octokit } = require("@octokit/rest");
+import { Octokit } from "@octokit/rest";
 
 import { withPrefix } from 'gatsby';
 const SVG = styled.svg`
@@ -20,30 +20,23 @@ function CardPresenterHorizontal({
   speaker // details about presenter
 }) {
   const [user, setUser] = useState([]);
-
-// console.log(speaker.github)
  
 const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN,
 });
 
-useEffect(() => {
-  getGithubUsers();
-});
-
-async function getGithubUsers() {
+useEffect(async () => {
   const result = await octokit.request(`GET /users/${speaker.github}`);
-  // console.log('result', result.data);
- setUser(result)
-}
-const userData = user.data
-console.log(userData, 'user')
+  setUser(result.data)
+}, []);
+
+
   return (
     <div className={`${col || 'col-lg-6 col-xl-4'}`}>
       <div className="container pl-0 pr-0">
         <div className="row my-auto justify-content-center">
           <div className="col-5 col-md-4 my-auto">
-            <img className="img-fluid rounded-circle" src={userData.avatar_url} alt={media.alt} />
+            <img className="img-fluid rounded-circle" src={user.avatar_url} alt={media.alt} />
           </div>
           <div className="col-7 col-md-8 d-flex align-items-center">
             <div className="d-flex flex-column justify-content-center">
