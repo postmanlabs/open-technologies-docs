@@ -142,6 +142,7 @@ const data = {
   ],
 };
 class IndexPage extends React.Component {
+  
   render() {
     return (
       <Layout>
