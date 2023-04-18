@@ -37,8 +37,8 @@ useEffect(async () => {
         <div className="row my-auto justify-content-center">
           <div className="col-5 col-md-4 my-auto">
 
-            {speaker.name === "Pascal Heus" || speaker.name === "LeTroy Gardner" ? <img className="img-fluid rounded-circle" src={media.src} alt={media.alt} /> : 
-            <img className="img-fluid rounded-circle" src={user.avatar_url} alt={media.alt} />}
+            {speaker.name === "Pascal Heus" || speaker.name === "LeTroy Gardner" ? <img className="img-fluid rounded-circle" src={withPrefix(media.src)} alt={media.alt} /> : 
+            <img className="img-fluid rounded-circle" src={user.avatar_url} alt={`${speaker.name} profile`} />}
           </div>
           <div className="col-7 col-md-8 d-flex align-items-center">
             <div className="d-flex flex-column justify-content-center">
