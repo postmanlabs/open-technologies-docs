@@ -93,7 +93,7 @@
          },
          {
            property: 'twitter:image',
-           content: '"https://voyager.postman.com/illustration/ventura-abled.png"',
+           content: 'https://voyager.postman.com/social-preview/postman-open-technologies-preview-image.png',
          },
          {
            property: 'twitter:site',
