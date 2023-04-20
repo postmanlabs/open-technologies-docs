@@ -143,7 +143,6 @@ const data = {
 };
 
 class IndexPage extends React.Component {
-  
   render() {
     let people;
     if(process.env.API_GITHUB_TOKEN){
@@ -187,6 +186,10 @@ class IndexPage extends React.Component {
                   <CardPresenterHorizontal
                     key={uuidv4()}
                     col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
                     speaker={{
                       name: people.speaker.name,
                       pronouns: people.speaker.pronouns,
@@ -213,6 +216,10 @@ class IndexPage extends React.Component {
                 people.company === 'specifications' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
                     speaker={{
                       name: people.speaker.name,
                       pronouns: people.speaker.pronouns,
@@ -238,6 +245,10 @@ class IndexPage extends React.Component {
                 people.company === 'json-schema' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
                     speaker={{
                       name: people.speaker.name,
                       pronouns: people.speaker.pronouns,
@@ -263,6 +274,10 @@ class IndexPage extends React.Component {
                 people.company === 'asyncapi' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
                     speaker={{
                       name: people.speaker.name,
                       pronouns: people.speaker.pronouns,
@@ -288,6 +303,10 @@ class IndexPage extends React.Component {
                 people.company === 'graphql' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
                     speaker={{
                       name: people.speaker.name,
                       pronouns: people.speaker.pronouns,
@@ -312,6 +331,10 @@ class IndexPage extends React.Component {
                 people.company === 'collection-format' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
                     speaker={{
                       name: people.speaker.name,
                       pronouns: people.speaker.pronouns,
@@ -337,6 +360,10 @@ class IndexPage extends React.Component {
                 people.company === 'testing' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
                     speaker={{
                       name: people.speaker.name,
                       pronouns: people.speaker.pronouns,
@@ -362,6 +389,10 @@ class IndexPage extends React.Component {
                 people.company === 'codegen' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
                     speaker={{
                       name: people.speaker.name,
                       pronouns: people.speaker.pronouns,
@@ -417,6 +448,10 @@ class IndexPage extends React.Component {
                 people.company === 'governance' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
                     speaker={{
                       name: people.speaker.name,
                       pronouns: people.speaker.pronouns,
@@ -442,6 +477,10 @@ class IndexPage extends React.Component {
                 people.company === 'lifecycle' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
                     speaker={{
                       name: people.speaker.name,
                       pronouns: people.speaker.pronouns,
@@ -467,6 +506,10 @@ class IndexPage extends React.Component {
                 people.company === 'products' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
+                    media={{
+                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
+                      src: people.media.src
+                    }}
                     speaker={{
                       name: people.speaker.name,
                       pronouns: people.speaker.pronouns,

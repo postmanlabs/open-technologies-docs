@@ -1,9 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Octokit } from "@octokit/rest";
-
 import { withPrefix } from 'gatsby';
+
 const SVG = styled.svg`
   &:hover {
     opacity: 0.7;
@@ -116,7 +115,7 @@ useEffect(async () => {
                 )}
                 {speaker.github && (
                   <a
-                    href={`https://github.com/${speaker.github}`}
+                    href={speaker.github}
                     target="_blank"
                     rel="noopener noreferrer nofollow"
                     className="mr-1"
