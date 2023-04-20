@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Paragraph } from 'aether-marketing';
 import { withPrefix } from 'gatsby';
+
 const SVG = styled.svg`
   &:hover {
     opacity: 0.7;
