@@ -21,23 +21,28 @@ function CardPresenterHorizontal({
 }) {
   const [user, setUser] = useState([]);
  
-const octokit = new Octokit({
+  if(process.env.API_GITHUB_TOKEN){
+  const octokit = new Octokit({
   auth: process.env.API_GITHUB_TOKEN,
 });
 
 useEffect(async () => {
-  const result = await octokit.request(`GET /users/${speaker.github}`);
+
+  const result = await octokit.request(`GET /users/${speaker.github}`)
+  
   setUser(result.data)
+  console.log(result.data)
+ 
+  
 }, []);
 
-
+  }
   return (
     <div className={`${col || 'col-lg-6 col-xl-4'}`}>
       <div className="container pl-0 pr-0">
         <div className="row my-auto justify-content-center">
           <div className="col-5 col-md-4 my-auto">
-
-            {speaker.name === "Pascal Heus" || speaker.name === "LeTroy Gardner" ? <img className="img-fluid rounded-circle" src={withPrefix(media.src)} alt={media.alt} /> : 
+          {speaker.name === "Pascal Heus" || speaker.name === "LeTroy Gardner" ? <img className="img-fluid rounded-circle" src={withPrefix(media.src)} alt={media.alt} /> : 
             <img className="img-fluid rounded-circle" src={user.avatar_url} alt={`${speaker.name} profile`} />}
           </div>
           <div className="col-7 col-md-8 d-flex align-items-center">
