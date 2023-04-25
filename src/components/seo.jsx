@@ -93,7 +93,7 @@
          },
          {
            property: 'twitter:image',
-           content: 'https://voyager.postman.com/social-preview/postman-open-technologies-preview-image.png',
+           content: 'https://voyager.postman.com/social-preview/postman-open-technologies-preview-image.jpg',
          },
          {
            property: 'twitter:site',
