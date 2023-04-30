@@ -213,6 +213,41 @@ GraphQL has a powerful type system and that can be capitalized on while working 
 
 Logging and monitoring are important aspects of error handling. Logging should capture detailed information about the error, including the error message, the query or mutation that caused the error, and any relevant metadata. Monitoring is also crucial for GraphQL APIs. Monitoring tools can help developers track the performance and availability of the API, as well as detect and diagnose errors.
 
+### Use GraphQL middleware
+
+Logging, monitoring, and error handling logic may be duplicated across resolvers, making maintenance more difficult, especially as the project expands. If every resolver manages errors differently, it could lead to an ambiguous experience for the user of the GraphQL API. Hence, it's essential to handle such situations consistently. We can do so by using [GraphQL Middleware](https://www.prisma.io/blog/graphql-middleware-zie3iphithxy). It enables us to encapsulate that common error handling code in middleware. The middleware acts as an interceptor, allowing us to perform actions before or after the requested field is resolved. It can also modify the response sent to the client.
+You can inject the middleware into a GraphQL server like [Yoga](https://the-guild.dev/graphql/yoga-server/docs/migration/migration-from-yoga-v1#middlewares). In the following example, the logError method is the middleware that runs after the product and store fields are resolved. The latest Yoga version consumes the middleware as a plugin.
+
+```graphql
+import { useGraphQLMiddleware } from '@envelop/graphql-middleware'
+
+const logError = async (resolve, parent, args, context, info) => {
+   try {
+    return await resolve(parent, args, context, info)
+  } catch (err) {
+      console.log(err, context, info);
+
+      // rethrow the error
+      throw err;
+  }
+}
+
+const errorHandler = {
+  Query: {
+    product: logError,
+    store: logError
+  }
+}
+
+const yoga = createYoga({
+  schema: createSchema({ typeDefs, resolvers }),
+  plugins: [useGraphQLMiddleware([errorHandler])]
+})
+
+const server = createServer(yoga)
+server.listen(4000)
+```
+
 ## Conclusion
 
 Building and maintaining a high-quality GraphQL API requires considerable consideration of error handling, logging, and monitoring. A mix of error handling strategies, in addition to the ones listed above, can lead to a reliable, performant, and user-friendly API.
