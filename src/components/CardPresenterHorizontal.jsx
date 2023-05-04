@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { Octokit } from "@octokit/rest";
 import { withPrefix } from 'gatsby';
 
 const SVG = styled.svg`
