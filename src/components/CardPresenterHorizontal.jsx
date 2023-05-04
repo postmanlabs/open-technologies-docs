@@ -21,9 +21,9 @@ function CardPresenterHorizontal({
 }) {
   const [user, setUser] = useState([]);
  
-if(process.env.API_GITHUB_TOKEN){
+if(process.env.PRIVATE_TOKEN){
   const octokit = new Octokit({
-  auth: process.env.API_GITHUB_TOKEN,
+    privateKey: process.env.PRIVATE_TOKEN,
 });
 
 useEffect(async () => {
