@@ -8,7 +8,7 @@ import SEO from '../components/seo';
 import '../../styles/config/_pm-icons.css';
 import peopleData from './peopleData.json';
 import CardPresenterHorizontal from '../components/CardPresenterHorizontal';
-
+import DummyPeople from './dummypeople.json'
 
 const header = {
   title: "Meet the teams and their tech in Postman Open Technologies",
@@ -143,6 +143,13 @@ const data = {
 };
 class IndexPage extends React.Component {
   render() {
+    let people;
+    if(process.env.API_GITHUB_TOKEN){
+      people = peopleData
+    } else {
+      people = DummyPeople
+    }
+   
     return (
       <Layout>
         <SEO title="Learning Center" slug="/" />
@@ -173,7 +180,7 @@ class IndexPage extends React.Component {
             <p className='mb-4'>Open Technologies is 40+ individuals working to strengthen the Postman platform and community.</p>
             <h3 className='mb-4'>Leadership</h3>
             <div className='row mt-4'>
-              {peopleData.map((people) => (
+              {people.map((people) => (
                 people.company === 'leadership' ?
                   <CardPresenterHorizontal
                     key={uuidv4()}
@@ -204,7 +211,7 @@ class IndexPage extends React.Component {
           <section className="section align-items-center">
             <h3 className='mb-4'>OpenAPI</h3>
             <div className='row mt-4'>
-              {peopleData.map(people => (
+              {people.map(people => (
                 people.company === 'specifications' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
@@ -233,7 +240,7 @@ class IndexPage extends React.Component {
             <h3 className='mb-4'>JSON Schema</h3>
 
             <div className='row mt-4'>
-              {peopleData.map(people => (
+              {people.map(people => (
                 people.company === 'json-schema' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
@@ -262,7 +269,7 @@ class IndexPage extends React.Component {
             <h3 className='mb-4'>AsyncAPI</h3>
 
             <div className='row mt-4'>
-              {peopleData.map(people => (
+              {people.map(people => (
                 people.company === 'asyncapi' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
@@ -291,7 +298,7 @@ class IndexPage extends React.Component {
             <h3 className='mb-4'>GraphQL</h3>
 
             <div className='row mt-4'>
-              {peopleData.map(people => (
+              {people.map(people => (
                 people.company === 'graphql' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
@@ -319,7 +326,7 @@ class IndexPage extends React.Component {
           <section className="section align-items-center">
             <h3 className='mb-4'>Collection Format</h3>
             <div className='row mt-4'>
-              {peopleData.map(people => (
+              {people.map(people => (
                 people.company === 'collection-format' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
@@ -348,7 +355,7 @@ class IndexPage extends React.Component {
           <section className="section align-items-center">
             <h3 className='mb-4'>Testing & Mocking</h3>
             <div className='row mt-4'>
-              {peopleData.map(people => (
+              {people.map(people => (
                 people.company === 'testing' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
@@ -377,7 +384,7 @@ class IndexPage extends React.Component {
 
             <h3 className='mb-4'>CodeGen</h3>
             <div className='row mt-4'>
-              {peopleData.map(people => (
+              {people.map(people => (
                 people.company === 'codegen' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
@@ -407,7 +414,7 @@ class IndexPage extends React.Component {
 
             <h3 className='mb-4'>Communications/PR</h3>
             <div className='row mt-4'>
-              {peopleData.map(people => (
+              {people.map(people => (
                 people.company === 'communications' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
@@ -436,7 +443,7 @@ class IndexPage extends React.Component {
 
             <h3 className='mb-4'>Governance</h3>
             <div className='row mt-4'>
-              {peopleData.map(people => (
+              {people.map(people => (
                 people.company === 'governance' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
@@ -465,7 +472,7 @@ class IndexPage extends React.Component {
 
             <h3 className='mb-4'>Lifecycle</h3>
             <div className='row mt-4'>
-              {peopleData.map(people => (
+              {people.map(people => (
                 people.company === 'lifecycle' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
@@ -494,7 +501,7 @@ class IndexPage extends React.Component {
 
             <h3 className='mb-4'>Products</h3>
             <div className='row mt-4'>
-              {peopleData.map(people => (
+              {people.map(people => (
                 people.company === 'products' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
@@ -523,7 +530,7 @@ class IndexPage extends React.Component {
 
             <h3 className='mb-4'>Data & Intelligence</h3>
             <div className='row mt-4'>
-              {peopleData.map(people => (
+              {people.map(people => (
                 people.company === 'data' ?
                   <CardPresenterHorizontal key={uuidv4()}
                     col={people.col}
