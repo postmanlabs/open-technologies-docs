@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { withPrefix } from 'gatsby';
-const { Octokit } = require("@octokit/rest");
-const { createAppAuth } = require("@octokit/auth-app");
 
 const SVG = styled.svg`
   &:hover {
