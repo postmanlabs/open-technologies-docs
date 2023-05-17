@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Octokit } from "@octokit/rest";
 import { withPrefix } from 'gatsby';
-const { Octokit } = require("@octokit/rest");
-const { createAppAuth } = require("@octokit/auth-app");
 
 const SVG = styled.svg`
   &:hover {
