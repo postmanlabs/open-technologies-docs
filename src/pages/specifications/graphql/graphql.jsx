@@ -72,7 +72,7 @@ const GraphQLPage = ({ data }) => {
                           <DynamicLink url="/specifications/graphql/getting-started-with-graphql-client/" name="Getting Started Guide for New GraphQL Client →" />
                         </div>
                         <div className="mb-2">
-                        <DynamicLink url="https://graphql.org/conf/speak/" name="The GraphQL Conference 2023 CFP Open →" />
+                        <DynamicLink url="https://graphql.org/conf/" name="GraphQLConf 2023 in September →" />
                         </div>
                         <div className="mb-2">
                           New Directives to be released in GraphQL Spec 2023
