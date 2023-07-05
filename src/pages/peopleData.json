@@ -35,6 +35,7 @@
     },
     {
         "company": "specifications",
+        "col": "col-12 col-lg-6 mb-5",
         "media": {
             "alt": "Kevin Swiber. Postman.",
             "src": "/images/Kevin-Swiber.jpeg"
