@@ -37,16 +37,17 @@
         "company": "specifications",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Mike Ralphson. Postman.",
-            "src": "/images/mike-ralphson.jpeg"
+            "alt": "Kevin Swiber. Postman.",
+            "src": "/images/Kevin-Swiber.jpeg"
         },
         "speaker": {
-            "name": "Mike Ralphson",
-            "pronouns": " (he/him)",
-            "twitter": "https://twitter.com/PermittedSoc",
-            "linkedin": "https://www.linkedin.com/in/mikeralphson/",
-            "website": "https://dev.to/mikeralphson",
-            "github": "MikeRalphson"
+            "name": "Kevin Swiber",
+            "pronouns": " (they/them)",
+            "twitter": "https://twitter.com/kevinswiber",
+            "linkedin": "https://www.linkedin.com/in/kevinswiber",
+            "website": "https://swiber.dev/",
+            "mastodon": "https://hachyderm.io/@kevinswiber",
+            "github": "kevinswiber"
         }
     },
     {
