@@ -33,7 +33,7 @@ function CalendarDates() {
   const Events = CalendarData.calendarData.records
   //sort date chronological
  const sortedEvents = Events.sort((a, b) => (a.fields.date.toLowerCase() < b.fields.date.toLowerCase()) ? -1 : ((b.fields.date.toLowerCase() > a.fields.date.toLowerCase()) ? 1 : 0));
-console.log(sortedEvents)
+// console.log(sortedEvents)
   return (
     <div >
       {sortedEvents.map((event) => (

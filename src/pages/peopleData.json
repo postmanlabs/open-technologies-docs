@@ -13,7 +13,7 @@
             "linkedin": "https://www.linkedin.com/in/kinlane/",
             "mastodon": "https://mastodon.kinlane.com/@kin",
             "website": "https://apievangelist.com/",
-            "github": "kinlane"
+            "github": "https://github.com/kinlane"
         }
     },
     {
@@ -30,7 +30,7 @@
             "linkedin": "https://www.linkedin.com/in/janschenk/",
             "mastodon": "https://mastodon.online/@jansche",
             "website": "https://dev.to/jansche",
-            "github": "jansche"
+            "github": "https://github.com/jansche"
         }
     },
     {
@@ -47,7 +47,7 @@
             "linkedin": "https://www.linkedin.com/in/kevinswiber",
             "website": "https://swiber.dev/",
             "mastodon": "https://hachyderm.io/@kevinswiber",
-            "github": "kevinswiber"
+            "github": "https://github.com/kevinswiber"
         }
     },
     {
@@ -63,7 +63,7 @@
             "twitter": "https://twitter.com/JulianWasTaken",
             "linkedin": "https://www.linkedin.com/in/julian-berman",
             "mastodon": "https://mastodon.social/@JulianWasTaken",
-            "github": "Julian"
+            "github": "https://github.com/Julian"
         }
     },
     {
@@ -76,7 +76,7 @@
         "speaker": {
             "name": "Greg Dennis",
             "pronouns": "",
-            "github": "gregsdennis",
+            "github": "https://github.com/gregsdennis",
             "mastodon": "https://dotnet.social/@gregsdennis",
             "linkedin": "https://www.linkedin.com/in/gregdennis/",
             "twitter": "https://twitter.com/gregsdennis"
@@ -110,7 +110,7 @@
             "pronouns": " (he/him)",
             "twitter": "https://twitter.com/benjagm",
             "linkedin": "https://www.linkedin.com/in/benjagranados/",
-            "github": "benjagm"
+            "github": "https://github.com/benjagm"
         }
     },
     {
@@ -126,7 +126,7 @@
             "twitter": "https://twitter.com/relequestual",
             "linkedin": "https://www.linkedin.com/in/benhuttonuk/",
             "website": "https://benhutton.me",
-            "github": "Relequestual",
+            "github": "https://github.com/Relequestual",
             "mastodon": "https://fosstodon.org/@relequestual"
         }
     },
@@ -140,7 +140,7 @@
         "speaker": {
             "name": "Samir Amzani",
             "pronouns": " (he/him)",
-            "github": "Amzani",
+            "github": "https://github.com/Amzani",
             "linkedin": "https://www.linkedin.com/in/amzani/",
             "website": "https://samir-amzani.medium.com/"
         }
@@ -156,7 +156,7 @@
             "name": "Souvik De",
             "pronouns": " (he/him)",
             "twitter": "https://twitter.com/souvik_ns",
-            "github": "Souvikns",
+            "github": "https://github.com/Souvikns",
             "linkedin": "https://www.linkedin.com/in/souvik-de-a2b941169/"
         }
     },
@@ -170,7 +170,7 @@
         "speaker": {
             "name": "Azeez Elegbede",
             "pronouns": " (he/him)",
-            "github": "AceTheCreator",
+            "github": "https://github.com/AceTheCreator",
             "twitter": "https://twitter.com/_acebuild",
             "linkedin": "https://www.linkedin.com/in/acebuild/"
         }
@@ -185,7 +185,7 @@
         "speaker": {
             "name": "Barba&#241;o Gonz&#225;lez",
             "pronouns": " (she/her)",
-            "github": "Barbanio",
+            "github": "https://github.com/Barbanio",
             "linkedin": "https://www.linkedin.com/in/barbano-gonzalez-moreno/"
         }
     },
@@ -202,7 +202,7 @@
             "twitter": "https://twitter.com/derberq",
             "linkedin": "https://www.linkedin.com/in/lukasz-gornicki-a621914/",
             "website": "https://www.brainfart.dev/",
-            "github": "derberg"
+            "github": "https://github.com/derberg"
         }
     },
     {
@@ -218,7 +218,7 @@
             "twitter": "https://twitter.com/jonaslagoni",
             "linkedin": "https://www.linkedin.com/in/jonaslagoni/",
             "website": "https://eventstack.tech/",
-            "github": "jonaslagoni"
+            "github": "https://github.com/jonaslagoni"
         }
     },
     {
@@ -234,7 +234,7 @@
             "linkedin": "https://www.linkedin.com/in/fmvilas",
             "mastodon": "https://social.fmvilas.me/@fran",
             "website": "https://fmvilas.me/",
-            "github": "fmvilas",
+            "github": "https://github.com/fmvilas",
             "twitter": "https://twitter.com/fmvilas"
         }
     },
@@ -251,7 +251,7 @@
             "twitter": "https://twitter.com/smoyac",
             "linkedin": "https://www.linkedin.com/in/smoya",
             "website": "https://smoya.dev/",
-            "github": "smoya",
+            "github": "https://github.com/smoya",
             "mastodon": "https://mastodon.social/@smoya"
         }
     },
@@ -265,7 +265,7 @@
         "speaker": {
             "name": "Khuda Dad Nomani",
             "pronouns": " (he/him)",
-            "github": "KhudaDad414",
+            "github": "https://github.com/KhudaDad414",
             "linkedin": "https://www.linkedin.com/in/khudadadnomani/",
             "twitter": "https://twitter.com/KhudaDadNomani"
         }
@@ -284,7 +284,7 @@
             "linkedin": "https://www.linkedin.com/in/alejandra-quetzalli/",
             "website": "https://docsasecosystem.com/",
             "mastodon": "https://mastodon.social/@quetzalliwritesbooks",
-            "github": "alequetzalli"
+            "github": "https://github.com/alequetzalli"
         }
     },
     {
@@ -297,7 +297,7 @@
         "speaker": {
             "name": "Pedro Ramos",
             "pronouns": " (he/him)",
-            "github": "peter-rr",
+            "github": "https://github.com/peter-rr",
             "linkedin": "https://www.linkedin.com/in/pedro-ramos-romero/"
 
         }
@@ -314,7 +314,7 @@
             "pronouns": " (she/her)",
             "twitter": "https://twitter.com/mdhananii",
             "website": "https://meenakshi-dhanani.medium.com/",
-            "github": "meenakshi-dhanani"
+            "github": "https://github.com/meenakshi-dhanani"
         }
     },
     {
@@ -328,7 +328,7 @@
             "name": "Doc Jones",
             "pronouns": " (she/her)",
             "linkedin": "https://www.linkedin.com/in/doc-jones/",
-            "github": "doc-jones",
+            "github": "https://github.com/doc-jones",
             "twitter": "https://twitter.com/mojosd",
             "reddit": "https://www.reddit.com/user/Jones-doc/"
         }
@@ -345,7 +345,7 @@
             "pronouns": "",
             "twitter": "https://twitter.com/Gbahdeyboh",
             "linkedin": "https://www.linkedin.com/in/gbahdeyboh",
-            "github": "Gbahdeyboh"
+            "github": "https://github.com/Gbahdeyboh"
         }
     },
     {
@@ -360,7 +360,7 @@
             "pronouns": "",
             "twitter": "https://twitter.com/lbroudoux",
             "website": "https://medium.com/@lbroudoux",
-            "github": "lbroudoux",
+            "github": "https://github.com/lbroudoux",
             "linkedin": "https://www.linkedin.com/in/laurentbroudoux/"
         }
     },
@@ -376,7 +376,7 @@
             "pronouns": " (he/him)",
             "twitter": "https://twitter.com/YadaYac",
             "linkedin": "https://www.linkedin.com/in/yacinekheddache/",
-            "github": "yada"
+            "github": "https://github.com/yada"
         }
     },
     {
@@ -389,7 +389,7 @@
         "speaker": {
             "name": "Kevin Duffey",
             "pronouns": " (he/him)",
-            "github": "kevin-postman",
+            "github": "https://github.com/kevin-postman",
             "linkedin": "http://www.linkedin.com/in/kmd",
             "mastodon": "https://hachyderm.io/@kduffey"
         }
@@ -424,7 +424,7 @@
             "linkedin": "https://www.linkedin.com/in/arnaudlauret",
             "website": "https://apihandyman.io/",
             "mastodon": "https://hachyderm.io/@arnaudlauret",
-            "github": "arno-di-loreto",
+            "github": "https://github.com/arno-di-loreto",
             "book": "https://www.manning.com/books/the-design-of-web-apis"
         }
     },
@@ -442,7 +442,7 @@
             "linkedin": "https://www.linkedin.com/in/kevinswiber",
             "website": "https://swiber.dev/",
             "mastodon": "https://hachyderm.io/@kevinswiber",
-            "github": "kevinswiber"
+            "github": "https://github.com/kevinswiber"
         }
     },
     {
@@ -458,7 +458,7 @@
             "twitter": "https://twitter.com/1sprintatatime",
             "linkedin": "https://www.linkedin.com/in/deepag",
             "website": "https://onesprintatatime.com/",
-            "github": "deepagoyal",
+            "github": "https://github.com/deepagoyal",
             "book": "https://www.amazon.com/API-Analytics-Product-Managers-understanding/dp/1803247657/ref=mp_s_a_1_1?keywords=Api+analytics+for+product+managers&qid=1676767912&sr=8-1"
         }
     },
@@ -476,7 +476,7 @@
             "linkedin": "https://www.linkedin.com/in/bpedro/",
             "website": "https://brunopedro.com/",
             "mastodon": "https://follow.brunopedro.com/@bpedro",
-            "github": "bpedro"
+            "github": "https://github.com/bpedro"
         }
     },
     {
@@ -491,7 +491,7 @@
             "pronouns": "",
             "twitter": "https://twitter.com/PascalHeus",
             "linkedin": "https://www.linkedin.com/in/pascal",
-            "github": "kulnor",
+            "github": "https://github.com/kulnor",
             "mastodon": "https://hachyderm.io/@plgah"
         }
     }
