@@ -21,7 +21,7 @@ const DigitalKnowledge = ({ data }) => {
     <Layout>
       <SEO title="Digital Knowledge and Machine Intelligence"
         description='AI, APIs, metadata, and data: the digital knowledge and machine intelligence ecosystem'
-        slug="/digital_knowledge/digital-knowledge-and-mi/" />
+        slug="/data_and_ai/digital-knowledge-and-mi/" />
       <DocWrapper className="container-fluid">
         <div className="row row-eq-height">
           <nav className="col-sm-12 col-md-4 col-lg-3 left-nav-re">
@@ -47,19 +47,19 @@ const DigitalKnowledge = ({ data }) => {
                   <h2>Research Areas</h2>
                   <p>While our R&D cover a wide range of subjects, the following are of particular interest to us at this time:</p>
                   <ul>
-                    <li><em>Generative AI:</em> Like everyone, we are naturally investigating the potential roles and uses of AI for API development, and to broadly support the vision of the above ecosystem. This includes developing Postman features, evaluating LLMs, exploring LangChain, keeping up to speed with latest news, while alongside strengthening our AI knowledge and expertise.</li>
+                    <li><em>Generative AI:</em> Like everyone, we are naturally investigating the potential roles and uses of AI for API development, and to broadly support the vision of the above ecosystem. This includes developing Postman features, evaluating Large Language Models (LLMs), exploring LangChain, keeping up to speed with latest news, while alongside strengthening our AI knowledge and expertise.</li>
                     <li><em>Knowledge Base:</em> We are gathering and analyzing vast amounts of information around APIs, Postman Collections, JSON schemas, and related resources, to better understand common practices, governance, and quality issues, or use as a data source for machine learning purposes.</li>
                     <li><em>Quality:</em> Ensuring the highest quality of APIs, collections, and documentation is critical. Based on findings from the knowledge base and user feedback, we are developing new tools and techniques to assess and address quality issues, in particular leveraging Spectral and AI.</li>
                     <li><em>Semantic Web:</em> RDF/SPARQL and related semantic web technologies, specifications, and practices provide robust mechanisms to capture and manage digital knowledge. We are examining ways to leverage RDF for managing and querying metadata around APIs and data, or to supplement and support AI.</li>
                     <li><em>GraphQL:</em> We are paying particular attention to GraphQL as an innovative and rapidly growing API technology for data management, discovery, and analysis. This includes supporting the standard, exploring potential integration with SPARQL and AI, or improving GraphQL metadata capabilities.</li>
-                    <li><em>(Meta)Data Modernization:</em> Data without metadata can be an indecipherable jumble. We are investigating ways to promote the use of APIs by data custodians, improve data discoverability, access, use, privacy, and support the establishment of related standards and best practices.</li>
+                    <li><em>(Meta)Data Modernization:</em> Data without metadata can be an indecipherable jumble. We are investigating ways to promote the use of APIs by data custodians and users, improve data discoverability, access, use, privacy, and support the establishment of related standards and best practices.</li>
                     <li><em>Machine2Machine:</em> We often think about APIs from a user perspective, but the primary consumers are actually applications, websites, and AIs. We are investigating how this  impacts API design, and how to ensure the smooth exchange of digital information and the dialog between applications, machines, and AIs.</li>
                   </ul>
                   <p>Collaboration is key to success, so do reach out if these topics excite you or you have questions or suggestions.</p>
                 </section>
                 <section className='mb-5'>
                   <h2>Digital Knowledge</h2>
-                  <p className='mb-5'>Data and metadata are the commodities that power machine intelligence through APIs and AI.</p>
+                  <p className='mb-5'>Data and metadata are the commodities that, through APIs and AI, power machine intelligence. They are the building blocks of digital knowledge.</p>
                   <h4>Data</h4>
                  <p>Data is the fundamental resource that captures the raw knowledge and ultimately powers digital intelligence.  The quality and relevance of data are therefore paramount. It is not just about quantity; it's about having the right data in the right shape and form.</p>
                  <p>Humans and AIs have a symbiotic relationship with data, each feeding into and enhancing the other. Data is the main input for machine learning, research, innovation, monitoring, and decision making.  And all these activities in turn produce new data.</p>
@@ -78,14 +78,15 @@ const DigitalKnowledge = ({ data }) => {
                   <h2>Machine Intelligence</h2>
                   <p className='mb-5'>Artificial Intelligence and APIs are the components that support the emergence of machine intelligence and cognitive capabilities.</p>
                   <h4>APIs</h4>
-                  <p>We live and operate in an interconnected world, where the direct digital information consumers are not users, but applications, websites, and AIs that need to communicate with each other in fast and efficient ways. Information must be accessible in digital form through standard-based interfaces. And APIs are therefore the connective tissue of our digital ecosystem, often an unseen yet essential facilitator in the background. Moreover, APIs play a pivotal role in ensuring security by establishing secure pathways for in exchange, or safeguarding the integrity and confidentiality of information.</p>
-                  <p className='mb-5'>Tools, techniques, best practices, and collaboration around APIs are fundamental, which have been Postman's main missions since inception. As the industry leader, we expect to continue to support and help communities and stakeholders leverage the power of APIs.</p>
+                  <p>We live and operate in an interconnected world, where the direct digital information consumers are not users, but applications, websites, and AIs that need to communicate with each other in fast and efficient ways. Information must be accessible in digital form through standard-based interfaces.</p>
+                  <p>APIs are the connective tissue of our digital ecosystem, often an unseen yet essential facilitator in the background. Moreover, APIs play a pivotal role in ensuring security by establishing secure pathways for in exchange, or safeguarding the integrity and confidentiality of information.</p>
+                  <p className='mb-5'>Tools, techniques, best practices, and collaboration around APIs are fundamental, which have been Postman's mission since inception. As the industry leader, we expect to continue to support and help communities and stakeholders leverage the power of APIs.</p>
   
                   <h4>Artificial Intelligence</h4>
                   <p>Generative AI has taken the world by storm and demonstrated its potential to drastically change the way we work. Where this will lead us is anyone's guess, but AI-driven chatbots, platforms, and tools will inevitably rapidly become our day to day expert assistants and potentially replace traditional solutions.</p>
                   <p >We can't lose sight, however, that AI is an end product of our ecosystem that includes APIs, metadata, and data. AI cannot exist without this supporting cast that truly powers its performance. Together, these components form the backbone of our digital world.</p>
-                  <p>While picture as the top of our ecosystem, AI also holds great potential to enhance the quality of data, metadata, and APIs. AI can also be used to generate synthetic data, which can be invaluable both for researchers and for training AI models.</p>
-                  <p>There are many dots to be connected when it comes to AI, which we are excited to look into.</p>
+                  <p>AI also plays a significant role as data producer, by creating new findings and knowledge, holding great potential for enhancing the quality of data, metadata, and APIs, or generating safe synthetic data for training and research purposes.</p>
+                  <p>There are many facets to explore and dots to be connected when it comes to the complex and rapidly evolving AI field, which we are eager to investigate.</p>
                   <p><em>For further information on our Digital Knowledge and Machine Intelligence program, contact <a href="mailto:pascal.heus@postman.com">pascal.heus@postman.com</a></em></p>
                 </section>
 
