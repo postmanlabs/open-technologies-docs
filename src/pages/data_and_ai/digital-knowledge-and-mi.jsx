@@ -19,7 +19,7 @@ const DigitalKnowledge = ({ data }) => {
   const { parentLink, subParentLink, previous, next } = data;
   return (
     <Layout>
-      <SEO title="Digital Knowledge and Machine Intelligence"
+      <SEO title="Digital knowledge and machine intelligence"
         description='AI, APIs, metadata, and data: the digital knowledge and machine intelligence ecosystem'
         slug="/data_and_ai/digital-knowledge-and-mi/" />
       <DocWrapper className="container-fluid">
@@ -32,7 +32,7 @@ const DigitalKnowledge = ({ data }) => {
               <main className="col-sm-12 col-md-12 col-lg-9 offset-lg-0 col-xl-7 doc-page ml-xl-5">
                 <BreadCrumbsLinks data={{ parentLink, subParentLink }} />
                 <section className='mb-5'>
-                  <h1>Digital Knowledge and Machine Intelligence</h1>
+                  <h1>Digital knowledge and machine intelligence</h1>
                   <p>
                     Artificial intelligence, APIs, data, and metadata form an ecosystem which is the foundation of digital knowledge management and machine intelligence.
                   </p>

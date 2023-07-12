@@ -90,7 +90,7 @@ export const leftNavItems = [
     url: '/data_and_ai/digital-knowledge-and-mi/',
     subMenuItems1: [
       {
-        name: 'Digital Knowledge and Machine Intelligence',
+        name: 'Digital knowledge and machine intelligence',
         url: '/data_and_ai/digital-knowledge-and-mi/'
       }
     ],
