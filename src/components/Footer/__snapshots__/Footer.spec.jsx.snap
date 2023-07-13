@@ -269,18 +269,31 @@ exports[`Footer renders correctly 1`] = `
               </div>
               <div>
                 <nav
-                  aria-labelledby="security-and-legal"
+                  aria-labelledby="legal-and-security"
                   className="mb-5"
                 >
                   <h2
                     className="footer-col-title"
-                    id="security-and-legal"
+                    id="legal-and-security"
                   >
-                    Security and Terms
+                    Legal and Security
                   </h2>
                   <ul
                     className="sc-gsnTZi kIEZAF column"
                   >
+                    <li
+                      className="column-row"
+                    >
+                      <a
+                        className="column-link"
+                        href="https://www.postman.com/legal/terms/"
+                        onClick={[Function]}
+                        rel={null}
+                        target={null}
+                      >
+                        Terms of Service
+                      </a>
+                    </li>
                     <li
                       className="column-row"
                     >
@@ -291,7 +304,7 @@ exports[`Footer renders correctly 1`] = `
                         rel={null}
                         target={null}
                       >
-                        Trust and Security
+                        Trust and Safety
                       </a>
                     </li>
                     <li
@@ -312,12 +325,12 @@ exports[`Footer renders correctly 1`] = `
                     >
                       <a
                         className="column-link"
-                        href="https://www.postman.com/legal/terms/"
+                        href="https://www.postman.com/legal/cookies/"
                         onClick={[Function]}
                         rel={null}
                         target={null}
                       >
-                        Terms of Service
+                        Cookie notice
                       </a>
                     </li>
                   </ul>

@@ -85,6 +85,17 @@ export const leftNavItems = [
     ],
   },
   {
+    name: 'Data & AI',
+    parentSlug: 'data-and-ai',
+    url: '/data-and-ai/digital-knowledge-and-mi/',
+    subMenuItems1: [
+      {
+        name: 'Digital knowledge and machine intelligence',
+        url: '/data-and-ai/digital-knowledge-and-mi/'
+      }
+    ],
+  },
+  {
     name: 'Blog',
     url: '/blog/graphql-security/',
     parentSlug: 'blog',
