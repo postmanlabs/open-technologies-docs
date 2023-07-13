@@ -86,12 +86,12 @@ export const leftNavItems = [
   },
   {
     name: 'Data & AI',
-    parentSlug: 'data_and_ai',
-    url: '/data_and_ai/digital-knowledge-and-mi/',
+    parentSlug: 'data-and-ai',
+    url: '/data-and-ai/digital-knowledge-and-mi/',
     subMenuItems1: [
       {
         name: 'Digital knowledge and machine intelligence',
-        url: '/data_and_ai/digital-knowledge-and-mi/'
+        url: '/data-and-ai/digital-knowledge-and-mi/'
       }
     ],
   },
