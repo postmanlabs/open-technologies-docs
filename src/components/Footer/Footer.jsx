@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import styled from 'styled-components';
 import footerDataLocal from '../../../build/footerDev.json';
-import footerData from '../../../bff-data/footer.json';
+// import footerData from '../../../bff-data/footer.json';
 
 
 const FooterWrapper = styled.footer`
@@ -104,12 +104,12 @@ function targetStringGenerator(target) {
 
 const Footer = () => {
 
-  const [data, setData] = useState(footerData)
+  const [data, setData] = useState(footerDataLocal)
   // runtime check to switch between prod and local data if API returns malformed
   const footerKeys = ['alt', 'copyright', 'items', 'src', 'type'];
   useEffect(() => {
-    if (footerKeys.every(key => Object.keys(footerData).includes(key))) {
-      setData(footerData)
+    if (footerKeys.every(key => Object.keys(footerDataLocal).includes(key))) {
+      setData(footerDataLocal)
     } else {
       setData(footerDataLocal)
     }
@@ -316,19 +316,15 @@ const Footer = () => {
                                       triggerGA(link.category, link.label);
                                     }}
                                   >
-                                    <div direction="row" wrap="nowrap">
-                                      <SocialSVGWrapper
-                                        className="d-inline-block align-self-center social-svg"
-                                        // eslint-disable-next-line react/no-danger
-                                        dangerouslySetInnerHTML={{
-                                          __html: link.svg,
-                                        }}
-                                      />
-                                      {link.span ? (
-                                        <>
-                                          {link.title}
-                                          <span>{link.span}</span>
-                                        </>
+                                    <div style={{ display: "inline-block", alignItems: "center" }}>
+                                      <img 
+                                        src={link.icon} 
+                                        style={{height: "16px", width: "16px", marginRight: "1rem", marginBottom: "0" }}
+                                        fetchpriority="low"
+                                        loading="lazy" 
+                                        />
+                                       {link.span ? (
+                                          <span>{link.title}</span>
                                       ) : (
                                         <>
                                           <div className="d-inline-block align-self-center">
