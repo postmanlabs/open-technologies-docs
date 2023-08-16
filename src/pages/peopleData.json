@@ -1,39 +1,5 @@
 [
     {
-        "company": "leadership",
-        "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Kin Lane. Postman.",
-            "src": "https://voyager.postman.com/photo/presenter/headshot-kin-lane.png"
-        },
-        "speaker": {
-            "name": "Kin Lane",
-            "pronouns": "(he/him/it)",
-            "twitter": "https://twitter.com/kinlane",
-            "linkedin": "https://www.linkedin.com/in/kinlane/",
-            "mastodon": "https://mastodon.kinlane.com/@kin",
-            "website": "https://apievangelist.com/",
-            "github": "https://github.com/kinlane"
-        }
-    },
-    {
-        "company": "leadership",
-        "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Jan Schenk. Postman.",
-            "src": "/images/jan.jpeg"
-        },
-        "speaker": {
-            "name": "Jan Schenk",
-            "pronouns": " (he/they)",
-            "twitter": "https://twitter.com/jansche",
-            "linkedin": "https://www.linkedin.com/in/janschenk/",
-            "mastodon": "https://mastodon.online/@jansche",
-            "website": "https://dev.to/jansche",
-            "github": "https://github.com/jansche"
-        }
-    },
-    {
         "company": "specifications",
         "col": "col-12 col-lg-6 mb-5",
         "media": {

@@ -178,34 +178,6 @@ class IndexPage extends React.Component {
           <section className="section align-items-center">
             <h2>Teams</h2>
             <p className='mb-4'>Open Technologies is 40+ individuals working to strengthen the Postman platform and community.</p>
-            <h3 className='mb-4'>Leadership</h3>
-            <div className='row mt-4'>
-              {people.map((people) => (
-                people.company === 'leadership' ?
-                  <CardPresenterHorizontal
-                    key={uuidv4()}
-                    col={people.col}
-                    media={{
-                      alt: `${people.speaker.name}, ${people.speaker.title} ${people.speaker.company}`,
-                      src: people.media.src
-                    }}
-                    speaker={{
-                      name: people.speaker.name,
-                      pronouns: people.speaker.pronouns,
-                      title: people.speaker.title,
-                      linkedin: people.speaker.linkedin,
-                      twitter: people.speaker.twitter,
-                      website: people.speaker.website,
-                      mastodon: people.speaker.mastodon,
-                      github: people.speaker.github,
-                      book: people.speaker.book,
-                      reddit: people.speaker.reddit
-                    }}
-                  /> : null
-              ))
-              }
-
-            </div>
           </section>
           <h2 className='mb-4'>Specifications</h2>
           <section className="section align-items-center">
