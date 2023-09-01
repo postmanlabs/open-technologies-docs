@@ -37,9 +37,6 @@ function CalendarDates() {
         <EventStyles className='mb-2' key={uuidv4()}>
           <p className='mb-0 date'>
           {event.fields.date.slice(0, 10).split('-').reverse().join('/').replace(/(\d{2})\/(\d{2})\/(\d{4})/, '$2/$1/$3')}{' '}
-          
-          {/* {event.fields.date.slice(20,25).toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' })} */}
-          {/* {console.log(event.fields.date)} */}
     </p>
           <div>{event.fields.link ? (<a href={event.fields.link} target="_blank" rel="noopener">{event.fields.title} →</a>) : event.fields.title}</div>
         </EventStyles>
