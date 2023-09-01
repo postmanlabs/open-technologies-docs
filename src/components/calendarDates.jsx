@@ -3,9 +3,6 @@ import { graphql, useStaticQuery } from "gatsby";
 const { v4: uuidv4 } = require('uuid');
 import styled from 'styled-components';
 
-import Moment from 'react-moment';
-import 'moment-timezone';
-
 const EventStyles = styled.div`
   .date {
     color: ${(props) => props.theme.colors.orange_50};
@@ -38,7 +35,12 @@ function CalendarDates() {
     <div >
       {sortedEvents.map((event) => (
         <EventStyles className='mb-2' key={uuidv4()}>
-          <Moment className='mb-0 date' tz="America/Los_Angeles" format='MM/DD/YYYY h:mma z'>{event.fields.date}</Moment>
+          <p className='mb-0 date'>
+          {event.fields.date.slice(0, 10).split('-').reverse().join('/').replace(/(\d{2})\/(\d{2})\/(\d{4})/, '$2/$1/$3')}{' '}
+          
+          {/* {event.fields.date.slice(20,25).toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' })} */}
+          {/* {console.log(event.fields.date)} */}
+    </p>
           <div>{event.fields.link ? (<a href={event.fields.link} target="_blank" rel="noopener">{event.fields.title} →</a>) : event.fields.title}</div>
         </EventStyles>
       ))}
