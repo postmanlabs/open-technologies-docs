@@ -37,8 +37,7 @@ function CalendarDates() {
    <div >
       {sortedEvents.map((event) => (
         <EventStyles className='mb-2' key={uuidv4()}>
-          {console.log(event.fields.date)}
-          <Moment className='mb-0 date' tz="America/Los_Angeles" format='MM/DD/YYYY h:mma z' parse='YYYY-MM-DD HH:mm' utc>{event.fields.date}</Moment>
+          <Moment className='mb-0 date' tz="America/Los_Angeles" format='MM/DD/YYYY h:mma z' parse='YYYY-MM-DD HH:mm'>{event.fields.date}</Moment>
           <div>{event.fields.link ? (<a href={event.fields.link} target="_blank" rel="noopener">{event.fields.title} →</a>) : event.fields.title}</div>
         </EventStyles>
       ))}
