@@ -28,7 +28,9 @@ function ConceptCardFilter() {
   let allCategories = ['All'];
 //add tags to array
   setOfTags?.forEach(item => {
-    item.forEach(category => allCategories.push(category))
+    if (item != null) {
+      item.forEach(category => allCategories.push(category))
+      }
   }
   )
   // filter out dupe tags 
