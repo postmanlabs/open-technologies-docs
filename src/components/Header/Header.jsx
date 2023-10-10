@@ -34,6 +34,27 @@ const LoginCheck = (props) => {
   if (!hidden) {
     return (
       <CTAButton>
+         <a
+          href={`https://go.postman${beta}.co/build`}
+          className={
+            cookie !== 'yes'
+              ? 'button__sign-in pingdom-transactional-check__sign-in-button'
+              : 'd-none'
+          }
+          style={{ padding: '4px 12px 4px 12px' }}
+          onClick={() => {
+            trackCustomEvent({
+              // string - required - The object that was interacted with (e.g.video)
+              category: 'lc-top-nav',
+              // string - required - Type of interaction (e.g. 'play')
+              action: 'Click',
+              // string - optional - Useful for categorizing events (e.g. 'Spring Campaign')
+              label: 'contact-sales-button-clicked',
+            });
+          }}
+        >
+         Contact Sales
+        </a>
         <a
           href={`https://go.postman${beta}.co/build`}
           className={

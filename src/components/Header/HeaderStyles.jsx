@@ -614,7 +614,7 @@ export const DropdownStyles = styled.div`
      box-shadow: 0 16px 24px -8px rgb(0 0 0 / 24%);
 
     .dropdown-item {
-      padding: 8px 16px;
+      padding: 8px 6px;
       font-weight: 400;
       font-size: 14px;
 
@@ -657,10 +657,13 @@ export const DropdownStyles = styled.div`
       margin-bottom: 2rem;
     }
   }
+  .dropdown-col:first-child {
+    max-width: 30%;
+  }
 
   .dropdown-header {
-    padding: 5px 15px;
-    color: ${(props) => props.theme.forms.text};
+    padding: 5px;
+    color: ${(props) => props.theme.colors.grey_90};
     font-size: 1.6rem;
     letter-spacing: -0.24px;
     line-height: 1.4;
@@ -707,7 +710,7 @@ a.button__sign-up {
   }
 
   @media (max-width: 480px) {
-    display: block;
+    /* display: block; */
     margin: 8px 16px;
   }
 };
@@ -742,8 +745,8 @@ a.button__sign-in {
     outline: 0;
   }
 
-  @media (max-width: 992px) {
-    margin-left: 16px;
+  @media (max-width: 1004px) {
+    margin: 4px;
   }
 }
 `
