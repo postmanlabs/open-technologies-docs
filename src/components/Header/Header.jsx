@@ -84,7 +84,7 @@ const Header = (props) => {
   const [cookie, setCookie] = useState('');
   const [hidden, setHidden] = useState(true);
   const [data, setData] = useState(navbarData);
-  const [dataDropdown, setDataDropdown] = useState(navtopicsdropdownData);
+  const [dataDropdown, setDataDropdown] = useState(navbarDataLocal);
   const [visibleHelloBar] = useState();
 
   useEffect(() => {
@@ -97,8 +97,8 @@ const Header = (props) => {
     const navbarKeys = ['items', 'media', 'type'];
     const navtopicsdropdownKeys = ['items', 'type']
 
-    if (navbarKeys.every(key => Object.keys(navbarData).includes(key))) {
-      setData(navbarData)
+    if (navbarKeys.every(key => Object.keys(navbarDataLocal).includes(key))) {
+      setData(navbarDataLocal)
     } else {
       setData(navbarDataLocal)
     }
@@ -315,7 +315,7 @@ const Header = (props) => {
                                 <h6 className="dropdown-header">{col.title}</h6>
                                 {col.subItemsCol.map((link) => (
                                   <a
-                                    className="dropdown-item"
+                                    className={`${link.link} dropdown-item`}
                                     href={link.url}
                                     key={link.title}
                                   >

@@ -5,35 +5,71 @@
       {
         "title": "Product",
         "dropdown": "true",
-        "subItems": [
+        "columns": [
           {
-            "title": "What is Postman?",
-            "url": "https://www.postman.com/product/what-is-postman/"
+            "title": "Getting Started",
+            "subItemsCol": [
+              {
+                "title": "What is Postman?",
+                "link": "",
+                "url": "https://learning.postman.com/docs/getting-started/introduction/"
+              },
+              {
+                "title": "Customer Stories",
+                "url": "https://academy.postman.com/"
+              },
+              {
+                "title": "Download Postman →",
+                "link": "app-cta",
+                "url": "https://www.postman.com/downloads/"
+              }
+            ]
           },
           {
-            "title": "API Repository",
-            "url": "https://www.postman.com/product/api-repository/"
+            "title": "API Platform",
+            "subItemsCol": [
+              {
+                "title": "Collaborate in Workspaces",
+                "url": "https://blog.postman.com/"
+              },
+              {
+                "title": "Organize with Collections",
+                "url": "https://www.postman.com/community/"
+              },
+              {
+                "title": "Explore the API Client",
+                "url": "https://www.postman.com/company/supernovas-program/"
+              },
+              {
+                "title": "Build Postman Flows",
+                "url": "https://www.postman.com/student-program/"
+              },
+              {
+                "title": "Work smarter with Postbot",
+                "url": "https://www.postman.com/events/"
+              },
+              {
+                "title": "Browse API Tools",
+                "url": "https://store.postman.com/"
+              }
+            ]
           },
           {
-            "title": "Tools",
-            "url": "https://www.postman.com/product/tools/"
-          },
-          {
-            "title": "Governance",
-            "url": "https://www.postman.com/product/governance/"
-          },
-          {
-            "title": "Workspaces",
-            "url": "https://www.postman.com/product/workspaces/"
-          },
-          {
-            "title": "Integrations",
-            "url": "https://www.postman.com/product/integrations/"
-          },
-          {
-            "title": "Get Started Free →",
-            "link": "app-cta",
-            "url": "https://www.postman.com/downloads/"
+            "title": "Enterprise Solutions",
+            "subItemsCol": [
+              {
+                "title": "Enterprise Essentials",
+                "url": "https://www.postman.com/support/"
+              },
+              {
+                "title": "API Test Automation",
+                "url": "https://www.postman.com/support/resellers-support/"
+              },
+              {
+                "title": "Internal API Management",
+                "url": "https://status.postman.com/"
+              }
+            ]
           }
         ]
       },
@@ -43,44 +79,8 @@
       },
       {
         "title": "Enterprise",
-        "isWidthShort": true,
-        "dropdown": "true",
-        "columns": [
-          {
-            "title": "Learn More",
-            "subItemsCol": [
-              {
-                "title": "Postman Enterprise",
-                "url": "https://www.postman.com/postman-enterprise/"
-              },
-              {
-                "title": "Customers",
-                "url": "https://www.postman.com/customers/"
-              },
-              {
-                "title": "Contact Sales",
-                "url": "https://www.postman.com/company/contact-sales/"
-              }
-            ]
-          },
-          {
-            "title": "Solutions",
-            "subItemsCol": [
-              {
-                "title": "Enterprise Essentials",
-                "url": "https://www.postman.com/solutions/enterprise-essentials/"
-              },
-              {
-                "title": "Postman for API Test Automation",
-                "url": "https://www.postman.com/solutions/api-test-automation/"
-              },
-              {
-                "title": "Postman for Internal API Management",
-                "url": "https://www.postman.com/solutions/internal-api-management/"
-              }
-            ]
-          }
-        ]
+        "url": "https://www.postman.com/postman-enterprise/"
+        
       },
       {
         "title": "Resources and Support",
