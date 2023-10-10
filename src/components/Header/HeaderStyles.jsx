@@ -673,7 +673,11 @@ export const DropdownStyles = styled.div`
 `
 
 
-export const CTAButton = styled.div`  
+export const CTAButton = styled.div` 
+margin-left: 10px; 
+@media (min-width: 1008px) {
+margin-left: 0px;
+}
     // Orange Button (Sign Up / Launch Postman)
 a.button__sign-up {
   align-items: center;
