@@ -162,7 +162,14 @@
                   "category": "global-footer",
                   "label": "cookie-notice",
                   "ariaLabel": "Read more about Postman's Cookie notice'"
-              }
+              },
+              {
+                "title": "Privacy choices",
+                "url": "https://www.postman.com/legal/privacy-choice/",
+                "category": "global-footer",
+                "label": "privacy-choice",
+                "ariaLabel": "Read more about Postman's privacy choices"
+            }
           ]
       },
       {
