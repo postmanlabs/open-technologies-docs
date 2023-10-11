@@ -60,7 +60,7 @@
             "subItemsCol": [
               {
                 "title": "Enterprise Essentials",
-                "url": "tps://www.postman.com/solutions/enterprise-essentials"
+                "url": "https://www.postman.com/solutions/enterprise-essentials"
               },
               {
                 "title": "API Test Automation",
