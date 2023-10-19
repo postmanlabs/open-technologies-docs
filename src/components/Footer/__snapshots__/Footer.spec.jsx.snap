@@ -333,6 +333,19 @@ exports[`Footer renders correctly 1`] = `
                         Cookie notice
                       </a>
                     </li>
+                    <li
+                      className="column-row"
+                    >
+                      <a
+                        className="column-link"
+                        href="https://www.postman.com/legal/privacy-choices/"
+                        onClick={[Function]}
+                        rel={null}
+                        target={null}
+                      >
+                        Privacy choices
+                      </a>
+                    </li>
                   </ul>
                 </nav>
               </div>
