@@ -55,9 +55,6 @@ jobs:
           PM_TECH_RT: ${{secrets.PM_TECH_RT}}
           SITE_URL: ${{secrets.BETA_SITE_URL}}
           DOMAIN_NAME: ${{secrets.BETA_DOMAIN_NAME}}
-          AIRTABLE_TOKEN: ${{secrets.AIRTABLE_TOKEN}}
-          AIRTABLE_CARDS_URL: ${{secrets.AIRTABLE_CARDS_URL}}
-          AIRTABLE_CALENDAR_URL: ${{secrets.AIRTABLE_CALENDAR_URL}}
           API_GITHUB_TOKEN: ${{secrets.API_GITHUB_TOKEN}}
           PRIVATE_TOKEN: $${{secrets.PRIVATE_TOKEN}}
         run: |
