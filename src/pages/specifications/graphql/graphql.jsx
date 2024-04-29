@@ -8,12 +8,10 @@ import RightNavLinks from '../../../components/RightNavLinks';
 import { leftNavItems } from '../../../components/LeftNav/LeftNavItems';
 import LeftNav from '../../../components/LeftNav/LeftNav';
 import SEO from '../../../components/seo';
-import styled from 'styled-components';
 import 'prismjs/themes/prism-tomorrow.css';
 import BreadCrumbsLinks from '../../../components/modules/BreadCrumbsLinks';
 import PreviousAndNextLinks from '../../../components/modules/PreviousAndNextLinks';
 import { DocWrapper } from '../../../../styles/DocWrapper';
-import CalendarDates from '../../../components/calendarDates';
 import EditDoc from '../../../components/Shared/EditDoc';
 import { RightColumnWrapper } from '../../../../styles/RightColumnWrapper';
 import { ContextualStyles } from '../../../../styles/ContextualStyles';
@@ -53,9 +51,6 @@ const GraphQLPage = ({ data }) => {
                       <div className="mb-2">
                         <img src={withPrefix("/images/Community.png")} alt="community Icon" width="50px" className='mr-2' />
                         <h4 >Meet the Team</h4>
-                        <div className='mb-2'>
-                          <DynamicLink url="https://www.linkedin.com/in/doc-jones" name="Doc Jones - GraphQL Lead →" />
-                        </div>
                         <div >
                           <DynamicLink url="https://www.linkedin.com/in/meenakshi-dhanani" name="Meenakshi Dhanani - Developer Relations Engineer →" />
                         </div>
@@ -94,16 +89,6 @@ const GraphQLPage = ({ data }) => {
                         </div>
                         <div >
                           <DynamicLink url="https://github.com/graphql/composite-schemas-wg" name="GraphQL Composite Schemas →" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="col-lg-6 mb-5">
-                      <div className="">
-                        <img src={withPrefix("/images/Events.svg")} alt="community Icon" width="50px" className='mr-2' />
-                        <h4>Calendar</h4>
-                        <div className='mb-2'>
-                          <CalendarDates />
                         </div>
                       </div>
                     </div>
