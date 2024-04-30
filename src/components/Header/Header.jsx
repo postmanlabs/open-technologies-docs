@@ -321,7 +321,7 @@ const Header = (props) => {
                           aria-labelledby="navbarDropdownMenuLink"
                         >
                           { item.columns && item.columns &&
-                          <div className="row dropdown-col-menu">
+                          <div className={item.isWidthShort ? `row row__short` : `row dropdown-col-menu`}>
                             { item.columns.map((col) => (
                               <div
                               className={
