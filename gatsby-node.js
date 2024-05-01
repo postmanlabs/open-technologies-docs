@@ -9,8 +9,7 @@ const redirects = require('./redirects.json');
 // const HeaderJson = require('./src/components/Header/Header.data.json');
 const { execSync } = require("child_process")
 const ignorePaths = [];
-const DummyData = require('./src/components/filterCards/Data.json');
-const DummyCalendar = require('./src/components/DummyCalendar.json');
+
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
@@ -176,68 +175,6 @@ exports.sourceNodes = async ({
   createNode(prepareNode(output.docs, 'leftNavLinks'));
 };
 
-/*Airtable Data*/
-
-const fetch = require(`node-fetch`)
-exports.sourceNodes = async ({ 
-  actions,
-  createNodeId,
-  createContentDigest 
-}) => {
-
-  let responseCard;
-  let cardData;
-  let responseCalendar;
-  let calendarData;
- try {   
-  responseCard = await fetch(
-    process.env.AIRTABLE_CARDS_URL,
-    {
-      headers: {
-        'Authorization': `Bearer ${process.env.AIRTABLE_TOKEN}`
-      },
-    },
-  );
-   cardData = await responseCard.json();
-
-   responseCalendar = await fetch(
-    process.env.AIRTABLE_CALENDAR_URL,
-    {
-      headers: {
-        'Authorization': `Bearer ${process.env.AIRTABLE_TOKEN}`
-      },
-    },
-  );
-   calendarData = await responseCalendar.json();
-} catch {
-    cardData = DummyData;
-    calendarData = DummyCalendar;
-  }
-
-  // console.log(cardData, 'cardData')
-  // console.log(JSON.stringify(calendarData), 'calendar')
-    actions.createNode({
-      ...cardData,
-      id: `card-id-${uuidv4()}`,
-      parent: null,
-      children: [],
-      internal: {
-        type: 'cardData',
-        contentDigest: createContentDigest(cardData)
-      }
-    })
-    actions.createNode({
-      ...calendarData,
-      id: `calendar-id-${uuidv4()}`,
-      parent: null,
-      children: [],
-      internal: {
-        type: 'calendarData',
-        contentDigest: createContentDigest(calendarData)
-      }
-    })
-
-};
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({

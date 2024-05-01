@@ -284,22 +284,6 @@
         }
     },
     {
-        "company": "graphql",
-        "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Doc Jones. Postman.",
-            "src": "/images/doc-jones.png"
-        },
-        "speaker": {
-            "name": "Doc Jones",
-            "pronouns": " (she/her)",
-            "linkedin": "https://www.linkedin.com/in/doc-jones/",
-            "github": "https://github.com/doc-jones",
-            "twitter": "https://twitter.com/mojosd",
-            "reddit": "https://www.reddit.com/user/Jones-doc/"
-        }
-    },
-    {
         "company": "collection-format",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
