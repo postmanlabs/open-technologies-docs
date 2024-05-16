@@ -114,8 +114,8 @@ const Header = (props) => {
     const navbarKeys = ['items', 'media', 'type'];
     const navtopicsdropdownKeys = ['items', 'type']
 
-    if (navbarKeys.every(key => Object.keys(navbarDataLocal).includes(key))) {
-      setData(navbarDataLocal)
+    if (navbarKeys.every(key => Object.keys(navbarData).includes(key))) {
+      setData(navbarData)
     } else {
       setData(navbarDataLocal)
     }
@@ -326,7 +326,7 @@ const Header = (props) => {
                               <div
                               className={
                                 item.isWidthShort
-                                  ? 'col-sm-12 col-md-6 dropdown-col'
+                                  ? 'col-sm-12 col-md-5 dropdown-col'
                                   : 'col-sm-6 col-md-4 dropdown-col'
                               } key={col.title}>
                                 <h6 className="dropdown-header">{col.title}</h6>
