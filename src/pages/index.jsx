@@ -266,7 +266,7 @@ class IndexPage extends React.Component {
               }
             </div>
           </section>
-          <section className="section align-items-center">
+          {/* <section className="section align-items-center">
             <h3 className='mb-4'>GraphQL</h3>
 
             <div className='row mt-4'>
@@ -294,7 +294,7 @@ class IndexPage extends React.Component {
               ))
               }
             </div>
-          </section>
+          </section> */}
           <section className="section align-items-center">
             <h3 className='mb-4'>Collection Format</h3>
             <div className='row mt-4'>
@@ -352,7 +352,7 @@ class IndexPage extends React.Component {
               }
             </div>
           </section>
-          <section className="section align-items-center">
+          {/* <section className="section align-items-center">
 
             <h3 className='mb-4'>CodeGen</h3>
             <div className='row mt-4'>
@@ -380,7 +380,7 @@ class IndexPage extends React.Component {
               ))
               }
             </div>
-          </section>
+          </section> */}
           <h2>Strategy</h2>
           <section className="section align-items-center">
 
