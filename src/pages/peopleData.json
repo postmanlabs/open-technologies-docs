@@ -145,20 +145,6 @@
         "company": "asyncapi",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
-            "alt": "Barba&#241;o Gonz&#225;lez. Postman.",
-            "src": "/images/barbano-gonzalez.jpeg"
-        },
-        "speaker": {
-            "name": "Barba&#241;o Gonz&#225;lez",
-            "pronouns": " (she/her)",
-            "github": "https://github.com/Barbanio",
-            "linkedin": "https://www.linkedin.com/in/barbano-gonzalez-moreno/"
-        }
-    },
-    {
-        "company": "asyncapi",
-        "col": "col-12 col-lg-6 mb-5",
-        "media": {
             "alt": "Lukasz Gornicki. Postman.",
             "src": "/images/lukasz-gornicki.png"
         },
@@ -185,23 +171,6 @@
             "linkedin": "https://www.linkedin.com/in/jonaslagoni/",
             "website": "https://eventstack.tech/",
             "github": "https://github.com/jonaslagoni"
-        }
-    },
-    {
-        "company": "asyncapi",
-        "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Fran Mendez. Postman.",
-            "src": "/images/fran-mendez.jpeg"
-        },
-        "speaker": {
-            "name": "Fran M&#233;ndez",
-            "pronouns": " (he/him)",
-            "linkedin": "https://www.linkedin.com/in/fmvilas",
-            "mastodon": "https://social.fmvilas.me/@fran",
-            "website": "https://fmvilas.me/",
-            "github": "https://github.com/fmvilas",
-            "twitter": "https://twitter.com/fmvilas"
         }
     },
     {
@@ -269,21 +238,6 @@
         }
     },
     {
-        "company": "graphql",
-        "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Meenakshi Dhanani. Postman.",
-            "src": "/images/Meenakshi-Dhanani.jpeg"
-        },
-        "speaker": {
-            "name": "Meenakshi Dhanani",
-            "pronouns": " (she/her)",
-            "twitter": "https://twitter.com/mdhananii",
-            "website": "https://meenakshi-dhanani.medium.com/",
-            "github": "https://github.com/meenakshi-dhanani"
-        }
-    },
-    {
         "company": "collection-format",
         "col": "col-12 col-lg-6 mb-5",
         "media": {
@@ -327,21 +281,6 @@
             "twitter": "https://twitter.com/YadaYac",
             "linkedin": "https://www.linkedin.com/in/yacinekheddache/",
             "github": "https://github.com/yada"
-        }
-    },
-    {
-        "company": "codegen",
-        "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Kevin Duffey. Postman.",
-            "src": "/images/kevin-duffey.jpeg"
-        },
-        "speaker": {
-            "name": "Kevin Duffey",
-            "pronouns": " (he/him)",
-            "github": "https://github.com/kevin-postman",
-            "linkedin": "http://www.linkedin.com/in/kmd",
-            "mastodon": "https://hachyderm.io/@kduffey"
         }
     },
     {
@@ -410,23 +349,6 @@
             "website": "https://onesprintatatime.com/",
             "github": "https://github.com/deepagoyal",
             "book": "https://www.amazon.com/API-Analytics-Product-Managers-understanding/dp/1803247657/ref=mp_s_a_1_1?keywords=Api+analytics+for+product+managers&qid=1676767912&sr=8-1"
-        }
-    },
-    {
-        "company": "products",
-        "col": "col-12 col-lg-6 mb-5",
-        "media": {
-            "alt": "Bruno Pedro. Postman.",
-            "src": "/images/bruno-pedro.jpeg"
-        },
-        "speaker": {
-            "name": "Bruno Pedro",
-            "pronouns": "",
-            "twitter": "https://twitter.com/bpedro",
-            "linkedin": "https://www.linkedin.com/in/bpedro/",
-            "website": "https://brunopedro.com/",
-            "mastodon": "https://follow.brunopedro.com/@bpedro",
-            "github": "https://github.com/bpedro"
         }
     },
     {
