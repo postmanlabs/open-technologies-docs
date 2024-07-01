@@ -1,6 +1,6 @@
 ![Postman logo](https://assets.getpostman.com/common-share/postman-github-logo.png "Postman logo")
 
-# Open Technologies docs
+# DEPRECATED: Open Technologies docs
 
 The [Postman Open Technologies Docs](https://learning.postman.com/open-technologies-docs) is the main repository behind the technical documentation that lives at https://learning.postman.com/open-technologies/. The content hosted there has been created with our community for our community and is available for community contributions.
 
